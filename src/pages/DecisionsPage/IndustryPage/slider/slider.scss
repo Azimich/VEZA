@@ -1,0 +1,87 @@
+.slider {
+  margin-bottom: 150px;
+
+  &__container {
+    padding: 10px 0 70px 0;
+    margin: 0 auto;
+  }
+
+  &__industry {
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    background-color: #F6F6F3;
+    width: 240px !important;
+    height: 340px !important;
+    border-radius: 10px;
+    margin: 0 30px;
+    overflow: hidden;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img-box {
+    width: 240px;
+    padding: 20px;
+    height: 240px;
+    margin-bottom: 30px;
+  }
+
+  &__bottom-box {
+    text-align: center;
+    background-color: color(green);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: color(white);
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    background-color: color(lightgreen);
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: color(lightgreen);
+    font-size: 30px;
+    position: absolute;
+    top: -20% !important;
+    right: 10px !important;
+    font-weight: 800;
+
+    @include phoneScreen {
+      font-size: 0;
+      display: none;
+    }
+  }
+
+  .swiper-container {
+    overflow-x:hidden;
+    overflow-y: hidden;
+  }
+}
+

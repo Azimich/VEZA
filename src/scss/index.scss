@@ -1,0 +1,52 @@
+
+
+//Глобальные css & mixins
+@import '../../node_modules/normalize.css/normalize.css';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/MainPage/sections/header/header';
+@import '../pages/MainPage/sections/banner/banner';
+@import '../pages/MainPage/sections/about/about';
+@import '../pages/MainPage/sections/news/news';
+@import '../pages/MainPage/sections/gallery/gallery';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../pages/MainPage/sections/footer/footer';
+
+//Стили страницы РЕШЕНИЯ
+@import '../pages/DecisionsPage/header/header';
+@import '../pages/DecisionsPage/footer/footer';
+@import '../pages/DecisionsPage/industry/industry';
+
+//Стили страницы ОТРАСЛИ
+@import '../pages/DecisionsPage/IndustryPage/header/header';
+@import '../pages/DecisionsPage/IndustryPage/objects/objects';
+@import '../pages/DecisionsPage/IndustryPage/slider/slider';
+@import '../pages/DecisionsPage/IndustryPage/footer/footer';
+
+//Стили страницы ПРОДУКЦИЯ
+@import '../pages/ProductionPage/header/header';
+@import '../pages/ProductionPage/equipment/equipment';
+@import '../pages/ProductionPage/footer/footer';
+
+//Стили страницы Вентиляторы
+@import '../pages/ProductionPage/FansPage/header/header';
+@import '../pages/ProductionPage/FansPage/fans/fans';
+@import '../pages/ProductionPage/FansPage/footer/footer';
+
+//Стили страницы ОБЩЕПРОМЫШЛЕННЫЕ Вентиляторы
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/industrialfans/industrialfans';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/footer/footer';
+
+//Стили страницы Вентиляторы ВРАН
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/fansVRAN/fansVRAN';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/footer/footer';
+
+//Стили страницы Вентиляторы и Типаразмеры
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/tabssizes/tabssizes';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/footer/footer';

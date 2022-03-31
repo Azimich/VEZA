@@ -1,0 +1,208 @@
+.gallery {
+  margin-bottom: 150px;
+
+  @include ipadScreen {
+    margin-bottom: 130px;
+  }
+
+  @include phoneScreen {
+    margin-bottom: 100px;
+  }
+
+  &__title-img {
+    position: relative;
+
+    &::before {
+      content:'';
+      position: absolute;
+      top: -76px;
+      left: 0;
+      width: 405px;
+      height: 138px;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/title_img1.svg');
+    }
+
+    &::after {
+      content:'';
+      position: absolute;
+      top: -70px;
+      right: 0px;
+      width: 405px;
+      height: 138px;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/title_img2.svg');
+    }
+
+    @include ipadScreen {
+      &::after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: color(dark);
+    margin-bottom: 30px;
+
+    @include ipadScreen {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    @include phoneScreen {
+      font-size: 35px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__slider {
+    padding: 20px 0 70px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include phoneScreen {
+      padding: 20px 0 40px 0;
+    }
+  }
+
+  .swiper-container {
+    overflow-x:hidden;
+    overflow-y: hidden;
+  }
+
+  &__slider-img {
+    display: flex;
+    width: 70%;
+    margin: 0 auto; 
+
+    @include ipadScreen {
+      width: 80%;
+    }
+
+    @include phoneScreen {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+
+  //Slide_PC
+  .slide__img-pc {
+
+    @include phoneScreen {
+      display: none;
+    }
+  }
+
+  //Slide_mobile
+  .slide__img-mobile {
+    display: none;
+
+    @include phoneScreen {
+      display: block;
+      border-radius: 20px;
+    }
+  }
+
+  .slider__btn-block {
+    position: relative;
+  }
+
+  //Button__pc
+  .slider__btn-pc {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    left: 25px;
+    color: #fff;
+    font-weight: 700;     
+    
+    &::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/arrow_news.svg');
+      cursor: pointer;
+    }
+
+    @include phoneScreen {
+      display: none;
+    }
+  }
+
+  
+     
+
+   //Button__mobile
+  .slider__btn-mobile {
+    display: none;
+
+    @include phoneScreen {
+     display: block;
+     position: absolute;
+     bottom: 35px;
+     left: 20px;
+     color: #fff;
+     font-weight: 700;
+
+     &::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 0;
+      width: 23px;
+      height: 23px;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/arrow_news.svg');
+
+      @media (max-width:376px) {
+        width: 18px;
+        height: 18px;
+      }
+     }
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(lightgreen);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+}
