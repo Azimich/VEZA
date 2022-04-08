@@ -1,0 +1,1085 @@
+.company {
+  margin: 180px auto 150px;
+
+  @include phoneScreen {
+    margin: 150px auto 100px;
+  }
+
+  &__container {
+  }
+
+  // Навигация Табов
+  &__nav {
+    margin: 0 auto 50px;
+    max-width: 1000px;
+
+    @media (max-width:1380px) {
+      max-width: 800px;
+    }
+  }
+
+  &__nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__nav__menu-item {
+
+    @media (max-width: 650px) {
+      width: 80%;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__nav__menu-item-link {
+    color: #313131;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 0 15px 0;
+    position: relative;
+
+    &.active {
+      color: color(green);
+
+      @media (max-width: 650px) {
+        color: color(white);
+        background-color: color(green) !important;
+      } 
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -16%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: transparent;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    &.active::after {
+      background-color: color(green);
+    }
+
+    @media (max-width: 650px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: rgba(79, 102, 79, 0.795) !important;
+      color: color(white);
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+
+  &__nav__menu-line {
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.247);
+    margin-top: 15px;
+    border-radius: 5px;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  // Табы
+  &__tabs-container {
+  }
+  
+  // О компании
+  &__about-container {
+
+  }
+
+  &__about__img-box {
+    display: none;
+  }
+
+  &__about__history-container {
+    position: relative;
+  }
+
+  &__about-history {
+    padding: 500px 0 0 0;
+    width: 100%;
+    height: auto;
+    @include backgroundImage(cover);
+    background-image: url('../assets/images/banner__ipad.png'); 
+  }
+
+  &__about__history-box {
+    background-color: color(white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    margin: 0 auto 100px;
+    max-width: 1300px;
+
+    @include ipadScreen {
+      padding: 30px 20px;
+    }
+  }
+
+  &__about__history-title {
+    margin: 0 auto 25px;
+  }
+
+  &__about-text {
+    font-size: 16px;
+    line-height: 170%;
+
+    @include ipadScreen {
+      font-size: 16px;
+      line-height: 145%;
+    }
+  }
+
+  &__office-box {
+    display: flex;
+    align-items: center;
+
+    @include ipadScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__office__img-box {
+    width: 47%;
+    margin-right: 3%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include ipadScreen {
+      width: 100%;
+      margin: 0 0 5% 0;
+    }
+  }
+
+  &__office__text-block {
+    width: 50%;
+
+    @include ipadScreen {
+      width: 100%;
+    }
+  }
+
+  &__office-title {
+    padding-bottom: 3%;
+    font-size: 50px;
+
+    @include ipadScreen {
+      font-size: 35px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 30px;
+    } 
+  }
+
+  &__office__text {
+    line-height: 160%;
+
+    span {
+      color: color(black);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1280px) {
+      line-height: 140%;
+    }
+  }
+
+  &__our__achievements-box {
+    margin: 80px 0;
+
+    
+    @include ipadScreen {
+      margin-top: 15%;
+    }
+  }
+
+  &__our__achievements-title {
+    margin-bottom: 5%;
+    font-size: 50px;
+
+    @include ipadScreen {
+      font-size: 35px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 30px;
+    } 
+  }
+
+  &__our__achievements__img-box {
+    display: block;
+
+    @include phoneScreen {
+      display: none;
+    }
+  }
+
+  &__our__achievements__img__mobile-box {
+    display: none;
+
+    @include phoneScreen {
+      display: block;
+      width: 80%;
+    }
+  }
+
+  // Видео проигриватель
+  &__video-container {
+    margin-bottom: 100px;
+  }
+
+  &__video-title {
+    margin-bottom: 25px;
+  }
+
+  &__video-item {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      margin: 0 auto;
+      border-radius: 10px;
+
+      @include ipadScreen {
+        height: 500px;
+      }
+
+      @include phoneScreen {
+        height: 400px;
+      }
+
+      @media (max-width: 400px) {
+        height: 300px;
+      }
+    }
+  }
+
+
+  &__factories__title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include ipadScreen {
+      margin-bottom: 50px;
+      text-align: left;
+    }
+  }
+
+  &__factories__title-line {
+    width: 40%;
+    height: 2px;
+    background-color: color(green);
+    
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__factories-title {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.025em;
+    max-width: 700px;
+    margin: 0 10px;
+
+    @include tabletScreen {
+      font-size: 20px;
+    }
+
+    @include ipadScreen {
+      position: relative;
+      max-width: 100%;
+      margin: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: color(green);
+        height: 2px;
+        width: 150px;
+        bottom: -20px;
+        right: 0;
+        left: 0;
+        margin: 0 auto 0;
+      }
+    }
+
+    @include phoneScreen {
+      margin-bottom: 8%;
+    }
+  }
+
+  &__factories-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+
+    @include phoneScreen {
+      flex-direction: column;
+      margin-bottom: 12%;
+    }
+  }
+
+  &__factories-item:hover  &__factories__images-box {
+    box-shadow: 0px 0px 8px #088122;
+  }
+
+  &__factories__images-box {
+    width: 45%;
+    margin-right: 5%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+    @include phoneScreen {
+     width: 100%;
+     margin: 0 0 5% 0;
+    }
+  }
+
+  &__factories__info-box {
+    width: 50%;
+
+    @include phoneScreen {
+      width: 100%;
+     }
+  }
+
+  &__factories__info-year {
+    color: #363636;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 57px;
+    letter-spacing: 0.025em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 22%;
+      top: 30px;
+      height: 2px;
+      background-color: #363636;
+      width: 80px;
+
+      @media (max-width: 1280px) {
+        left: 28%;
+      }
+
+      @include ipadScreen {
+        left: 35%;
+      }
+
+      @include phoneScreen {
+        left: 23%;
+      }
+
+      @media (max-width: 460px) {
+        left: 30%;
+      }
+    }
+
+    @include ipadScreen {
+      font-size: 40px;
+    }
+
+  }
+
+  &__factories__info-title {
+    margin: 4% 0 0 0;
+    font-size: 22px;
+    font-weight: 600;
+
+    @media (max-width: 1280px) {
+      margin: 0;
+    }
+
+    @include phoneScreen {
+      margin: 10px 0;
+    }
+  }
+
+  &__factories__info-text {
+    margin-bottom: 5px;
+  }
+
+  &__factories__info__button-box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.3s;
+    margin-top: 20px;
+    transition: all 0.3s;
+
+    @media (max-width: 1280px) {
+      margin: 10px 0 0 0;
+    }
+
+    @include phoneScreen {
+      justify-content: left;
+    }
+
+    &:hover {
+      margin-left: 12px;
+    }
+  }
+
+  &__factories__info__button-box:hover &__factories__info-button {
+    color: color(green);
+  }
+
+  &__factories__info__button-box:hover .fa-arrow-right-long {
+    color: color(green);
+    border-color: color(green);
+  }
+
+  &__factories__info-button {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    color: color(dark);
+    font-weight: 600;
+    padding-right: 20px;
+    transition: all 0.3s;
+  }
+
+  &__factories__info__button-box .fa-arrow-right-long {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    border: 2px solid color(dark);
+    transition: all 0.3s;
+  }
+
+  &__factories__item-second {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    transition: all 0.3s;
+
+    @include phoneScreen {
+      flex-direction: column;
+      margin-bottom: 12%;
+    }
+  }
+
+  &__factories__item-second:hover  &__factories__images__box-second {
+    box-shadow: 0px 0px 8px #088122;
+  }
+
+  &__factories__images__box-second {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+
+    @include phoneScreen {
+      width: 100%;
+      order: 0;
+      margin-bottom: 5%;
+    }
+  }
+
+  &__factories__info__box-second {
+    width: 45%;
+    margin-right: 5%;
+    text-align: right;
+
+    @include phoneScreen {
+      width: 100%;
+      margin-right: 0;
+      text-align: left;
+      order: 1;
+    }
+  }
+
+  &__factories__info__year-second {
+    color: #363636;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 57px;
+    letter-spacing: 0.025em;
+    position: relative;
+
+    span {
+      width: 80px;
+      height: 2px;
+      background-color: color(green);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 25%;
+      top: 30px;
+      height: 1px;
+      background-color: #363636;
+      width: 80px;
+
+      @media (max-width: 1280px) {
+        right: 28%;
+      }
+
+      @include ipadScreen {
+        right: 40%;
+      }
+
+      @include phoneScreen {
+        left: 30%;
+        right: 0;
+        height: 1.5px;
+      }
+    }
+
+    @include ipadScreen {
+      font-size: 40px;
+    }
+  }
+
+  &__factories__info__title-second {
+    margin: 4% 0 0 0;
+    font-size: 22px;
+    font-weight: 600;
+
+    @media (max-width: 1280px) {
+      margin: 0;
+    }
+
+    @include phoneScreen {
+      margin: 10px 0;
+    }
+  }
+
+  &__factories__info__text-second {
+    margin-bottom: 5px;
+  }
+
+  &__factories__info__button__box-second {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: all 0.3s;
+
+    @include phoneScreen {
+      justify-content: left;
+    }
+
+    &:hover {
+      margin-right: 12px;
+    }
+  }
+
+  &__factories__info__button-second {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    color: color(dark);
+    font-weight: 400;
+    padding-right: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  &__factories__info__button__box-second .fa-arrow-right-long {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    border: 2px solid color(dark);
+    transition: all 0.3s;
+  }
+
+  &__factories__info__button__box-second:hover &__factories__info-button {
+    color: color(green);
+  }
+
+  &__factories__info__button__box-second:hover .fa-arrow-right-long {
+    color: color(green);
+    border-color: color(green);
+  }
+
+  // Наши Лидеры
+  &__leaders-container {
+    display: block;
+  }
+
+  &__about__img-box {
+  }
+
+  &__leaders-content {
+
+  }
+
+  &__leaders-title {
+    margin-bottom: 50px;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__leaders__item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+    }
+  }
+
+  &__leaders-item {
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    background-color: rgba(221, 229, 214, 0.23);
+    margin: 0 auto 50px;
+    border-top: 3px solid color(green);
+
+    &:hover {
+      background-color: rgba(233, 234, 223, 0.619);
+      box-shadow: 0px 0px 10px #000000;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 10px 30px;
+    }
+
+    @media (max-width: 892px) {
+      width: 300px;
+    }
+
+    @media (max-width: 672px) {
+      width: 100%;
+    }
+  }
+
+  &__leaders__img-box {
+    width: max-content;
+    height: 400px;
+    margin: 0 auto;
+
+    @media (max-width: 892px) {
+      width: 300px;
+      height: max-content;
+    }
+  }
+
+  &__leaders__info-box {
+    background-color: color(green);
+    padding: 30px 10px;
+
+    @media (max-width: 892px) {
+      padding: 20px;
+    }
+  }
+
+  &__leaders__info-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    color: color(white);
+    text-align: center;
+  }
+
+  // Наши менеджеры
+  &__managers__container {
+    display: block;
+  }
+
+  &__about__img-box {
+    height: auto;
+  }
+
+  &__managers__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 45px;
+
+    @media (max-width: 500px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 30px;
+    }
+  }
+
+  &__managers__search-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    background-color: #f3f3f3;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #000000b3;
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: center;
+      max-width: 60%;
+    }
+
+    @include phoneScreen {
+      max-width: 80%;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 100%;
+      padding: 20px 10px;
+    }
+  }
+
+  &__managers__search-item {
+
+    @include ipadScreen {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  &__managers__search-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145%;
+    color: color(dark);
+    padding: 0 0 8px 0;
+  }
+
+  &__managers__search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #2121219c;
+    width: 100%;
+    transition: all 0.2s;
+
+    &::placeholder { 
+      color: #3131318e;
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: color(green);
+      box-shadow: 0px 0px 2px #078707b3;
+    }
+  }
+
+  &__managers__search-button {
+    margin: 0 auto;
+  }
+
+
+  &__managers__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__managers-item {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-bottom: 5px solid transparent;
+    margin: 0 20px 30px 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px #000000;
+      border-color: color(green);
+    }
+
+    @include ipadScreen {
+      width: 300px;
+      margin: 0 10px 25px 10px;
+    }
+
+    @media (max-width: 500px) {
+      width: 300px;
+      margin: 0 auto 25px;
+    }
+  }
+
+  &__managers__img-box {
+    margin: 0 auto;
+
+    @media (max-width: 500px) {
+      width: 300px;
+    }
+  }
+
+  &__managers__info-box {
+    background-color: color(green);
+    padding: 30px 10px;
+
+    @media (max-width: 892px) {
+      padding: 20px;
+    }
+  }
+
+  &__managers__info-title {
+    color: color(white);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2.5%;
+  }
+
+  &__managers__info-text {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+
+  // Наши вакансии
+  &__vacancies-container {
+  }
+
+  &__about__img-box {
+  }
+
+  &__vacancies__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 45px;
+
+    @media (max-width: 500px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 30px;
+    }
+  }
+
+  &__vacancies__search-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    background-color: #f3f3f3;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #000000b3;
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: center;
+      max-width: 60%;
+    }
+
+    @include phoneScreen {
+      max-width: 80%;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 100%;
+      padding: 20px 10px;
+    }
+  }
+
+  &__vacancies__search-item {
+
+    @include ipadScreen {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  &__vacancies__search-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145%;
+    color: color(dark);
+    padding: 0 0 8px 0;
+  }
+
+  &__vacancies__search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #2121219c;
+    width: 100%;
+    transition: all 0.2s;
+
+    &::placeholder { 
+      color: #3131318e;
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: color(green);
+      box-shadow: 0px 0px 2px #078707b3;
+    }
+  }
+
+  &__vacancies__search-button {
+    margin: 0 auto;
+  }
+
+  &__vacancies__vacancy-container {
+    padding: 0 0 5px 0;
+  }
+
+  &__vacancies__vacancy-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        background: #D4DDC9;
+        border-color: color(green);
+        box-shadow: 0 0 5px rgb(48, 53, 48);
+      }
+    }
+
+    @include ipadScreen {
+      border-color: color(green);
+      border-color: color(green);
+    }
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: start;
+      padding: 20px 10px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__vacancies__vacancy-item:hover  &__vacancies__vacncy-button {
+      background-color: color(green);
+    }
+  }
+
+  &__vacancies__vacancy-title-box {
+    max-width: 70%;
+
+    @include ipadScreen {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__vacancies__vacancy-title {
+    font-size: 25px;
+    color: #212121;
+    letter-spacing: 2.5%;
+    margin-bottom: 12px;
+  }
+
+  &__vacancies__vacancy-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121b5;
+    margin-bottom: 8px;
+  }
+
+  &__vacancies__vacancy-text {
+    font-size: 16px;
+  }
+
+  &__vacancies__button-box {
+
+    @include ipadScreen {
+      margin: 0 auto;
+    }
+  }
+
+  &__vacancies__vacncy-button {
+    background: rgba(51, 149, 58, 0.6);
+    width: 240px;
+    height: 50px;
+    transition: all 0.3s;
+
+    @include ipadScreen {
+      background-color: color(green);
+    }
+  }
+
+  &__vacancies__bottom-box {
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+
+  &__vacancies__bottom-title {
+    margin-bottom: 15px;
+
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
+  }
+
+  &__vacancies__bottom-text {
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  &__vacancies__bottom-btn {
+    text-align: center;
+    margin: 0 auto;
+    width: 240px;
+    height: 50px;
+    transition: all 0.3s;
+    
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+    }
+  }
+  
+}
+
+
