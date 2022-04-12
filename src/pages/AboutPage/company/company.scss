@@ -10,7 +10,7 @@
 
   // Навигация Табов
   &__nav {
-    margin: 0 auto 50px;
+    margin: 0 auto 100px;
     max-width: 1000px;
 
     @media (max-width:1380px) {
@@ -131,7 +131,7 @@
   &__about__history-box {
     background-color: color(white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     padding: 50px;
     text-align: center;
     margin: 0 auto 100px;
@@ -144,6 +144,7 @@
 
   &__about__history-title {
     margin: 0 auto 25px;
+    font-size: 45px;
   }
 
   &__about-text {
@@ -630,7 +631,7 @@
     transition: all 0.3s;
   }
 
-  &__factories__info__button__box-second:hover &__factories__info-button {
+  &__factories__info__button__box-second:hover &__factories__info__button-second {
     color: color(green);
   }
 

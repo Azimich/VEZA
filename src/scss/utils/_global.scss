@@ -247,8 +247,10 @@ section {
   width: 320px;
   height: 51px;
   background: #33953A;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.3s;
+  color: color(white);
+  letter-spacing: 2.5%;
 }
 
 .little__button {

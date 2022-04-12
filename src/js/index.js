@@ -5,6 +5,7 @@ import { initSwiper } from './_swiper';
 import { initEquipmentpage } from './_equipmentpage';
 import { initTabssizes } from './_tabssizes';
 import { initVacancy } from './_vacancy';
+import { initResources } from './_resources';
 
 (function () {
   if (typeof NodeList !== 'undefined' && NodeList.prototype && !NodeList.prototype.forEach) {
@@ -18,7 +19,8 @@ import { initVacancy } from './_vacancy';
     initEquipmentpage();
     initTabssizes();
     initVacancy();
-    
+    initResources();
+
   } catch (err) {
     console.log(err);
   }

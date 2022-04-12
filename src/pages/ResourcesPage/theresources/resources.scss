@@ -1,0 +1,317 @@
+.resources {
+  margin: 180px auto 150px;
+
+  @include phoneScreen {
+    margin: 150px auto 100px;
+  }
+
+  &__container {
+  }
+
+  &__nav {
+    margin: 0 auto 100px;
+    max-width: 1000px;
+
+    @media (max-width:1380px) {
+      max-width: 800px;
+    }
+  }
+
+  &__nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__nav__menu-item {
+
+    @media (max-width: 650px) {
+      width: 80%;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__nav__menu-item-link {
+    color: #313131;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 0 15px 0;
+    position: relative;
+
+    &.active {
+      color: color(green);
+
+      @media (max-width: 650px) {
+        color: color(white);
+        background-color: color(green) !important;
+      } 
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -16%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: transparent;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    &.active::after {
+      background-color: color(green);
+    }
+
+    @media (max-width: 650px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: rgba(79, 102, 79, 0.795) !important;
+      color: color(white);
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+
+  &__nav-line {
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.247);
+    margin-top: 15px;
+    border-radius: 5px;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 400px;
+    margin: 0 auto 80px;
+    padding: 0;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: color(lightgreen);
+    }
+
+    @include ipadScreen {
+      width: 320px;
+      margin: 0 auto 50px;
+      border-radius: 5px;
+    }
+  }
+
+
+// TABS
+  &__tabs {
+  }
+
+  // BIM
+  &__BIM-tab {
+    display: none;
+  }
+
+  &__BIM-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  &__BIM-item {
+    width: 300px;
+    margin: 0 30px 50px 30px;
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s;
+    overflow: hidden;
+    padding: 1px;
+    border-radius: 10px;
+
+    @media (min-width: 768px) {
+      &:hover {
+        border-color: #F89A00;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #21212182;
+      }
+    }
+
+    @include ipadScreen {
+      margin:  0 15px 35px 15px;
+      border-color: #F89A00;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #2121213c;
+    }
+
+    @media (max-width: 500px) {
+      margin: 0 0 35px 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__BIM-item:hover &__BIM__item-box {
+      border-radius: 0;
+      box-shadow: 0 0 3px transparent;
+    }
+
+    &__BIM-item:hover &__BIM-text {
+      color: #F89A00;
+    }
+  }
+
+  &__BIM__item-box {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #21212157;
+    transition: all 0.3s;
+
+    @include ipadScreen {
+      border-radius: 0;
+    }
+  }
+
+  &__BIM__img-box {
+    height: 230px;
+    width: max-content;
+  }
+
+  &__BIM__info-box {
+    background-color: #F89A00;
+    padding: 10px;
+  }
+
+  &__BIM-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 145%;
+    color: color(white);
+    text-align: center;
+  }
+
+  &__BIM-text {
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  // Вопросы
+  &__faq-tabs {
+  }
+
+  &__faq-container {
+  }
+
+  &__faq__search-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    background: #F5F5F5;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    padding: 50px 30px;
+    border-radius: 10px;
+
+    @include ipadScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__faq-text {
+    font-size: 20px;
+    color: color(dark);
+  }
+
+  &__faq-input {
+    width: 50%;
+
+    @include ipadScreen {
+      margin: 30px 0;
+      width: 100%;
+    }
+
+    @include SEScreen {
+      margin: 20px 0;
+    }
+  }
+
+  &__faq-button {
+
+    &:hover {
+      background-color: rgb(9, 103, 9);
+    }
+  }
+
+  &__faq__accordions-container {
+
+  }
+
+  &__faq__accordion-item {
+    position: relative;
+    box-shadow:  0 0 2px #606060;
+    width: 100%;
+    margin-bottom: 35px;
+    max-height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &.active {
+      max-height: 100vh;
+
+      @media (max-width: 800px) {
+        max-height: 100vh;
+      }
+    }
+  }
+
+  .icon-arrow {
+    transition: 0.3s;
+  }
+
+  &__faq__accordion-item.active .icon-arrow {
+    transform: rotate(-90deg);
+  }
+
+  &__faq__accordion-title {
+    background: #dbdbdb;
+    cursor: pointer;
+    font-size: 20px;
+    color: color(dark);
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      text-align: right;
+    }
+  }
+
+  &__faq__accordion-content {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 150%;
+    background: #eaeaea;
+    color: color(dark);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 0 0 5px 5px;
+  }
+
+}
