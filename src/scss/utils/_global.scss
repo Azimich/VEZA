@@ -18,6 +18,7 @@ body {
   }
 }
 
+
 ul{
   list-style: none;
 }
@@ -53,9 +54,11 @@ h1,h2,h3,h4,h5{
 section {
   max-width: 2000px;
   margin: 0 auto;
+  flex: 1 1 auto;
 }
 
 .wrapper {
+  min-height: 100%;
   max-width: 1500px;
   padding: 0 90px;
   margin: auto;
@@ -118,7 +121,7 @@ section {
 .h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 70px;
   letter-spacing: 0.015em;
   text-transform: uppercase;

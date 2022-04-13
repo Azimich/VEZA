@@ -61,7 +61,17 @@
 @import '../pages/AboutPage/company/company';
 @import '../pages/AboutPage/footer/footer';
 
-//Стили страницы О компании
+//Стили страницы Ресурсы
 @import '../pages/ResourcesPage/header/header';
 @import '../pages/ResourcesPage/theresources/resources';
 @import '../pages/ResourcesPage/footer/footer';
+
+//Стили страницы Контакты
+@import '../pages/ContactsPage/header/header';
+@import '../pages/ContactsPage/information/information';
+@import '../pages/ContactsPage/footer/footer';
+
+//Стили Второй страницы Наши заводы
+@import '../pages/ContactsPage/InformationPage/header/header';
+@import '../pages/ContactsPage/InformationPage/factories/factories';
+@import '../pages/ContactsPage/InformationPage/footer/footer';

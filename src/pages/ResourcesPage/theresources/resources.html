@@ -11,18 +11,18 @@
        <!-- Навигация Табов -->
       <nav class="resources__nav">
         <ul class="resources__nav__menu tabs">
-          <li class="resources__nav__menu-item"><a href="#" class="resources__nav__menu-item-link active">BIM</a></li>
-          <li class="resources__nav__menu-item"><a href="#" class="resources__nav__menu-item-link">Вопросы</a></li>
-          <li class="resources__nav__menu-item"><a href="#" class="resources__nav__menu-item-link">Анкетирование</a></li>
-          <li class="resources__nav__menu-item"><a href="#" class="resources__nav__menu-item-link">Документация</a></li>
-          <li class="resources__nav__menu-item"><a href="#" class="resources__nav__menu-item-link">Обучение</a></li>
+          <li class="resources__nav__menu-item"><a href="#BIM" class="resources__nav__menu-item-link active">BIM</a></li>
+          <li class="resources__nav__menu-item"><a href="#faq" class="resources__nav__menu-item-link">Вопросы</a></li>
+          <li class="resources__nav__menu-item"><a href="#questionnaire" class="resources__nav__menu-item-link">Анкетирование</a></li>
+          <li class="resources__nav__menu-item"><a href="#documentation" class="resources__nav__menu-item-link">Документация</a></li>
+          <li class="resources__nav__menu-item"><a href="#education" class="resources__nav__menu-item-link">Обучение</a></li>
         </ul>
         <div class="resources__nav-line"></div>
       </nav>
       <!-- TABS -->
       <div class="resources__tabs">
         <!-- BIM -->
-        <div class="resources__BIM-tab">
+        <div class="resources__BIM-tab tab__cont" id="BIM">
           <a href="#" class="resources__button middle__button">Скачать библиотеку BIM-моделей</a>
           <div class="resources__BIM-container">
             <a href="#" class="resources__BIM-item">
@@ -89,7 +89,7 @@
         </div>
 
         <!-- Вопросы -->
-        <div class="resources__faq-tabs">
+        <div class="resources__faq-tabs tab__cont hide" id="faq">
           <div class="resources__faq-container">
             <div class="resources__faq__search-box">
               <p class="resources__faq-text">Ключевые слова:</p>
@@ -172,6 +172,80 @@
             </div>
           </div>
         </div>
+
+        <!-- Анкетирование -->
+        <div class="resources__questionnaire-tabs tab__cont hide" id="questionnaire">
+          <div class="resources__questionnaire-container">
+            <div class="resources__questionnaire__search-box">
+              <p class="resources__questionnaire-text">Ключевые слова:</p>
+              <input placeholder="Поиск" type="text" class="resources__questionnaire-input input">
+              <a href="#" class="resources__questionnaire-button little__button">Поиск</a>
+            </div>
+            <div class="resources__questionnaire-questionnaire">
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-1.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-2.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-3.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-4.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-5.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+              <a href="#" class="resources__questionnaire__questionnaire-item">
+                <div class="resources__questionnaire__questionnaire__img-box">
+                  <img src="../assets/images/questionnaire-6.png" alt="questionnaire">
+                </div>
+                <h3 class="resources__questionnaire__questionnaire-title">Название анкетирования</h3>
+                <p class="resources__questionnaire__questionnaire-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Документация -->
+        <div class="resources__documentation__tabs tab__cont hide" id="documentation">
+          <div class="resources__documentation__content">
+            <div class="resources__documentation__img-box">
+              <img src="../assets/images/error-tabs.svg" alt="error">
+            </div>
+          </div>
+        </div>
+
+         <!-- Обучение -->
+        <div class="resources__education__tabs tab__cont hide" id="education">
+          <div class="resources__education__content">
+            <div class="resources__education__img-box">
+              <img src="../assets/images/error-tabs.svg" alt="error">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
