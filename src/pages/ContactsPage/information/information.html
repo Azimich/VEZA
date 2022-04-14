@@ -340,8 +340,21 @@
 
         <!-- Техническая Характеристика -->
         <div class="information__support-container tab__cont hide" id="information__support">
-          <div class="information__support__form-container">
-            <div class="information__support-form">
+          <form class="information__form" action="./mail.php" method="post" novalidate>
+            <input type="text" name="name" id="username" placeholder="Имя" class="information__form-name">
+            <div class="information__form-email-box">
+              <input type="email" name="email" id="mail" placeholder="Почта *" class="information__form-email require">
+              <input type="tel" name="tel" id="telephone" placeholder="Телефон" class="information__form-tel">
+            </div>
+            <textarea name="message" id="text" placeholder="Ваш вопрос"></textarea>
+            <div class="information__form-checkbox">
+              <input type="checkbox" name="check" id="checkbox" class="require">
+              <label for="checkbox">Согласие на обработку персональных данных *</label>
+            </div>
+            <button type="submit" class="information__form-button">Оставить заявку</button>
+          </form>
+          <!-- <div class="information__support__form-container">
+            <form id="form" class="information__support-form">
               <label class="information__support-label" for="#">Выбериpму сообщения*</label>
               <input type="text" class="information__support-input input">
               <div class="information__support__input-container">
@@ -391,14 +404,22 @@
                   <label class="information__support-label" for="#">Задайте свой вопрос или опишите ваше предложение</label>
                   <textarea name="name" id="#" cols="100" rows="10"></textarea>
                 </div>
-                <div class="information__support__textarea-item">
-                  <label class="information__support-label" for="#">Прекрепите файлы</label>
-                  <textarea name="name" id="#" cols="100" rows="10"></textarea>
+                <div class="information__support__file-container">
+                  <a href="#" class="information__support-button little__button">Отправить</a>
+                  <div class="information__support__file-box">
+                    <div class="information__support__add-file">+</div>
+                    <p class="information__support__add__text">Загрузить файл</p>
+                    <input type="file" class="information__support__add__file-click">
+                  </div>
                 </div>
               </div>
-              <a href="#" class="information__support-button">Отправить</a>
-            </div>
+              
+            </form>
             <div class="information__support__form-right">
+              <div class="information__support__top__social-box">
+                <a href="#" class="information__support-phone"><i class="fa-solid fa-phone"></i>+7 495 989-47-20</a>
+                <a href="#" class="information__support-phone"><i class="fa-solid fa-envelope"></i>msk@veza.ru</a>
+              </div>
               <div class="information__support__search-box">
                 <div class="information__support__search-item">
                   <label for="#" class="information__support__search-label">Должность</label>
@@ -413,11 +434,31 @@
                   <input type="text" placeholder="Введите напрвление" class="information__support__search-input input">
                 </div>
                 <div class="information__support__search-item">
-                  <a href="#" class="information__support__search-button">Поиск</a>
+                  <a href="#" class="information__support__search-button little__button">Поиск</a>
+                </div>
+              </div>
+              <div class="information__support__chat-box">
+                <div class="information__support__chat__box-item">
+                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
+                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
+                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
+                </div>
+                <div class="information__support__chat__box-item">
+                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
+                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
+                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
+                </div>
+                <div class="information__support__chat__box-item">
+                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
+                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
+                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

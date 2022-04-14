@@ -449,17 +449,18 @@
   }
 
 
-  .resources__documentation__img-box {
+  &__documentation__img-box {
     width: 100%;
     height: 500px;
     border-radius: 20px;
     margin: 0 auto;
   }
 
-  .resources__education__img-box {
+  &__education__img-box {
     width: 100%;
     height: 500px;
     border-radius: 20px;
     margin: 0 auto;
   }
+
 }

@@ -409,10 +409,56 @@
               <h2 class="company__vacancies__bottom-title h2">НЕ НАШЛИ ПОДХОДЯЩУЮ ВАКАНСИЯ?</h2>
               <p class="company__vacancies__bottom-text text">Присылайте нам свое резюме, и мы свяжемся с Вами, как только появится подходящая    позиция для Вас!
               </p>
-              <a href="#" class="company__vacancies__bottom-btn little__button">Отправить резюме</a>
+              <a href="#popup__form" class="company__vacancies__bottom-btn little__button popup-links">Отправить резюме</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup__form">
+    <div class="popup__body">
+      <div class="popup__content">
+        <div class="close-popup">&times;</div>
+        <h1 class="popup__heading">оформить заявку</h1>
+        <p class="popup__text">
+          Хотите стать частью нашей команды? Или нашли ваканcию, которая вам подходит ?
+          Оставьте Ваши данные и мы обязательно свяжемся с Вами!</p>
+        <form action="./mail.php" method="POST" id="form" novalidate>
+          <input type="text" placeholder="Имя" name="name">
+          <div class="email-tel-box">
+            <input type="email" name="email" id="user-mail" placeholder="Почта *" class="email required">
+            <input type="tel" name="tel" id="user-phone" placeholder="Телефон">
+          </div>
+          <textarea name="message" id="text" placeholder="Другое описание"></textarea>
+          <fieldset class="inputfile-box">
+            <span class="file-cleaner"></span>
+            <input type="file" name="file" id="upload" class="inputfile" accept=".pdf,.docx">
+            <label for="upload" class="label-file">Ваше резюме</label>
+            <p>Расскажите больше о себе. Прикрепите Ваши резюме или портфолио.</p>
+          </fieldset>
+          <div class="checkbox-box">
+            <input type="checkbox" id="chbox" class="required">
+            <label for="chbox">Согласие на обработку персональных данных *</label>
+          </div>
+          <button type="submit" class="submit">Оставить заявку</button>
+        </form>
+      </div>
+   </div>
+  </div>
+  <div class="success">
+    <div class="success__popup-wrapper">
+      <div class="success__popup-content">
+        <div class="success-checkmark">
+          <div class="check-icon">
+            <span class="icon-line line-tip"></span>
+            <span class="icon-line line-long"></span>
+            <div class="icon-circle"></div>
+            <div class="icon-fix"></div>
+          </div>
+        </div>
+        <p class="success__content-text">Отправлено!</p>
       </div>
     </div>
   </div>

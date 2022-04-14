@@ -423,7 +423,415 @@
   &__support-container {
     
   }
+ 
+  &__support__form-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  &__support-form {
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px #212121;
+    padding: 25px;
+    width: 40%;
+    border-radius: 20px;
+  }
+
+  &__support-label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &__support-input {
+    margin-bottom: 20px;
+
+    &:first-child {
+      width: 70%;
+    }
+  }
+
+  &__support__input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__support__inputs__left-block {
+  }
+
+  &__support__input-box {
+  }
+
+  &__support__inputs__right-block {
+
+  }
+
+  &__support__textarea-box {
+  }
+
+  &__support__textarea-item {
+    overflow: hidden;
+
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      padding: 20px 10px;
+      margin-bottom: 25px;
+
+      &:focus {
+        border-color: #33953A;
+      }
+    }
+  }
+
+  &__support-button {
+  }
+
+  &__support__form-right {
+    width: 55%;
+  }
+
+  &__support__top__social-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__support-phone {
+    color: color(dark);
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-right: 20px;
+
+    i {
+      color: color(green);
+      padding-right: 10px;
+    }
+  }
+
+  &__support__search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px #828282;
+  }
+
+  &__support__search-item {
+  }
+
+  &__support__search-label {
+    margin-bottom: 8px;
+  }
+
+  &__support__search-input {
+    width: 85%;
+
+    &::placeholder { 
+      color: #3131318e;
+      font-size: 12px;
+    }
+  }
+
+  &__support__search-button {
+    width: 150px;
+  }
+
+  &__support__chat-box {
+  }
+
+  &__support__chat__box-item {
+    background: #D9DCD4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgb(193, 208, 195);
+      box-shadow: 0 0 5px #2d2d2d;
+    }
+  }
+
+  &__support__chat__item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.025em;
+    color: color(dark);
+  }
+
+  &__support__chat__item-subtitle {
+    color: color(dark);
+    margin: 10px 0;
+  }
+
+  &__support__chat__item-text {
+    color: color(dark);
+  }
+
+  &__support__file-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__support__file-box {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 0 2px #979797;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  &__support__add-file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: color(green);
+    font-weight: 500;
+    line-height: auto;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #33953A;
+    border-radius: 50%;
+    
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__support__add__file-click {
+    position: absolute;
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+  }
   
+  &__support__chat__item-button {
+    margin: 15px 0 8px 0;
+  }
+
+
+
+
+
+
+  &__form {
+    margin: 30px auto 80px;
+    max-width: 532px;
+
+    @include phoneScreen{
+      margin: 16px auto 48px;
+    }
+  }
+
+  input{
+    padding: 8px 0 8px 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: color(black);
+    border-bottom: 1px solid #BCBDC0;
+    font-family: inherit;
+    transition: border .6s;
+
+    &::placeholder{
+      color: #6C6D70;
+    }
+
+    &:focus{
+      border-width: 2px;
+      border-color: color(lightgreen2);
+    }
+
+    &:active{
+      border-bottom: 2px solid #BCBDC0;
+    }
+
+    &.error{
+      border-color: red;
+    }
+
+    @include phoneScreen{
+      font-size: 16px;
+    }
+  }
+
+  &__form-name {
+    width: 100%;
+  }
+
+  &__form-email-box {
+    margin: 36px 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phoneScreen{
+      margin: 24px 0;
+      display: block;
+
+      input:first-child{
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__form-email,&__form-tel {
+    width: 256px;
+
+    @include phoneScreen{
+      width: 100%;
+    }
+  }
+
+  textarea{
+    width: 100%;
+    height: 128px;
+    padding: 8px;
+    border: 1px solid #BCBDC0;
+    font-size: 18px;
+    line-height: 24px;
+    color: color(black);
+    transition: border .6s;
+
+    &::placeholder{
+      color: #6C6D70;
+    }
+
+    &:focus{
+      border-width: 2px !important;
+      border-color: color(lightgreen2);
+    }
+
+    @include phoneScreen{
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__form-checkbox {
+    margin: 24px 0 70px;
+    display: flex;
+    align-items: center;
+    
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    label {
+      padding-left: 40px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #010A08;
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border: 2px solid color(black);
+      }
+
+      &.error{
+
+        &::before{
+          border-color: red;
+        }
+      }
+
+      &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        width: 16.67px;
+        height: 16px;
+        background: url("../assets/images/checkbox.svg") no-repeat;
+      }
+    }
+
+    input:checked + label {
+
+      &::before {
+        background-color: color(black);
+        border-color: color(black) !important;
+      }
+
+      &::after {
+        display: block;
+        z-index: 2;
+      }
+    }
+
+    @include phoneScreen{
+      margin: 24px 0 45px;
+
+      label{
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 36px;
+  
+        &::before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+  
+        &::after {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__form-button {
+    width: 100%;
+    height: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid color(black);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    color: color(black);
+
+    &:hover{
+      color: color(white);
+      background-color: color(black);
+    }
+
+    @include phoneScreen{
+      border-width: 2px;
+      font-size: 16px;
+      height: 64px;
+    }
+  }
+
 }
 
 

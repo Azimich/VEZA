@@ -267,12 +267,16 @@ section {
   transition: all 0.3s;
   color: color(white);
   transition: all 0.3s;
+
+  &:hover {
+    background-color: #096709;
+  }
 }
 
 .input {
   padding: 10px;
   border-radius: 5px;
-  border: 1.5px solid #2121219c;
+  border: 1.5px solid #9494949c;
   width: 100%;
   transition: all 0.2s;
 
