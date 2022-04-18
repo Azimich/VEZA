@@ -6,7 +6,7 @@ export const initForms = () => {
 
   document.addEventListener("DOMContentLoaded", function() {
 
-      const popupForm = document.getElementById("form");
+      const popupForm = document.querySelector(".information__form");
       popupForm.addEventListener("submit", formSend);
 
       async function formSend(e) {
@@ -56,9 +56,9 @@ export const initForms = () => {
             for (let index = 0; index < formReq.length; index++) {
               const input = formReq[index];
               formRemoveError(input);
-              formRemoveError(input.nextElementSibling);
+              // formRemoveError(input.nextElementSibling);
 
-                if(input.classList.contains('email')){
+                if(input.classList.contains('information__form-email')){
                     if (emailTest(input)){
                       formAddError(input);
                       error++;
@@ -72,7 +72,7 @@ export const initForms = () => {
 
                 else{
                     if(input.value === ''){
-                      formAddError(input.nextElementSibling);
+                      formAddError(input);
                       error++; 
                     }
                 }
@@ -84,72 +84,72 @@ export const initForms = () => {
 
   /* Валидация и отправка  формы Футера  */
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const footerForm = document.querySelector(".contacts__form");
-      footerForm.addEventListener("submit", formSend);
+  //   document.addEventListener("DOMContentLoaded", function() {
+  //     const footerForm = document.querySelector(".contacts__form");
+  //     footerForm.addEventListener("submit", formSend);
 
-        async function formSend(e) {
-          e.preventDefault();
+  //       async function formSend(e) {
+  //         e.preventDefault();
 
-          let error = formValidate(footerForm);
-          let formData = new FormData(footerForm);
+  //         let error = formValidate(footerForm);
+  //         let formData = new FormData(footerForm);
 
-          console.log(error)
+  //         console.log(error)
 
-          if (error === 0){
+  //         if (error === 0){
 
-              let response = await fetch('mail.php', {
-                 method: 'POST',
-                 body: formData 
-              });
-              if(response.ok){
-                  sended();
-                  footerForm.reset(); 
-                  setTimeout(() => {
-                    sendedRemove();
-                  }, 3000);
-              }else{
-                  alert('Ошибка!')
-              }
+  //             let response = await fetch('mail.php', {
+  //                method: 'POST',
+  //                body: formData 
+  //             });
+  //             if(response.ok){
+  //                 sended();
+  //                 footerForm.reset(); 
+  //                 setTimeout(() => {
+  //                   sendedRemove();
+  //                 }, 3000);
+  //             }else{
+  //                 alert('Ошибка!')
+  //             }
               
-          }else {
+  //         }else {
 
-          }  
-        }
+  //         }  
+  //       }
 
-        function formValidate (footerForm){
-          let error = 0;
+  //       function formValidate (footerForm){
+  //         let error = 0;
 
-          let formRequire = document.querySelectorAll(".require");
+  //         let formRequire = document.querySelectorAll(".require");
 
-          for (let index = 0; index < formRequire.length; index++) {
-              const input = formRequire[index];
-              formRemoveError(input);
+  //         for (let index = 0; index < formRequire.length; index++) {
+  //             const input = formRequire[index];
+  //             formRemoveError(input);
 
-              if(input.classList.contains('contacts__form-email')){
-                  if (emailTest(input)){
-                      formAddError(input);
-                      error++;
-                  }
-              }else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
-                  formAddError(input.nextElementSibling);
-                  error++;
-              }else if(input.value === ''){
-                      formAddError(input);
-                      error++;  
-                  }
+  //             if(input.classList.contains('contacts__form-email')){
+  //                 if (emailTest(input)){
+  //                     formAddError(input);
+  //                     error++;
+  //                 }
+  //             }else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
+  //                 formAddError(input.nextElementSibling);
+  //                 error++;
+  //             }else if(input.value === ''){
+  //                     formAddError(input);
+  //                     error++;  
+  //                 }
               
-        }
-          return error;
+  //       }
+  //         return error;
 
-    }
+  //   }
 
 
       
       
       
 
-   });
+  //  });
 
     const popup = document.querySelector('.popup');
 
@@ -172,7 +172,7 @@ export const initForms = () => {
     const sendedText = document.querySelector('.success');
 
     function sended() {
-        sendedText.classList.add('sended');
+      sendedText.classList.add('sended');
     }
     
     function sendedRemove() {

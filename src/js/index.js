@@ -7,7 +7,6 @@ import { initTabssizes } from './_tabssizes';
 import { initVacancy } from './_vacancy';
 import { initResources } from './_resources';
 import { initForms } from './_forms';
-import { initHelpers } from './_helpers';
 import { initPopup } from './_popup';
 
 
@@ -22,10 +21,9 @@ import { initPopup } from './_popup';
     initSwiper();
     initEquipmentpage();
     initTabssizes();
-    initVacancy();
+    // initVacancy();
     initResources();
     initForms();
-    initHelpers();
     initPopup();
 
   } catch (err) {

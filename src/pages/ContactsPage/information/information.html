@@ -11,14 +11,13 @@
       <!-- Навигация Табов -->
       <nav class="information__nav">
         <ul class="information__nav__menu tabs">
-          <li class="information__nav__menu-item"><a href="#information__contacts" class="information__nav__menu-item-link active">Контакты</a></li>
-          <li class="information__nav__menu-item"><a href="#information__support" class="information__nav__menu-item-link">Техническая поддержка</a></li>
+          <li class="information__nav__menu-item"><a href="contacts-page.html" class="information__nav__menu-item-link active">Контакты</a></li>
+          <li class="information__nav__menu-item"><a href="support-page.html" class="information__nav__menu-item-link">Техническая поддержка</a></li>
         </ul>
         <div class="information__nav__menu-line"></div>
       </nav>
       <h1 class="information__title h1">Свяжитесь с нами</h1>
       <p class="information__contacts-subtitle">Чтобы получить ответы на ваши вопросы и быть в курсе всего происходящего</p>
-      <!-- Табы -->
       <div class="information__tabs-container">
         <!-- Контакты -->
         <div class="information__contacts-container tab__cont" id="information__contacts">
@@ -336,129 +335,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Техническая Характеристика -->
-        <div class="information__support-container tab__cont hide" id="information__support">
-          <form class="information__form" action="./mail.php" method="post" novalidate>
-            <input type="text" name="name" id="username" placeholder="Имя" class="information__form-name">
-            <div class="information__form-email-box">
-              <input type="email" name="email" id="mail" placeholder="Почта *" class="information__form-email require">
-              <input type="tel" name="tel" id="telephone" placeholder="Телефон" class="information__form-tel">
-            </div>
-            <textarea name="message" id="text" placeholder="Ваш вопрос"></textarea>
-            <div class="information__form-checkbox">
-              <input type="checkbox" name="check" id="checkbox" class="require">
-              <label for="checkbox">Согласие на обработку персональных данных *</label>
-            </div>
-            <button type="submit" class="information__form-button">Оставить заявку</button>
-          </form>
-          <!-- <div class="information__support__form-container">
-            <form id="form" class="information__support-form">
-              <label class="information__support-label" for="#">Выбериpму сообщения*</label>
-              <input type="text" class="information__support-input input">
-              <div class="information__support__input-container">
-                <div class="information__support__inputs__left-block">
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Имя*</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">E-mail*</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Компания</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Страна или Регион</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Номер заказа</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                </div>
-                <div class="information__support__inputs__right-block">
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Фамилия*</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Контактный телефон*</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Должность</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                  <div class="information__support__input-box">
-                    <label class="information__support-label" for="#">Город</label>
-                    <input type="text" class="information__support-input input">
-                  </div>
-                </div>
-              </div>
-              <div class="information__support__textarea-box">
-                <div class="information__support__textarea-item">
-                  <label class="information__support-label" for="#">Задайте свой вопрос или опишите ваше предложение</label>
-                  <textarea name="name" id="#" cols="100" rows="10"></textarea>
-                </div>
-                <div class="information__support__file-container">
-                  <a href="#" class="information__support-button little__button">Отправить</a>
-                  <div class="information__support__file-box">
-                    <div class="information__support__add-file">+</div>
-                    <p class="information__support__add__text">Загрузить файл</p>
-                    <input type="file" class="information__support__add__file-click">
-                  </div>
-                </div>
-              </div>
-              
-            </form>
-            <div class="information__support__form-right">
-              <div class="information__support__top__social-box">
-                <a href="#" class="information__support-phone"><i class="fa-solid fa-phone"></i>+7 495 989-47-20</a>
-                <a href="#" class="information__support-phone"><i class="fa-solid fa-envelope"></i>msk@veza.ru</a>
-              </div>
-              <div class="information__support__search-box">
-                <div class="information__support__search-item">
-                  <label for="#" class="information__support__search-label">Должность</label>
-                  <input type="text" placeholder="Введите должность" class="information__support__search-input input">
-                </div>
-                <div class="information__support__search-item">
-                  <label for="#" class="information__support__search-label">Город</label>
-                  <input type="text" placeholder="Введите город" class="information__support__search-input input">
-                </div>
-                <div class="information__support__search-item">
-                  <label for="#" class="information__support__search-label">Направление</label>
-                  <input type="text" placeholder="Введите напрвление" class="information__support__search-input input">
-                </div>
-                <div class="information__support__search-item">
-                  <a href="#" class="information__support__search-button little__button">Поиск</a>
-                </div>
-              </div>
-              <div class="information__support__chat-box">
-                <div class="information__support__chat__box-item">
-                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
-                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
-                </div>
-                <div class="information__support__chat__box-item">
-                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
-                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
-                </div>
-                <div class="information__support__chat__box-item">
-                  <h4 class="information__support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-                  <p class="information__support__chat__item-subtitle">Моска, Россия</p>
-                  <p class="information__support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-                  <a href="#" class="information__support__chat__item-button little__button">Написать</a>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>

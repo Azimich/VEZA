@@ -1,4 +1,4 @@
-import { popupOpen, popupClose } from './_helpers';
+import { popupOpen, popupClose, bodyLock, bodyUnlock } from './_helpers';
 
 export const initPopup = () =>{
   const popupLinks = document.querySelectorAll('.popup-links');
@@ -11,6 +11,7 @@ export const initPopup = () =>{
         const popupName = popupLink.getAttribute('href').replace('#', '');
         const currentPopup = document.getElementById(popupName);
         popupOpen(currentPopup);
+        bodyLock()
       });
     }
   }
@@ -23,6 +24,7 @@ export const initPopup = () =>{
         e.preventDefault();
         popupClose(el.closest('.popup'));
         document.getElementById('form').reset();
+        bodyUnlock()
         document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
           item.style.borderWidth = '1px';
           item.classList.remove('error');

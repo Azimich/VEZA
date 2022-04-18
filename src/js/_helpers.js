@@ -31,8 +31,8 @@ export function popupClose(popupActive, doUnlock = true) {
   }
 }
 
-function bodyLock() {
-  const lockPadding = document.querySelectorAll('.lock-padding');
+export function bodyLock() {
+  const lockPadding = document.querySelectorAll('lock');
   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
   if (lockPadding.length > 0) {
@@ -49,7 +49,7 @@ function bodyLock() {
   }
 }
 
-function bodyUnlock() {
+export function bodyUnlock() {
 
   document.body.style.paddingRight = '0px';
   document.body.classList.remove('lock');

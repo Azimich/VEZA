@@ -61,6 +61,22 @@
 @import '../pages/AboutPage/company/company';
 @import '../pages/AboutPage/footer/footer';
 
+//Стили страницы Наши Лидеры
+@import '../pages/AboutPage/LeadersPage/header/header';
+@import '../pages/AboutPage/LeadersPage/leaders/leaders';
+@import '../pages/AboutPage/LeadersPage/footer/footer';
+
+
+//Стили страницы Наши Менеджеры
+@import '../pages/AboutPage/ManagersPage/header/header';
+@import '../pages/AboutPage/ManagersPage/managers/managers';
+@import '../pages/AboutPage/ManagersPage/footer/footer';
+
+//Стили страницы Вакансии
+@import '../pages/AboutPage/VacanciesPage/header/header';
+@import '../pages/AboutPage/VacanciesPage/vacancies/vacancies';
+@import '../pages/AboutPage/VacanciesPage/footer/footer';
+
 //Стили страницы Ресурсы
 @import '../pages/ResourcesPage/header/header';
 @import '../pages/ResourcesPage/theresources/resources';
@@ -75,3 +91,13 @@
 @import '../pages/ContactsPage/InformationPage/header/header';
 @import '../pages/ContactsPage/InformationPage/factories/factories';
 @import '../pages/ContactsPage/InformationPage/footer/footer';
+
+//Стили страницы Техподдержка
+@import '../pages/ContactsPage/SupportPage/header/header';
+@import '../pages/ContactsPage/SupportPage/support/support';
+@import '../pages/ContactsPage/SupportPage/footer/footer';
+
+//Стили страницы Входа и Регистрации
+@import '../pages/AuthorizationPage/header/header';
+@import '../pages/AuthorizationPage/authorization/authorization';
+@import '../pages/AuthorizationPage/footer/footer';
