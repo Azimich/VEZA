@@ -1,31 +1,31 @@
 .banner {
   position: relative;
-
   width: 100%;
   height: auto;
   @include backgroundImage(cover);
   background-image: url('../assets/images/banner.png'); 
-  margin: 88px auto 130px;
-  max-width: 1550px;
+  margin: 70px auto 130px;
+  max-width: 2500px;
 
   @include tabletScreen {
-    margin: 75px auto 100px;
+    margin: 60px auto 100px;
     width: 100%;
     height: auto;
     @include backgroundImage(cover);
     background-image: url('../assets/images/banner__ipad.png'); 
   }
 
-  @include ipadScreen {
-    margin-bottom: 70px;
-  }
-
   @include phoneScreen {
     width: 100%;
-    height: auto;
+    height: 500px;
     @include backgroundImage(cover);
     background-image: url('../assets/images/banner__phone.png'); 
-    margin: 70px auto 50px;
+    margin: 65px auto 50px;
+  }
+
+  @media (max-width:400px) {
+    height: 430px;
+    
   }
 
  
@@ -45,41 +45,56 @@
     }
   }
 
+  &__right-element {
+    max-width: 70%;
+
+    @include ipadScreen {
+      max-width: 100%;
+    }
+  }
+
   &__title {
     font-weight: bold;
-    font-size: 80px;
-    line-height: 108%;
+    text-transform: uppercase;
+    font-size: 70px;
+    line-height: 128%;
     letter-spacing: 0.025em;
     color: color(white);
     text-shadow: 4px 2px 3px rgba(18, 18, 18, 0.68);
-    max-width: 680px;
+    max-width: 800px;
 
     @include tabletScreen {
       font-size: 60px;
     }
 
+    @include ipadScreen {
+      font-size: 50px;
+    }
+
     @include phoneScreen {
       font-size: 45px;
-      font-weight: 600;
+      font-weight: 500;
+    }
+
+    @media (max-width:500px) {
+      font-size: 40px;
     }
 
     @media (max-width:400px) {
-      font-size: 40px;
-      font-weight: 500;
-      line-height: 105%;
+      font-size: 33px;
     }
   }
 
   &__text {
     font-style: normal;
     font-weight: 500;
-    font-size: 27px;
+    font-size: 20px;
     line-height: 136.5%;
     letter-spacing: 0.02em;
     color: color(white);
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.51);
     max-width: 500px;
-    padding: 20px 0 75px 0;
+    padding: 5px 0 50px 0;
 
     @include tabletScreen {
       font-size: 25px;
@@ -89,22 +104,7 @@
     @include phoneScreen {
       font-size: 18px;
       letter-spacing: 2.5%;
-      font-weight: normal;
-      padding: 15px 0 50px 0;
-    }
-  }
-
-  &__btn-box {
-    position: relative;
-
-    &::after {
-      content:'';
-      position: absolute;
-      bottom: -70px;
-      width: 300px;
-      height: 60px;
-      @include backgroundImage(cover);
-      background-image: url('../assets/images/btn_line.png');
+      padding: 8px 0 40px 0;
     }
   }
 
@@ -168,7 +168,7 @@
       top: -110px;
     }
 
-    @include tabletScreen {
+    @include ipadScreen {
       display: none;
     }
   }

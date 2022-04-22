@@ -21,7 +21,7 @@
     max-width: 1550px;
     margin: auto;
 
-    @include ipadScreen {
+    @media (max-width: 1160px) {
       width: 100%;
       height: auto;
       @include backgroundImage(cover);
@@ -34,73 +34,13 @@
     }
   }
 
-  .about__title-img {
-    position: relative;
-    padding-bottom: 30px;
-
-    &::before {
-      content:'';
-      position: absolute;
-      top: -20px;
-      left: 0;
-      width: 405px;
-      height: 138px;
-      @include backgroundImage(cover);
-      background-image: url('../assets/images/title_img1.svg');
-    }
-
-    &::after {
-      content:'';
-      position: absolute;
-      top: -20px;
-      right: 0px;
-      width: 405px;
-      height: 138px;
-      @include backgroundImage(cover);
-      background-image: url('../assets/images/title_img2.svg');
-    }
-
-    @include ipadScreen {
-      
-      &::after,
-      &:before {
-        display: none;
-      }
-    }
-
-    @include ipadScreen {
-      padding-bottom: 0;
-    }
-  }
-
-  &__title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 80px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: color(dark);
-    margin-bottom: 30px;
-
-    @include ipadScreen {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-
-    @include phoneScreen {
-      font-size: 35px;
-      margin-bottom: 0px;
-    }
-  }
-
   &__elem-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0 0 0;
 
-    @include ipadScreen {
+    @media (max-width: 1160px) {
       display: block;
     }
   }

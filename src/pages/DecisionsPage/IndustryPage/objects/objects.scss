@@ -1,5 +1,9 @@
 .objects {
-  margin-top: 160px;
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 100px auto 80px;
+  }
 
   &__info {
     display: flex;
@@ -240,7 +244,7 @@
   &__effects-cover li &__effect-to-right {
     opacity: 0;
     background: linear-gradient(227.96deg, rgba(123, 169, 0, 0.86) -21.84%, #337700 103.24%); /* Фон блока при наведении */
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s;
     color: color(white);
     transform: translate(-250px, 0px) rotate(0deg); /* Направление выезжающей панели */
   }

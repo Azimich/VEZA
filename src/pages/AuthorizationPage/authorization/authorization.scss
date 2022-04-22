@@ -1,13 +1,17 @@
 .authorization {
-  margin: 200px auto 150px;
+  margin: 150px auto 100px;
 
   @include phoneScreen {
-    margin: 150px auto 100px;
+    margin: 100px auto 80px;
   }
 
   &__nav {
     margin: 0 auto 80px;
     max-width: 300px;
+
+    @include phoneScreen {
+      margin-bottom: 50px;
+    }
   }
 
   &__nav__menu {
@@ -96,9 +100,6 @@
   }
 
   // TABS
-  &__tabs-container {
-  }
-
   &__tabs-item {
     padding: 5px;
   }
@@ -242,12 +243,6 @@
     }
   }
 
-  &__second-form {
-  }
-
-  &__second__form__input-container {
-  }
-
   &__second__form__input-content {
     width: 50%;
 
@@ -263,76 +258,6 @@
 
   &__second__form-labels {
     margin-bottom: 5px;
-  }
-
-  &__second__form-input {
-  }
-
-  .checkbox-box-two {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-
-    label {
-      padding-left: 37px;
-      font-size: 16px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      color: color(black);
-      cursor: pointer;
-      position: relative;
-      
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 22px;
-        height: 22px;
-        border: 2px solid color(dark);
-        border-radius: 2px;
-      }
-
-      &.error {
-    
-        &::before{
-          border-color: red;
-        }
-      }
-
-      &:after {
-        content: '';
-        display: none;
-        position: absolute;
-        left: 3px;
-        top: 3px;
-        width: 16.67px;
-        height: 16px;
-        background: url("../assets/images/checkbox.svg") no-repeat;
-      }
-    }
-
-    input:checked + label {
-      
-      &::before {
-        background-color: color(green);
-        border-color: color(green) !important;
-      }
-
-      &::after {
-        display: block;
-        z-index: 2;
-      }
-    }
-
-    input {
-      width: 0.1px;
-      height: 0.1px;
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      z-index: -1;
-    }
   }
 
   .submit__two {

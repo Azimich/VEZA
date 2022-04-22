@@ -1,8 +1,8 @@
 .factories {
-  margin: 180px auto 150px;
+  margin: 150px auto 100px;
 
   @include phoneScreen {
-    margin: 150px auto 100px;
+    margin: 100px auto 80px;
   }
 
   &__title {

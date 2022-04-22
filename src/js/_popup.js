@@ -30,7 +30,7 @@ export const initPopup = () =>{
           item.classList.remove('error');
           document.querySelector('.checkbox-box>label').classList.remove('error');
           if(item.classList.contains('label-file')){
-            item.textContent = 'Ваше резюме'
+            item.textContent = ''
             item.style.color = '#6C6D70'
           }
         })

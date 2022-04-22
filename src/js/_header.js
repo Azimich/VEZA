@@ -24,16 +24,4 @@ export const initHeader = () => {
   }
   
   navSlide ();
-
-  //search 
-  const searchBtn = document.querySelector('.header__search-btn');
-  const searchBox = document.querySelector('.header__search-box');
-  const searchInput = document.querySelector('.header__input');
-
-  searchBtn.addEventListener('click', ()=> {
-    searchBox.classList.toggle('active');
-    searchInput.classList.toggle('active');
-    searchBtn.classList.toggle('active');
-  });  
-  
 }
