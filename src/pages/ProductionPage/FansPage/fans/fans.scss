@@ -356,7 +356,6 @@
 
 
   //FANS-BLOCK
-  
   &__right-container {
     max-width: 1000px;
     display: block;
@@ -410,16 +409,6 @@
     margin-bottom: 5%;
     transition: all 0.3s;
 
-    &:hover .equipment__fans-bg {
-      background: linear-gradient(133.06deg, #FFFFF5 0%, #F6F6F3 100%);
-      transition: all 0.3s;
-    }
-
-    &:hover .equipment__fans-text {
-      color: rgb(1, 77, 1);
-      transition: all 0.3s;
-    }
-
     @media (max-width: 1450px) {
       width: 270px;
     }
@@ -436,11 +425,24 @@
 
   &__fan-bg {
     background-color: #F6F6F3;
-    box-shadow: 0px 0px 10px rgba(84, 136, 72, 0.3);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     height: 280px;
+    border-top: 5px solid transparent;
+    box-shadow: 0 0 3px #21212131;
+
+    @include ipadScreen {
+      box-shadow:  0 0px 5px #31313154;
+      border-color: color(green);
+    }
+
+    @media (min-width: 1024px) {
+      &:hover {
+        box-shadow:  0 0px 5px #31313154;
+        border-color: color(green);
+      }
+    }
   }
 
   &__fan__img-box {
@@ -462,6 +464,11 @@
   &__fan-text {
     font-weight: 500;
     font-size: 20px;
+    transition: all .3s;
+  }
+
+  &__fan-item:hover  &__fan-text {
+    color: color(green);
   }
 
 }

@@ -64,19 +64,48 @@
     background-color: color(lightgreen);
   }
 
-  .swiper-button-prev:after,
-  .swiper-button-next::after {
-    color: color(lightgreen);
-    font-size: 30px;
-    position: absolute;
-    top: -20% !important;
-    right: 10px !important;
-    font-weight: 800;
+  .swiper-button-next, .swiper-button-prev {
+    background: rgba(0, 128, 0, 0.853);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 45%;
 
     @include phoneScreen {
       font-size: 0;
       display: none;
     }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: color(white);
+    position: absolute;
+    top: 23%;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+
+    @include phoneScreen {
+      font-size: 0;
+      display: none;
+    }
+  }
+
+  .swiper-button-prev:after {
+    left: 9px;
+  }
+
+  .swiper-button-next::after {
+    right: 9px;
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0px;
+    right: auto;
   }
 
   .swiper-container {

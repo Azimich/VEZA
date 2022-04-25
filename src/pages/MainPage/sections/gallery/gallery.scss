@@ -9,63 +9,9 @@
     margin-bottom: 100px;
   }
 
-  &__title-img {
-    position: relative;
-
-    &::before {
-      content:'';
-      position: absolute;
-      top: -76px;
-      left: 0;
-      width: 405px;
-      height: 138px;
-      @include backgroundImage(cover);
-      background-image: url('../assets/images/title_img1.svg');
-    }
-
-    &::after {
-      content:'';
-      position: absolute;
-      top: -70px;
-      right: 0px;
-      width: 405px;
-      height: 138px;
-      @include backgroundImage(cover);
-      background-image: url('../assets/images/title_img2.svg');
-    }
-
-    @include ipadScreen {
-      &::after,
-      &:before {
-        display: none;
-      }
-    }
-  }
-
-  &__title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 80px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: color(dark);
-    margin-bottom: 30px;
-
-    @include ipadScreen {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-
-    @include phoneScreen {
-      font-size: 35px;
-      margin-bottom: 0px;
-    }
-  }
-
   &__slider {
     padding: 20px 0 70px 0;
-    max-width: 1400px;
+    max-width: 1280px;
     margin: 0 auto;
 
     @include phoneScreen {

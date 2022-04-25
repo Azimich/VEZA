@@ -429,13 +429,13 @@
 
     @media (min-width: 1024px) {
       &:hover {
-        box-shadow:  0 2px 5px #313131;
+        box-shadow:  0 0px 5px #31313154;
         border-color: color(green);
       }
     }
 
     @include ipadScreen {
-      box-shadow:  0 2px 5px #31313150;
+      box-shadow:  0 1px 5px #31313150;
       border-color: color(green);
     }
   }
@@ -510,87 +510,60 @@
 
 
   &__pagination-container {
+    margin-top: 5%;
+
+    @include phoneScreen {
+      margin-top: 10%;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include phoneScreen {
+      flex-direction: column;
+    }
+  }
+
+  // &__pagination-prev {
+  // }
+
+  &__pagination-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
+    justify-content: space-between;
+    margin: 0 20px;
+
+    @include phoneScreen {
+      margin: 30px 0;
+    }
   }
 
-  .pagination ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 16px;
-    border-radius: 50px;
+  &__pagination-list {
+    padding: 0 10px;
   }
 
-  .pagination ul li {
-    color: color(green);
-    list-style: none;
-    line-height: 38px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.3s ease;
-
-  }
-
-  .pagination ul li.numb{
-    font-size: 16px;
-    font-weight: 600;
-    height: 35px;
-    width: 35px;
+  &__pagination-link {
+    padding: 8px 12px;
     border-radius: 5px;
-    margin: 0 3px;
-    line-height: 38px;
-  }
+    background-color: rgba(99, 99, 99, 0.337);
+    color: color(dark);
+    transition: all 0.3s;
 
-  .pagination ul li.numb.first {
-    margin: 0px 3px 0 -5px;
-  }
+    &.active {
+      color: color(white);
+      background-color: color(green);
+    }
 
-  .pagination ul li.numb.last{
-    margin: 0px -5px 0 3px;
-  }
-
-  .pagination ul li.dots {
-    font-size: 22px;
-    cursor: default;
-  }
-
-  .pagination ul li.btn{
-    padding: 0 20px;
-    margin-left: 20px;
-    border-radius:8px;
-    background: color(green);
-    color: color(white);
-    font-size: 16px;
-  }
-
-  .pagination .btn-prev {
-    margin: 0 20px 0 0 !important;
-    transition: all .3s;
     &:hover {
-      background: #33953a !important;
+      color: color(white);
+      background-color: color(green);
     }
   }
 
-  .pagination .btn-next {
-    margin: 0 0 0 20px !important;
-    transition: all .3s;
-    &:hover {
-      background: #33953a !important;
-    }
-  }
-
-  .pagination li.active,
-  .pagination ul li.numb:hover,
-  .pagination li:first-child:hover,
-  .pagination ul li:last-child:hover{
-    color: #fff;
-    background: color(green);
-  }
+  // &__pagination-next {
+  // }
 
 }

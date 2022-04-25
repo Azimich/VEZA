@@ -35,13 +35,13 @@ export const initEquipmentpage = () => {
   
   // //calling function with passing parameters and adding inside element which is ul tag
   // element.innerHTML = createPagination(totalPages, page);
-  // function createPagination(totalPages, page){
+  // function createPagination(totalPages, page) {
   //   let liTag = '';
   //   let active;
   //   let beforePage = page - 1;
   //   let afterPage = page + 1;
   //   if(page > 1){ //show the next button if the page value is greater than 1
-  //     liTag += `<li class="btn prev btn-prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i> Назад</span></li>`;
+  //     liTag += `<li class="btn prev btn-prev"><span><i class="fas fa-angle-left"></i> Назад</span></li>`;
   //   }
   
   //   if(page > 2){ //if page value is less than 2 then add 1 after the previous button

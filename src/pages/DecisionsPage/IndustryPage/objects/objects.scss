@@ -12,6 +12,10 @@
     @media (max-width: 1220px) {
       display: block;
     }
+
+    @include phoneScreen {
+      margin-bottom: 50px;
+    }
   }
 
   &__pc-img {
@@ -28,7 +32,13 @@
     @media (max-width: 1220px) {
       display: block;
       border-radius: 10px;
-      margin-bottom: 40px;
+      margin: 0 0 40px 0;
+      width: 60%;
+    }
+
+    @include phoneScreen {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
@@ -61,6 +71,12 @@
   &__our-title {
     font-weight: 400;
     margin-bottom: 40px;
+
+    @include phoneScreen {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 35px;
+    }
   }
 
   &__text {

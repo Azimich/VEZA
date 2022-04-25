@@ -6,11 +6,11 @@
   }
 
   @include phoneScreen {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   @include SEScreen {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   &__container {
