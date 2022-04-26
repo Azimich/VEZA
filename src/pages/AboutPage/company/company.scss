@@ -5,8 +5,8 @@
     margin: 100px auto 80px;
   }
 
-  &__container {
-  }
+  // &__container {
+  // }
 
   // Навигация Табов
   &__nav {
@@ -103,15 +103,6 @@
     display: none;
   }
 
-  // Табы
-  &__tabs-container {
-  }
-  
-  // О компании
-  &__about-container {
-
-  }
-
   &__about__img-box {
     display: none;
   }
@@ -121,30 +112,58 @@
   }
 
   &__about-history {
-    padding: 500px 0 0 0;
+    padding: 600px 0 0 0;
     width: 100%;
     height: auto;
     @include backgroundImage(cover);
-    background-image: url('../assets/images/banner__ipad.png'); 
+    background-image: url('../assets/images/banner__ipad.png');
+
+    @include tabletScreen {
+      padding: 600px 0 0 0;
+      width: 100%;
+      height: auto;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/banner__ipad.png'); 
+    }
+  
+    @include phoneScreen {
+      padding: 600px 0 0 0;
+      width: 100%;
+      height: auto;
+      @include backgroundImage(cover);
+      background-image: url('../assets/images/banner__phone.png'); 
+      margin: 65px auto 50px;
+    }
   }
 
   &__about__history-box {
     background-color: color(white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px;
     padding: 50px;
     text-align: center;
-    margin: 0 auto 100px;
+    margin: -220px auto 100px;
     max-width: 1300px;
+
+    @include tabletScreen {
+      max-width: 1200px;
+    }
 
     @include ipadScreen {
       padding: 30px 20px;
+      max-width: 1000px;
+      border-radius: 0 0 20px 20px;
     }
   }
 
   &__about__history-title {
-    margin: 0 auto 25px;
+    margin-bottom: 20px;
     font-size: 45px;
+
+    @include phoneScreen {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
   }
 
   &__about-text {

@@ -557,6 +557,9 @@
     color: color(dark);
     font-size: 14px;
     font-weight: 400;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: gray;
   }
 
   .first__item {
@@ -588,6 +591,9 @@
     color: color(dark);
     font-size: 14px;
     font-weight: 400;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: gray;
   }
 
   .first__item-2 {
@@ -639,6 +645,9 @@
     width: 112px !important;
     padding: 15px;
     color: #fff;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: #d0d0d0;
   }
 
   .middle__table-1 {
@@ -676,6 +685,9 @@
     padding: 15px;
     color: color(dark);
     text-align: center;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: #adadad;
   }
 
   &__table__middle-second {
@@ -683,6 +695,9 @@
     padding: 15px;
     color: color(dark);
     text-align: center;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: #adadad;
   }
 
 
@@ -712,6 +727,9 @@
     padding: 10px;
     color: color(dark);
     font-weight: 400;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: gray;
   }
 
   .middle__table__mobile-second {
@@ -720,6 +738,9 @@
     padding: 10px;
     color: color(dark);
     font-weight: 400;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: gray;
   }
 
 
@@ -757,18 +778,12 @@
     margin-bottom: 17px;
   }
 
-  &__technical__left-table {
-  }
 
   &__technical__left__title-top {
     background-color: #E4E4DE;
     text-align: center;
     font-weight: 600;
     padding: 10px;
-  }
-
-  &__technical__left__table__box {
-    
   }
 
   .first__table__long {
@@ -787,12 +802,6 @@
     border-style: solid;
     border-width: 0 0 0.3px 0.3px;
     border-color: gray;
-  }
-
-  &__table__title {
-  }
-
-  .first__title {
   }
 
   &__technical__right-item {
@@ -1061,15 +1070,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    // display: none;
-
-    @media (max-width: 1400px) {
-      max-width: 900px;
-    }
-
-    @media (max-width: 1320px) {
-      max-width: 855px;
-    }
 
     @media (max-width: 1200px) {
       margin: 0 auto;

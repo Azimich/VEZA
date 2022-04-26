@@ -6,7 +6,7 @@ import { initEquipmentpage } from './_equipmentpage';
 import { initTabssizes } from './_tabssizes';
 import { initAuthorization } from './_authorization';
 import { initResources } from './_resources';
-import { initForms } from './_forms';
+// import { initForms } from './_forms';
 import { initPopup } from './_popup';
 
 
@@ -23,7 +23,7 @@ import { initPopup } from './_popup';
     initTabssizes();
     initAuthorization();
     initResources();
-    initForms();
+    // initForms();
     initPopup();
 
   } catch (err) {

@@ -117,16 +117,6 @@
     display: none;
   }
 
-
-// TABS
-  &__tabs {
-  }
-
-  // BIM
-  &__BIM-tab {
-    
-  }
-
   &__BIM-container {
     display: flex;
     flex-wrap: wrap;
@@ -212,13 +202,6 @@
   }
 
   // Вопросы
-  &__faq-tabs {
-    
-  }
-
-  &__faq-container {
-  }
-
   &__faq__search-box {
     display: flex;
     justify-content: space-around;
@@ -261,42 +244,42 @@
   }
 
   &__faq__accordions-container {
-
+    background: #FFFBFB;
   }
 
   &__faq__accordion-item {
     position: relative;
-    box-shadow:  0 0 2px #606060;
+    border-bottom: 1px solid #C8C8C8;
     width: 100%;
-    margin-bottom: 35px;
-    max-height: 50px;
+    max-height: 60px;
     overflow: hidden;
-    border-radius: 5px;
-    transition: 0.3s;
+    transition: all 0.2s;
 
     &.active {
       max-height: 100vh;
+      background-color: rgb(246 255 244 / 72%);
 
       @media (max-width: 800px) {
-        max-height: 100vh;
+        max-height: 130vh;
       }
     }
   }
 
   .icon-arrow {
-    transition: 0.3s;
+    transition: all 0.2s;
   }
 
   &__faq__accordion-item.active .icon-arrow {
     transform: rotate(-90deg);
+    color: color(green);
   }
 
   &__faq__accordion-title {
-    background: #dbdbdb;
+    background: transparent;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     color: color(dark);
-    padding: 15px 10px;
+    padding: 20px 20px 20px 15px;
     display: flex;
     justify-content: space-between;
 
@@ -305,25 +288,21 @@
     }
   }
 
+  &__faq__accordion-item.active &__faq__accordion-title {
+    color: color(green);
+  }
+
   &__faq__accordion-content {
-    padding: 10px;
-    font-size: 18px;
+    padding: 0px 15px 12px 15px;
+    font-size: 16px;
     line-height: 150%;
-    background: #eaeaea;
     color: color(dark);
     position: relative;
     overflow: hidden;
-    transition: 0.3s;
-    border-radius: 0 0 5px 5px;
+    transition: all 0.2s;
   }
 
   // Анкетирование
-  &__questionnaire-tabs {
-  }
-
-  &__questionnaire-container {
-  }
-
   &__questionnaire__search-box {
     display: flex;
     justify-content: space-around;
@@ -413,7 +392,7 @@
     transition: all 0.3s;
 
     @media (max-width: 1260px) {
-      font-size: 25px;
+      font-size: 22px;
     }
 
     @include phoneScreen {
