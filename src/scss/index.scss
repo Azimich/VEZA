@@ -51,10 +51,15 @@
 @import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/tabssizes/tabssizes';
 @import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/footer/footer';
 
-//Стили страницы Активная Новости
+//Стили страницы Новости
 @import '../pages/NewsPage/header/header';
 @import '../pages/NewsPage/tidings/tidings';
 @import '../pages/NewsPage/footer/footer';
+
+//Стили страницы Активная Новости
+@import '../pages/NewsPage/activeNewsPage/header/header';
+@import '../pages/NewsPage/activeNewsPage/activenews/activenews';
+@import '../pages/NewsPage/activeNewsPage/footer/footer';
 
 //Стили страницы О компании
 @import '../pages/AboutPage/header/header';

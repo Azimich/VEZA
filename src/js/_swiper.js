@@ -1,13 +1,31 @@
 
 export const initSwiper = () => {
+
+  // banner slider
+  const swiperGallery = new Swiper('.banner__slider', {
+    grabCursor: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    pagination: {
+      el: '.swiper-pagination',
+
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    simulateTouch: true,
+    loop:true,
+  });
   
-
+  // gallery slider
   const swiper = new Swiper('.gallery__slider', {
-
     effect: "cards",
     grabCursor: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -26,22 +44,19 @@ export const initSwiper = () => {
 
   //sliderIndustry
   const swiperIndustry = new Swiper('.slider__industry', {
-
     effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 40,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 40,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
     grabCursor: true,
 
-
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -69,8 +84,6 @@ export const initSwiper = () => {
     },      
     grabCursor: true,
 
-
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -85,13 +98,6 @@ export const initSwiper = () => {
 
     simulateTouch: true,
     loop: true,
-
-    // breakpoints: {
-    //   450: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 30
-    //   }
-    // },
   });
 
 }

@@ -1,91 +1,58 @@
 .banner {
-  position: relative;
-  width: 100%;
-  height: auto;
-  @include backgroundImage(cover);
-  background-image: url('../assets/images/banner.png'); 
   margin: 70px auto 130px;
-  max-width: 2500px;
 
-  @include tabletScreen {
-    margin: 60px auto 100px;
-    width: 100%;
-    height: auto;
-    @include backgroundImage(cover);
-    background-image: url('../assets/images/banner__ipad.png'); 
-  }
-
-  @include phoneScreen {
-    width: 100%;
-    height: 500px;
-    @include backgroundImage(cover);
-    background-image: url('../assets/images/banner__phone.png'); 
-    margin: 65px auto 50px;
-  }
-
-  @media (max-width:400px) {
-    height: 430px;
-    
-  }
-
- 
-
-  &__container {
-    padding: 160px 0 180px 0;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-
-    @include tabletScreen {
-      padding: 100px 0 100px 0;
-    }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(white);
 
     @include phoneScreen {
-      padding: 110px 0 60px 0
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
     }
   }
 
-  &__right-element {
-    max-width: 70%;
-
-    @include ipadScreen {
-      max-width: 100%;
-    }
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: color(white);
+    font-size: 35px;
+    position: absolute;
   }
 
-  &__title {
+  .swiper-container {
+    overflow-x:hidden;
+    overflow-y: hidden;
+  }
+
+  .banner__slider-slide {
+    position: relative;
+    height: 700px;
+  }
+
+  .banner__right-element {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    background: rgba(123, 123, 123, 0.38);
+    backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+
+  .banner__title {
+    font-size: 45px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 70px;
+    max-width: 540px;
     line-height: 128%;
     letter-spacing: 0.025em;
     color: color(white);
     text-shadow: 4px 2px 3px rgba(18, 18, 18, 0.68);
-    max-width: 800px;
-
-    @include tabletScreen {
-      font-size: 60px;
-    }
-
-    @include ipadScreen {
-      font-size: 50px;
-    }
-
-    @include phoneScreen {
-      font-size: 45px;
-      font-weight: 500;
-    }
-
-    @media (max-width:500px) {
-      font-size: 40px;
-    }
-
-    @media (max-width:400px) {
-      font-size: 33px;
-    }
   }
 
-  &__text {
+  .banner__text {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -95,22 +62,11 @@
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.51);
     max-width: 500px;
     padding: 5px 0 50px 0;
-
-    @include tabletScreen {
-      font-size: 25px;
-      padding: 15px 0 70px 0;
-    }
-    
-    @include phoneScreen {
-      font-size: 18px;
-      letter-spacing: 2.5%;
-      padding: 8px 0 40px 0;
-    }
   }
 
-  &__button {
-    width: 400px;
-    padding: 20px 50px;
+  .banner__button {
+    width: 300px;
+    padding: 16px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,14 +85,161 @@
      border-color: #33953A;
      box-shadow: 0px 0px 123px rgba(22, 131, 8, 0.6);
     }
-
-    @media (max-width: 500px) {
-      padding: 18px 50px;
-      width: 100%;
-      border: 1px solid #fff;
-      font-weight: 500;
-    }
   }
+
+  .banner__slider-img {
+    width: 100%;
+  }
+
+  .banner__video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  
+  // position: relative;
+  // width: 100%;
+  // height: auto;
+  // @include backgroundImage(cover);
+  // background-image: url('../assets/images/banner.png'); 
+  // margin: 70px auto 130px;
+  // max-width: 2500px;
+
+  // @include tabletScreen {
+  //   margin: 60px auto 100px;
+  //   width: 100%;
+  //   height: auto;
+  //   @include backgroundImage(cover);
+  //   background-image: url('../assets/images/banner__ipad.png'); 
+  // }
+
+  // @include phoneScreen {
+  //   width: 100%;
+  //   height: 500px;
+  //   @include backgroundImage(cover);
+  //   background-image: url('../assets/images/banner__phone.png'); 
+  //   margin: 65px auto 50px;
+  // }
+
+  // @media (max-width:400px) {
+  //   height: 430px;
+    
+  // }
+
+ 
+
+  // &__container {
+  //   padding: 160px 0 180px 0;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   position: relative;
+
+  //   @include tabletScreen {
+  //     padding: 100px 0 100px 0;
+  //   }
+
+  //   @include phoneScreen {
+  //     padding: 110px 0 60px 0
+  //   }
+  // }
+
+  // &__right-element {
+  //   max-width: 70%;
+
+  //   @include ipadScreen {
+  //     max-width: 100%;
+  //   }
+  // }
+
+  // &__title {
+  //   font-weight: bold;
+  //   text-transform: uppercase;
+  //   font-size: 70px;
+  //   line-height: 128%;
+  //   letter-spacing: 0.025em;
+  //   color: color(white);
+  //   text-shadow: 4px 2px 3px rgba(18, 18, 18, 0.68);
+  //   max-width: 800px;
+
+  //   @include tabletScreen {
+  //     font-size: 60px;
+  //   }
+
+  //   @include ipadScreen {
+  //     font-size: 50px;
+  //   }
+
+  //   @include phoneScreen {
+  //     font-size: 45px;
+  //     font-weight: 500;
+  //   }
+
+  //   @media (max-width:500px) {
+  //     font-size: 40px;
+  //   }
+
+  //   @media (max-width:400px) {
+  //     font-size: 33px;
+  //   }
+  // }
+
+  // &__text {
+  //   font-style: normal;
+  //   font-weight: 500;
+  //   font-size: 20px;
+  //   line-height: 136.5%;
+  //   letter-spacing: 0.02em;
+  //   color: color(white);
+  //   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.51);
+  //   max-width: 500px;
+  //   padding: 5px 0 50px 0;
+
+  //   @include tabletScreen {
+  //     font-size: 25px;
+  //     padding: 15px 0 70px 0;
+  //   }
+    
+  //   @include phoneScreen {
+  //     font-size: 18px;
+  //     letter-spacing: 2.5%;
+  //     padding: 8px 0 40px 0;
+  //   }
+  // }
+
+  // &__button {
+  //   width: 400px;
+  //   padding: 20px 50px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 18px;
+  //   font-weight: 600;
+  //   line-height: 136.5%;
+  //   letter-spacing: 0.08em;
+  //   border: 2px solid #fff;
+  //   color: color(white);
+  //   text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.31);
+  //   border-radius: 10px;
+  //   transition: all 0.3s ease-in;
+
+  //   &:hover {
+  //     background: #33953A;
+  //    border-color: #33953A;
+  //    box-shadow: 0px 0px 123px rgba(22, 131, 8, 0.6);
+  //   }
+
+  //   @media (max-width: 500px) {
+  //     padding: 18px 50px;
+  //     width: 100%;
+  //     border: 1px solid #fff;
+  //     font-weight: 500;
+  //   }
+  // }
 
 
   &__icon-box {

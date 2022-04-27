@@ -35,7 +35,7 @@
   }
 
   &__item {
-    width: 380px;
+    width: 330px;
     margin: 20px;
     filter: drop-shadow(0px -5px 1px rgba(255, 255, 255, 0.5));
     position: relative;
@@ -79,10 +79,10 @@
   }
 
   &__way-title {
-    color: color(white);
+    color: #FFF;
     font-weight: bold;
-    font-size: 45px;
-    line-height: 48px;
+    font-size: 35px;
+    line-height: 90%;
     letter-spacing: 0.025em;
     margin-bottom: 12px;
 
@@ -98,11 +98,9 @@
   }
 
   &__text {
-    color: color(white);
-    max-width: 333px;
     font-weight: normal;
-    font-size: 17px;
-    line-height: 150%;
+    font-size: 16px;
+    line-height: 130%;
     letter-spacing: 0.025em;
     color: #DDDDDD;
     max-width: 370px;

@@ -264,10 +264,6 @@
     visibility: visible;
   }
 
-  @include phoneScreen {
-    background: #445461;
-  }
-
   &__body {
     display: flex;
     justify-content: center;
@@ -276,8 +272,11 @@
     margin: 150px auto 0;
 
     @include phoneScreen {
-      margin-top: 50px;
-      width: 100%;
+      width: 90%;
+    }
+
+    @media (max-width: 400px) {
+      width: 95%;
     }
   }
 
@@ -288,7 +287,7 @@
     opacity: 0;
     transform: perspective(600px) translate(0, -100%) rotateX(45deg);
     transition: all 0.4s;
-    background: #445461;
+    background: color(green);
     box-shadow: 0 0 10px #ffffff69;
     position: relative;
 
@@ -339,11 +338,11 @@
   }
 
   .input__search {
-    border-bottom: 2px solid #939292 !important;
+    border-bottom: 2px solid #ffffff !important;
     border-radius: 0;
     height: 40px;
     padding: 5px;
-    width: 100%;
+    width: 95%;
     border: none;
 
     &:focus {
@@ -352,6 +351,8 @@
 
     &::placeholder {
       font-weight: 400;
+      font-size: 16px;
+      color: color(white);
     }
   }
 

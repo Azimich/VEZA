@@ -1,0 +1,45 @@
+.active-news {
+  margin: 120px auto;
+
+  &__container {
+  }
+
+  &__button {
+  }
+
+
+  &__content-box {
+
+  }
+
+  &__content-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-box {
+    width: 50%;
+  }
+
+  &__info-box {
+  }
+
+  &__info-title {
+  }
+
+  &__info-text {
+  }
+
+  &__info-subtext {
+  }
+
+  &__images-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__images-item {
+  }
+
+}
