@@ -18,19 +18,22 @@
     height: 660px;
     @include backgroundImage(cover);
     background-image: url('../assets/images/about_banner.png'); 
-    max-width: 1550px;
     margin: auto;
 
-    @media (max-width: 1160px) {
+    @media (max-width: 1650px) {
+      padding: 0 80px;
+    }
+
+    @media (max-width: 1220px) {
       width: 100%;
       height: auto;
       @include backgroundImage(cover);
       background-image: url('../assets/images/about_banner-ipad.png'); 
-      padding: 40px 0;
+      padding: 40px;
     }
 
     @include phoneScreen {
-      padding: 0 0 40px 0;
+      padding: 20px;
     }
   }
 
@@ -38,10 +41,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0 0 0;
+    margin: 0 auto;
+    max-width: 1550px;
 
-    @media (max-width: 1160px) {
-      display: block;
+    @media (max-width: 1220px) {
+      flex-direction: column;
     }
   }
 
@@ -56,15 +60,18 @@
   }
 
   &__text {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 18px;
     line-height: 165%;
     letter-spacing: 0.025em;
     color: color(white);
     margin: 0 0 30px 0;
 
+    @media (max-width: 1435px) {
+      line-height: 145%;
+    }
+
     @include tabletScreen {
-      font-weight: 500;
       font-size: 16px;
       line-height: 150%;
       letter-spacing: 0.025em;
@@ -77,7 +84,7 @@
     }
 
     @include ipadScreen {
-      text-align: justify;
+      text-align: left;
     }
   }
 
@@ -85,7 +92,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 650px !important;
 
     @media (max-width: 1200px) {
       width: 100% !important;
@@ -107,12 +113,13 @@
     display: flex;
     flex-wrap: wrap;
     width: 650px !important;
+    margin: 30px 0 0 0;
 
     @media (max-width: 1200px) {
       justify-content: center;
     }
 
-    @include ipadScreen {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
@@ -120,7 +127,7 @@
   .about__ipad-mans {
     display: none;
 
-    @include ipadScreen {
+    @media (max-width: 1200px) {
       display: block;
     }    
 
@@ -526,9 +533,8 @@
   }
   
   .progressbar text {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 20px;
-    font-family: 'Montserrat';
 
     @include tabletScreen {
       font-weight: 700;

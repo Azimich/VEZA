@@ -42,7 +42,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      padding: 80px 0 400px 0;
+      padding: 80px 0 900px 0;
       transform: translateX(100%);
       transition: transform 0.3s ease-in;
       z-index: 99;
@@ -62,6 +62,10 @@
 
     &:last-child {
       margin-right: 0;
+
+      @include ipadScreen {
+        border-bottom: 1px solid #a2a2a256;
+      }
     }
 
     &:first-child {
@@ -246,8 +250,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(11px);
+  background-color: #fff;
   top: 0;
   left: 0;
   z-index: 99;
@@ -264,130 +267,50 @@
     visibility: visible;
   }
 
-  &__body {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    width: 80%;
-    margin: 150px auto 0;
-
-    @include phoneScreen {
-      width: 90%;
-    }
-
-    @media (max-width: 400px) {
-      width: 95%;
-    }
-  }
-
-  &__content {
-    width: 100%;
-    padding: 50px 40px 70px 40px;
-    border-radius: 10px;
-    opacity: 0;
-    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
-    transition: all 0.4s;
-    background: color(green);
-    box-shadow: 0 0 10px #ffffff69;
-    position: relative;
-
-    @include phoneScreen {
-      box-shadow: none;
-      padding: 50px 20px 70px 20px;
-    }
-  }
-
   &.open .popup__content {
     opacity: 1;
     transform: perspective(600px) translate(0px, 0%) rotateX(0);
   }
 
   .close-popup {
-    position: absolute;
-    top: 30px;
-    right: 15px;
-    line-height: 18px;
     font-size: 40px;
     color: #828282;
     cursor: pointer;
-  }
-
-  &__heading{
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    text-transform: uppercase;
-    color: color(black);
-  }
-
-  &__text{
-    margin: 16px auto 20px;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-    color: color(black);
+    order: 1;
   }
 
   .search__container {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
+    border-bottom: 2px solid color(green) !important;
     position: relative;
   }
 
   .input__search {
-    border-bottom: 2px solid #ffffff !important;
     border-radius: 0;
     height: 40px;
     padding: 5px;
-    width: 95%;
+    width: 100%;
     border: none;
 
     &:focus {
-      color: #ffffff;
+      color: #000000;
     }
 
     &::placeholder {
       font-weight: 400;
       font-size: 16px;
-      color: color(white);
+      color: color(dark);
     }
   }
 
   .search__btn {
-    color: color(white);
-    position: absolute;
-    right: 0;
-    top: 13px;
+    color: color(green);
+    margin: 0 10px 0 0;
   }
 
   form {
-
-    label {
-      font-size: 16px;
-      color: color(dark);
-      margin-bottom: 5px;
-    }
-
-    input {
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &::placeholder {
-        color: #e4e4e4;
-        font-size: 14px;
-        letter-spacing: 1px;
-      }
-
-      &.error {
-        border-color: red;
-      }
-    }
-
     .email-tel-box {
       display: flex;
       justify-content: space-between;
@@ -407,25 +330,6 @@
       }
     }
 
-    textarea {
-      width: 100%;
-      height: 81px;
-      padding: 8px;
-      color: color(black);
-      font-size: 14px;
-      line-height: 22px;
-      border: 1px solid #BCBDC0;
-
-      &::placeholder{
-        color: #6C6D70;
-      }
-
-      &:focus{
-        border-width: 2px !important;
-        border-color: color(lightgreen2);
-      }
-    }
-
     .inputfile-box{
       border: none;
       padding: 0;
@@ -439,43 +343,6 @@
         height: 0.1px;
         opacity: 0;
         visibility: hidden;
-      }
-
-      .file-cleaner{
-        position: absolute;
-        top: 30px;
-        right: 145px;
-        width: 14px;
-        height: 14px;
-        cursor: pointer;
-        // background: url('../assets/images/file-cleaner.svg') no-repeat;
-        background-size: contain;
-        z-index: 2;
-      }
-
-      p {
-        font-size: 11.3px;
-        line-height: 17px;
-        color: #BCBDC0;
-      }
-
-      @include phoneScreen {
-        label{
-          width: 88%;
-          &::after {
-            display: none;
-          }
-  
-          &::before {
-            content: '';
-            bottom: 3px;
-            right: -17%;
-          }
-        }
-
-        .file-cleaner{
-          right: 40px;
-        }
       }
     }
 
@@ -491,305 +358,54 @@
       font-weight: 600;
       color: color(dark);
     }
-
-    .checkbox-box {
-      display: flex;
-      align-items: center;
-      
-      input {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        z-index: -1;
-      }
-  
-      label {
-        padding-left: 37px;
-        font-size: 16px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color: color(black);
-        cursor: pointer;
-        position: relative;
-  
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          width: 22px;
-          height: 22px;
-          border: 2px solid color(black);
-        }
-  
-        &.error {
-  
-          &::before{
-            border-color: red;
-          }
-        }
-  
-        &::after {
-          display: none;
-          content: "";
-          position: absolute;
-          left: 3px;
-          top: 3px;
-          width: 16.67px;
-          height: 16px;
-          background: url("../assets/images/checkbox.svg") no-repeat;
-        }
-      }
-  
-      input:checked + label {
-  
-        &::before {
-          background-color: color(green);
-          border-color: color(green) !important;
-        }
-  
-        &::after {
-          display: block;
-          z-index: 2;
-        }
-      }
-  
-      @include phoneScreen{
-        margin: 24px 0 45px;
-  
-        label {
-          font-size: 12px;
-          line-height: 15px;
-          padding-left: 36px;
-    
-          &::before {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-    
-          &::after {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-      }
-    }
-
-    .submit{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border: none;
-    }
-  }
-}
-
-.success{
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(27, 35, 50, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 99;
-
-  &.sended{
-    display: block;
   }
 
-  &__popup-wrapper{
-    width: 100%;
-    height: 100%;
+
+  .popup__search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 50px auto 0;
+    padding: 0 30px;
+  }
+
+  .popup__search-logo {
+    width: 130px;
+    order: 0;
+
+    @include phoneScreen {
+      width: 80px;
+    }
+  }
+
+  .popup__search-body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
+    align-items: start;
+    height: 100%;
+    max-width: 1500px;
+    margin: 50px auto 0;
+    padding: 0 30px;
   }
 
-  &__popup-content {
-    max-width: 600px;
+  .popup__search-content {
     width: 100%;
-    height: 300px;
-    padding: 30px 10px 0;
-    background-color: color(white);
-    margin: auto;
-    border-radius: 20px;
+    height: 100%;
+    padding: 0px 40px 70px 40px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transition: all 0.4s;
+    background: #fff;
+    box-shadow: 0 0 10px #ffffff69;
+    position: relative;
 
-    @include phoneScreen{
-      height: 230px;
-    }
-
-  }
-
-  &__content-text{
-    margin-top: 30px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 30px;
-    color: rgb(7, 136, 25);
-
-    @include phoneScreen{
-      margin-top: 10px;
-      font-size: 23px;
+    @include phoneScreen {
+      padding: 0 10px;
     }
   }
 
-  .success-checkmark {
-    width: 80px;
-    height: 115px;
-    margin: 0 auto;
-    
-    .check-icon {
-        width: 80px;
-        height: 80px;
-        position: relative;
-        border-radius: 50%;
-        box-sizing: content-box;
-        border: 4px solid #4CAF50;
-        
-        &::before {
-            top: 3px;
-            left: -2px;
-            width: 30px;
-            transform-origin: 100% 50%;
-            border-radius: 100px 0 0 100px;
-        }
-        
-        &::after {
-            top: 0;
-            left: 30px;
-            width: 60px;
-            transform-origin: 0 50%;
-            border-radius: 0 100px 100px 0;
-            animation: rotate-circle 4.25s ease-in;
-        }
-        
-        &::before, &::after {
-            content: '';
-            height: 100px;
-            position: absolute;
-            background: #FFFFFF;
-            transform: rotate(-45deg);
-        }
-        
-        .icon-line {
-            height: 5px;
-            background-color: #4CAF50;
-            display: block;
-            border-radius: 2px;
-            position: absolute;
-            z-index: 10;
-            
-            &.line-tip {
-                top: 46px;
-                left: 14px;
-                width: 25px;
-                transform: rotate(45deg);
-                animation: icon-line-tip 0.75s;
-            }
-            
-            &.line-long {
-                top: 38px;
-                right: 8px;
-                width: 47px;
-                transform: rotate(-45deg);
-                animation: icon-line-long 0.75s;
-            }
-        }
-        
-        .icon-circle {
-            top: -4px;
-            left: -4px;
-            z-index: 10;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            position: absolute;
-            box-sizing: content-box;
-            border: 4px solid rgba(76, 175, 80, .5);
-        }
-        
-        .icon-fix {
-            top: 8px;
-            width: 5px;
-            left: 26px;
-            z-index: 1;
-            height: 85px;
-            position: absolute;
-            transform: rotate(-45deg);
-            background-color: #FFFFFF;
-        }
-    }
-
-    @keyframes rotate-circle {
-      0% {
-          transform: rotate(-45deg);
-      }
-      5% {
-          transform: rotate(-45deg);
-      }
-      12% {
-          transform: rotate(-405deg);
-      }
-      100% {
-          transform: rotate(-405deg);
-      }
-  }
-
-  @keyframes icon-line-tip {
-    0% {
-      width: 0;
-      left: 1px;
-      top: 19px;
-    }
-    54% {
-      width: 0;
-      left: 1px;
-      top: 19px;
-    }
-    70% {
-      width: 50px;
-      left: -8px;
-      top: 37px;
-    }
-    84% {
-      width: 17px;
-      left: 21px;
-      top: 48px;
-    }
-     100% {
-      width: 25px;
-      left: 14px;
-      top: 45px;
-    }
-  }
-
-    @keyframes icon-line-long {
-      0% {
-        width: 0;
-        right: 46px;
-        top: 54px;
-      }
-      65% {
-        width: 0;
-        right: 46px;
-        top: 54px;
-      }
-      84% {
-        width: 55px;
-        right: 0px;
-        top: 35px;
-      }
-      100% {
-        width: 47px;
-        right: 8px;
-        top: 38px;
-      } 
-    }   
-  }
 }
+
+

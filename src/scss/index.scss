@@ -2,6 +2,8 @@
 
 //Глобальные css & mixins
 @import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
 @import './utils/variables';
 @import './utils/_mixins';
 @import './utils/_global';

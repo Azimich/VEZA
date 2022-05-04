@@ -4,6 +4,10 @@ export const initSwiper = () => {
   // banner slider
   const swiperGallery = new Swiper('.banner__slider', {
     grabCursor: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
 
     navigation: {
       nextEl: '.swiper-button-next',
@@ -20,6 +24,7 @@ export const initSwiper = () => {
     simulateTouch: true,
     loop:true,
   });
+
   
   // gallery slider
   const swiper = new Swiper('.gallery__slider', {
@@ -42,21 +47,21 @@ export const initSwiper = () => {
     loop:true,
   });
 
+
   //sliderIndustry
   const swiperIndustry = new Swiper('.slider__industry', {
     effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 40,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
     grabCursor: true,
-
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: -5,
+      stretch: -50,
+      depth: 0,
+      modifier: 1,
+      slideShadows: true,
+    },
+    grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -74,16 +79,21 @@ export const initSwiper = () => {
   });
 
 
+
   //SLIDER__FANS__VRAN
   const swiperFan = new Swiper('.fans__vran__slider', {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },      
+    effect: "coverflow",
     grabCursor: true,
-
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: -5,
+      stretch: -35,
+      depth: 0,
+      modifier: 1,
+      slideShadows: true,
+    },
+    grabCursor: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

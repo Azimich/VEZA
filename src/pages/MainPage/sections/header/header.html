@@ -33,13 +33,18 @@
 
 <div class="wrapper">
   <div class="popup" id="popup__search">
-    <div class="close-popup">&times;</div>
-    <div class="popup__body">
-      <div class="popup__content">
+    <div class="popup__search-header">
+      <div class="close-popup">&times;</div>
+      <div class="popup__search-logo">
+        <img src="../assets/images/logo_header.svg" alt="vezalogo">
+      </div>
+    </div>
+    <div class="popup__body popup__search-body">
+      <div class="popup__content popup__search-content">
         <form class="form__search" action="#" method="POST" id="form" novalidate>
           <div class="search__container">
-            <input type="text" placeholder="Поиск" name="name" class="required input__search">
             <a href="#" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <input type="text" placeholder="Поиск" name="name" class="required input__search">
           </div>
           <fieldset class="inputfile-box">
             <span class="file-cleaner"></span>
@@ -50,21 +55,6 @@
         </form>
       </div>
    </div>
-  </div>
-  <div class="success">
-    <div class="success__popup-wrapper">
-      <div class="success__popup-content">
-        <div class="success-checkmark">
-          <div class="check-icon">
-            <span class="icon-line line-tip"></span>
-            <span class="icon-line line-long"></span>
-            <div class="icon-circle"></div>
-            <div class="icon-fix"></div>
-          </div>
-        </div>
-        <p class="success__content-text">Отправлено!</p>
-      </div>
-    </div>
   </div>
 </div>
 

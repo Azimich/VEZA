@@ -1,8 +1,10 @@
 
 import { initHeader } from './_header';
 import { initAbout } from './_about';
+import { initNews } from './_news';
 import { initSwiper } from './_swiper';
-import { initEquipmentpage } from './_equipmentpage';
+import { initSlick } from './libs/slick';
+// import { initEquipmentpage } from './_equipmentpage';
 import { initTabssizes } from './_tabssizes';
 import { initAuthorization } from './_authorization';
 import { initResources } from './_resources';
@@ -19,7 +21,9 @@ import { initPopup } from './_popup';
     initHeader();
     initAbout();
     initSwiper();
-    initEquipmentpage();
+    initNews();
+    initSlick();
+    // initEquipmentpage();
     initTabssizes();
     initAuthorization();
     initResources();

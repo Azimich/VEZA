@@ -11,13 +11,13 @@
           <li class="header__menu-list"><a href="resources-page.html" class="header__menu-link">Ресурсы</a></li>
           <li class="header__menu-list"><a href="contacts-page.html" class="header__menu-link">Контакты</a></li>
           <div class="mobile__search-box">
-            <a href="#" class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#popup__search" class="header__icon popup-links"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="#" class="header__icon"><i class="fa-solid fa-earth-africa"></i></a>
             <a href="authorization-page.html" class="header__icon"><i class="fa-solid fa-user-plus"></i></a>
           </div>
         </ul>
         <div class="header__icon__box">
-          <a href="#" class="header__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#popup__search" class="header__icon popup-links"><i class="fa-solid fa-magnifying-glass"></i></a>
           <a href="#" class="header__icon"><i class="fa-solid fa-earth-africa"></i></a>
           <a href="authorization-page.html" class="header__icon"><i class="fa-solid fa-user-plus"></i></a>
         </div>
@@ -30,6 +30,33 @@
     </div>
   </div>
 </header>
+
+<div class="wrapper">
+  <div class="popup" id="popup__search">
+    <div class="popup__search-header">
+      <div class="close-popup">&times;</div>
+      <div class="popup__search-logo">
+        <img src="../assets/images/logo_header.svg" alt="vezalogo">
+      </div>
+    </div>
+    <div class="popup__body popup__search-body">
+      <div class="popup__content popup__search-content">
+        <form class="form__search" action="#" method="POST" id="form" novalidate>
+          <div class="search__container">
+            <a href="#" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <input type="text" placeholder="Поиск" name="name" class="required input__search">
+          </div>
+          <fieldset class="inputfile-box">
+            <span class="file-cleaner"></span>
+            <input type="file" name="file" id="upload" class="inputfile" accept=".pdf,.docx">
+            <label for="upload" class="label-file"></label>
+            <p></p>
+          </fieldset>
+        </form>
+      </div>
+   </div>
+  </div>
+</div>
 
 
 

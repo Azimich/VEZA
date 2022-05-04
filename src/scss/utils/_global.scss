@@ -88,8 +88,8 @@ section {
 //Текст стандартные
 .text {
   font-weight: normal;
-  font-size: 18px;
-  line-height: 145%;
+  font-size: 16px;
+  line-height: 150%;
   letter-spacing: 0.025em;
   color: color(dark);
 
@@ -101,7 +101,7 @@ section {
 .text-green {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 140%;
   text-align: center;
   letter-spacing: 0.025em;
@@ -229,6 +229,7 @@ section {
   color: color(white);
   border-radius: 8px;
   letter-spacing: 1px;
+  font-weight: normal;
   transition: all 0.3s;
 
   @include phoneScreen {
@@ -254,9 +255,11 @@ section {
   transition: all 0.3s;
   color: color(white);
   letter-spacing: 2.5%;
+  font-weight: normal;
 }
 
 .little__button {
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;

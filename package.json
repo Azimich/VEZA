@@ -18,14 +18,17 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.11.5",
+    "@fancyapps/ui": "^4.0.26",
     "autoprefixer": "^9.8.6",
     "babel": "^6.23.0",
     "cssnano": "^4.1.10",
+    "f": "^1.4.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.0.9",
     "postcss-modules": "^3.2.2",
     "sass": "^1.23.7",
+    "sli": "^0.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.0.6"
   }
