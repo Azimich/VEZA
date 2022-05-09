@@ -55,8 +55,8 @@ export const initSwiper = () => {
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: -5,
-      stretch: -50,
+      rotate: -1,
+      stretch: -60,
       depth: 0,
       modifier: 1,
       slideShadows: true,
@@ -80,15 +80,15 @@ export const initSwiper = () => {
 
 
 
-  //SLIDER__FANS__VRAN
+  // SLIDER__FANS__VRAN
   const swiperFan = new Swiper('.fans__vran__slider', {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: -5,
-      stretch: -35,
+      rotate: -1,
+      stretch: -48,
       depth: 0,
       modifier: 1,
       slideShadows: true,
@@ -107,7 +107,15 @@ export const initSwiper = () => {
     },
 
     simulateTouch: true,
-    loop: true,
+    loop: true,   
+    
+    // breakpoints: {
+    //   1380: {
+    //     coverflowEffect: {
+    //       stretch: -48
+    //     }
+    //   }
+    // }
   });
 
 }

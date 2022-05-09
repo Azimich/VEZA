@@ -36,8 +36,9 @@
   }
   
   .equipment__sidebar-title {
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
     letter-spacing: 0.025em;   
 
     @media (max-width: 1200px) {
@@ -58,16 +59,23 @@
     display: flex;
     align-items: center;
     background-color: #45563c;
+    border-top: 0.5px solid #b4bdb27d;
+    border-bottom: 0.5px solid #b4bdb27d;
     color: color(white);
-    padding: 20px;
+    padding: 16px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #5d7a4e;
+    }
   }
 
   .equipment__sidebar-category-icon {
-    margin-right: 20px;
+    margin-right: 12px;
   }
 
   .equipment__sidebar-category-text {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .equipment__sidebar__industrial__fans {
@@ -76,7 +84,10 @@
     align-items: center;
     text-decoration: none;
     padding: 15px 20px;
+    border-top: 0.5px solid #b4bdb27d;
+    border-bottom: 0.5px solid #b4bdb27d;
     transition: all 0.3s;
+    font-weight: 300;
 
     &:first-child {
       padding-top: 22px;
@@ -123,7 +134,7 @@
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 40px;
 
     @media (max-width: 1200px) {
@@ -133,7 +144,7 @@
 
     @include phoneScreen {
       font-size: 25px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
   
@@ -212,7 +223,7 @@
   }
 
   &__text {
-    font-weight: 500;
+    font-weight:  400;
     font-size: 20px;
   }
 

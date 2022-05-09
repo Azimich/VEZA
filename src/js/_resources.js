@@ -17,18 +17,11 @@ export const initResources = () => {
   
 
   // Accordions
-  const accordionItem = document.querySelectorAll(".resources__faq__accordion-item");
   const accordionTitle = document.querySelectorAll(".resources__faq__accordion-title");
 
   accordionTitle.forEach((item) => item.addEventListener('click', () => {
     const parent = item.parentNode;
-    
-    if (parent.classList.contains("active")) {
-      parent.classList.remove("active")
-    } else {
-      accordionItem.forEach((child) => child.classList.remove("active"))
-    }
-    parent.classList.toggle("active")
+    parent.classList.toggle('active')
   }))
 
 }

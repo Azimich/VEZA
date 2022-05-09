@@ -11,18 +11,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0;
 
     @include ipadScreen {
-      padding: 14px 0;
+      padding: 21px 0;
     }
   }
 
   &__logo {
-    width: 110px;
+    width: 130px;
 
     @include ipadScreen {
-      width: 95px;
+      width: 90px;
       z-index: 100;
     }
   }
@@ -62,10 +62,6 @@
 
     &:last-child {
       margin-right: 0;
-
-      @include ipadScreen {
-        border-bottom: 1px solid #a2a2a256;
-      }
     }
 
     &:first-child {
@@ -74,13 +70,20 @@
 
     @include ipadScreen {
       margin: 0;
-      border-top: 1px solid #a2a2a256;
+      border-top: 1px solid #bdbdbd56;
       width: 100%;
       text-align: center;
       padding: 20px 0;
       transition: all 0.3s;
     }
   }
+
+  @include ipadScreen {
+    .last {
+      border-bottom: 1px solid #bdbdbd56;
+    }
+  }
+
 
   @include ipadScreen {
     &__menu-list:hover {

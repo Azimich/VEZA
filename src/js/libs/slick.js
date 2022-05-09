@@ -6,7 +6,6 @@ const teamSlider = $('.slider__click')
 
 export const initSlick = () => {
 
-
   Fancybox.bind('[data-fancybox="single"]', {
     groupAttr: false,
   });

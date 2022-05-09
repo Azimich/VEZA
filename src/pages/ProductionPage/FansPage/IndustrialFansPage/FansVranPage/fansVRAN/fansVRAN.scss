@@ -36,8 +36,9 @@
   }
 
   .equipment__sidebar-title {
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
     letter-spacing: 0.025em;   
 
     @media (max-width: 1200px) {
@@ -58,16 +59,22 @@
     display: flex;
     align-items: center;
     background-color: #45563c;
+    border-bottom: 0.5px solid #b4bdb27d;
     color: color(white);
-    padding: 20px;
+    padding: 16px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #5d7a4e;
+    }
   }
 
   .equipment__sidebar-category-icon {
-    margin-right: 20px;
+    margin-right: 12px;
   }
 
   .equipment__sidebar-category-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .equipment__sidebar__fans__vran {
@@ -77,6 +84,9 @@
     text-decoration: none;
     padding: 15px 20px;
     transition: all 0.3s;
+    font-weight: 300;
+    border-top: 0.5px solid #b4bdb27d;
+    border-bottom: 0.5px solid #b4bdb27d;
 
     &:first-child {
       padding-top: 22px;
@@ -101,13 +111,14 @@
 
   &__container__items {
     max-width: 1000px;
+    padding-bottom: 50px;
 
     @media (max-width: 1450px) {
-      max-width: 950px;
+      max-width: 970px;
     }
 
-    @media (max-width: 1450px) {
-      max-width: 880px;
+    @media (max-width: 1380px) {
+      max-width: 850px;
     }
 
     @media (max-width: 1245px) {
@@ -121,7 +132,7 @@
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 40px;
 
     @media (max-width: 1200px) {
@@ -135,9 +146,9 @@
 
     @include phoneScreen {
       font-size: 25px;
-      margin-bottom: 30px;
       text-align: center;
       line-height: 145%;
+      margin-bottom: 20px;
     }
   }
 
@@ -173,13 +184,13 @@
 
   .fans__vran__img-box {
     max-width: 350px !important;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     position: relative;
 
     @media (max-width: 830px) {
       max-width: 400px;
-      margin-bottom: 30px;
+      margin: 0 auto 25px;
     }
   }
 
@@ -308,7 +319,7 @@
   }
 
   .sub_text-bold {
-    font-weight: 700;
+    font-weight: 500;
     color: color(black);
     margin-bottom: 10px;
 
@@ -321,8 +332,11 @@
   //Slider VRAN
   &__slider {
     display: flex;
-    padding: 30px 5px !important;
-    max-width: 968px !important;
+    padding: 0 5px 30px 5px !important;
+
+    @media (max-width: 1200px) {
+      max-width: 940px;
+    }
 
     @include phoneScreen {
       padding: 0 5px 30px 5px !important;
@@ -335,7 +349,7 @@
 
   &__slider-title {
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     color: color(dark);
   }
 
@@ -357,11 +371,16 @@
     &:hover .equipment__fan__VRAN__slider-bottom-btn{
       margin: 0 0 0 5px;
     }
+
+    @media (max-width: 1380px) {
+      width: 250px !important;
+      height: 360px !important;
+    }
   }
 
   .swiper-slide.swiper-slide-visible.swiper-slide-active {
     opacity: 1 !important;
-    background-color: #f5f7f3;
+    background-color: #7fb734
   }
 
   &__slider-img-box {
@@ -369,7 +388,7 @@
   }
 
   &__slider-bottom-box {
-    background: linear-gradient(71.51deg, #2B7200 -6.22%, #9EC100 133.76%);
+    background-color: #484848;
     padding: 20px;
     height: 150px;
     position: relative;
@@ -396,6 +415,14 @@
     }
   }
 
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
   .swiper-button-prev:after,
   .swiper-button-next::after {
     color: color(white);
@@ -411,11 +438,11 @@
   }
 
   .swiper-button-prev:after {
-    left: 9px;
+    right: 12px;
   }
 
   .swiper-button-next::after {
-    right: 9px;
+    left: 12px;
   }
 
   &__slider-bottom-btn {
@@ -441,6 +468,7 @@
     line-height: 135%;
     font-size: 16px;
     margin-bottom: 20px;
+    font-weight: 400;
   }
   
 
@@ -451,6 +479,7 @@
   }
 
   &__table-title {
+    font-weight: 500;
     font-size: 35px;
     margin: 0 0 30px 0;
     text-align: center;
@@ -710,18 +739,32 @@
 
   &-button-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     text-align: right;
     width: 120px;
     margin: 50px auto 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: all 0.3s;
+    border: 2px solid color(green);
 
-    span {
-      font-size: 16px;
+    &:hover {
+      opacity: 1;
+      background: color(green);
+      box-shadow: 0 0 5px color(green);
     }
 
     i {
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
+      color: color(green);
     }
+  }
+
+  &-button-box:hover > i {
+    color: color(white);
   }
 
 

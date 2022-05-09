@@ -204,6 +204,152 @@
     transition: all 0.3s;
   }
 
+  // Каталоги
+  &__catalogs-tab {
+  }
+
+  &__catalogs-container {
+  }
+
+  &__catalogs-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-weight: 500;
+
+    @media (max-width: 500px) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__catalogs-items {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__catalogs__second-box, &__catalogs__first-box {
+    width: 49%;
+
+    @media (max-width: 1100px) {
+      width: 80%;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  &__catalogs-item {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0 18px 0 0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-bottom: 25px;
+
+    &:hover {
+      box-shadow: 0 0 8px green;
+    }
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      justify-content: start;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  &__catalogs__item-images {
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+
+    @media (max-width: 520px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__catalogs__item-info {
+    margin-left: 25px;
+    padding: 10px 0;
+
+    @media (max-width: 520px) {
+      margin: 0;
+    }
+  }
+
+  &__catalogs__item-title {
+    font-size: 20px;
+    color: color(dark);
+    margin-bottom: 25px;
+
+    @media (max-width: 1100px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 520px) {
+      padding: 0 5px;
+      text-align: center;
+    }
+  }
+
+  &__catalogs__item-buttons {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 520px) {
+      justify-content: center;
+    }
+  }
+
+  &__catalogs__item__save-button {
+    width: 0px;
+    padding: 10px 50px;
+    background-color: transparent;
+    border: 2px solid color(green);
+    height: 35px;
+    font-size: 15px;
+    transition: all 0.3s;
+    color: color(green);
+
+    &:hover {
+      background-color: color(green);
+      color: color(white);
+    }
+  }
+
+  &__catalogs__item-pdf {
+    margin: 0 10px;
+    color: gray;
+  }
+
+  &__catalogs__item__pdf-button {
+    width: auto;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid color(green);
+    height: 35px;
+    font-size: 15px;
+    transition: all 0.3s;
+    color: color(green);
+
+    &:hover {
+      background-color: color(green);
+      color: color(white);
+    }
+  }
+
+
   // Вопросы
   &__faq__search-box {
     display: flex;
@@ -323,6 +469,7 @@
     transition: all 0.3s;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
     overflow: hidden;
+    width: 250px;
 
     @media (max-width: 700px) {
       height: 400px;
