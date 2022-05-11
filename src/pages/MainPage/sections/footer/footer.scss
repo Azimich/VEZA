@@ -23,11 +23,11 @@
   }
 
   &__logo {
-    width: 110px;
-    height: auto;
+    width: 130px;
 
     @include ipadScreen {
-      width: 95px;
+      width: 90px;
+      z-index: 100;
     }
   }
 

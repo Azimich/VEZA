@@ -4,10 +4,10 @@ export const initSwiper = () => {
   // banner slider
   const swiperGallery = new Swiper('.banner__slider', {
     grabCursor: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
 
     navigation: {
       nextEl: '.swiper-button-next',
