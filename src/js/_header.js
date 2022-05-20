@@ -6,7 +6,6 @@ export const initHeader = () => {
     const burger = document.querySelector('.header__mobile-menu');
     const nav = document.querySelector('.header__menu');
     const navLinks = document.querySelectorAll('.header__nav > li');
-    const header = document.querySelectorAll('header');
   
     burger.addEventListener('click', () => {
       nav.classList.toggle('active');
