@@ -7,12 +7,12 @@
 
   // Навигация Табов
   &__nav {
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     max-width: 1000px;
 
-    @media (max-width:1380px) {
-      max-width: 800px;
-    }
+    // @media (max-width:1380px) {
+    //   max-width: 800px;
+    // }
   }
 
   &__nav__menu {
@@ -95,7 +95,335 @@
       display: none;
     }
   }
+
+
+  // maps
+  &__maps-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .map {
+    width: 100%;
+    position: relative;
+  }
   
+  .map svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: relative;
+  }
+
+  .popups__container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 500px;
+  }
+
+  &__baloon-moskow_1 {
+    top: 57%;
+    left: 13.2%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_2 {
+    top: 58%;
+    left: 8.1%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_3 {
+    top: 66%;
+    left: 8.4%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_4 {
+    top: 67.8%;
+    left: 10.4%;
+    width: 20px;
+  }
+
+  &__baloon-moskow_5 {
+    top: 76%;
+    left: 7.7%;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__baloon-moskow_6 {
+    top: 77%;
+    left: 5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_7 {
+    top: 74%;
+    left: 11%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_8 {
+    top: 73%;
+    left: 15%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_9 {
+    top: 67.4%;
+    left: 14.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_10 {
+    top: 67.4%;
+    left: 14.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_11 {
+    top: 64.8%;
+    left: 16.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_12 {
+    top: 72%;
+    left: 18.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_13 {
+    top: 68%;
+    left: 20.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_14 {
+    top: 64%;
+    left: 18.6%;
+    height: 15px;
+  }
+
+  &__baloon-moskow_15 {
+    top: 59.5%;
+    left: 17%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_16 {
+    top: 60.5%;
+    left: 21.5%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_17 {
+    top: 62%;
+    left: 13%;
+    height: 16px;
+  }
+
+  &__baloon-moskow_18 {
+    top: 60.5%;
+    left: 15%;
+    height: 15px;
+  }
+
+  &__baloon-moskow_1,
+  &__baloon-moskow_2,
+  &__baloon-moskow_3,
+  &__baloon-moskow_4,
+  &__baloon-moskow_5,
+  &__baloon-moskow_6,
+  &__baloon-moskow_7,
+  &__baloon-moskow_8,
+  &__baloon-moskow_9,
+  &__baloon-moskow_10,
+  &__baloon-moskow_11,
+  &__baloon-moskow_12,
+  &__baloon-moskow_13,
+  &__baloon-moskow_14,
+  &__baloon-moskow_15,
+  &__baloon-moskow_16,
+  &__baloon-moskow_17,
+  &__baloon-moskow_18,
+  &__baloon-moskow_19,
+  &__baloon-moskow_20,
+  &__baloon-moskow_21,
+  &__baloon-moskow_22,
+  &__baloon-moskow_23,
+  &__baloon-moskow_24,
+  &__baloon-moskow_25,
+  &__baloon-moskow_26,
+  &__baloon-moskow_27,
+  &__baloon-moskow_28,
+  &__baloon-moskow_29,
+  &__baloon-moskow_30,
+  &__baloon-moskow_31,
+  &__baloon-moskow_32 {
+    position: absolute;
+    height: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &__baloon-moskow_19 {
+    left: 15%;
+    top: 57%;
+    height: 15px;
+  }
+
+  &__baloon-moskow_20 {
+    left: 15%;
+    top: 53.5%;
+    height: 15px;
+  }
+
+  &__baloon-moskow_21 {
+    left: 12%;
+    top: 50%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_22 {
+    left: 27%;
+    top: 61%;
+    height: 20px;
+  }
+
+  &__baloon-moskow_23 {
+    left: 23%;
+    top: 76%;
+  }
+
+  &__baloon-moskow_24 {
+    left: 29%;
+    top: 69%;
+  }
+
+  &__baloon-moskow_25 {
+    left: 33%;
+    top: 74%;
+  }
+
+  &__baloon-moskow_26 {
+    left: 26%;
+    top: 75%;
+  }
+
+  &__baloon-moskow_27 {
+    left: 36%;
+    top: 78%;
+  }
+
+  &__baloon-moskow_28 {
+    left: 43%;
+    top: 83%;
+  }
+
+  &__baloon-moskow_29 {
+    left: 43%;
+    top: 75%;
+  }
+
+  &__baloon-moskow_30 {
+    left: 51%;
+    top: 78%;
+  }
+
+  &__baloon-moskow_31 {
+    left: 87.5%;
+    top: 76%;
+  }
+
+  &__baloon-moskow_32 {
+    left: 88.5%;
+    top: 87%;
+  }
+
+
+  &__maps-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #212121;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: none;
+  }
+
+  .managers__popup-close {
+    font-size: 30px;
+    text-align: right;
+  }
+
+  .managers__popup-info {
+    width: 300px;
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    top: 0;
+    opacity: 0;
+    visibility: visible;
+    display: none;
+    transition: all 0.1s;
+  }
+
+  .baloons.active .managers__popup-info {
+    display: block;
+    opacity: 1;
+    z-index: 99;
+    left: -100%;
+  }
+
+  .managers__popup-cont {
+    background-color: #fff;
+    box-shadow: 0 0 5px #212121;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .managers__popup-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  .managers__popup-title {
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .leaders__item-video {
+    
+  }
+
+  .managers__popup-text {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 145%;
+    margin-bottom: 6px;
+  }
+
+
   &__managers__container {
     display: block;
     max-width: 1215px;
@@ -283,7 +611,6 @@
     background: none;
     border-radius: 50%;
     box-shadow: 0 8px 10px rgba(23, 165, 13, 0.3);
-    cursor: pointer;
     height: 40px;
     width: 40px;
     text-align: center;
