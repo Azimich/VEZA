@@ -5,10 +5,12 @@ import { initNews } from './_news';
 import { initSwiper } from './_swiper';
 import { initSlick } from './libs/slick';
 import { initTabssizes } from './_tabssizes';
-import { initMaps } from './_maps';
+import { initCompany } from './_company';
+import { initLeaders } from './_leaders';
+import { initManagers } from './_managers';
+import { initVacancies } from './_vacancies';
 import { initAuthorization } from './_authorization';
 import { initResources } from './_resources';
-// import { initForms } from './_forms';
 import { initPopup } from './_popup';
 
 
@@ -24,10 +26,12 @@ import { initPopup } from './_popup';
     initNews();
     initSlick();
     initTabssizes();
-    initMaps();
+    initCompany();
+    // initLeaders();
+    initManagers();
+    // initVacancies();
     initAuthorization();
     initResources();
-    // initForms();
     initPopup();
 
   } catch (err) {

@@ -13,7 +13,7 @@ export const initHeader = () => {
       body.classList.toggle('lock')
     });
 
-    navLinks.forEach(link => link.addEventListener('click', () => closeMenu()))
+    navLinks.forEach(link => link.addEventListener('click', () => closeMenu()));
 
     function closeMenu () {
       nav.classList.remove('active')

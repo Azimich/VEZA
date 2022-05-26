@@ -1,8 +1,8 @@
-export const initMaps = ()=> {
+export const initCompany = ()=> {
 
   const $leftLinks = document.querySelectorAll('.left-menu a'),
 		$mapLinks = document.querySelectorAll('.map a'),
-    $tooltip = document.querySelector('.managers__maps-tooltip');
+    $tooltip = document.querySelector('.company__maps-tooltip');
 
   $leftLinks.forEach(el => {
     el.addEventListener('mouseenter', (e) => {
@@ -31,8 +31,8 @@ export const initMaps = ()=> {
     $mapLinks.forEach(continents => {
       continents.addEventListener('mousemove', function(e) {
         $tooltip.innerText = this.dataset.title;
-        $tooltip.style.top = (e.y + 250) + 'px';
-        $tooltip.style.left = (e.x + 30) + 'px';
+        $tooltip.style.top = (e.y - 0) + 'px';
+        $tooltip.style.left = (e.x - 400) + 'px';
         $tooltip.style.fontSize = '12'  + 'px';
       });
 
@@ -57,22 +57,21 @@ export const initMaps = ()=> {
 
   // baloons
   const $baloons = document.querySelectorAll('.baloons');
-  const $closePopup = document.querySelectorAll('.managers__popup-close')
+  const nodeList = [$baloons];
+  nodeList.map(node => clickHandler(node));
 
-  $baloons.forEach(elem =>{
-    elem.addEventListener('click', function() {
-      elem.classList.toggle('active');
-    });
-  });
-
-  // $closePopup.forEach(el => el.addEventListener('click', ()=> closePopup()));
-
-  // function closePopup() {
-  //   $baloons.classList.remove('active');
-  // }
-
-  $closePopup.addEventListener('click', ()=> {
-    $baloons.classList.remove('active');
-  });
+  function clickHandler (nodeList = []) {
+    nodeList.forEach(link => link.addEventListener("click", function() {
+      if(this.classList.contains("active")) {
+        this.classList.remove("active")
+        this.parentNode.nextElementSibling.classList.remove("active") 
+      } else {
+        nodeList.forEach(item => {
+          item.classList.remove("active")
+        });
+        this.classList.add("active")
+      }
+    }));
+  }
 
 }
