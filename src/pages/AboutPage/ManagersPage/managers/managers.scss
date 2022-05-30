@@ -132,7 +132,11 @@
   &__baloon-1 {
     top: 57%;
     left: 13.2%;
-    height: 20px;
+
+    @media (max-width: 500px) {
+      top: 52%;
+      left: 12.2%;
+    }
   }
 
   &__baloon-2 {
@@ -156,14 +160,21 @@
   &__baloon-5 {
     top: 76%;
     left: 7.7%;
-    width: 20px;
-    height: 20px;
+
+    @media (max-width: 500px) {
+      top: 80%;
+      left: 7.3%;
+    }
   }
 
   &__baloon-6 {
     top: 77%;
     left: 5%;
-    height: 20px;
+    
+    @media (max-width: 500px) {
+      top: 76%;
+      left: 4%;
+    }
   }
 
   &__baloon-7 {
@@ -187,13 +198,21 @@
   &__baloon-10 {
     top: 67.4%;
     left: 14.5%;
-    height: 20px;
+
+    @media (max-width: 500px) {
+      top: 61.4%;
+      left: 15.5%;
+    }
   }
 
   &__baloon-11 {
-    top: 64.8%;
-    left: 16.5%;
-    height: 20px;
+    top: 42.8%;
+    left: 13.9%;
+    
+    @media (max-width: 500px) {
+      top: 40%;
+      left: 14%;
+    }
   }
 
   &__baloon-12 {
@@ -205,7 +224,11 @@
   &__baloon-13 {
     top: 68%;
     left: 20.5%;
-    height: 20px;
+    
+    @media (max-width: 500px) {
+      top: 68%;
+      left: 22.5%;
+    }
   }
 
   &__baloon-14 {
@@ -218,6 +241,11 @@
     top: 59.5%;
     left: 17%;
     height: 20px;
+
+    @media (max-width: 500px) {
+      top: 53.5%;
+      left: 19%;
+    }
   }
 
   &__baloon-16 {
@@ -229,52 +257,20 @@
   &__baloon-17 {
     top: 62%;
     left: 13%;
-    height: 16px;
+
+    @media (max-width: 500px) {
+      top: 60%;
+      left: 12%;
+    }
   }
 
   &__baloon-18 {
     top: 60.5%;
     left: 15%;
-    height: 15px;
-  }
 
-  &__baloon-1,
-  &__baloon-2,
-  &__baloon-3,
-  &__baloon-4,
-  &__baloon-5,
-  &__baloon-6,
-  &__baloon-7,
-  &__baloon-8,
-  &__baloon-9,
-  &__baloon-10,
-  &__baloon-11,
-  &__baloon-12,
-  &__baloon-13,
-  &__baloon-14,
-  &__baloon-15,
-  &__baloon-16,
-  &__baloon-17,
-  &__baloon-18,
-  &__baloon-19,
-  &__baloon-20,
-  &__baloon-21,
-  &__baloon-22,
-  &__baloon-23,
-  &__baloon-24,
-  &__baloon-25,
-  &__baloon-26,
-  &__baloon-27,
-  &__baloon-28,
-  &__baloon-29,
-  &__baloon-30,
-  &__baloon-31,
-  &__baloon-32 {
-    position: absolute;
-    height: 20px;
-
-    img {
-      cursor: pointer;
+    @media (max-width: 500px) {
+      top: 54.5%;
+      left: 15.3%
     }
   }
 
@@ -282,18 +278,32 @@
     left: 15%;
     top: 57%;
     height: 15px;
+
+    @media (max-width: 500px) {
+      left: 14.6%;
+      top: 47%;
+    }
   }
 
   &__baloon-20 {
     left: 15%;
     top: 53.5%;
     height: 15px;
+
+    @media (max-width: 500px) {
+      left: 18%;
+      top: 47.5%;
+    }
   }
 
   &__baloon-21 {
     left: 12%;
     top: 50%;
-    height: 20px;
+
+    @media (max-width: 500px) {
+      top: 45%;
+      left: 10%;
+    }
   }
 
   &__baloon-22 {
@@ -305,6 +315,11 @@
   &__baloon-23 {
     left: 23%;
     top: 76%;
+
+    @media (max-width: 500px) {
+      left: 22%;
+      top: 76%;
+    }
   }
 
   &__baloon-24 {
@@ -345,69 +360,64 @@
   &__baloon-31 {
     left: 87.5%;
     top: 76%;
+
+    @media (max-width: 500px) {
+      left: 85.5%;
+      top: 70%;
+    }
   }
 
   &__baloon-32 {
     left: 88.5%;
     top: 87%;
-  }
 
-
-  // popups
-  &__popup__bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.5);
-    opacity: 0; 
-    pointer-events: none; 
-    transition: 0.5s all;
-
-    &.active { 
-      opacity: 1; 
-      pointer-events: all; 
-      transition: 0.5s all;
+    @media (max-width: 500px) {
+      left: 87.5%;
+      top: 80%;
     }
   }
 
-  &__popup__bg-popup {
+  &__baloon-1,
+  &__baloon-2,
+  &__baloon-3,
+  &__baloon-4,
+  &__baloon-5,
+  &__baloon-6,
+  &__baloon-7,
+  &__baloon-8,
+  &__baloon-9,
+  &__baloon-10,
+  &__baloon-11,
+  &__baloon-12,
+  &__baloon-13,
+  &__baloon-14,
+  &__baloon-15,
+  &__baloon-16,
+  &__baloon-17,
+  &__baloon-18,
+  &__baloon-19,
+  &__baloon-20,
+  &__baloon-21,
+  &__baloon-22,
+  &__baloon-23,
+  &__baloon-24,
+  &__baloon-25,
+  &__baloon-26,
+  &__baloon-27,
+  &__baloon-28,
+  &__baloon-29,
+  &__baloon-30,
+  &__baloon-31,
+  &__baloon-32 {
     position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-    background: #fff;
-    width: 400px;
-    padding: 25px;
-    transition: 0.5s all;
+    height: 20px;
+    width: 20px;
 
-    &.active { 
-      transform: perspective(600px) translate(0px, 0%) rotate(0deg);
-      transition: 0.5s all;
-      z-index: 99;
-    }
-  }
-
-  &__close-popup {
-    width: 30px !important;
-  }
-
-  &__header-popup {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
     img {
-      width: 50px;
+      cursor: pointer;
     }
   }
 
-  &__maps-container {
-  }
-
-  &__maps-block {
-  }
 
   &__tooltips {
     position: absolute;
@@ -424,36 +434,17 @@
     display: none;
   }
 
-  &__close-popup  {
-    font-size: 30px;
-    text-align: right;
-    cursor: pointer;
+  .managers__popup-contents {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    
+    @include phoneScreen {
+      flex-direction: column;
+      justify-content: start;
+    }
   }
 
-  &__info-popup {
-    width: 300px;
-    position: absolute;
-    left: 0%;
-    right: 50%;
-    top: 0;
-    opacity: 0;
-    visibility: visible;
-    display: none;
-    transition: all 0.1s;
-  }
-
-  &__baloons.active &__info-popup  {
-    display: block;
-    opacity: 1;
-    z-index: 99;
-  }
-
-  &__cont-popup {
-    background-color: #fff;
-    box-shadow: 0 0 5px #212121;
-    padding: 10px;
-    border-radius: 10px;
-  }
 
   &__logo-popup {
     display: flex;
@@ -467,23 +458,135 @@
   }
 
   .managers__popup-title {
-    color: #000000;
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 6px;
+    color: color(dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-right: 50px;
+
+    @media (max-width: 920px) {
+      margin-right: 30px;
+    }
+
+    @include phoneScreen {
+      margin: 0 0 16px 0;
+    }
   }
 
-  .leaders__item-video {
-    
+  .managers__phone-content {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: color(green);
+    transition: all 0.3s;
+
+    &:nth-child(3) {
+      margin: 0 20px;
+
+      @include phoneScreen {
+        margin: 8px 0;
+      }
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      margin-right: 5px;
+
+      path {
+        fill:green;
+      }
+    }
+
+    .maps__geo {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .managers__popup-phone {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+    transition: all 0.3s;
+    &:hover {
+      color: green;
+
+      path {
+        fill: green;
+      }
+    }
   }
 
   .managers__popup-text {
     color: #000000;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 145%;
     margin-bottom: 6px;
+    margin-bottom: 15px;
   }
+
+  // Maps
+  .managers__maps-block {
+    width: 100%;
+    height: 65vh;
+  }
+
+  // Popup
+  .maps__popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(129, 123, 123);
+    top: 0;
+    left: 0;
+    z-index: 98;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding: 0 40px;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .maps__popup.open &__popup__bg-popup {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0);
+  }
+
+  &__popup__bg-popup {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    right: 0;
+    max-width: 90%;
+    border-radius: 10px;
+    opacity: 0;
+    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+
+    @include phoneScreen {
+      top: 15%;
+    }
+  }
+
+  .managers__close-popup {
+    position: absolute;
+    right: 15px;
+  }
+
 
 
   &__managers__container {

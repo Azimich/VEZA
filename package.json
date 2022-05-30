@@ -1,5 +1,5 @@
 {
-  "name": "Veza",
+  "name": "veza",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
@@ -31,5 +31,11 @@
     "sli": "^0.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitflic.ru/project/web-sajt/web-front-end.git"
+  },
+  "author": "",
+  "description": ""
 }

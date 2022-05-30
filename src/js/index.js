@@ -27,7 +27,7 @@ import { initPopup } from './_popup';
     initSlick();
     initTabssizes();
     initCompany();
-    // initLeaders();
+    initLeaders();
     initManagers();
     // initVacancies();
     initAuthorization();
