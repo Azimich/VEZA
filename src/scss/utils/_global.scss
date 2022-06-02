@@ -90,7 +90,6 @@ section {
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.025em;
   color: color(dark);
 
   @include ipadScreen {
@@ -100,11 +99,9 @@ section {
 
 .text-green {
   font-style: normal;
-  font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   text-align: center;
-  letter-spacing: 0.025em;
   color: #548848;
 
   @include tabletScreen {

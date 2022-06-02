@@ -29,7 +29,7 @@ import { initPopup } from './_popup';
     initCompany();
     initLeaders();
     initManagers();
-    // initVacancies();
+    initVacancies();
     initAuthorization();
     initResources();
     initPopup();

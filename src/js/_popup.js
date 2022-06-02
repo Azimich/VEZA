@@ -25,15 +25,15 @@ export const initPopup = () =>{
           popupClose(el.closest('.popup'));
           document.getElementById('form').reset();
           bodyUnlock()
-          document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
-            item.style.borderWidth = '1px';
-            item.classList.remove('error');
-            document.querySelector('.checkbox-box>label').classList.remove('error');
-            if(item.classList.contains('label-file')){
-              item.textContent = ''
-              item.style.color = '#6C6D70'
-            }
-          })
+          // document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
+          //   item.style.borderWidth = '1px';
+          //   item.classList.remove('error');
+          //   document.querySelector('.checkbox-box>label').classList.remove('error');
+          //   if(item.classList.contains('label-file')){
+          //     item.textContent = ''
+          //     item.style.color = '#6C6D70'
+          //   }
+          // })
         });
       }
     }

@@ -9,10 +9,6 @@
   &__nav {
     margin: 0 auto 30px;
     max-width: 1000px;
-
-    @media (max-width:1380px) {
-      max-width: 800px;
-    }
   }
 
   &__nav__menu {
@@ -98,46 +94,214 @@
 
 
   // maps
-  &__map {
-    max-width: 1215px;
-    height: 500px;
-    margin: 0 auto 80px;
-    border-radius: 10px;
+  &__container-maps {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    position: relative;
   }
-  
-  [class*="balloon"] {
+
+  &__container-tems {
+  }
+
+  &__maps-svg {
+    position: relative;
+  }
+
+  &__tooltips {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    padding: 5px;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
+    box-shadow: 0 0 10px #212121;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: none;
   }
-  
-  [class*="inner-panes"] {
-    border-radius: 15px;
+
+  &__baloon-1,
+  &__baloon-2,
+  &__baloon-3,
+  &__baloon-4,
+  &__baloon-5,
+  &__baloon-6,
+  &__baloon-7,
+  &__baloon-8,
+  &__baloon-9,
+  &__baloon-10,
+  &__baloon-11 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+
+    img {
+      cursor: pointer;
+    }
+
+    @include phoneScreen {
+      width: 20px;
+      height: 20px;
+    }
   }
-  
-  .baloon__address {
-    font-weight: 600;
-    margin-bottom: 8px;
+
+  &__baloon-1 {
+    left: 26%;
+    top: 65%;
   }
-  
-  .baloon__contacts {
-    display: flex;
-    align-items: center;
+
+  &__baloon-2 {
+    left: 85%;
+    top: 70%;
+
+    @media (max-width: 530px) {
+      left: 83%;
+      top: 69%;
+    }
   }
-  
-  .baloon__contacts > img {
-    width: 25px;
-    height: auto;
-    margin-right: 5px;
+
+  &__baloon-3 {
+    left: 36%;
+    top: 64.5%;
+
+    @media (max-width: 530px) {
+      left: 37%;
+      top: 59.5%;
+    }
   }
-  
-  .baloon__contacts > a {
-    text-decoration: none;
-    font-size: 12px;
-    color: green;
+
+  &__baloon-4 {
+    left: 21%;
+    top: 47%;
   }
-  
-  .baloon__address-call {
-    margin-top: 12px;
+
+  &__baloon-5 {
+    left: 30%;
+    top: 51%;
   }
+
+  &__baloon-6 {
+    left: 15%;
+    top: 58%;
+  }
+
+  &__baloon-7 {
+    left: 11%;
+    top: 73%;
+
+    @media (max-width: 530px) {
+      left: 10%;
+      top: 70%;
+    }
+  }
+
+  &__baloon-8 {
+    left: 43%;
+    top: 75%;
+  }
+
+  &__baloon-9 {
+    left: 68%;
+    top: 50%;
+  }
+
+  &__baloon-10 {
+    left: 52%;
+    top: 76%;
+  }
+
+  &__baloon-11 {
+    left: 33%;
+    top: 73%;
+
+    @media (max-width: 530px) {
+      left: 34%;
+      top: 70%;
+    }
+  }
+
+
+  // Popups
+  &__popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #4a4a4a !important;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__popup.open &__popup__bg-popup {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0);
+  }
+
+  &__popup__bg-popup {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    right: 0;
+    max-width: 500px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transition: all 0.3s;
+    background: #fff;
+    overflow: hidden;
+
+    @include phoneScreen {
+      top: 15%;
+      max-width: 90%;
+    }
+  }
+
+  &__close-popup {
+    position: absolute;
+    right: 15px;
+    font-weight: 300;
+  }
+
+  &__popup-contents {
+
+  }
+
+  &__popup-title {
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  &__galerry {
+    padding: 0 0 10px 0;
+    height: 280px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__popup-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #212121;
+    padding: 0 10px 10px;
+  }
+
 
   &__leaders-container {
     display: block;
@@ -219,9 +383,10 @@
 
 
   // Стили соцсетей
-  .banner__icon-box {
+  &__icon-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -253,36 +418,39 @@
     }
   }
 
-  .banner__icon {
-    font-size: 28px;
-    font-weight: 700;
-    color: color(green);
-    transition: 0.3s;
-    margin: 5px 0;
-    z-index: 50;
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
 
     &:hover {
-      color: #1BC47D;
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+      position: absolute;
+      left: 3px;
     }
   }
 
   // Анимация иконки телефона
   .btn-call {
-    background: none;
+    margin: 9px 0 0 5px;
     border-radius: 50%;
-    box-shadow: 0 8px 10px rgba(23, 165, 13, 0.3);
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    z-index: 99;
     transition: .3s;
     -webkit-animation: hoverWave linear 1s infinite;
     animation: hoverWave linear 2s infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
   }
   
   .btn-call__ico {
@@ -291,12 +459,22 @@
     align-items: center;
     animation: 3s ease 10s normal none 0 running shake;
     animation-iteration-count: infinite;
-    /* -webkit-animation: 1200ms ease 0s normal none 1 running shake;
-    -webkit-animation-iteration-count: infinite; */
     color: green;
-    font-size: 28px;
-
     transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
   }
 
   
@@ -337,7 +515,6 @@
   }
   
   /* animations icon */
-  
   @keyframes shake {
     0% {
         transform: rotateZ(0deg);
@@ -473,6 +650,4 @@
         -webkit-transform: rotateZ(0deg);
     }
   }
-
-
 }

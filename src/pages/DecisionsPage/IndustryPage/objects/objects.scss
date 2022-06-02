@@ -461,9 +461,10 @@
 
 
    // Стили соцсетей
-   .banner__icon-box {
+   &__icon-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -495,36 +496,39 @@
     }
   }
 
-  .banner__icon {
-    font-size: 28px;
-    font-weight: 700;
-    color: color(green);
-    transition: 0.3s;
-    margin: 5px 0;
-    z-index: 50;
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
 
     &:hover {
-      color: #1BC47D;
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+      position: absolute;
+      left: 3px;
     }
   }
 
   // Анимация иконки телефона
   .btn-call {
-    background: none;
+    margin: 9px 0 0 5px;
     border-radius: 50%;
-    box-shadow: 0 8px 10px rgba(23, 165, 13, 0.3);
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    z-index: 99;
     transition: .3s;
     -webkit-animation: hoverWave linear 1s infinite;
     animation: hoverWave linear 2s infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
   }
   
   .btn-call__ico {
@@ -533,12 +537,22 @@
     align-items: center;
     animation: 3s ease 10s normal none 0 running shake;
     animation-iteration-count: infinite;
-    /* -webkit-animation: 1200ms ease 0s normal none 1 running shake;
-    -webkit-animation-iteration-count: infinite; */
     color: green;
-    font-size: 28px;
-
     transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
   }
 
   
@@ -579,7 +593,6 @@
   }
   
   /* animations icon */
-  
   @keyframes shake {
     0% {
         transform: rotateZ(0deg);

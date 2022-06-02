@@ -7,7 +7,7 @@
 
    // Навигация Табов
    &__nav {
-    margin: 0 auto 100px;
+    margin: 0 auto 30px;
     max-width: 1000px;
 
     @media (max-width:1380px) {
@@ -37,13 +37,13 @@
 
   &__nav__menu-item-link {
     color: #313131;
-    font-weight: 600;
     font-size: 18px;
     padding: 0 0 15px 0;
     position: relative;
 
     &.active {
       color: color(green);
+      font-weight: 600;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -96,6 +96,87 @@
     }
   }
 
+  // Maps
+  &__map-container {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+
+    @media (max-width:530px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    position: relative;
+  }
+
+  .map__svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: relative;
+  }
+
+  &__baloon-moskow_1,
+  &__baloon-moskow_2,
+  &__baloon-moskow_3,
+  &__baloon-moskow_4,
+  &__baloon-moskow_5,
+  &__baloon-moskow_6,
+  &__baloon-moskow_7,
+  &__baloon-moskow_8,
+  &__baloon-moskow_9 {
+    position: absolute;
+    height: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &__baloon-moskow_1 {
+  }
+
+  &__baloon-moskow_2 {
+  }
+  
+  &__baloon-moskow_3 {
+  }
+  
+  &__baloon-moskow_4 {
+  }
+  
+  &__baloon-moskow_5 {
+  }
+  
+  &__baloon-moskow_6 {
+  }
+  
+  &__baloon-moskow_7 {
+  }
+  
+  &__baloon-moskow_8 {
+  }
+  
+  &__baloon-moskow_9 {
+  }
+  
+  &__maps-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #212121;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: none;
+  }
+  
+
   // Наши вакансии
   &__vacancies__title {
     margin-bottom: 60px;
@@ -104,6 +185,7 @@
 
     @media (max-width: 500px) {
       font-size: 35px;
+      margin-bottom: 30px;
     }
 
     @media (max-width: 400px) {
@@ -291,6 +373,38 @@
     
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+    }
+  }
+
+
+  // Стили для поикс
+  .input__search {
+    position: relative;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 5px #212121;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto 30px;
+
+    img {
+      position: absolute;
+      right: 28px;
+      top: 26px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .return {
+    display: none;
+  }
+
+  .input {
+    padding: 10px 40px 10px 10px;
+    
+    &::placeholder {
+      color: gray;
     }
   }
 
@@ -827,9 +941,6 @@
     }
   }
 
-
-
-
    // Стили соцсетей
    .banner__icon-box {
     display: flex;
@@ -865,36 +976,74 @@
     }
   }
 
-  .banner__icon {
-    font-size: 28px;
-    font-weight: 700;
-    color: color(green);
-    transition: 0.3s;
-    margin: 5px 0;
-    z-index: 50;
+  &__icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 280px;
+    left: 95%;
+    z-index: 100;
+
+    &::after,
+    &:before {
+      content: '';
+      background-color: #1BC47D;
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      right: 50%;
+    }
+
+    &::after {
+      bottom: -120px;
+    }
+
+    &:before {
+      top: -110px;
+    }
+
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
 
     &:hover {
-      color: #1BC47D;
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+      position: absolute;
+      left: 3px;
     }
   }
 
   // Анимация иконки телефона
   .btn-call {
-    background: none;
+    margin: 9px 0 0 5px;
     border-radius: 50%;
-    box-shadow: 0 8px 10px rgba(23, 165, 13, 0.3);
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    z-index: 99;
     transition: .3s;
     -webkit-animation: hoverWave linear 1s infinite;
     animation: hoverWave linear 2s infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
   }
   
   .btn-call__ico {
@@ -903,12 +1052,22 @@
     align-items: center;
     animation: 3s ease 10s normal none 0 running shake;
     animation-iteration-count: infinite;
-    /* -webkit-animation: 1200ms ease 0s normal none 1 running shake;
-    -webkit-animation-iteration-count: infinite; */
     color: green;
-    font-size: 28px;
-
     transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
   }
 
   
@@ -949,7 +1108,6 @@
   }
   
   /* animations icon */
-  
   @keyframes shake {
     0% {
         transform: rotateZ(0deg);

@@ -9,10 +9,6 @@
   &__nav {
     margin: 0 auto 50px;
     max-width: 1000px;
-
-    // @media (max-width:1380px) {
-    //   max-width: 800px;
-    // }
   }
 
   &__nav__menu {
@@ -130,8 +126,8 @@
   }
 
   &__baloon-1 {
-    top: 57%;
-    left: 13.2%;
+    top: 55%;
+    left: 12.2%;
 
     @media (max-width: 500px) {
       top: 52%;
@@ -146,15 +142,13 @@
   }
 
   &__baloon-3 {
-    top: 66%;
+    top: 64%;
     left: 8.4%;
-    height: 20px;
   }
 
   &__baloon-4 {
     top: 67.8%;
-    left: 10.4%;
-    width: 20px;
+    left: 10.9%;
   }
 
   &__baloon-5 {
@@ -238,9 +232,8 @@
   }
 
   &__baloon-15 {
-    top: 59.5%;
-    left: 17%;
-    height: 20px;
+    top: 58.5%;
+    left: 18%;
 
     @media (max-width: 500px) {
       top: 53.5%;
@@ -255,8 +248,8 @@
   }
 
   &__baloon-17 {
-    top: 62%;
-    left: 13%;
+    top: 61%;
+    left: 12%;
 
     @media (max-width: 500px) {
       top: 60%;
@@ -276,8 +269,7 @@
 
   &__baloon-19 {
     left: 15%;
-    top: 57%;
-    height: 15px;
+    top: 56%;
 
     @media (max-width: 500px) {
       left: 14.6%;
@@ -287,8 +279,7 @@
 
   &__baloon-20 {
     left: 15%;
-    top: 53.5%;
-    height: 15px;
+    top: 51.5%;
 
     @media (max-width: 500px) {
       left: 18%;
@@ -416,6 +407,11 @@
     img {
       cursor: pointer;
     }
+
+    @include phoneScreen {
+      height: 12px;
+      width: 12px;
+    }
   }
 
 
@@ -533,6 +529,16 @@
   .managers__maps-block {
     width: 100%;
     height: 65vh;
+    overflow: hidden;
+
+    @include phoneScreen {
+      height: 50vh;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   // Popup
@@ -540,7 +546,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(129, 123, 123);
+    background-color: #4a4a4a;
     top: 0;
     left: 0;
     z-index: 98;
@@ -569,7 +575,7 @@
     right: 0;
     margin: 0 auto;
     right: 0;
-    max-width: 90%;
+    max-width: 80%;
     border-radius: 10px;
     opacity: 0;
     transform: perspective(600px) translate(0, -100%) rotateX(45deg);
@@ -579,12 +585,14 @@
 
     @include phoneScreen {
       top: 15%;
+      max-width: 95%;
     }
   }
 
   .managers__close-popup {
     position: absolute;
     right: 15px;
+    font-weight: 300;
   }
 
 
@@ -772,21 +780,74 @@
   }
 
   // Анимация иконки телефона
-  .btn-call {
-    background: none;
-    border-radius: 50%;
-    box-shadow: 0 8px 10px rgba(23, 165, 13, 0.3);
-    height: 40px;
-    width: 40px;
+  &__icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    z-index: 99;
+    position: fixed;
+    top: 280px;
+    left: 95%;
+    z-index: 100;
+
+    &::after,
+    &:before {
+      content: '';
+      background-color: #1BC47D;
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      right: 50%;
+    }
+
+    &::after {
+      bottom: -120px;
+    }
+
+    &:before {
+      top: -110px;
+    }
+
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
+
+    &:hover {
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+      position: absolute;
+      left: 3px;
+    }
+  }
+
+  // Анимация иконки телефона
+  .btn-call {
+    margin: 9px 0 0 5px;
+    border-radius: 50%;
     transition: .3s;
     -webkit-animation: hoverWave linear 1s infinite;
     animation: hoverWave linear 2s infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
   }
   
   .btn-call__ico {
@@ -795,12 +856,22 @@
     align-items: center;
     animation: 3s ease 10s normal none 0 running shake;
     animation-iteration-count: infinite;
-    /* -webkit-animation: 1200ms ease 0s normal none 1 running shake;
-    -webkit-animation-iteration-count: infinite; */
     color: green;
-    font-size: 28px;
-
     transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
   }
 
   
@@ -841,7 +912,6 @@
   }
   
   /* animations icon */
-  
   @keyframes shake {
     0% {
         transform: rotateZ(0deg);
