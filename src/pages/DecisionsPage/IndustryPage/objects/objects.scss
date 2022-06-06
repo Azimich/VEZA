@@ -1,5 +1,5 @@
 .objects {
-  margin: 150px auto 100px;
+  margin: 150px auto 50px;
 
   @include phoneScreen {
     margin: 100px auto 80px;
@@ -58,7 +58,6 @@
     line-height: 50px;
     font-size: 38px;
     font-weight: 500;
-    max-width: 600px;
 
     @media (max-width: 1220px) {
       text-align: center;

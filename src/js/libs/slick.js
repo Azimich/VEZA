@@ -4,11 +4,13 @@ import 'slick-carousel/slick/slick';
 
 const teamSlider = $('.slider__click')
 
+
 export const initSlick = () => {
 
   Fancybox.bind('[data-fancybox="single"]', {
     groupAttr: false,
   });
+
 
   $(document).ready(function(){
     teamSlider.slick({

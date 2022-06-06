@@ -396,9 +396,9 @@
     }
   }
 
-  .return {
-    display: none;
-  }
+  // .return {
+  //   display: none;
+  // }
 
   .input {
     padding: 10px 40px 10px 10px;
@@ -408,7 +408,9 @@
     }
   }
 
-  
+  .popup.open .vacancies__container {
+    overflow: hidden;
+  }
    // Popup
    .popup {
     position: fixed;

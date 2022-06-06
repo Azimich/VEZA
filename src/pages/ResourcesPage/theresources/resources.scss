@@ -7,11 +7,7 @@
 
 
   &__nav {
-    margin: 0 auto 100px;
-
-    @media (max-width: 900px) {
-      margin: 0 auto 50px;
-    }
+    margin: 0 auto 50px;
   }
 
   &__nav__menu {
@@ -104,18 +100,9 @@
   &__button {
     width: 400px;
     margin: 0 auto 80px;
-    padding: 0;
-
-    &:hover {
-      transform: scale(1.1);
-      background-color: color(lightgreen);
-    }
-
-    @include ipadScreen {
-      width: 320px;
-      margin: 0 auto 50px;
-      border-radius: 5px;
-    }
+    transition: all 0.3s;
+    border-radius: 5px;
+    height: 55px;
   }
 
   .hide {
@@ -205,12 +192,6 @@
   }
 
   // Каталоги
-  &__catalogs-tab {
-  }
-
-  &__catalogs-container {
-  }
-
   &__catalogs-title {
     text-align: center;
     text-transform: uppercase;

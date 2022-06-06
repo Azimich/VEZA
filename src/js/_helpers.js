@@ -1,5 +1,5 @@
 let unlock = true;
-const timeout = 800;
+const timeout = 300;
 
 export function popupOpen(currentPopup) {
   if (currentPopup && unlock) {
@@ -25,9 +25,9 @@ export function popupClose(popupActive, doUnlock = true) {
   if (unlock) {
     popupActive.classList.remove('open');
 
-    if (doUnlock) {
-      bodyUnlock();
-    }
+    // if (doUnlock) {
+    //   bodyUnlock();
+    // }
   }
 }
 
@@ -50,7 +50,6 @@ export function bodyLock() {
 }
 
 export function bodyUnlock() {
-
   document.body.style.paddingRight = '0px';
   document.body.classList.remove('lock');
   unlock: false;

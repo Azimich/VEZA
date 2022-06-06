@@ -329,148 +329,190 @@
   }
 
 
-  //Slider VRAN
-  &__slider {
-    display: flex;
-    padding: 0 5px 30px 5px !important;
-
-    @media (max-width: 1200px) {
-      max-width: 940px;
-    }
-
-    @include phoneScreen {
-      padding: 0 5px 30px 5px !important;
-    }
+  //Gallery VRAN
+  &__gallery-container {
+    margin: 100px 0;
   }
 
-  &__slider-container {
-    margin: 50px auto 0;
+  &__gallery-title {
+    margin-bottom: 20px;
+    line-height: auto;
   }
 
-  &__slider-title {
-    text-align: center;
-    font-weight: 500;
-    color: color(dark);
-  }
-
-  &__slider-container {
-    padding: 20px 0;
-  }
-
-  &__slider-item {
-    width: 270px !important;
-    height: 380px !important;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 25%);
-    background-color: #9cff4d;
-    border-radius: 10px;
-    padding: 20px 0;
+  &__gallery-content {
     overflow: hidden;
-    opacity: 0.6;
-    transition: all 0.3s;
-
-    &:hover .equipment__fan__VRAN__slider-bottom-btn{
-      margin: 0 0 0 5px;
-    }
-
-    @media (max-width: 1380px) {
-      width: 250px !important;
-      height: 360px !important;
-    }
+    border-radius: 12px;
   }
 
-  .swiper-slide.swiper-slide-visible.swiper-slide-active {
-    opacity: 1 !important;
-    background-color: #7fb734
-  }
-
-  &__slider-img-box {
-    margin: 0 0 20px 0;
-  }
-
-  &__slider-bottom-box {
-    background-color: #484848;
-    padding: 20px;
-    height: 150px;
-    position: relative;
-    bottom: -20px;
-  }
-
-  .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    font-size: 10px;
-    background-color: color(lightgreen);
-  }
-
-  .swiper-button-next, .swiper-button-prev {
-    background: rgba(0, 128, 0, 0.853);
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    top: 53%;
-
-    @include phoneScreen {
-      font-size: 0;
-      display: none;
-    }
-  }
-
-  .swiper-button-prev {
-    left: 0;
-  }
-
-  .swiper-button-next {
-    right: 0;
-  }
-
-  .swiper-button-prev:after,
-  .swiper-button-next::after {
-    color: color(white);
-    position: absolute;
-    top: 23%;
-    font-weight: 500 !important;
-    font-size: 18px !important;
-
-    @include phoneScreen {
-      font-size: 0;
-      display: none;
-    }
-  }
-
-  .swiper-button-prev:after {
-    right: 12px;
-  }
-
-  .swiper-button-next::after {
-    left: 12px;
-  }
-
-  &__slider-bottom-btn {
-    font-weight: 400;
+  &__gallery__top-box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 200px;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__gallery__top-items {
+    width: 32.7%;
+    height: 100%;
+    background-color: rgb(0 132 25 / 76%);
     transition: all 0.3s;
-    font-size: 16px;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 10px #212121;
+    }
 
     img {
-      margin-left: 10px;
-      width: 20px;
-      height: 20px;
+      object-fit: contain;
     }
 
-    &:nth-child(4) {
-      margin-top: 15px;
+    @media (max-width: 950px) {
+      height: 200px;
+      width: 100%;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
-  .fans__vran__slider__subtitle {
-    color: color(white);
-    line-height: 135%;
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: 400;
+  &__gallery__bottom-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    overflow: hidden;
+    padding: 10px 0;
+    
+    @include phoneScreen {
+      flex-direction: column;
+      height: auto;
+      padding: 12px 0;
+    }
   }
+
+  &__gallery__bottom-items {
+    width: 49.5%;
+    height: 100%;
+    background-color: rgb(0 132 25 / 76%);
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 10px #212121;
+    }
+
+    img {
+      object-fit: contain;
+    }
+      
+    @include phoneScreen {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .hover-effect-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-weight: 500;
+    top: 30%; /* Отступ сверху */
+    font-size: 25px; /* Размер текста заголовка */
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    color: white; /* Цвет заголовка */
+    z-index: 1;
+    transition: top .4s ease;
+  }
+
+  .hover-effect-btn:hover .title {
+    top: 20%; /* Отступ сверху при наведении */
+  }
+
+  @media (min-width: 950px) {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: background 0.4s ease;
+    }
   
+    .hover-effect-btn:hover .overlay {
+      display: block;
+      background: rgba(0, 0, 0, 0.656); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+    }
+
+    .button {
+      position: absolute;
+      width: 100%;
+      left:0;
+      top: 65%; /* Отступ сверху */
+      text-align: center;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+  
+    .button a {
+      padding: 10px 50px; /* Отступ */
+      text-align: center;
+      background: #fff; /* Цвет кнопки */
+      color: rgb(26, 130, 0); /* Цвет текста */
+      border: 1px solid white; /* Ширина, стиль и цвет границы */
+      z-index: 1; 
+      border-radius: 8px;
+    }
+  
+    .hover-effect-btn:hover .button {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0 0 0 / 28%);
+    }
+  
+    .button {
+      position: absolute;
+      width: 100%;
+      left:0;
+      top: 65%; /* Отступ сверху */
+      text-align: center;
+      opacity: 1;
+      transition: opacity .35s ease;
+    }
+  
+    .button a {
+      padding: 10px 50px; /* Отступ */
+      text-align: center;
+      background: #fff; /* Цвет кнопки */
+      color: rgb(26, 130, 0); /* Цвет текста */
+      border: 1px solid white; /* Ширина, стиль и цвет границы */
+      z-index: 1; 
+      border-radius: 8px;
+    }
+  }
 
   //table VRAN
   &__table-container {
@@ -478,12 +520,20 @@
     margin: 40px 0 0 0;
   }
 
-  &__table-title {
+  &__table-title, &__gallery-title {
     font-weight: 500;
     font-size: 35px;
     margin: 0 0 30px 0;
     text-align: center;
     line-height: 40px;
+
+    @media (max-width: 500px) {
+      font-weight: 500;
+      font-size: 25px;
+      margin: 0 0 20px 0;
+      text-align: center;
+      line-height: 28px;
+    }
   }
 
   &__table-box {

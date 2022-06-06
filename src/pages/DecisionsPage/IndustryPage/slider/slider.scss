@@ -1,145 +1,193 @@
-.slider {
-  margin-bottom: 150px;
-
-  &__container {
-    padding: 10px 0 70px 0;
-    margin: 0 auto;
-  }
-
-  &__industry {
-    overflow: hidden;
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media (max-width: 1400px) {
-      max-width: 1190px;
-    }
-
-    @media (max-width: 1200px) {
-      max-width: 1060px;
-    }
-  }
-
-  &__item {
-    background-color: #9cff4d;
-    opacity: 0.4;
-    width: 360px !important;
-    height: 460px !important;
-    border-radius: 10px;
-    overflow: hidden;
-
-    @media (max-width: 1400px) {
-      width: 320px !important;
-      height: 410px !important;
-    }
-
-    @media (max-width: 1200px) {
-      width: 280px !important;
-      height: 380px !important;
-    }
-
-  }
-
-  .slider__item.swiper-slide.swiper-slide-visible.swiper-slide-active {
-    opacity: 1;
-    background-color: #7fb734;
-  }
-
-  &__img-box {
-    width: 80%;
-    padding: 20px;
-    margin: 0 auto 90px;
-    height: 300px;
-
-    @media (max-width: 1400px) {
-      padding: 10px;
-      margin: 0 auto 80px;
-      height: 260px;
-    }
-
-    @media (max-width: 1200px) {
-      padding: 10px;
-      margin: 0 auto 50px;
-      height: 255px;
-    }
-  }
-
-  &__bottom-box {
-    text-align: center;
-    background-color: #484848;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.industry {
 
   &__title {
-    padding: 10px 0;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 35px;
+    margin: 0 0 30px 0;
     text-align: center;
-    letter-spacing: 0.02em;
-    color: color(white);
-  }
+    line-height: 40px;
 
-  .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    font-size: 10px;
-    background-color: color(lightgreen);
-  }
-
-  .swiper-button-next, .swiper-button-prev {
-    background: rgba(0, 128, 0, 0.853);
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    top: 45%;
-
-    @include phoneScreen {
-      font-size: 0;
-      display: none;
+    @media (max-width: 500px) {
+      font-weight: 500;
+      font-size: 25px;
+      margin: 0 0 20px 0;
+      text-align: center;
+      line-height: 28px;
     }
   }
 
-  .swiper-button-prev:after,
-  .swiper-button-next::after {
-    color: color(white);
+  &__gallery-container {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  &__gallery__top-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+  
+    @media (max-width: 950px) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  
+  &__gallery__top-items {
+    width: 32.7%;
+    height: 100%;
+    background-color: rgb(0 132 25 / 76%);
+    transition: all 0.3s;
+    position: relative;
+  
+    &:hover {
+      box-shadow: 0 0 10px #212121;
+    }
+  
+    img {
+      object-fit: contain;
+    }
+  
+    @media (max-width: 950px) {
+      height: 200px;
+      width: 100%;
+      margin-bottom: 12px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__gallery__bottom-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    overflow: hidden;
+    padding: 10px 0 0px 0px;
+    
+    @include phoneScreen {
+      flex-direction: column;
+      height: auto;
+      padding: 12px 0;
+    }
+  }
+  
+  &__gallery__bottom-items {
+    width: 49.5%;
+    height: 100%;
+    background-color: rgb(0 132 25 / 76%);
+    position: relative;
+    transition: all 0.3s;
+  
+    &:hover {
+      box-shadow: 0 0 10px #212121;
+    }
+  
+    img {
+      object-fit: contain;
+    }
+      
+    @include phoneScreen {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  .hover-effect-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .title {
     position: absolute;
-    top: 23%;
-    font-weight: 500 !important;
-    font-size: 18px !important;
-
-    @include phoneScreen {
-      font-size: 0;
-      display: none;
+    width: 100%;
+    left: 0;
+    font-weight: 500;
+    top: 30%; /* Отступ сверху */
+    font-size: 25px; /* Размер текста заголовка */
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    color: white; /* Цвет заголовка */
+    z-index: 1;
+    transition: top .4s ease;
+  }
+  
+  .hover-effect-btn:hover .title {
+    top: 20%; /* Отступ сверху при наведении */
+  }
+  
+  @media (min-width: 950px) {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: background 0.4s ease;
+    }
+  
+    .hover-effect-btn:hover .overlay {
+      display: block;
+      background: rgba(0, 0, 0, 0.656); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+    }
+  
+    .button {
+      position: absolute;
+      width: 100%;
+      left:0;
+      top: 65%; /* Отступ сверху */
+      text-align: center;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+  
+    .button a {
+      padding: 10px 50px; /* Отступ */
+      text-align: center;
+      background: #fff; /* Цвет кнопки */
+      color: rgb(26, 130, 0); /* Цвет текста */
+      border: 1px solid white; /* Ширина, стиль и цвет границы */
+      z-index: 1; 
+      border-radius: 8px;
+    }
+  
+    .hover-effect-btn:hover .button {
+      opacity: 1;
     }
   }
-
-  .swiper-button-prev:after {
-    left: 9px;
-  }
-
-  .swiper-button-next::after {
-    right: 9px;
-  }
-
-  .swiper-button-next, .swiper-rtl .swiper-button-prev {
-    right: 0px;
-    left: auto;
-  }
-  .swiper-button-prev, .swiper-rtl .swiper-button-next {
-    left: 0px;
-    right: auto;
-  }
-
-  .swiper-container {
-    overflow-x:hidden;
-    overflow-y: hidden;
+  
+  @media (max-width: 950px) {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0 0 0 / 28%);
+    }
+  
+    .button {
+      position: absolute;
+      width: 100%;
+      left:0;
+      top: 65%; /* Отступ сверху */
+      text-align: center;
+      opacity: 1;
+      transition: opacity .35s ease;
+    }
+  
+    .button a {
+      padding: 10px 50px; /* Отступ */
+      text-align: center;
+      background: #fff; /* Цвет кнопки */
+      color: rgb(26, 130, 0); /* Цвет текста */
+      border: 1px solid white; /* Ширина, стиль и цвет границы */
+      z-index: 1; 
+      border-radius: 8px;
+    }
   }
 }
-
