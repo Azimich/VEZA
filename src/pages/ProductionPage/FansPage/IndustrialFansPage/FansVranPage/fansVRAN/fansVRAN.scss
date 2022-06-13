@@ -32,17 +32,23 @@
   }
 
   .equipment__sidebar__title-box {
-    padding: 10px 20px;
+    padding: 10px;
   }
 
   .equipment__sidebar-title {
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 20px;
-    letter-spacing: 0.025em;   
+    letter-spacing: 0.025em; 
+    display: flex;
+    align-items: center;
+    
+    svg {
+      margin-right: 8px;
+    }
 
     @media (max-width: 1200px) {
-      text-align: center;
+     justify-content: center;
     }
   }
 
@@ -71,6 +77,11 @@
 
   .equipment__sidebar-category-icon {
     margin-right: 12px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .equipment__sidebar-category-text {
@@ -348,19 +359,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 200px;
+    padding: 10px 10px 0 10px;
 
     @media (max-width: 950px) {
       flex-direction: column;
       height: auto;
+      padding: 10px 0 0 0;
     }
   }
 
   &__gallery__top-items {
     width: 32.7%;
     height: 100%;
-    background-color: rgb(0 132 25 / 76%);
-    transition: all 0.3s;
+    transition: all 0.2s;
     position: relative;
 
     &:hover {
@@ -372,25 +383,68 @@
     }
 
     @media (max-width: 950px) {
-      height: 200px;
       width: 100%;
       margin-bottom: 12px;
+      height: 240px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
+
+    @media (max-width: 450px) {
+      height: 100%;
+    }
+  }
+
+
+  /* Настройки маркированного списка */
+  .hover-effect-scale {
+    list-style:none;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    
+    @media (max-width:950px) {
+      height: 100%;
+    }
+  }
+
+  .hover-effect-scale li {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+
+    @media (max-width:950px) {
+      height: 100%;
+    }
+  }
+
+  .hover-effect-scale li img {
+    transition: all 0.2s linear;
+
+    @media (max-width: 950px) {
+      object-fit: cover;
+    }
+
+    @media (max-width: 450px) {
+      object-fit: contain;
+    }
+  }
+
+  .hover-effect-scale li:hover img {
+    transform: scale(1.1);
   }
 
   &__gallery__bottom-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 200px;
     overflow: hidden;
-    padding: 10px 0;
+    padding: 10px 10px 10px 10px;
     
-    @include phoneScreen {
+    @media (max-width: 950px){
       flex-direction: column;
       height: auto;
       padding: 12px 0;
@@ -400,9 +454,8 @@
   &__gallery__bottom-items {
     width: 49.5%;
     height: 100%;
-    background-color: rgb(0 132 25 / 76%);
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     &:hover {
       box-shadow: 0 0 10px #212121;
@@ -411,108 +464,49 @@
     img {
       object-fit: contain;
     }
-      
+
+    @media (max-width: 950px) {
+      width: 100%;
+      margin-bottom: 12px;
+      height: 240px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     @include phoneScreen {
       width: 100%;
-      height: 200px;
       margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  .hover-effect-btn {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .title {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    font-weight: 500;
-    top: 30%; /* Отступ сверху */
-    font-size: 25px; /* Размер текста заголовка */
-    text-align: center;
-    text-transform: uppercase; /* Заглавные буквы */
-    color: white; /* Цвет заголовка */
-    z-index: 1;
-    transition: top .4s ease;
-  }
-
-  .hover-effect-btn:hover .title {
-    top: 20%; /* Отступ сверху при наведении */
-  }
-
-  @media (min-width: 950px) {
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    @media (max-width: 450px) {
       height: 100%;
-      transition: background 0.4s ease;
     }
-  
-    .hover-effect-btn:hover .overlay {
+      
+  }
+
+  &__gallery__bottom-items-pc {
+    display: block;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+
+  &__gallery__bottom-items-mob {
+    display: none;
+
+    @media (max-width: 950px) {
       display: block;
-      background: rgba(0, 0, 0, 0.656); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
-    }
-
-    .button {
-      position: absolute;
-      width: 100%;
-      left:0;
-      top: 65%; /* Отступ сверху */
-      text-align: center;
-      opacity: 0;
-      transition: opacity .35s ease;
-    }
-  
-    .button a {
-      padding: 10px 50px; /* Отступ */
-      text-align: center;
-      background: #fff; /* Цвет кнопки */
-      color: rgb(26, 130, 0); /* Цвет текста */
-      border: 1px solid white; /* Ширина, стиль и цвет границы */
-      z-index: 1; 
-      border-radius: 8px;
-    }
-  
-    .hover-effect-btn:hover .button {
-      opacity: 1;
     }
   }
 
-  @media (max-width: 950px) {
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgb(0 0 0 / 28%);
-    }
-  
-    .button {
-      position: absolute;
-      width: 100%;
-      left:0;
-      top: 65%; /* Отступ сверху */
-      text-align: center;
-      opacity: 1;
-      transition: opacity .35s ease;
-    }
-  
-    .button a {
-      padding: 10px 50px; /* Отступ */
-      text-align: center;
-      background: #fff; /* Цвет кнопки */
-      color: rgb(26, 130, 0); /* Цвет текста */
-      border: 1px solid white; /* Ширина, стиль и цвет границы */
-      z-index: 1; 
-      border-radius: 8px;
-    }
-  }
+
 
   //table VRAN
   &__table-container {
@@ -805,11 +799,17 @@
       opacity: 1;
       background: color(green);
       box-shadow: 0 0 5px color(green);
+
+      path {
+        fill: color(white);
+      }
     }
 
-    i {
+    svg {
       transform: rotate(-90deg);
-      color: color(green);
+       path {
+         fill: green;
+       }
     }
   }
 
@@ -873,8 +873,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 25px !important;
+      height: 25px !important;
       position: absolute;
       left: 3px;
     }

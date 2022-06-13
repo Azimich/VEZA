@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0;
 
     @media (max-width: 1130px) {
       display: flex;
@@ -23,11 +23,11 @@
   }
 
   &__logo {
-    width: 130px;
+    width: 120px;
 
     @include ipadScreen {
       width: 90px;
-      z-index: 100;
+      z-index: 98;
     }
   }
 
@@ -71,7 +71,7 @@
   &__menu-link {
     font-size: 16px;
     font-weight: 400;
-    color: color(lightgreen);
+    color: green;
     letter-spacing: 0.025em;
     transition: 0.3s;
     position: relative;
@@ -110,29 +110,27 @@
   }
 
   &__social-item {
-    width: 38px;
-    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     background-color: transparent;
-    margin: 0 5px;
-    font-size: 20px;
-    font-weight: 700;
+    margin: 0 8px;
     color: color(lightgreen);
-    transition: 0.5s;
+    transition: 0.3s;
 
     &:hover {
-      color: color(white);
-      background-color: color(lightgreen);
+      background-color: green;
     }
 
-    &:nth-child(2) {
-      font-size: 25px;
-    }
-    &:nth-child(3) {
-      font-size: 25px;
+    svg {
+      width: 23px;
+      height: 23px;
+      transition: all 0.3s;
+
+      path {
+        fill: green;
+      }
     }
   }
 }

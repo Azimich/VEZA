@@ -691,11 +691,6 @@
            <a href="#" class="vacancies__vacancies__search-button little__button">Поиск</a>
           </div>
         </div>
-<!-- 
-        <div class="input__search">
-          <input type="text" class="input" placeholder="Поиск" id="search">
-          <img src="../assets/images/search.svg" alt="search">
-        </div> -->
 
         <div class="vacancies__vacancies__vacancy-container">
           <div class="vacancies__vacancies__vacancy-item" data-title="cаратов" data-name="Веб-разработчик">
@@ -789,15 +784,15 @@
     </div>
 
 
-    <div class="popup" id="popup__form">
-      <div class="popup__body">
-        <div class="popup__content">
-          <div class="close-popup">&times;</div>
+    <div class="popup popup__vacancies" id="popup__form">
+      <div class="popup__body popup__vacancies-body">
+        <div class="popup__content popup__vacancies-content">
+          <div class="close-popup popup__vacancies-close">&times;</div>
           <h1 class="popup__heading">оформить заявку</h1>
           <p class="popup__text">
             Хотите стать частью нашей команды? Или нашли ваканcию, которая вам подходит ?
             Оставьте Ваши данные и мы обязательно свяжемся с Вами!</p>
-          <form action="./mail.php" method="POST" id="form" novalidate>
+          <form action="#" method="POST" id="form" novalidate>
             <input type="text" placeholder="Имя" name="name">
             <div class="email-tel-box">
               <input type="email" name="email" id="user-mail" placeholder="Почта *" class="email required">

@@ -1,3 +1,4 @@
+
 export const initTabssizes = () => {
 
     // TABS
@@ -6,48 +7,43 @@ export const initTabssizes = () => {
             e.preventDefault();
             const id = e.target.getAttribute('href').replace('#','');
             document.querySelectorAll('.typesizes__menu-link').forEach(
-                (element) => element.classList.remove('active')
-            );
+                (element) => element.classList.remove('active'));
+
             document.querySelectorAll('.tab__cont').forEach(
-                (el) => el.classList.add('hide')
-            );
+                (el) => el.classList.add('hide'));
+
             elem.classList.add('active');
             document.getElementById(id).classList.remove('hide');
         });
     });
 
-    // POPUP
-    // const popupBg = document.querySelector('.typesizes__popup-bg');
-    // const popupItems = document.querySelector('.typesizes__popup-items');
-    // const popupOpenBtn = document.querySelectorAll('.typesezis__open-popup');
-    // const popupCloseBtn = document.querySelector('.typesizes__close-popup');
-    // const buttonClose = document.querySelector('.typesizes__popup-btn');
+    
+    // VanillaTilt.init(document.querySelector(".card"), {
+	// 	max: 0,  // Максимальный угол поворота карточки
+    //     glare: true,  // Включаем эффект блика
+    //     'max-glare': 0.5,  // Регулируем интенсивность блика
+    //     reverse: false,  // Включает/выключает реверсию наклона 
+	// });
 
-    // popupOpenBtn.forEach(button => {
-    //     button.addEventListener('click', (elem)=> {
-    //         popupBg.classList.add('active');
-    //         popupItems.classList.add('active')
-    //     });
+    // const card = document.querySelector('.card');
+    // const fan = document.querySelector('.photo > img');
+    // const title = document.querySelector('.name');
+    // const description = document.querySelector('.description');
+    // const button = document.querySelector('.button');
+
+    // card.addEventListener('mouseenter', (e)=> {
+    //     fan.classList.add('active')
+    //     title.classList.add('active')
+    //     description.classList.add('active')
+    //     button.classList.add('active')
+    //     card.style.transition = 'none';
     // });
 
-
-    // popupCloseBtn.addEventListener('click', function() {
-    //     popupBg.classList.remove('active');
-    //     popupItems.classList.remove('active');
+    // card.addEventListener('mouseleave', (e)=> {
+    //     fan.classList.remove('active')
+    //     title.classList.remove('active')
+    //     description.classList.remove('active')
+    //     button.classList.remove('active')
+    //     card.style.transition = 'all 0.5s ease';
     // });
-
-    // buttonClose.addEventListener('click', (e)=> {
-    //    popupBg.classList.remove('active');
-    //    popupItems.classList.remove('active') 
-    // });
-
-    // ChecBoxes
-    // const checkBoxes = document.querySelectorAll('.typesizes__checkbox');
-
-    // checkBoxes.forEach(function(elements) {
-    //     elements.addEventListener('click', ()=> {
-    //         elements.classList.toggle('active')
-    //     })
-    // })
-
 }

@@ -21,10 +21,14 @@
     width: 250px;
     border-radius: 10px;
     height: max-content;
-    margin: 10px 0 0 0;
+    margin: 10px 40px 0 0;
     background: #FFFFFF;
     box-shadow: 0px 0px 8px #00000085;
     overflow: hidden;
+
+    @media (max-width: 1350px) {
+      margin: 10px 30px 0 0;
+    }
 
     @media (max-width: 1200px) {
       width: 100%;
@@ -33,23 +37,24 @@
   }
   
   .equipment__sidebar__title-box {
-    padding: 10px 20px;
+    padding: 10px;
   }
   
   .equipment__sidebar-title {
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 0.025em;  
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+    }
 
     @media (max-width: 1200px) {
-      text-align: center;
+      justify-content: center;
     }
-  }
-  
-  .equipment__sidebar-title i {
-    color:#548848;
-    margin-right: 10px;
   }
   
   .equipment__sidebar-menu {
@@ -105,31 +110,16 @@
   }
 
   //FANS-BLOCK
-  &__right-container {
+  &__box-items {
     max-width: 1000px;
-    display: block;
-
-    @media (max-width: 1450px) {
-      max-width: 950px;
-    }
-
-    @media (max-width: 1450px) {
-      max-width: 860px;
-    }
-
-    @media (max-width: 1245px) {
-      max-width: 800px;
-    }
 
     @media (max-width: 1200px) {
       max-width: 100%;
-      margin: 0 auto;
-      text-align: center;
     }
   }
 
   &__fan-title {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
     font-size: 40px;
     text-transform: uppercase;
 
@@ -138,86 +128,108 @@
     }
 
     @include phoneScreen {
+      font-size: 35px;
+    }
+
+    @media (max-width: 500px) {
       font-size: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
-  &__fan-block {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  &__production-items {
+    max-width: 1000px;
 
-    @media (max-width: 1100px) {
-      justify-content: space-evenly;      
-    }
-  }
-
-  &__fan-item {
-    width: 300px;
-    margin-bottom: 5%;
-    transition: all 0.3s;
-
-    @media (max-width: 1450px) {
-      width: 270px;
-    }
-
-    @media (max-width: 1245px) {
-      width: 250px;
+    @media (max-width: 1350px) {
+      max-width: 950px;
     }
 
     @media (max-width: 1200px) {
-      width: 310px;
-      margin: 10px 10px 40px 10px;
+      max-width: 100%;
     }
   }
 
-  &__fan-bg {
-    background-color: #F6F6F3;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 280px;
-    border-top: 5px solid transparent;
-    box-shadow: 0 0 3px #21212131;
+  &__production-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2%;
+ 
+    @media (max-width: 600px) {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0 0 0;
+      margin-bottom: 0;
+    }
+  }
 
-    @include ipadScreen {
-      box-shadow:  0 0px 5px #31313154;
-      border-color: color(green);
+  &__top-item {
+    width: 32%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.2s;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 10px #212121;
     }
 
-    @media (min-width: 1024px) {
-      &:hover {
-        box-shadow:  0 0px 5px #31313154;
-        border-color: color(green);
+    img {
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 12px;
+      height: 300px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
-  }
 
-  &__fan__img-box {
-    overflow: hidden;
-    width: max-content;
-    margin: auto;
-
-    @media (max-width: 1200px) {
-      width: max-content;
-      height: max-content;
-      padding: 0;
+    @media (max-width: 450px) {
+      height: 100%;
     }
   }
 
-  .fans__size-img {
-    width: 250px;
+  &__hover-effect-scale {
+    list-style:none;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    
+    @media (max-width:950px) {
+      height: 100%;
+    }
   }
 
-  &__fan-text {
-    font-weight: 400;
-    font-size: 20px;
-    transition: all .3s;
+  &__hover-effect-scale li {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+
+    @media (max-width:950px) {
+      height: 100%;
+    }
   }
 
-  &__fan-item:hover  &__fan-text {
-    color: color(green);
+  &__hover-effect-scale li img {
+    transition: all 0.2s linear;
+
+    @media (max-width: 950px) {
+      object-fit: cover;
+    }
+
+    @media (max-width: 450px) {
+      object-fit: contain;
+    }
+  }
+
+  &__hover-effect-scale li:hover img {
+    transform: scale(1.1);
   }
 
   // Стили соцсетей
@@ -275,8 +287,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }

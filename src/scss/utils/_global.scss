@@ -18,7 +18,6 @@ body {
   }
 }
 
-
 ul{
   list-style: none;
 }
@@ -149,7 +148,6 @@ section {
 
   @include ipadScreen {
     font-size: 35px;
-    line-height: 38px;
   }
 
   @include phoneScreen {

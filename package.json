@@ -22,7 +22,6 @@
     "autoprefixer": "^9.8.6",
     "babel": "^6.23.0",
     "cssnano": "^4.1.10",
-    "f": "^1.4.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.0.9",
@@ -30,12 +29,13 @@
     "sass": "^1.23.7",
     "sli": "^0.0.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^8.0.6"
+    "swiper": "^8.0.6",
+    "vanilla-tilt": "^1.7.2"
   },
   "repository": {
     "type": "git",
     "url": "https://gitflic.ru/project/web-sajt/web-front-end.git"
   },
-  "author": "",
+  "author": "Azim",
   "description": ""
 }

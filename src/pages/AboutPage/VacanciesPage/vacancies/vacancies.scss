@@ -396,10 +396,6 @@
     }
   }
 
-  // .return {
-  //   display: none;
-  // }
-
   .input {
     padding: 10px 40px 10px 10px;
     
@@ -411,6 +407,7 @@
   .popup.open .vacancies__container {
     overflow: hidden;
   }
+
    // Popup
    .popup {
     position: fixed;
@@ -450,7 +447,7 @@
       max-width: 470px;
       padding: 48px 24px 56px;
       opacity: 0;
-      transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+      transform: translate(-50%, -50%) scale(0);
       transition: all 0.4s;
       background-color: color(white);
       border-radius: 15px !important;
@@ -461,9 +458,9 @@
       }
     }
   
-    &.open &__content {
+    .popup.open .popup__vacancies-content {
       opacity: 1;
-      transform: perspective(600px) translate(0px, 0%) rotateX(0);
+      transform: translate(0%, 0%) scale(1);
     }
   
     .close-popup {

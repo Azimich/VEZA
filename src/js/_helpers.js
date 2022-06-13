@@ -25,9 +25,9 @@ export function popupClose(popupActive, doUnlock = true) {
   if (unlock) {
     popupActive.classList.remove('open');
 
-    // if (doUnlock) {
-    //   bodyUnlock();
-    // }
+    if (doUnlock) {
+      bodyUnlock();
+    }
   }
 }
 

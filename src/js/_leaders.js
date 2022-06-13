@@ -35,8 +35,8 @@ export const initLeaders = ()=> {
     $mapLinks.forEach(continents => {
       continents.addEventListener('mousemove', function(e) {
         $tooltip.innerText = this.dataset.title;
-        $tooltip.style.top = (e.y - 220) + 'px';
-        $tooltip.style.left = (e.x - 400) + 'px';
+        $tooltip.style.top = (e.y - 120) + 'px';
+        $tooltip.style.left = (e.x - 200) + 'px';
         $tooltip.style.fontSize = '12'  + 'px';
       });
 

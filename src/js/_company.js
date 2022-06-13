@@ -18,8 +18,8 @@ export const initCompany = ()=> {
     $mapLinks.forEach(continents => {
       continents.addEventListener('mousemove', function(e) {
         $tooltip.innerText = this.dataset.title;
-        $tooltip.style.top = (e.y - 0) + 'px';
-        $tooltip.style.left = (e.x - 400) + 'px';
+        $tooltip.style.top = (e.y - 10) + 'px';
+        $tooltip.style.left = (e.x - 300) + 'px';
         $tooltip.style.fontSize = '12'  + 'px';
       });
 

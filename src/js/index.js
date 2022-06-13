@@ -5,6 +5,7 @@ import { initNews } from './_news';
 import { initSwiper } from './_swiper';
 import { initSlick } from './libs/slick';
 import { initTabssizes } from './_tabssizes';
+import { initVanilla } from '../../node_modules/vanilla-tilt/lib/vanilla-tilt'
 import { initCompany } from './_company';
 import { initLeaders } from './_leaders';
 import { initManagers } from './_managers';
