@@ -296,12 +296,9 @@
   transform: translate(0%, 0%) scale(1);
 }
 
-.popup.open body {
-  overflow: hidden !important;
-}
 
 .popup__search-content {
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 15px;
   border-radius: 10px;
@@ -310,6 +307,10 @@
   transition: all 0.3s;
   background: #fff;
   position: relative;   
+
+  @include phoneScreen {
+    width: 100%;
+  }
 }
 
 .search__close-popup {

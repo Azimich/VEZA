@@ -8,17 +8,19 @@
 
 html{
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  height: 100%;
 
   &.lock {
     overflow: hidden;
   }
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -51,13 +53,11 @@ h1,h2,h3,h4,h5{
 }
 
 section {
-  max-width: 2000px;
   margin: 0 auto;
-  flex: 1 1 auto;
+  max-width: 2000px;
 }
 
 .wrapper {
-  min-height: 100%;
   max-width: 1500px;
   padding: 0 90px;
   margin: auto;

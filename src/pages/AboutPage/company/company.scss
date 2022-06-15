@@ -298,38 +298,34 @@
 
   &__popup.open &__popup__bg-popup {
     opacity: 1;
-    transform: perspective(600px) translate(0px, 0%) rotateX(0);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__popup__bg-popup {
     position: absolute;
-    top: 25%;
-    left: 0;
+    top: 50%;
+    left: 50%;
     right: 0;
-    margin: 0 auto;
-    right: 0;
-    max-width: 500px;
+    width: 520px;
     border-radius: 10px;
     opacity: 0;
-    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transform: translate(-50%, -50%) scale(0);
     transition: all 0.3s;
     background: #fff;
     overflow: hidden;
 
     @include phoneScreen {
-      top: 18%;
-    }
-
-    @media (max-width: 520px) {
-      max-width: 350px;
+      width: 90%;
     }
   }
 
   &__close-popup {
     position: absolute;
     right: 15px;
-    font-weight: 300;
-    font-size: 28px;
+    top: 15px;
+    color: gray;
+    font-weight: 400;
+    font-size: 30px;
     cursor: pointer;
   }
 
@@ -773,10 +769,7 @@
     color: color(green);
   }
 
-  &__factories__info__button-box:hover .fa-arrow-right-long {
-    color: color(green);
-    border-color: color(green);
-  }
+
 
   &__factories__info-button {
     display: flex;
@@ -788,17 +781,6 @@
     transition: all 0.3s;
   }
 
-  &__factories__info__button-box .fa-arrow-right-long {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    border: 2px solid color(dark);
-    transition: all 0.3s;
-  }
 
   &__factories__item-second {
     display: flex;
@@ -928,26 +910,11 @@
     transition: all 0.3s;
   }
 
-  &__factories__info__button__box-second .fa-arrow-right-long {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    border: 2px solid color(dark);
-    transition: all 0.3s;
-  }
 
   &__factories__info__button__box-second:hover &__factories__info__button-second {
     color: color(green);
   }
 
-  &__factories__info__button__box-second:hover .fa-arrow-right-long {
-    color: color(green);
-    border-color: color(green);
-  }
 
   // Стили соцсетей
   &__icon-box {
@@ -960,7 +927,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 98;
 
     &::after,
     &:before {
@@ -1004,8 +971,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }

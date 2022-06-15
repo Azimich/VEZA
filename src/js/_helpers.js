@@ -1,9 +1,11 @@
 let unlock = true;
-const timeout = 300;
+const timeout = 700;
+const body = document.querySelector('body')
 
 export function popupOpen(currentPopup) {
   if (currentPopup && unlock) {
     const popupActive = document.querySelector('.popup.open');
+    body.classList.add('lock')
 
     if (popupActive) {
       popupClose(popupActive, false);
@@ -32,10 +34,9 @@ export function popupClose(popupActive, doUnlock = true) {
 }
 
 export function bodyLock() {
-  const lockPadding = document.querySelectorAll('lock');
-  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+  const lockPadding = document.querySelector('body');
+  const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
 
-  if (lockPadding.length > 0) {
     for (let index = 0; index < lockPadding.length; index++) {
       const el = lockPadding[index];
       el.style.paddingRight = lockPaddingValue;
@@ -46,12 +47,11 @@ export function bodyLock() {
         unlock: true;
       }, timeout);
     }
-  }
 }
 
 export function bodyUnlock() {
-  document.body.style.paddingRight = '0px';
-  document.body.classList.remove('lock');
+  document.querySelector('body').style.paddingRight = '0px';
+  body.classList.remove('lock');
   unlock: false;
   setTimeout(function () {
     unlock: true;

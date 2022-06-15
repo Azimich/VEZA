@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+import { Fancybox } from "@fancyapps/ui";
 import 'slick-carousel/slick/slick';
 
 const teamSlider = $('.slider__click')
@@ -10,7 +10,6 @@ export const initSlick = () => {
   Fancybox.bind('[data-fancybox="single"]', {
     groupAttr: false,
   });
-
 
   $(document).ready(function(){
     teamSlider.slick({

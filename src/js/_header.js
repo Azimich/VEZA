@@ -6,12 +6,19 @@ export const initHeader = () => {
     const burger = document.querySelector('.header__mobile-menu');
     const nav = document.querySelector('.header__menu');
     const navLinks = document.querySelectorAll('.header__nav > li');
+    
   
     burger.addEventListener('click', () => {
       nav.classList.toggle('active');
       burger.classList.toggle('toggle');
-      body.classList.toggle('lock')
+      body.classList.add('lock')
     });
+
+    burger.addEventListener('click', ()=> {
+      body.classList.remove('lock')
+    })
+
+ 
 
     navLinks.forEach(link => link.addEventListener('click', () => closeMenu()));
 

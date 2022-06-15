@@ -15,17 +15,17 @@ export const initCompany = ()=> {
         el.style.cssText = `fill: ${color}; stroke-width: 2px; transition: all .5s;`);
     });
 
-    $mapLinks.forEach(continents => {
-      continents.addEventListener('mousemove', function(e) {
-        $tooltip.innerText = this.dataset.title;
-        $tooltip.style.top = (e.y - 10) + 'px';
-        $tooltip.style.left = (e.x - 300) + 'px';
-        $tooltip.style.fontSize = '12'  + 'px';
-      });
+    // $mapLinks.forEach(continents => {
+    //   continents.addEventListener('mousemove', function(e) {
+    //     $tooltip.innerText = this.dataset.title;
+    //     $tooltip.style.top = (e.y - 10) + 'px';
+    //     $tooltip.style.left = (e.x - 300) + 'px';
+    //     $tooltip.style.fontSize = '12'  + 'px';
+    //   });
 
-      continents.addEventListener('mouseenter', function() {$tooltip.style.display = 'block';});
-      continents.addEventListener('mouseleave', function() {$tooltip.style.display = 'none';});
-    });
+    //   continents.addEventListener('mouseenter', function() {$tooltip.style.display = 'block';});
+    //   continents.addEventListener('mouseleave', function() {$tooltip.style.display = 'none';});
+    // });
 
     el.addEventListener('mouseleave', (e) => {
       let self = e.currentTarget;

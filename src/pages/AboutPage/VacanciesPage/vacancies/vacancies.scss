@@ -106,12 +106,12 @@
     }
   }
 
-  &__map {
+  .vacancies__map {
     width: 100%;
     position: relative;
   }
 
-  .map__svg {
+  .vacancies__map-svg {
     display: block;
     width: 100%;
     height: 100%;
@@ -119,49 +119,18 @@
     position: relative;
   }
 
-  &__baloon-moskow_1,
-  &__baloon-moskow_2,
-  &__baloon-moskow_3,
-  &__baloon-moskow_4,
-  &__baloon-moskow_5,
-  &__baloon-moskow_6,
-  &__baloon-moskow_7,
-  &__baloon-moskow_8,
-  &__baloon-moskow_9 {
+  &__baloon-moskow_1 {
     position: absolute;
-    height: 20px;
+    height: 32px;
+    top: 55%;
+    left: 50%;
 
     img {
       cursor: pointer;
     }
   }
 
-  &__baloon-moskow_1 {
-  }
-
-  &__baloon-moskow_2 {
-  }
   
-  &__baloon-moskow_3 {
-  }
-  
-  &__baloon-moskow_4 {
-  }
-  
-  &__baloon-moskow_5 {
-  }
-  
-  &__baloon-moskow_6 {
-  }
-  
-  &__baloon-moskow_7 {
-  }
-  
-  &__baloon-moskow_8 {
-  }
-  
-  &__baloon-moskow_9 {
-  }
   
   &__maps-tooltip {
     position: absolute;
@@ -404,11 +373,137 @@
     }
   }
 
-  .popup.open .vacancies__container {
+
+  //popup-slider
+  .vacancies__popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #4a4a4a !important;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .vacancies__popup.open .vacancies__popup-bg {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .vacancies__popup-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 100% !important;
+    height: 100vh;
+    padding: 30px 30px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: transparent;
+    overflow: hidden;
+
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+
+  .vacancies__close-popup {
+    position: absolute;
+    right: 5% !important;
+    top: 5% !important;
+    color: gray;
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  //Swiper-popup
+  .vacancies__slider {
+    max-width: 1280px;
+
+    margin: 0 auto;
+  }
+
+  .swiper-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 4% 12% 4% 12%;
+
+    @include phoneScreen {
+      padding: 18% 9% 8% 9%;
+    }
+  }
+
+  .vacancies__slider-slide {
+    width: 100%;
     overflow: hidden;
   }
 
-   // Popup
+  .vacancies__slider-img {
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 70vh;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include phoneScreen {
+      border-radius: 10px;
+    }
+
+    img {
+      object-fit: revert;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(white);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+
+  
+
+   // Popup-forms
    .popup {
     position: fixed;
     width: 100%;
@@ -419,12 +514,13 @@
     left: 0;
     z-index: 99;
     opacity: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
     visibility: hidden;
     transition: all 0.4s;
+    display: flex;
     align-items: center;
     justify-content: center;
+    padding: 30px 0;
+    
   
     &.open {
       opacity: 1;
@@ -435,32 +531,33 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 16px;
-      height: 100%;
+      padding: 50px 20px;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 20px;
   
       @include phoneScreen{
         align-items: start;
       }
     }
   
-    &__content {
-      max-width: 470px;
+    .popup__vacancies-content {
+      width: 520px;
       padding: 48px 24px 56px;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0);
       transition: all 0.4s;
       background-color: color(white);
       border-radius: 15px !important;
-      position: relative;
-  
-      @include phoneScreen{
-        padding: 45px 16px;
-      }
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      right: 0;
     }
   
-    .popup.open .popup__vacancies-content {
+    &.open  .popup__vacancies-content {
       opacity: 1;
-      transform: translate(0%, 0%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
     }
   
     .close-popup {
@@ -604,7 +701,7 @@
         .file-cleaner{
           position: absolute;
           top: 30px;
-          right: 145px;
+          right: 190px;
           width: 14px;
           height: 14px;
           cursor: pointer;
@@ -950,7 +1047,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 98;
 
     &::after,
     &:before {
@@ -985,7 +1082,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 98;
 
     &::after,
     &:before {
@@ -1029,8 +1126,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }

@@ -260,6 +260,10 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-out;
+
+    @include phoneScreen {
+      max-width: 100%;
+    }
   }
   
   .card .photo {
@@ -362,7 +366,7 @@
   }
 
   .third__item {
-    font-weight: 500;
+    font-weight: 400;
 
     i {
       color: color(dark);
@@ -395,7 +399,7 @@
   }
 
   .third__item-2 {
-    font-weight: 500;
+    font-weight: 400;
     
     i {
       color: color(dark);
@@ -404,7 +408,7 @@
   }
   
   &__table__text {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.025em;
@@ -1120,7 +1124,7 @@
     justify-content: space-between;
     margin-bottom: 50px;
 
-    @media (max-width: 900px) {
+    @include phoneScreen {
       flex-direction: column;
     }
   }
@@ -1129,7 +1133,7 @@
     text-align: left;
     margin: 0 0 18px 0;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: #6a6a6a;
   }
 
@@ -1138,7 +1142,7 @@
     align-items: start;
     margin-bottom: 15px;
 
-    @media (max-width: 440px) {
+    @media (max-width: 1100px) {
       flex-direction: column;
     }
   }
@@ -1149,11 +1153,12 @@
       margin-left: 50px;
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: 1100px) {
       order: 2;
 
       &:last-child {
         order: 1;
+        margin-left: 0;
       }
     }
   }
@@ -1293,8 +1298,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }

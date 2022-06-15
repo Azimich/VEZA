@@ -63,13 +63,11 @@
     }
   }
 
-  &__item:hover .fa-arrow-right-long {
-    color: color(white);
-    border-color: color(white);
+  &__item:hover path {
+    fill: #fff;
 
     @include ipadScreen {
-      color: color(dark);
-      border-color: color(dark);
+      fill: #212121;
     }
   }
 
@@ -182,21 +180,25 @@
     }
   }
 
-  &__button-box .fa-arrow-right-long {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    border: 2px solid color(dark);
-  }
 
   &__item-button {
     color: color(dark);
     font-weight: 500;
-    padding-right: 20px;
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #212121;
+      }
+    }
   }
 
   &__item__second {
@@ -253,13 +255,11 @@
     }
   }
 
-  &__item__second:hover .fa-arrow-right-long {
-    color: color(white);
-    border-color: color(white);
+  &__item__second:hover path {
+    fill: #fff;
 
     @include ipadScreen {
-      color: color(dark);
-      border-color: color(dark);
+      fill: #212121;
     }
   }
 
@@ -357,24 +357,25 @@
   }
 
   &__item-button__second {
+    color: color(dark);
+    font-weight: 500;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
-    color: color(dark);
-    font-weight: 400;
-    padding-right: 20px;
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #212121;
+      }
+    }
   }
 
-  &__button-box__second .fa-arrow-right-long {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    border: 2px solid color(dark);
-  }
 
   &__images-box__second {
     width: 543px;
@@ -448,7 +449,7 @@
     box-shadow: 0px 0px 17px #088122;
   }
 
-  &__item-horizontal:hover    &__item__horizontal-text {
+  &__item-horizontal:hover  &__item__horizontal-text {
    color: color(green);
   }
 
@@ -508,28 +509,30 @@
   }
 
   &__item__horizontal-button {
+    text-decoration: none;
     color: color(white);
-    z-index: 55;
-    padding-right: 20px;
-  }
-
-  &__item-bottom  .fa-arrow-right-long {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 13px;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    color: color(white);
-    border: 2px solid color(white);
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #ffffff;
+      }
+    }
   }
 
   &__item__horizontal-text {
     color: color(dark);
     text-align: center;
     margin-top: 25px;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 0.3s;
   }
 
@@ -543,13 +546,19 @@
   .more-news {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 15px;
     width: 180px;
     margin: 0 auto;
+    cursor: pointer;
 
-    i {
-      transform: rotate(90deg);
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+
+      path {
+        fill: #fff;
+      }
     }
   }
   
@@ -609,8 +618,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }

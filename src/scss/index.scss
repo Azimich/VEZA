@@ -1,21 +1,21 @@
 
 
 //Глобальные css & mixins
-@import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/slick-carousel/slick/slick-theme.css';
 @import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+@import '../../node_modules/swiper/swiper-bundle.css';
 @import './utils/variables';
 @import './utils/_mixins';
 @import './utils/_global';
 
 //Стили главной страницы сайта
-@import '../pages/MainPage/sections/header/header';
-@import '../pages/MainPage/sections/banner/banner';
-@import '../pages/MainPage/sections/about/about';
-@import '../pages/MainPage/sections/news/news';
-@import '../pages/MainPage/sections/gallery/gallery';
+@import '../pages/MainPage/header/header';
+@import '../pages/MainPage/banner/banner';
+@import '../pages/MainPage/about/about';
+@import '../pages/MainPage/news/news';
+@import '../pages/MainPage/gallery/gallery';
 @import '../../node_modules/swiper/swiper.scss';
-@import '../pages/MainPage/sections/footer/footer';
+@import '../pages/MainPage/footer/footer';
 
 //Стили страницы РЕШЕНИЯ
 @import '../pages/DecisionsPage/header/header';
@@ -108,3 +108,4 @@
 @import '../pages/AuthorizationPage/header/header';
 @import '../pages/AuthorizationPage/authorization/authorization';
 @import '../pages/AuthorizationPage/footer/footer';
+

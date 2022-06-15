@@ -565,34 +565,34 @@
 
   .maps__popup.open &__popup__bg-popup {
     opacity: 1;
-    transform: perspective(600px) translate(0px, 0%) rotateX(0);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__popup__bg-popup {
     position: absolute;
-    top: 18%;
-    left: 0;
+    top: 55%;
+    left: 50%;
     right: 0;
-    margin: 0 auto;
-    right: 0;
-    max-width: 80%;
+    width: 80%;
     border-radius: 10px;
     opacity: 0;
-    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transform: translate(-50%, -50%) scale(0);
     transition: all 0.3s;
     background: #fff;
     overflow: hidden;
 
     @include phoneScreen {
-      top: 15%;
-      max-width: 95%;
+      width: 95%;
     }
   }
 
   .managers__close-popup {
     position: absolute;
     right: 15px;
-    font-weight: 300;
+    color: gray;
+    font-weight: 400;
+    font-size: 30px;
+    cursor: pointer;
   }
 
 
@@ -790,7 +790,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 98;
 
     &::after,
     &:before {
@@ -834,8 +834,8 @@
 
   .ok__ru {
     svg {
-      width: 30px !important;
-      height: 30px !important;
+      width: 26px !important;
+      height: 26px !important;
       position: absolute;
       left: 3px;
     }
