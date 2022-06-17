@@ -38,6 +38,10 @@ button {
   display: block;
 }
 
+button {
+  border: none;
+}
+
 textarea{
   resize: none;
 }
@@ -130,6 +134,7 @@ section {
 
   @include phoneScreen {
     font-size: 35px;
+    font-weight: 500;
   }
 
   @media (max-width: 400px) {
@@ -156,7 +161,6 @@ section {
 
   @media (max-width: 400px) {
     font-size: 25px;
-    line-height: 30px;
   }
 }
 
@@ -318,6 +322,10 @@ section {
 
 .fancybox__thumbs {
   display: none;
+}
+
+.carousel__button svg {
+  color: #7e7e7e;
 }
 
 

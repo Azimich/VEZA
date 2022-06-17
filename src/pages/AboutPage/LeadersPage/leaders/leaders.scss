@@ -251,7 +251,8 @@
     top: 50%;
     left: 50%;
     right: 0;
-    width: 500px;
+    width: 700px;
+    height: 470px;
     border-radius: 10px;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
@@ -267,6 +268,7 @@
   &__close-popup {
     position: absolute;
     right: 15px;
+    top: 5px;
     color: gray;
     font-weight: 400;
     font-size: 30px;
@@ -276,12 +278,12 @@
   &__popup-title {
     font-size: 22px;
     font-weight: 400;
-    padding: 10px;
+    padding: 12px 10px;
   }
 
   &__galerry {
     padding: 0 0 10px 0;
-    height: 280px;
+    height: 365px;
 
     img {
       object-fit: cover;
@@ -386,7 +388,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 95 !important;
 
     &::after,
     &:before {

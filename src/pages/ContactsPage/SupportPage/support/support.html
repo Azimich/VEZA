@@ -43,156 +43,125 @@
       </nav>
       <h1 class="support__title h1">Свяжитесь с нами</h1>
       <p class="support__contacts-subtitle">Чтобы получить ответы на ваши вопросы и быть в курсе всего происходящего</p>
+
       <!-- Техническая Характеристика -->
-      <div class="support__form-container">
-      <!-- <form class="support__form" method="post" novalidate>
-          <input type="text" name="name" id="username" placeholder="Имя" class="support__form-name required">
-          <div class="support__form-email-box">
-            <input type="email" name="email" id="mail" placeholder="Почта *" class="support__form-email required">
-            <input type="tel" name="tel" id="telephone" placeholder="Телефон" class="support__form-tel">
-          </div>
-          <textarea name="message" id="text" placeholder="Ваш вопрос"></textarea>
-          <div class="support__form-checkbox">
-            <input type="checkbox" name="check" id="checkbox" class="required">
-            <label for="checkbox">Согласие на обработку персональных данных *</label>
-          </div>
-          <button type="submit" class="support__form-button">Оставить заявку</button>
-      </form> -->
-        <div class="support__form__mobile-container">
-          <form id="form" class="support__form">
-            <label class="support__label" for="#">Выбериpму сообщения*</label>
-            <input type="text" class="support__input input">
-            <div class="support__input-container">
-              <div class="support__inputs__left-block">
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Имя*</label>
-                  <input type="text" class="support__input input">
+      <div class="support__info-container">
+        <div class="support__info__container-items">
+          <form action="#" class="support__form" id="first-form">
+            <div class="support__form-item">
+
+              <select name="name" id="#" class="support__form-select first__select">
+                <option value="Трудо устройство" selected="select">Выберите тему</option>
+                <option value="Трудоустройство">Позвоните мне</option>
+                <option value="Трудоустройство">Устроиться на работу</option>
+                <option value="Трудоустройство">Оставить отзыв</option>
+              </select>
+
+              <div class="support__form-inputs">
+                <div class="support__inputs-item">
+                  <input type="text" name="name" id="name" placeholder="Имя" class="support__form-name require">
+                  <input type="text" name="username" id="username" placeholder="Фамилия" class="support__form-name require">
                 </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">E-mail*</label>
-                  <input type="text" class="support__input input">
+                <div class="support__inputs-item">
+                  <input type="email" name="email" id="mail" placeholder="Почта *" class="support__form-email support__form-name require">
+                  <input type="phone" name="phone" id="phone" placeholder="Телефон *" class="support__form-name require">
                 </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Компания</label>
-                  <input type="text" class="support__input input">
+                <div class="support__inputs-item">
+                  <input type="text" name="company" id="company" placeholder="Компания" class="support__form-name require">
+                  <input type="text" name="job" id="job" placeholder="Должность" class="support__form-name require">
                 </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Страна или Регион</label>
-                  <input type="text" class="support__input input">
+                <div class="support__inputs-item some-select">
+                  <select name="name" class="support__form-select">
+                    <option value="Трудо устройство" selected="select">Россия Московская Область</option>
+                    <option value="Трудоустройство">Россия Астраханская Область</option>
+                    <option value="Трудоустройство">Россия Владимирская Область</option>
+                    <option value="Трудоустройство">Россия Омкая Область</option>
+                  </select>
+                  <select name="name" class="support__form-select">
+                    <option value="Трудо устройство" selected="select">Москва</option>
+                    <option value="Трудоустройство">Санкт-Петербург</option>
+                    <option value="Трудоустройство">Саратов</option>
+                    <option value="Трудоустройство">Астрахань</option>
+                  </select>
                 </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Номер заказа</label>
-                  <input type="text" class="support__input input">
+                <div class="support__inputs-item">
+                  <input type="number" name="company" placeholder="Номер заказа" class="support__form-name some-input">
                 </div>
-              </div>
-              <div class="support__inputs__right-block">
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Фамилия*</label>
-                  <input type="text" class="support__input input">
+                <div class="support__inputs-item">
+                  <textarea name="message" id="text" placeholder="Ваш вопрос"></textarea>
                 </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Контактный телефон*</label>
-                  <input type="text" class="support__input input">
-                </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Должность</label>
-                  <input type="text" class="support__input input">
-                </div>
-                <div class="support__input-box">
-                  <label class="support__label" for="#">Город</label>
-                  <input type="text" class="support__input input">
-                </div>
-              </div>
-            </div>
-            <div class="support__textarea-box">
-              <div class="support__textarea-item">
-                <label class="support__label" for="#">Задайте свой вопрос или опишите ваше предложение</label>
-                <textarea name="name" id="#" cols="100" rows="10"></textarea>
-              </div>
-              <fieldset class="inputfile-box">
-                <span class="file-cleaner"></span>
-                <input type="file" name="file" id="upload" class="inputfile" accept=".pdf,.docx">
-                <label for="upload" class="label-file"></label>
-                <p>Опишите подробно ваш вопрос. Прикрепите файл.</p>
-              </fieldset>
-              <div class="support__form-checkbox">
-                <input type="checkbox" name="check" id="checkbox" class="required">
-                <label for="checkbox">Согласие на обработку персональных данных *</label>
-              </div>
-              <div class="support__file-container">
-                <a href="#" class="support__button little__button">Отправить</a>
+                <!-- <fieldset class="support__inputfile-box">
+                  <span class="file-cleaner"></span>
+                  <input type="file" name="file" id="upload" class="inputfile" accept=".jpg, .png">
+                  <label for="upload" class="label-file"></label>
+                </fieldset> -->
+
+                <label class="support__form-checkbox path require">
+                  <input type="checkbox" id="checkbox" class="input-checkbox require">
+                  <svg viewbox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                  </svg>
+                  <span class="label__checbox">Согласие на обработку персональных данных *</span>
+                </label>
+                <button type="submit" class="support__form-button little__button">Отпарвить</button>
               </div>
             </div>
-            
           </form>
-          <div class="support__search__mobile-container">
-            <div class="support__top__social__mobile-box">
-              <a href="#" class="support__mobile__phone"><i class="fa-solid fa-phone"></i>+7 495 989-47-20</a>
-              <a href="#" class="support__mobile__phone"><i class="fa-solid fa-envelope"></i>msk@veza.ru</a>
-            </div>
-            <div class="support__search__mobile-box">
-              <div class="support__search__mobile-item">
-                <label for="#" class="support__search__mobile-label">Должность</label>
-                <input type="text" placeholder="Введите должность" class="support__search__mobile-input input">
-              </div>
-              <div class="support__search__mobile-item">
-                <label for="#" class="support__search__mobile-label">Город</label>
-                <input type="text" placeholder="Введите город" class="support__search__mobile-input input">
-              </div>
-              <div class="support__search__mobile-item">
-                <label for="#" class="support__search__mobile-label">Направление</label>
-                <input type="text" placeholder="Введите напрвление" class="support__search__mobile-input input">
-              </div>
-              <div class="support__search__mobile-item">
-                <a href="#" class="support__search__mobile-button little__button">Поиск</a>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="support__form-right">
-          <div class="support__top__social-box">
-            <a href="#" class="support__phone"><i class="fa-solid fa-phone"></i>+7 495 989-47-20</a>
-            <a href="#" class="support__phone"><i class="fa-solid fa-envelope"></i>msk@veza.ru</a>
+        <div class="support__info__container-items">
+          <div class="support__info-socials">
+            <a href="tel: +7 495 989-47-20" class="support__info-phone">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.3296 21.48L22.5696 19.24C22.8713 18.9421 23.2531 18.7381 23.6684 18.6529C24.0838 18.5677 24.515 18.6049 24.9096 18.76L27.6396 19.85C28.0385 20.0119 28.3804 20.2882 28.6224 20.6441C28.8645 21.0001 28.9957 21.4197 28.9996 21.85V26.85C28.9973 27.1428 28.9358 27.4321 28.8187 27.7005C28.7016 27.9688 28.5315 28.2107 28.3185 28.4116C28.1055 28.6125 27.854 28.7682 27.5792 28.8693C27.3044 28.9704 27.0121 29.0149 26.7196 29C7.58965 27.81 3.72965 11.61 2.99965 5.41004C2.96576 5.10558 2.99672 4.79739 3.09049 4.50575C3.18427 4.21411 3.33873 3.94563 3.54371 3.71798C3.7487 3.49032 3.99956 3.30865 4.2798 3.1849C4.56004 3.06116 4.86331 2.99816 5.16965 3.00004H9.99965C10.4307 3.00132 10.8514 3.13151 11.2078 3.37387C11.5643 3.61623 11.84 3.95968 11.9996 4.36004L13.0896 7.09004C13.2499 7.48311 13.2908 7.91468 13.2072 8.33085C13.1236 8.74702 12.9192 9.12934 12.6196 9.43004L10.3796 11.67C10.3796 11.67 11.6696 20.4 20.3296 21.48Z" fill="black"/>
+              </svg>    
+              <span>+7 495 989-47-20</span>
+            </a>
+            <a href="mailto: msk@veza.ru" class="support__info-phone">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 7.373V14.5C18 15.163 17.7366 15.7989 17.2678 16.2678C16.7989 16.7366 16.163 17 15.5 17H4.5C3.83696 17 3.20107 16.7366 2.73223 16.2678C2.26339 15.7989 2 15.163 2 14.5V7.373L9.746 11.931C9.82295 11.9764 9.91066 12.0003 10 12.0003C10.0893 12.0003 10.177 11.9764 10.254 11.931L18 7.373ZM15.5 4C16.1151 3.9999 16.7087 4.22661 17.1672 4.63674C17.6257 5.04687 17.9168 5.61164 17.985 6.223L10 10.92L2.015 6.223C2.08316 5.61164 2.37432 5.04687 2.83279 4.63674C3.29127 4.22661 3.88485 3.9999 4.5 4H15.5Z" fill="black"></path>
+              </svg> 
+              <span>msk@veza.ru</span>
+            </a>
           </div>
           <div class="support__search-box">
             <div class="support__search-item">
-              <label for="#" class="support__search-label">Должность</label>
-              <input type="text" placeholder="Введите должность" class="support__search-input input">
+              <labai class="support__search-label">Город</labai>
+              <input type="text" class="support__search-input input">
             </div>
             <div class="support__search-item">
-              <label for="#" class="support__search-label">Город</label>
-              <input type="text" placeholder="Введите город" class="support__search-input input">
+              <labai class="support__search-label">Должность</labai>
+              <input type="text" class="support__search-input input">
             </div>
             <div class="support__search-item">
-              <label for="#" class="support__search-label">Направление</label>
-              <input type="text" placeholder="Введите напрвление" class="support__search-input input">
+              <labai class="support__search-label">Направление</labai>
+              <input type="text" class="support__search-input input">
             </div>
             <div class="support__search-item">
-              <a href="#" class="support__search-button little__button">Поиск</a>
+             <button class="support__search-button little__button">Поиск</button>
             </div>
           </div>
-          <div class="support__chat-box">
-            <div class="support__chat__box-item">
-              <h4 class="support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-              <p class="support__chat__item-subtitle">Моска, Россия</p>
-              <p class="support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-              <a href="#" class="support__chat__item-button little__button">Написать</a>
+          <div class="support__info-telegram">
+            <div class="support__info__tg-item">
+              <div class="support__info-title">ПУНКТЫ ТЕПЛОВЫЕ</div>
+              <p class="support__info-subtitle">Моска, Россия</p>
+              <p class="support__info-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </p>
+              <a href="#" class="support__info-link little__button">Перейти</a>
             </div>
-            <div class="support__chat__box-item">
-              <h4 class="support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-              <p class="support__chat__item-subtitle">Моска, Россия</p>
-              <p class="support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-              <a href="#" class="support__chat__item-button little__button">Написать</a>
+            <div class="support__info__tg-item">
+              <div class="support__info-title">УЗЛЫ РЕГУЛИРУЮЩИЕ</div>
+              <p class="support__info-subtitle">Моска, Россия</p>
+              <p class="support__info-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </p>
+              <a href="#" class="support__info-link little__button">Перейти</a>
             </div>
-            <div class="support__chat__box-item">
-              <h4 class="support__chat__item-title h3">ПУНКТЫ ТЕПЛОВЫЕ</h4>
-              <p class="support__chat__item-subtitle">Моска, Россия</p>
-              <p class="support__chat__item-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-              <a href="#" class="support__chat__item-button little__button">Написать</a>
+            <div class="support__info__tg-item">
+              <div class="support__info-title">ВЕНТИЛЯТОРЫ</div>
+              <p class="support__info-subtitle">Моска, Россия</p>
+              <p class="support__info-text text">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </p>
+              <a href="#" class="support__info-link little__button">Перейти</a>
             </div>
           </div>
         </div>
-      </div>  
+      </div>
     </div>          
   </div>
 </section>

@@ -12,6 +12,7 @@ import { initVacancies } from './_vacancies';
 import { initAuthorization } from './_authorization';
 import { initResources } from './_resources';
 import { initPopup } from './_popup';
+import { initForms } from './_forms';
 
 
 (function () {
@@ -33,6 +34,7 @@ import { initPopup } from './_popup';
     initAuthorization();
     initResources();
     initPopup();
+    initForms();
 
   } catch (err) {
     console.log(err);

@@ -36,13 +36,13 @@
 
   &__nav__menu-item-link {
     color: #313131;
-    font-weight: 600;
     font-size: 18px;
     padding: 0 0 15px 0;
     position: relative;
 
     &.active {
       color: color(green);
+      font-weight: 500;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -420,7 +420,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 95 !important;
 
     &::after,
     &:before {

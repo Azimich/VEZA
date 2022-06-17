@@ -971,7 +971,7 @@
 
   .typesizes__popup-items {
     position: absolute;
-    top: 58%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #fff;
@@ -1254,7 +1254,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 95 !important;
 
     &::after,
     &:before {

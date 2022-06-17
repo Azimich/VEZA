@@ -36,13 +36,13 @@
 
   &__nav__menu-item-link {
     color: #313131;
-    font-weight: 600;
     font-size: 18px;
     padding: 0 0 15px 0;
     position: relative;
 
     &.active {
       color: color(green);
+      font-weight: 500;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -104,472 +104,398 @@
     margin-bottom: 60px;
     color: #515151;
     text-align: center;
+
+    @media (max-width: 500px) {
+      margin: 0 0 40px 0;
+    }
   }
 
-
-  &__form-container {
+  //Контенер для инфы
+  &__info-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 10px;
-
-    @media (max-width: 1100px) {
-      display: block;
-    }
+    align-items: start;
   }
-
-  &__form__mobile-container {
-    width: 42%;
-
-    @media (max-width: 1110px) {
-      width: 100%;
-    }
-  }
-
-  &__form {
-    background-color: #f5f5f5;
-    box-shadow: 0 0 5px #21212172;
-    padding: 25px 25px 0 25px;
-    height: 100%;
-    border-radius: 15px;
-
-    @media (max-width: 1400px) {
-      padding: 20px 15px;
-    }
-
-    @media (max-width: 1110px) {
-      box-shadow: none;
-      width: 60%;
-    }
-
-    @media (max-width: 700px) {
-      width: 100%;
-    }
-
-  }
-
-  &__label {
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-
-  &__input {
-    margin-bottom: 20px;
-    height: 35px;
+  
+  &__info__container-items {
+    width: 100%;
 
     &:first-child {
-      width: 70%;
-    }
-
-    @media (max-width: 1400px) {
-
+      margin-bottom: 80px;
     }
   }
+  
+  &__form {
+    width: 80%;
+    margin: 0 auto;
 
-  &__input-container {
+    @include phoneScreen {
+      width: 100%;
+    }
+  }
+  
+  
+  &__inputs-item {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
 
     @media (max-width: 500px) {
       flex-direction: column;
-      justify-content: center;
+      margin-bottom: 0;
     }
   }
-
-  &__inputs__left-block {
-    margin-right: 15px;
+  
+  &__form-name {
+    width: 100%;
+    padding: 8px;
+    margin-top: 24px;
+    border: none;
+    border-bottom: 1px solid #BCBDC0;
+    color: color(black);
+    font-size: 14px;
 
     @media (max-width: 500px) {
-      margin-right: 0;
+      margin: 35px 0 0 0;
     }
-  }
-
-  &__input-box {
-    margin-bottom: 15px;
-  }
-
-  &__textarea-item {
-    overflow: hidden;
-
-    textarea {
-      width: 100%;
-      border-radius: 10px;
-      height: 180px;
-      padding: 20px 10px;
-      margin-bottom: 25px;
-
-      &:focus {
-        border-color: #33953A;
-      }
-
-      @include ipadScreen {
-        border-radius: 5px;
-        height: 150px;
-      }
-    }
-  }
-
-  .inputfile-box {
-    border: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    position: relative;
-
-    label {
-      width: 60%;
-      margin: 20px 0 8px;
-      padding: 8px;
-      border: none;
-      cursor: pointer;
-      color: #6C6D70;
-      font-size: 14px;
-      border-bottom: 1px solid #BCBDC0;
-      text-overflow: ellipsis;
-      position: relative;
-
-      &:focus{
-        border-bottom: 2px solid color(green);
-      }
-  
-      &::before {
-        content: "Прикрепить";
-        position: absolute;
-        padding: 5px 0 0 30px;
-        right: -75px;
-        bottom: 4px;
-        width: 24px;
-        height: 24px;
-        font-size: inherit;
-        font-weight: 500;
-        color: color(black);
-        background-size: cover;
-        background: url('../assets/images/upload-icon.svg') no-repeat;
-      }
-    }
-  
-    input {
-      margin: 0 !important;
-      padding: 0;
-      width: 0.1px;
-      height: 0.1px;
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .file-cleaner{
-      position: absolute;
-      top: 15px;
-      right: 180px;
-      width: 14px;
-      height: 14px;
-      cursor: pointer;
-      background: url('../assets/images/file-cleaner.svg') no-repeat;
-      background-size: contain;
-      z-index: 2;
-    }
-
-    p {
-      font-size: 11.3px;
-      line-height: 17px;
-      color: #BCBDC0;
-    }
-
-    @include phoneScreen {
-      label {
-        width: 88%;
-
-        &::after {
-          display: none;
-        }
-
-        &::before {
-          content: '';
-          bottom: 3px;
-          right: -17%;
-        }
-      }
-
-      .file-cleaner{
-        right: 40px;
-      }
-    }
-  }
-  
-  // Checbox
-  &__form-checkbox {
-    display: flex;
-    align-items: center;
-
-    input {
-      width: 0.1px;
-      height: 0.1px;
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      z-index: -1;
-    }
-
-    label {
-      padding-left: 37px;
-      font-size: 16px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-      color: color(black);
-      cursor: pointer;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 22px;
-        height: 22px;
-        border: 2px solid color(black);
-        border-radius: 3px;
-      }
-
-      &.error {
-
-        &::before{
-          border-color: red;
-        }
-      }
-
-      &::after {
-        display: none;
-        content: "";
-        position: absolute;
-        left: 3px;
-        top: 3px;
-        width: 16.67px;
-        height: 16px;
-        background: url("../assets/images/checkbox.svg") no-repeat;
-      }
-    }
-
-    input:checked + label {
-
-      &::before {
-        background-color: color(green);
-        border-color: color(green) !important;
-      }
-
-      &::after {
-        display: block;
-        z-index: 2;
-      }
-    }
-
-    @include phoneScreen{
-      margin: 24px 0 45px;
-
-      label {
-        font-size: 12px;
-        line-height: 15px;
-        padding-left: 36px;
-  
-        &::before {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-  
-        &::after {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-      }
-    }
-  }
-
-  &__search__mobile-box {
-    display: none;
-
-    @media (max-width: 1110px) {
-      display: block;
-    }
-  }
-
-  // Мобильная версия правого блока формы
-  @media (max-width: 1110px) {
-
-    &__form__mobile-container {
-      display: flex;
-      justify-content: space-around;
-      max-width: 800px;
-      margin: 0 auto 50px;
-      background-color: #f5f5f5;
-      box-shadow: 0 0 5px #21212172;
-      padding: 25px;
-      height: 100%;
-      border-radius: 15px;
-
-      @media (max-width: 700px) {
-        flex-direction: column;
-        width: 85%;
-        padding: 0;
-      }
-
-      @media (max-width: 600px) {
-        width: 100%;
-      }
-    }
-  }
-
-  &__search__mobile-container {
-    padding: 40px 0 0 0;
-  }
-
-
-  &__search__mobile-box {
-    display: none;
-
-    @media (max-width: 1110px) {
-      display: block;
-      background: color(white);
-      padding: 25px 10px;
-      box-shadow: 0 0 2px #3131315c;
-      border-radius: 10px;
-      margin:0 0 0 0;
-
-      @media (max-width: 700px) {
-        padding: 30px 10px 20px 10px;
-        border-radius: 0 0 10px 10px;
-      }
+    
+    &:first-child {
+      margin-right: 20px;
 
       @media (max-width: 500px) {
-        box-shadow: none;
+        margin-right: 0;
+      }
+    }
+
+    &::placeholder{
+      color: #6C6D70;
+    }
+
+    &:focus{
+      border-width: 2px;
+      border-color: color(green);
+    }
+
+    &.error{
+      border-color: red;
+    }
+  }
+
+  &__form-select {
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+
+    @media (max-width: 500px) {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 30px;
       }
     }
   }
 
-  @media (max-width: 1100px) {
+  .first__select {
+    width: 100%;
 
-    &__search__mobile-item {
-      margin-bottom: 20px;
-
-      @media (max-width: 700px) {
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
+    @media (max-width: 500px) {
+      margin-bottom: 0;
     }
+  }
+  
+  .some-select {
+    margin: 50px 0 10px 0;
 
-    &__search__mobile-label {
-      margin-bottom: 5px;
-    }
-
-    &__search__mobile-button {
-      margin-top: 35px;
+    @media (max-width: 500px) {
+      margin: 40px 0 10px 0;
     }
   }
 
-  &__form-right {
-    width: 55%;
+  .some-input {
+    margin: 28px 0 25px 0;
+  }
+  
+  textarea{
+    width: 100%;
+    height: 120px;
+    padding: 8px;
+    color: color(black);
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid #BCBDC0;
+    border-radius: 5px;
 
-    @media (max-width: 1100px) {
+    &::placeholder{
+      color: #6C6D70;
+    }
+
+    &:focus{
+      border-width: 2px !important;
+      border-color: color(green);
+    }
+  }
+
+  // CheckBox
+  &__form-checkbox {
+    --background: #fff;
+    --border: #616161;
+    --border-hover: #BBC1E1;
+    --border-active: #009247;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: all .3s;
+
+    input, svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 25px;
+    }
+  }
+
+
+  &__form-checkbox input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+
+    &:checked {
+      --b: var(--border-active);
+    }
+
+    &.error{
+      box-shadow: 0 0 5px red;
+    }
+  }
+
+  &__popup-titles {
+    margin-bottom: 18px;
+  }
+
+   &__form-checkbox:hover .label__checbox {
+    color:#616161;
+  }
+  
+  .label__checbox {
+    margin-left: 8px;
+    font-size: 16px;
+    color: color(dark);
+  }
+  
+  &__form-checkbox svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 10px;
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+  
+  &__form-checkbox.path input:checked {
+    --s: 1px;
+    transition-delay: 0.2s;
+  }
+  
+   &__form-checkbox.path input:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+  
+   &__form-checkbox.path svg {
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    transition: stroke-dasharray 0.3s, stroke-dashoffset 0.3s;
+  }
+  
+   &__form-checkbox.bounce {
+    --stroke: var(--tick);
+  }
+  
+   &__form-checkbox.bounce input:checked {
+    --s: 11px;
+  }
+  
+   &__form-checkbox.bounce input:checked + svg {
+    animation: bounce 0.2s linear forwards 0.2s;
+  }
+  
+   &__form-checkbox.bounce svg {
+    --scale: 0;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  &__form-button {
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: 400px) {
+      margin: 0 auto;
       width: 100%;
     }
   }
 
-  &__top__social-box {
+  &__info-socials {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 
-    @media (max-width: 1100px) {
-      display: none;
+    @media (max-width: 400px) {
+      flex-direction: column;
     }
   }
-  
-  &__top__social__mobile-box {
-    display: none;
 
-    @media (max-width: 1100px) {
-      display: flex;
-      flex-direction: column;
+  &__info-phone {
+    display: flex;
+    align-items: center;
 
-      @media (max-width: 700px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    &:first-child {
+      margin-right: 20px;
+
+      @media (max-width: 450px) {
+        &:first-child {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    span {
+      font-size: 18px;
+      color: #6C6D70;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+
+      path {
+        fill: green;
       }
     }
   }
 
-  &__mobile__phone {
-    color: #212121;
-    font-weight: 600;
-    transition: all 0.3s;
-    margin: 0 0 20px 0;
-
-    i {
-      color: #009247;
-      padding-right: 10px;
-    }
-  }
-
-
-  &__phone {
-    color: color(dark);
-    font-weight: 600;
-    transition: all 0.3s;
-    margin-right: 20px;
-
-    i {
+  &__info-phone:hover {
+    span {
       color: color(green);
-      padding-right: 10px;
     }
   }
 
   &__search-box {
     display: flex;
-    justify-content: space-between;
     align-items: end;
-    background-color: #f5f5f5;
-    margin-bottom: 40px;
-    padding: 30px 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 3px #828282;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    margin-bottom: 30px;
 
-    @media (max-width: 1100px) {
-      display: none;
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+
+  &__search-item {
+    width: 25%;
+
+    @media (max-width: 650px) {
+     width: 100%;
+     margin-bottom: 25px;
+    }
+
+    &:last-child {
+      width: 18%;
+      overflow: hidden;
+
+      @media (max-width: 650px) {
+        width: 100%;
+      }
     }
   }
 
   &__search-label {
-    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #6C6D70;
   }
 
   &__search-input {
-    width: 85%;
-    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
 
-    &::placeholder { 
-      color: #3131318e;
-      font-size: 12px;
+    @media (max-width: 650px) {
+      padding: 10px;
     }
   }
 
   &__search-button {
-    width: 150px;
-    height: 35px;
+    width: 100%;
+    height: 38px;
 
-    @media (max-width: 1350px) {
-      width: 120px;
+    @media (max-width: 650px) {
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
-  &__chat__box-item {
-    background: #D9DCD4;
-    padding: 15px;
+  &__info-telegram{
+    padding-bottom: 5px;
+  }
+
+  &__info__tg-item {
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: #D4DDC9;
     border-radius: 10px;
-    margin-bottom: 25px;
+    opacity: 0.8;
     transition: all 0.3s;
 
     &:hover {
-      background-color: rgb(193, 208, 195);
-      box-shadow: 0 0 5px #2d2d2d;
+      opacity: 1;
+      box-shadow: 0 0 5px green;
     }
 
     &:last-child {
@@ -577,69 +503,28 @@
     }
   }
 
-  &__chat__item-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.025em;
-    color: color(dark);
-  }
-
-  &__chat__item-subtitle {
-    color: color(dark);
-    margin: 10px 0;
-  }
-
-  &__chat__item-text {
-    color: color(dark);
-  }
-
-  &__file-container {
-    margin-top: 30px;
-  }
-
-  &__file-box {
-    position: relative;
-    width: 160px;
-    height: 160px;
-    box-shadow: 0 0 2px #979797;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-  }
-
-  &__add-file {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: color(green);
+  &__info-title {
+    font-size: 18px;
     font-weight: 500;
-    line-height: auto;
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
-    border: 2px solid #33953A;
-    border-radius: 50%;
-    
-    &:first-child {
-      margin-bottom: 15px;
-    }
+    text-transform: uppercase;
+    color: color(dark);
+    margin-bottom: 5px;
   }
 
-  &__add__file-click {
-    position: absolute;
-    opacity: 0;
-    width: 160px;
-    height: 160px;
-    border-radius: 8px;
+  &__info-subtitle {
+    font-weight: 500;
+    color: color(dark);
   }
-  
-  &__chat__item-button {
-    margin: 15px 0 8px 0;
+
+  &__info-text {
+    margin-bottom: 12px;
+    font-size: 14px;
   }
+
+  &__info-link {
+    height: 38px;
+  }
+
 
    // Стили соцсетей
    &__icon-box {
@@ -652,7 +537,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 95 !important;
 
     &::after,
     &:before {

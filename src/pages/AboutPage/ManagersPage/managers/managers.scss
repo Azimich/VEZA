@@ -790,7 +790,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 98;
+    z-index: 95 !important;
 
     &::after,
     &:before {

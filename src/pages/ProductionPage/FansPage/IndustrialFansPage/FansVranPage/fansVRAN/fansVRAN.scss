@@ -140,21 +140,17 @@
   &__title {
     margin-bottom: 30px;
     font-size: 40px;
+    text-align: center;
 
     @media (max-width: 1200px) {
       font-size: 30px;
       margin-bottom: 30px;
     }
 
-    @media (max-width: 830px) {
-      text-align: center;
-    }
-
     @include phoneScreen {
       font-size: 25px;
       text-align: center;
       line-height: 145%;
-      margin-bottom: 20px;
     }
   }
 
@@ -189,10 +185,11 @@
   }
 
   .fans__vran__img-box {
-    max-width: 350px !important;
+    max-width: 1000px !important;
     margin: 0;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 
     @media (max-width: 830px) {
       max-width: 400px;
@@ -824,7 +821,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 100;
+    z-index: 95 !important;
 
     &::after,
     &:before {

@@ -42,24 +42,23 @@
     </nav>
     <div class="authorization__tabs-container">
       <div class="authorization__tabs-item tab__cont" id="authorization">
-        <form action="#" class="authorization__first-form">
-          <div class="authorization__label-box">
-            <label for="#" class="authorization__label">Логин*</label>
-            <input type="text" placeholder="@mail.ru" class="authorization__input input">
-          </div>
-          <div class="authorization__label-box">
-            <label for="#" class="authorization__label">Пароль*</label>
-            <input type="text" placeholder="*******" class="authorization__input input">
-          </div>
-          <div class="authorization__checkbox-box authorization__label-box">
-            <div class="checkbox-box">
-              <input type="checkbox" id="chbox" class="required">
-              <label for="chbox">Запомни меня</label>
+        <form action="#" class="authorization__form" id="first-form">
+          <div class="authorization__form-item">
+            <div class="authorization__inputs-item">
+              <input type="text" name="name" id="name" placeholder="Логин*" class="authorization__form-name require">
+              <input type="password" name="username" id="username" placeholder="Пароль*" class="authorization__form-name require">
             </div>
-            <a href="#" class="authorization__password">Забыл пароль?</a>
-          </div>
-          <div class="authorization__label-box">
-            <button type="submit" class="submit little__button">Войти</button>
+            <div class="authorization__form-check-boxces">
+              <label class="authorization__form-checkbox path require">
+                <input type="checkbox" id="checkbox" class="input-checkbox require">
+                <svg viewbox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+                <span class="label__checbox">Запомнить меня</span>
+              </label>
+              <a href="#" class="authorization__form-recovery">Забыл пароль?</a>
+            </div>
+            <button type="submit" class="authorization__form-button little__button">Отпарвить</button>
           </div>
         </form>
       </div>

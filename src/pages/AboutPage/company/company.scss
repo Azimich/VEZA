@@ -192,7 +192,7 @@
 
   &__baloon-moskow_4 {
     top: 63%;
-    left: 9%;
+    left: 10%;
 
     @include phoneScreen {
       top: 65%;
@@ -206,8 +206,8 @@
   }
 
   &__baloon-moskow_5 {
-    top: 73%;
-    left: 26.7%;
+    top: 71%;
+    left: 24.7%;
 
     @include phoneScreen {
       top: 67%;
@@ -221,8 +221,8 @@
   }
 
   &__baloon-moskow_6 {
-    top: 78%;
-    left: 6%;
+    top: 73%;
+    left: 30%;
     
     @media (max-width:530px) {
       top: 78%;
@@ -232,7 +232,7 @@
   }
 
   &__baloon-moskow_7 {
-    top: 74%;
+    top: 45%;
     left: 11%;
 
     @media (max-width:530px) {
@@ -242,8 +242,8 @@
   }
 
   &__baloon-moskow_8 {
-    top: 73%;
-    left: 15%;
+    top: 70%;
+    left: 9%;
     
     @media (max-width:530px) {
       top: 68%;
@@ -927,7 +927,7 @@
     position: fixed;
     top: 280px;
     left: 95%;
-    z-index: 98;
+    z-index: 95 !important;
 
     &::after,
     &:before {
