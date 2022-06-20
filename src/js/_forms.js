@@ -2,141 +2,327 @@ export const initForms = () => {
 
   "use strict"
 
-  /* Валидация и отправка  формы Попапа  */
 
+  /* Валидация и отправка  формы Техническая  */
+   document.addEventListener("DOMContentLoaded", function() {
+    const texForm = document.querySelector(".support__form");
+    texForm.addEventListener("submit", formSend);
+    async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(texForm);
+      let formData = new FormData(texForm);
+
+      console.log(error)
+
+      if (error === 0){
+        let response = await fetch('mail.php', {
+          method: 'POST',
+          body: formData 
+        });
+
+        if(response.ok){
+            sended();
+            texForm.reset(); 
+            setTimeout(() => {
+              sendedRemove();
+            }, 3000);
+        }else{
+          alert('Ошибка!')
+        }
+         
+      } else {
+
+      }  
+    }
+
+    function formValidate (texForm) {
+      let error = 0;
+
+      let formRequire = document.querySelectorAll(".require");
+
+      for (let index = 0; index < formRequire.length; index++) {
+        const input = formRequire[index];
+        formRemoveError(input);
+
+        if (input.classList.contains('support__form-email')) {
+          if (emailTest(input)) {
+            formAddError(input);
+            error++;
+          }
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if(input.value === '') {
+          formAddError(input);
+          error++;  
+        }
+      }
+      return error;
+    }
+        
+  });
+
+  /* Валидация и отправка  формы Popup  */
   document.addEventListener("DOMContentLoaded", function() {
-
-    const popupForm = document.querySelector(".popup__vacancies");
+    const popupForm = document.querySelector(".popup-form");
     popupForm.addEventListener("submit", formSend);
-
     async function formSend(e) {
       e.preventDefault();
 
       let error = formValidate(popupForm);
-      // let formData = new FormData(popupForm);
+      let formData = new FormData(popupForm);
+
+      console.log(error)
+
       if (error === 0) {
         let response = await fetch('mail.php', {
           method: 'POST',
           body: formData 
         });
-        if(response.ok){
-          sended(); 
-          popupForm.reset(); 
-          document.getElementById('form').reset();
-          document.querySelectorAll('.textarea__popup,.label-file').forEach(item => {
-            item.style.borderWidth = '1px';
-            item.classList.remove('error');
-            document.querySelector('.vacancies__form-checkbox > .check').classList.remove('error');
-            if(item.classList.contains('.label-file')) {
-              item.textContent = 'Ваше резюме'
-              item.style.color = '#6C6D70'
-            }
-          });
-          setTimeout(() => {
-            closePopup ();
-            sendedRemove();
-          }, 3000);
 
-          } else {
-            alert('Ошибка!')
+        if(response.ok) {
+            sended();
+            popupForm.reset(); 
+            setTimeout(() => {
+              sendedRemove();
+            }, 3000);
+        } else {
+          alert('Ошибка!')
+        }
+         
+      } else {
+
+      }  
+    }
+
+    function formValidate (popupForm) {
+      let error = 0;
+      let formRequire = document.querySelectorAll(".required");
+
+      for (let index = 0; index < formRequire.length; index++) {
+        const input = formRequire[index];
+        formRemoveError(input);
+
+        if (input.classList.contains('email')) {
+          if (emailTest(input)) {
+            formAddError(input);
+            error++;
           }
-        
-        } else {} 
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if(input.value === '') {
+          formAddError(input);
+          error++;  
+        }
       }
+      return error;
+    }
+        
+  });
 
-      function formValidate (popupForm){
-        let error = 0;
+  /* Валидация и отправка  формы Авторизации  */
+  document.addEventListener("DOMContentLoaded", function() {
+    const authorizationForm = document.querySelector(".authorization__form");
+    authorizationForm.addEventListener("submit", formSend);
+    async function formSend(e) {
+      e.preventDefault();
 
-        let formReq = document.querySelectorAll(".required");
+      let error = formValidate(authorizationForm);
+      let formData = new FormData(authorizationForm);
 
-          for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-            formRemoveError(input);
+      console.log(error)
 
-            if(input.classList.contains('email')){
-              if (emailTest(input)){
-                formAddError(input);
-                error++;
-              }
-            }
+      if (error === 0) {
+        let response = await fetch('mail.php', {
+          method: 'POST',
+          body: formData 
+        });
 
-            else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
-              formAddError(input);
-              error++;
-            }
+        if(response.ok) {
+            sended();
+            authorizationForm.reset(); 
+            setTimeout(() => {
+              sendedRemove();
+            }, 3000);
+        } else {
+          alert('Ошибка!')
+        }
+         
+      } else {
 
-            else{
-              if(input.value === ''){
-                formAddError(input);
-                error++; 
-              }
-            }
+      }  
+    }
+
+    function formValidate (authorizationForm) {
+      let error = 0;
+      let formRequire = document.querySelectorAll(".require");
+
+      for (let index = 0; index < formRequire.length; index++) {
+        const input = formRequire[index];
+        formRemoveError(input);
+
+        if (input.classList.contains('email')) {
+          if (emailTest(input)) {
+            formAddError(input);
+            error++;
           }
-        return error;
-      } 
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if(input.value === '') {
+          formAddError(input);
+          error++;  
+        }
+      }
+      return error;
+    }
+        
+  });
 
+  /* Валидация и отправка  формы Авторизации  */
+  document.addEventListener("DOMContentLoaded", function() {
+    const singForm = document.querySelector(".authorization__second-form");
+    singForm.addEventListener("submit", formSend);
+    async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(singForm);
+      let formData = new FormData(singForm);
+
+      console.log(error)
+
+      if (error === 0) {
+        let response = await fetch('mail.php', {
+          method: 'POST',
+          body: formData 
+        });
+
+        if(response.ok) {
+            sended();
+            singForm.reset(); 
+            setTimeout(() => {
+              sendedRemove();
+            }, 3000);
+        } else {
+          alert('Ошибка!')
+        }
+         
+      } else {
+
+      }  
+    }
+
+    function formValidate (singForm) {
+      let error = 0;
+      let formRequire = document.querySelectorAll(".require");
+
+      for (let index = 0; index < formRequire.length; index++) {
+        const input = formRequire[index];
+        formRemoveError(input);
+
+        if (input.classList.contains('email')) {
+          if (emailTest(input)) {
+            formAddError(input);
+            error++;
+          }
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if(input.value === '') {
+          formAddError(input);
+          error++;  
+        }
+      }
+      return error;
+    }
+        
   });
 
 
-  /* Валидация и отправка  формы Техническая  */
-    document.addEventListener("DOMContentLoaded", function() {
-      const texForm = document.querySelector(".support__form");
-      texForm.addEventListener("submit", formSend);
 
-        async function formSend(e) {
-          e.preventDefault();
 
-          let error = formValidate(texForm);
-          let formData = new FormData(texForm);
 
-          console.log(error)
 
-          if (error === 0){
-            let response = await fetch('mail.php', {
-              method: 'POST',
-              body: formData 
-            });
+//   document.addEventListener("DOMContentLoaded", function() {
 
-            if(response.ok){
-                sended();
-                texForm.reset(); 
-                setTimeout(() => {
-                  sendedRemove();
-                }, 3000);
-            }else{
-              alert('Ошибка!')
-            }
-             
-          } else {
+//     const popupForm = document.getElementById("popup-form");
+//     popupForm.addEventListener("submit", formSend);
 
-          }  
-        }
+//     async function formSend(e) {
+//         e.preventDefault();
 
-        function formValidate (texForm) {
-          let error = 0;
+//         let error = formValidate(popupForm);
+//         let formData = new FormData(popupForm);
 
-          let formRequire = document.querySelectorAll(".require");
+//           if (error === 0){
+//             let response = await fetch('mail.php', {
+//                 method: 'POST',
+//                 body: formData 
+//              });
+//              if(response.ok){
+//                 sended(); 
+//                 popupForm.reset(); 
+//                 document.getElementById('popup-form').reset();
+//                 document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
+//                   item.style.borderWidth = '1px';
+//                   item.classList.remove('error');
+//                   document.querySelector('.vacancies__form-checkbox>check').classList.remove('error');
+//                   if(item.classList.contains('label-file')){
+//                     item.textContent = 'Ваше резюме'
+//                     item.style.color = '#6C6D70'
+//                   }
+//                 })
+//                 setTimeout(() => {
+//                   closePopup ();
+//                   sendedRemove();
+//                 }, 3000);
 
-          for (let index = 0; index < formRequire.length; index++) {
-            const input = formRequire[index];
-            formRemoveError(input);
+//              }else{
+//                  alert('Ошибка!')
+//              }
+            
+//         }else {
 
-            if (input.classList.contains('support__form-email')) {
-              if (emailTest(input)) {
-                formAddError(input);
-                error++;
-              }
-            } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-                formAddError(input);
-                error++;
-            } else if(input.value === '') {
-              formAddError(input);
-              error++;  
-            }
-          }
-          return error;
-        }
-   });
+//       }
+        
+//     }
+
+//       function formValidate (popupForm){
+//           let error = 0;
+
+//           let formReq = document.querySelectorAll(".required");
+
+//           for (let index = 0; index < formReq.length; index++) {
+//             const input = formReq[index];
+//             formRemoveError(input);
+//             formRemoveError(input.nextElementSibling);
+
+//               if(input.classList.contains('email')){
+//                   if (emailTest(input)){
+//                     formAddError(input);
+//                     error++;
+//                   }
+//               }
+
+//               else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
+//                 formAddError(input.nextElementSibling);
+//                 error++;
+//               }
+
+//               else{
+//                   if(input.value === ''){
+//                     formAddError(input.nextElementSibling);
+//                     error++; 
+//                   }
+//               }
+//           }
+//         return error;
+//       }    
+// });
+
+
 
     const popup = document.querySelector('.popup');
 
@@ -144,15 +330,15 @@ export const initForms = () => {
       popup.classList.remove('open');
     } 
 
-    function formAddError (input){
+    function formAddError (input) {
       input.classList.add('error');
     }
 
-    function formRemoveError (input){
+    function formRemoveError (input) {
       input.classList.remove('error');
     }
 
-    function emailTest(input){
+    function emailTest(input) {
       return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 
@@ -202,12 +388,12 @@ export const initForms = () => {
       }
     });
 
-    document.querySelectorAll('input,textarea').forEach(item =>{
-      item.addEventListener('change', () =>{
-        if(item.value != ''){
+    document.querySelectorAll('input,textarea').forEach(item => {
+      item.addEventListener('change', () => {
+        if(item.value != '') {
           item.style.borderWidth = '2px'
         }
-        else{
+        else {
           item.style.borderWidth = '1px'
         }
       })

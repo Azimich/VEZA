@@ -145,21 +145,18 @@
       }
     }
 
-    &::placeholder{
+    &::placeholder {
       color: #6C6D70;
     }
 
-    &:focus{
+    &:focus {
       border-width: 2px;
       border-color: color(green);
     }
 
-    &.error{
+    &.error {
       border-color: red;
     }
-  }
-
-  &__form-email {
   }
 
   &__form-check-boxces {
@@ -194,6 +191,10 @@
       width: 22px;
       height: 22px;
       display: block;
+    }
+
+    @include phoneScreen {
+      align-items: start;
     }
   }
 
@@ -235,7 +236,7 @@
   
   .label__checbox {
     margin-left: 8px;
-    font-size: 16px;
+    font-size: 15px;
     color: color(dark);
   }
   
@@ -299,18 +300,6 @@
     }
   }
 
-  .input-checkbox {
-  }
-
-  .label__checbox {
-  }
-
-  &__form-button {
-  }
-
-  .little__button {
-  }
-
   // Регистрация
   &__tabs-item {
     max-width: 550px;
@@ -321,10 +310,8 @@
   }
 
   &__second-form {
-    background-color: #fff;
-    box-shadow: 0 0 5px #2121216a;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 5px 30px 30px 30px;
     border-radius: 10px;
   }
 
@@ -338,26 +325,67 @@
   }
 
   &__second__form__input-content {
-    width: 50%;
-
-    @media (max-width: 560px) {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   &__second__form-items {
-    margin: 0 0 25px 0;
-    color: color(dark);
+   display: flex;
+   align-items: center;
   }
 
-  &__second__form-labels {
-    margin-bottom: 5px;
+  .authorization__align {
+    align-items: end;
+    margin: 50px 0 0 0;
+  }
+
+  &__form-select {
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+  &__form-inputs {
+    width: 50%;
+    padding: 8px;
+    margin-top: 40px;
+    border: none;
+    border-bottom: 1px solid #BCBDC0;
+    color: color(black);
+    font-size: 14px;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 500px) {
+      margin: 35px 0 0 0;
+    }
+
+    &::placeholder {
+      color: #6C6D70;
+    }
+
+    &:focus {
+      border-width: 2px;
+      border-color: color(green);
+    }
+
+    &.error {
+      border-color: red;
+    }
+  }
+
+  .checkbox-href {
+    color: #009247;
   }
 
   .submit__two {
+    margin-top: 50px;
     border: none;
+    cursor: pointer;
   }
-
 
    // Стили соцсетей
    &__icon-box {

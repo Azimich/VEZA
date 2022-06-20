@@ -600,7 +600,7 @@
   
         &:focus{
           border-width: 2px;
-          border-color: color(lightgreen2);
+          border-color: color(green);
         }
   
         &.error{
@@ -642,7 +642,7 @@
   
         &:focus{
           border-width: 2px !important;
-          border-color: color(lightgreen2);
+          border-color: color(green);
         }
       }
   

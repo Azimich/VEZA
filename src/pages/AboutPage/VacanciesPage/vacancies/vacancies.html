@@ -795,11 +795,11 @@
           <p class="popup__text">
             Хотите стать частью нашей команды? Или нашли ваканcию, которая вам подходит ?
             Оставьте Ваши данные и мы обязательно свяжемся с Вами!</p>
-          <form action="./mail.php" method="POST" id="form" novalidate>
-            <input type="text" placeholder="Имя" name="name">
+          <form class="popup-form" action="./mail.php" method="POST" id="popup-form" novalidate>
+            <input class="required" type="text" placeholder="Имя" name="name" class="email">
             <div class="email-tel-box">
               <input type="email" name="email" id="user-mail" placeholder="Почта *" class="email required">
-              <input class="input__popup email" type="tel" name="tel" id="user-phone" placeholder="Телефон">
+              <input class="input__popup required" type="tel" name="tel" id="user-phone" placeholder="Телефон">
             </div>
             <textarea class="textarea__popup" name="message" id="text" placeholder="Другое описание"></textarea>
             <fieldset class="inputfile-box">
@@ -808,8 +808,8 @@
               <label for="upload" class="label-file">Ваше резюме</label>
               <p>Расскажите больше о себе. Прикрепите Ваши резюме или портфолио.</p>
             </fieldset>
-            <label class="vacancies__form-checkbox path require">
-              <input type="checkbox" id="checkbox" class="check require">
+            <label class="vacancies__form-checkbox path">
+              <input type="checkbox" id="checkbox" class="check required">
               <svg viewbox="0 0 21 21">
                 <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
               </svg>
