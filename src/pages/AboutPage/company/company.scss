@@ -97,7 +97,7 @@
     display: flex;
     align-items: center;
     max-width: 1000px;
-    margin: 0 auto 100px;
+    margin: 0 auto 200px;
 
     @media (max-width:530px) {
       margin-bottom: 60px;
@@ -107,14 +107,25 @@
   .map {
     width: 100%;
     position: relative;
+    margin: 0 auto;
   }
   
   .map svg {
     display: block;
     width: 100%;
     height: 100%;
-    transition: all 1s;
+    transition: all 0.2s;
     position: relative;
+
+    path {
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        fill: rgb(28, 157, 0);
+        box-shadow: 0 0 5px #212121;
+      }
+    }
   }
 
   .popups__container {
@@ -139,7 +150,10 @@
   &__baloon-moskow_8,
   &__baloon-moskow_9 {
     position: absolute;
-    height: 30px;
+    height: 25px;
+    // width: 25px;
+    // @include backgroundImage(cover);
+    // background-image: url('../assets/images/zavod.svg');
 
     img {
       cursor: pointer;
@@ -148,106 +162,96 @@
     @include phoneScreen {
       width: 20px;
     }
+
+    @media (max-width: 530px) {
+      width: 15px;
+    }
   }
 
   &__baloon-moskow_1 {
-    top: 55.9%;
-    left: 14.7%;
+    top: 53.9%;
+    left: 17%;
 
-    @media (max-width:530px) {
-      top: 56%;
-      left: 18%;
+    @include phoneScreen {
+      top: 53.9%;
+      left: 17%;
     }
   }
 
   &__baloon-moskow_2 {
-    top: 52%;
-    left: 11.6%;
+    top: 59%;
+    left: 11%;
 
-    @include phoneScreen {
-      top: 48%;
-      left: 11.6%;
-    }
-
-    @media (max-width:530px) {
-      top: 52%;
-      left: 8.8%;
+    @media (max-width: 530px) {
+      top: 59%;
+      left: 11%;
     }
   }
 
   &__baloon-moskow_3 {
-    top: 56.5%;
-    left: 9%;
+    top: 54%;
+    left: 13%;
 
     @include phoneScreen {
-      top: 55.5%;
-      left: 9%;
+      top: 49%;
+      left: 13%;
     }
 
-    @media (max-width:530px) {
-      top: 43%;
-      left: 13.5%;
+    @media (max-width: 530px) {
+      top: 49%;
+      left: 13%;
     }
   }
 
   &__baloon-moskow_4 {
-    top: 63%;
-    left: 10%;
+    top: 67%;
+    left: 12%;
 
-    @include phoneScreen {
-      top: 65%;
-      left: 10%;
-    }
-    
-    @media (max-width:530px) {
-      top: 65%;
-      left: 10%;
+    @media (max-width: 530px) {
+      top: 67%;
+      left: 12%;
     }
   }
 
   &__baloon-moskow_5 {
     top: 71%;
-    left: 24.7%;
+    left: 25.7%;
 
     @include phoneScreen {
       top: 67%;
       left: 26.7%;
     }
-
-    @media (max-width:530px) {
-      top: 60%;
-      left: 27.7%;
-    }
   }
 
   &__baloon-moskow_6 {
-    top: 73%;
-    left: 30%;
-    
-    @media (max-width:530px) {
-      top: 78%;
-      left: 6%;
-      height: 18px;
-    }
+    top: 70%;
+    left: 33%;
   }
 
   &__baloon-moskow_7 {
-    top: 45%;
-    left: 11%;
+    top: 53.9%;
+    left: 7.8%;
+    width: 20px;
+
+    @include ipadScreen {
+      top: 51.9%;
+      left: 6.8%;
+      width: 15px;
+    }
 
     @media (max-width:530px) {
-      top: 76%;
-      left: 8%;
+      top: 47.9%;
+      left: 6.8%;
     }
   }
 
   &__baloon-moskow_8 {
-    top: 70%;
-    left: 9%;
+    top: 77%;
+    left: 10%;
     
     @media (max-width:530px) {
-      top: 68%;
-      left: 18%;
+      top: 77%;
+      left: 10%;
     }
   }
 

@@ -157,6 +157,7 @@
 
   .hover-effect-scale li img {
     transition: all 0.2s linear;
+    transform: scale(1);
 
     @media (max-width: 950px) {
       object-fit: cover;
@@ -170,5 +171,4 @@
   .hover-effect-scale li:hover img {
     transform: scale(1.1);
   }
-  
 }

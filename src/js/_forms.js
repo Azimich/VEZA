@@ -183,7 +183,7 @@ export const initForms = () => {
 
   /* Валидация и отправка  формы Авторизации  */
   document.addEventListener("DOMContentLoaded", function() {
-    const singForm = document.querySelector(".authorization__second-form");
+    const singForm = document.querySelector(".authorization__form");
     singForm.addEventListener("submit", formSend);
     async function formSend(e) {
       e.preventDefault();
@@ -201,7 +201,7 @@ export const initForms = () => {
 
         if(response.ok) {
             sended();
-            singForm.reset(); 
+            authorizationForm.reset(); 
             setTimeout(() => {
               sendedRemove();
             }, 3000);
@@ -214,7 +214,7 @@ export const initForms = () => {
       }  
     }
 
-    function formValidate (singForm) {
+    function formValidate (authorizationForm) {
       let error = 0;
       let formRequire = document.querySelectorAll(".require");
 

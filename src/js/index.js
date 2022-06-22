@@ -5,14 +5,11 @@ import { initNews } from './_news';
 import { initSwiper } from './libs/_swiper';
 import { initSlick } from './libs/slick';
 import { initTabssizes } from './_tabssizes';
-import { initCompany } from './_company';
-import { initLeaders } from './_leaders';
-import { initManagers } from './_managers';
-import { initVacancies } from './_vacancies';
 import { initAuthorization } from './_authorization';
 import { initResources } from './_resources';
 import { initPopup } from './_popup';
 import { initForms } from './_forms';
+import { initHistory } from './_history';
 
 
 (function () {
@@ -27,14 +24,11 @@ import { initForms } from './_forms';
     initNews();
     initSlick();
     initTabssizes();
-    initCompany();
-    initLeaders();
-    initManagers();
-    initVacancies();
     initAuthorization();
     initResources();
     initPopup();
     initForms();
+    initHistory();
 
   } catch (err) {
     console.log(err);

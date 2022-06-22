@@ -9,7 +9,7 @@ export const initAbout = () => {
         oRequestAnimationFrame ||
         msRequestAnimationFrame ||
         function(callback) {
-          setTimeout(callback, 1000 / 60);
+          setTimeout(callback, 1000 / 100);
         }
     })();
   
