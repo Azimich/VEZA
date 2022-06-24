@@ -24,7 +24,6 @@ export const initSwiper = () => {
     EffectCards: {
       rotate: true,
       slideShadows: false,
-      transformEl: '.banner__slider-slide'
     },
 
     navigation: {
@@ -71,38 +70,36 @@ export const initSwiper = () => {
     loop:true,
   });
 
-  //swiper-popup
-  const swiper4 = new Swiper(".history__slider", {
-
-    modules: [Navigation, Pagination],
-   
-    slidesPerView: 3,
-    spaceBetween: 150,
-    breakpoints: {
-      "@0.00": {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      "@0.75": {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      "@1.00": {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
+  const swiper4 = new Swiper(".mySwiper", {
+    modules: [Navigation],
+    slidesPerView: 5,
+    spaceBetween: 5,
+    loop:true,
+    autoplay: {
+      delay: 1000,
     },
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
-    loop: true,
-    simulateTouch: true,
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 5,
+      },
+    },
   });
 }

@@ -3,7 +3,7 @@ import { Fancybox } from "@fancyapps/ui";
 import 'slick-carousel/slick/slick';
 
 const teamSlider = $('.slider__click');
-const historySlider = $('.history__slick-wrapper')
+const historySlider = $('.history__slick-items')
 
 
 export const initSlick = () => {
@@ -22,34 +22,31 @@ export const initSlick = () => {
     });
   });
 
-  $(document).ready(function() {
-    historySlider.slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      centerMode: true,
-      variableWidth: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    })
-  })
+  // $(document).ready(function() {
+  //   historySlider.slick({
+  //     centerMode: true,
+  //     centerPadding: '60px',
+  //     slidesToShow: 4,
+  //     autoplay: true,
+  //     autoplaySpeed: 800,
+  //     responsive: [
+  //       {
+  //         breakpoint: 768,
+  //         settings: {
+  //           centerMode: true,
+  //           centerPadding: '40px',
+  //           slidesToShow: 3
+  //         }
+  //       },
+  //       {
+  //         breakpoint: 580,
+  //         settings: {
+  //           centerMode: true,
+  //           centerPadding: '40px',
+  //           slidesToShow: 1
+  //         }
+  //       }
+  //     ]
+  //   })
+  // })
 };

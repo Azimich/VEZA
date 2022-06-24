@@ -88,9 +88,6 @@
     }
   }
 
-  
-     
-
    //Button__mobile
   .slider__btn-mobile {
     display: none;
@@ -145,7 +142,6 @@
   }
 
   @include phoneScreen {
-
     .swiper-button-prev:after,
     .swiper-button-next::after {
       display: none;

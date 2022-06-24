@@ -122,280 +122,157 @@ export const initForms = () => {
         
   });
 
-  /* Валидация и отправка  формы Авторизации  */
+
+
+
+
+
   document.addEventListener("DOMContentLoaded", function() {
-    const authorizationForm = document.querySelector(".authorization__form");
-    authorizationForm.addEventListener("submit", formSend);
+
+    const popupForm = document.getElementById("popup-form");
+    popupForm.addEventListener("submit", formSend);
+
     async function formSend(e) {
       e.preventDefault();
 
-      let error = formValidate(authorizationForm);
-      let formData = new FormData(authorizationForm);
-
-      console.log(error)
+      let error = formValidate(popupForm);
+      let formData = new FormData(popupForm);
 
       if (error === 0) {
         let response = await fetch('mail.php', {
           method: 'POST',
           body: formData 
-        });
+         });
 
-        if(response.ok) {
-            sended();
-            authorizationForm.reset(); 
-            setTimeout(() => {
-              sendedRemove();
-            }, 3000);
+        if (response.ok) {
+          sended(); 
+          popupForm.reset(); 
+          document.getElementById('popup-form').reset();
+          document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
+            item.style.borderWidth = '1px';
+            item.classList.remove('error');
+            document.querySelector('.vacancies__form-checkbox>check').classList.remove('error');
+            if(item.classList.contains('label-file')){
+              item.textContent = 'Ваше резюме'
+              item.style.color = '#6C6D70'
+            }
+          });
+          setTimeout(() => {
+            closePopup ();
+            sendedRemove();
+          }, 3000);
+
         } else {
-          alert('Ошибка!')
-        }
-         
-      } else {
+            alert('Ошибка!')
+          }
+        
+    } else {
 
-      }  
+    }
+        
     }
 
-    function formValidate (authorizationForm) {
+    function formValidate (popupForm){
       let error = 0;
-      let formRequire = document.querySelectorAll(".require");
 
-      for (let index = 0; index < formRequire.length; index++) {
-        const input = formRequire[index];
+      let formReq = document.querySelectorAll(".required");
+
+      for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        formRemoveError(input);
         formRemoveError(input);
 
-        if (input.classList.contains('email')) {
-          if (emailTest(input)) {
+        if(input.classList.contains('email')){
+          if (emailTest(input)){
             formAddError(input);
             error++;
           }
         } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-            formAddError(input);
-            error++;
-        } else if(input.value === '') {
-          formAddError(input);
-          error++;  
-        }
-      }
-      return error;
-    }
-        
-  });
-
-  /* Валидация и отправка  формы Авторизации  */
-  document.addEventListener("DOMContentLoaded", function() {
-    const singForm = document.querySelector(".authorization__form");
-    singForm.addEventListener("submit", formSend);
-    async function formSend(e) {
-      e.preventDefault();
-
-      let error = formValidate(singForm);
-      let formData = new FormData(singForm);
-
-      console.log(error)
-
-      if (error === 0) {
-        let response = await fetch('mail.php', {
-          method: 'POST',
-          body: formData 
-        });
-
-        if(response.ok) {
-            sended();
-            authorizationForm.reset(); 
-            setTimeout(() => {
-              sendedRemove();
-            }, 3000);
+          formAddError(input); error++ 
         } else {
-          alert('Ошибка!')
-        }
-         
-      } else {
-
-      }  
-    }
-
-    function formValidate (authorizationForm) {
-      let error = 0;
-      let formRequire = document.querySelectorAll(".require");
-
-      for (let index = 0; index < formRequire.length; index++) {
-        const input = formRequire[index];
-        formRemoveError(input);
-
-        if (input.classList.contains('email')) {
-          if (emailTest(input)) {
+          if(input.value === ''){
             formAddError(input);
-            error++;
+            error++; 
           }
-        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-            formAddError(input);
-            error++;
-        } else if(input.value === '') {
-          formAddError(input);
-          error++;  
         }
       }
       return error;
-    }
-        
+    }    
   });
 
 
+  const popup = document.querySelector('.popup');
 
+  function closePopup () {
+    popup.classList.remove('open');
+  } 
 
+  function formAddError (input) {
+    input.classList.add('error');
+  }
 
+  function formRemoveError (input) {
+    input.classList.remove('error');
+  }
 
-//   document.addEventListener("DOMContentLoaded", function() {
+  function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
 
-//     const popupForm = document.getElementById("popup-form");
-//     popupForm.addEventListener("submit", formSend);
+  const sendedText = document.querySelector('.success');
 
-//     async function formSend(e) {
-//         e.preventDefault();
+  function sended() {
+    sendedText.classList.add('sended');
+  }
+  
+  function sendedRemove() {
+    sendedText.classList.remove('sended');  
+  }; 
+  
+  let input = document.querySelector('.inputfile');
+  let label = input.nextElementSibling;
+  let labelVal = label.textContent;
+  let fileClean = document.querySelector('.file-cleaner');
+  
 
-//         let error = formValidate(popupForm);
-//         let formData = new FormData(popupForm);
+  fileClean.addEventListener('click', () =>{
+    input.value = ''
+    label.style.borderWidth = "1px";
+    label.style.color = "#6C6D70";
+    label.style.borderWidth = "1px";
+    label.textContent = 'Ваше резюме';
+  })
 
-//           if (error === 0){
-//             let response = await fetch('mail.php', {
-//                 method: 'POST',
-//                 body: formData 
-//              });
-//              if(response.ok){
-//                 sended(); 
-//                 popupForm.reset(); 
-//                 document.getElementById('popup-form').reset();
-//                 document.querySelectorAll('input,textarea,.label-file').forEach(item =>{
-//                   item.style.borderWidth = '1px';
-//                   item.classList.remove('error');
-//                   document.querySelector('.vacancies__form-checkbox>check').classList.remove('error');
-//                   if(item.classList.contains('label-file')){
-//                     item.textContent = 'Ваше резюме'
-//                     item.style.color = '#6C6D70'
-//                   }
-//                 })
-//                 setTimeout(() => {
-//                   closePopup ();
-//                   sendedRemove();
-//                 }, 3000);
-
-//              }else{
-//                  alert('Ошибка!')
-//              }
-            
-//         }else {
-
-//       }
-        
-//     }
-
-//       function formValidate (popupForm){
-//           let error = 0;
-
-//           let formReq = document.querySelectorAll(".required");
-
-//           for (let index = 0; index < formReq.length; index++) {
-//             const input = formReq[index];
-//             formRemoveError(input);
-//             formRemoveError(input.nextElementSibling);
-
-//               if(input.classList.contains('email')){
-//                   if (emailTest(input)){
-//                     formAddError(input);
-//                     error++;
-//                   }
-//               }
-
-//               else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
-//                 formAddError(input.nextElementSibling);
-//                 error++;
-//               }
-
-//               else{
-//                   if(input.value === ''){
-//                     formAddError(input.nextElementSibling);
-//                     error++; 
-//                   }
-//               }
-//           }
-//         return error;
-//       }    
-// });
-
-
-
-    const popup = document.querySelector('.popup');
-
-    function closePopup () {
-      popup.classList.remove('open');
-    } 
-
-    function formAddError (input) {
-      input.classList.add('error');
+   input.addEventListener('change', function(e) {
+    let fileName = '';
+    if ( this.files && this.files.length > 1 ) {
+      fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace( '{count}', this.files.length);
     }
-
-    function formRemoveError (input) {
-      input.classList.remove('error');
+    else {
+      fileName = this.files[0].name;
     }
-
-    function emailTest(input) {
-      return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    if ( fileName ) {
+      label.textContent = fileName;
+      label.style.color = "#000";
+      label.style.borderWidth = "2px";
     }
-
-    const sendedText = document.querySelector('.success');
-
-    function sended() {
-      sendedText.classList.add('sended');
+    else {
+      label.textContent = labelVal;
     }
-    
-    function sendedRemove() {
-      sendedText.classList.remove('sended');  
-    }; 
-    
-    let input = document.querySelector('.inputfile'),
-        label = input.nextElementSibling,
-     labelVal = label.textContent,
-    fileClean = document.querySelector('.file-cleaner');
-    
+    if (this.files[0].size > 2 * 1024 * 1024) {
+      alert('Допустимый размер файла 2 МБ!')
+      label.textContent = labelVal;
+    }
+  });
 
-    fileClean.addEventListener('click', () =>{
-      input.value = ''
-      label.style.borderWidth = "1px";
-      label.style.color = "#6C6D70";
-      label.style.borderWidth = "1px";
-      label.textContent = 'Ваше резюме'
+  document.querySelectorAll('input,textarea').forEach(item => {
+    item.addEventListener('change', () => {
+      if (item.value != '') {
+        item.style.borderWidth = '2px'
+      }
+      else {
+        item.style.borderWidth = '1px'
+      }
     })
-
-     input.addEventListener('change', function(e){
-      let fileName = '';
-      if( this.files && this.files.length > 1 ){
-        fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace( '{count}', this.files.length);
-      }
-      else{
-        fileName = this.files[0].name;
-      }
-      if( fileName ){
-        label.textContent = fileName;
-        label.style.color = "#000";
-        label.style.borderWidth = "2px";
-      }
-      else{
-        label.textContent = labelVal;
-      }
-      if(this.files[0].size > 2 * 1024 * 1024){
-        alert('Допустимый размер файла 2 МБ!')
-        label.textContent = labelVal;
-      }
-    });
-
-    document.querySelectorAll('input,textarea').forEach(item => {
-      item.addEventListener('change', () => {
-        if(item.value != '') {
-          item.style.borderWidth = '2px'
-        }
-        else {
-          item.style.borderWidth = '1px'
-        }
-      })
-    })
+  })
 }

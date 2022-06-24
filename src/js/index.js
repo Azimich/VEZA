@@ -28,7 +28,7 @@ import { initHistory } from './_history';
     initResources();
     initPopup();
     initForms();
-    initHistory();
+    initHistory()
 
   } catch (err) {
     console.log(err);
