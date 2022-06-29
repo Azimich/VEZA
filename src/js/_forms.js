@@ -1,12 +1,13 @@
 export const initForms = () => {
 
   "use strict"
-
-
   /* Валидация и отправка  формы Техническая  */
    document.addEventListener("DOMContentLoaded", function() {
     const texForm = document.querySelector(".support__form");
-    texForm.addEventListener("submit", formSend);
+    if (texForm) {
+      texForm.addEventListener("submit", formSend);
+    }
+  
     async function formSend(e) {
       e.preventDefault();
 
@@ -28,7 +29,7 @@ export const initForms = () => {
               sendedRemove();
             }, 3000);
         }else{
-          alert('Ошибка!')
+          alert('Для отправки данных нужен сервер!')
         }
          
       } else {
@@ -63,15 +64,19 @@ export const initForms = () => {
         
   });
 
-  /* Валидация и отправка  формы Popup  */
+
+  /* Валидация и отправка  формы Авторизации  */
   document.addEventListener("DOMContentLoaded", function() {
-    const popupForm = document.querySelector(".popup-form");
-    popupForm.addEventListener("submit", formSend);
+    const singPopup = document.querySelector(".authorization__form");
+    if (singPopup) {
+      singPopup.addEventListener("submit", formSend);
+    }
+
     async function formSend(e) {
       e.preventDefault();
 
-      let error = formValidate(popupForm);
-      let formData = new FormData(popupForm);
+      let error = formValidate(singPopup);
+      let formData = new FormData(singPopup);
 
       console.log(error)
 
@@ -88,7 +93,7 @@ export const initForms = () => {
               sendedRemove();
             }, 3000);
         } else {
-          alert('Ошибка!')
+          alert('Для отправки данных нужен сервер!')
         }
          
       } else {
@@ -96,9 +101,9 @@ export const initForms = () => {
       }  
     }
 
-    function formValidate (popupForm) {
+    function formValidate (singPopup) {
       let error = 0;
-      let formRequire = document.querySelectorAll(".required");
+      let formRequire = document.querySelectorAll(".req");
 
       for (let index = 0; index < formRequire.length; index++) {
         const input = formRequire[index];
@@ -123,20 +128,84 @@ export const initForms = () => {
   });
 
 
-
-
-
-
+  /* Валидация и отправка  формы Регистрации  */
   document.addEventListener("DOMContentLoaded", function() {
+    const authorizationForm = document.querySelector(".authorization__second-form");
+    if (authorizationForm) {
+      authorizationForm.addEventListener("submit", formSend);
+    }
+    
 
+    async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(authorizationForm);
+      let formData = new FormData(authorizationForm);
+
+      console.log(error)
+
+      if (error === 0) {
+        let response = await fetch('mail.php', {
+          method: 'POST',
+          body: formData 
+        });
+
+        if(response.ok) {
+            sended();
+            popupForm.reset(); 
+            setTimeout(() => {
+              sendedRemove();
+            }, 3000);
+        } else {
+          alert('Для отправки данных нужен сервер!')
+        }
+         
+      } else {
+
+      }  
+    }
+
+    function formValidate (authorizationForm) {
+      let error = 0;
+      let formRequire = document.querySelectorAll(".require");
+
+      for (let index = 0; index < formRequire.length; index++) {
+        const input = formRequire[index];
+        formRemoveError(input);
+
+        if (input.classList.contains('email')) {
+          if (emailTest(input)) {
+            formAddError(input);
+            error++;
+          }
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if(input.value === '') {
+          formAddError(input);
+          error++;  
+        }
+      }
+      return error;
+    }
+        
+  });
+
+
+  /* Валидация и отправка  формы Попапа */
+  document.addEventListener("DOMContentLoaded", function() {
     const popupForm = document.getElementById("popup-form");
-    popupForm.addEventListener("submit", formSend);
+    if (popupForm) {
+      popupForm.addEventListener("submit", formSend);
+    }
 
     async function formSend(e) {
       e.preventDefault();
 
       let error = formValidate(popupForm);
       let formData = new FormData(popupForm);
+
+      console.log(error)
 
       if (error === 0) {
         let response = await fetch('mail.php', {
@@ -163,7 +232,7 @@ export const initForms = () => {
           }, 3000);
 
         } else {
-            alert('Ошибка!')
+            alert('Для отправки данных нужен сервер!')
           }
         
     } else {
@@ -229,41 +298,46 @@ export const initForms = () => {
     sendedText.classList.remove('sended');  
   }; 
   
+
   let input = document.querySelector('.inputfile');
-  let label = input.nextElementSibling;
-  let labelVal = label.textContent;
-  let fileClean = document.querySelector('.file-cleaner');
-  
+  if (input) {
+    input.addEventListener('change', function(e) {
 
-  fileClean.addEventListener('click', () =>{
-    input.value = ''
-    label.style.borderWidth = "1px";
-    label.style.color = "#6C6D70";
-    label.style.borderWidth = "1px";
-    label.textContent = 'Ваше резюме';
-  })
+      let label = document.querySelector('.label-file');
+      let labelVal = label.textContent;
+      let fileClean = document.querySelector('.file-cleaner');
+      
+    
+      fileClean.addEventListener('click', () =>{
+        input.value = ''
+        label.style.borderWidth = "1px";
+        label.style.color = "#6C6D70";
+        label.style.borderWidth = "1px";
+        label.textContent = 'Ваше резюме';
+      })
+      
+      let fileName = '';
+      if ( this.files && this.files.length > 1 ) {
+        fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace( '{count}', this.files.length);
+      }
+      else {
+        fileName = this.files[0].name;
+      }
+      if ( fileName ) {
+        label.textContent = fileName;
+        label.style.color = "#000";
+        label.style.borderWidth = "2px";
+      }
+      else {
+        label.textContent = labelVal;
+      }
+      if (this.files[0].size > 2 * 1024 * 1024) {
+        alert('Допустимый размер файла 2 МБ!')
+        label.textContent = labelVal;
+      }
+    });
+  }
 
-   input.addEventListener('change', function(e) {
-    let fileName = '';
-    if ( this.files && this.files.length > 1 ) {
-      fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace( '{count}', this.files.length);
-    }
-    else {
-      fileName = this.files[0].name;
-    }
-    if ( fileName ) {
-      label.textContent = fileName;
-      label.style.color = "#000";
-      label.style.borderWidth = "2px";
-    }
-    else {
-      label.textContent = labelVal;
-    }
-    if (this.files[0].size > 2 * 1024 * 1024) {
-      alert('Допустимый размер файла 2 МБ!')
-      label.textContent = labelVal;
-    }
-  });
 
   document.querySelectorAll('input,textarea').forEach(item => {
     item.addEventListener('change', () => {

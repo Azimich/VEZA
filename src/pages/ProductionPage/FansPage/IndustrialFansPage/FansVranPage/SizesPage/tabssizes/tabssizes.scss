@@ -168,7 +168,6 @@
 
     &.active {
       color: color(green);
-      font-weight: 600;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -272,6 +271,10 @@
     width: 350px;
     margin: 0 auto;
     transition: all 0.75s ease-out; 
+
+    @include phoneScreen {
+      width: auto;
+    }
   }
   
   .card .photo img {
@@ -458,6 +461,11 @@
   }
 
 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
 
   &__table__middle-first {
     background: #EBEBEB;
@@ -592,256 +600,7 @@
     }
   }
 
-  &__table-box {
-    display: block;
 
-    @media (max-width: 700px) {
-      display: none;
-    }
-  }
-
-  table {
-    width: 100%;
-    font-size: 14px;
-    border-collapse: collapse;
-    border: 1px solid rgb(170, 170, 170);
-  }
-
-  .fans__vran__table__size-box-top {
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 0px 0;
-    border-color: white;
-    background: #CDCDC0;
-  }
-
-  .size__0 {
-    padding: 10px 2px 10px 33px !important;
-    width: 275px;
-    background: #E4E4DE;
-
-    @media (max-width: 1200px) {
-      width: 281px;
-    }
-
-    @media (max-width: 768px) {
-      width: 228px;
-    }
-  }
-  .size__1 {
-    padding: 9px !important;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-
-  .size__2 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__3 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__4 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__5 {
-    padding: 5px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__6 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__7 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__8 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-  .size__9 {
-    padding: 9px;
-    width: 67px;
-
-    @media (max-width: 768px) {
-      width: 54.4px;
-    }
-  }
-
-  .fans__vran__table__container {
-    display: flex;
-  }
-
-  .fans__vran__table__right-block {
-    width: 264px;
-    height: auto;
-    display: flex;
-    background: #DBE6D9;
-
-    @media (max-width: 1200px) {
-      width: 270px;
-    }
-  }
-
-  .fans__vran__table__right-item {
-    padding: 20px 10px;
-    text-align: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.199);
-
-    @media (max-width: 1200px) {
-      padding: 20px 13px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 20px 8px;
-    }
-
-    &:first-child {
-      border-left: 1px solid rgba(0, 0, 0, 0.199);
-    }
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-
-  .width__size__table-line {
-    width: 736px;
-  }
-
-  .fans__vran__table__numbers-size {
-    width: 15px;
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    border-color: white;
-    padding: 7px;
-    background: #B6AFAF;
-    color: #fff;
-  }
-
-  .fans__vran__table__numbers-size-box {
-    width: 28px;
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    background: #B2C9AC;
-    padding: 10px;
-    color: #fff;
-  }
-
-  .bottom__box-size {
-    border-bottom: 1px solid #f5f5f5;
-  }
-
-  .number__last__size {
-    padding: 5px;
-  }
-
-
-  //Mobile-table
-  .fans__vran__table__mobile-box {
-    display: none;
-
-    @media (max-width: 700px) {
-      display: block;
-    }
-  }
-
-  .fans__vran__table__mobile-second-box, .fans__vran__table__mobile-third-box {
-    display: none;
-
-    @media (max-width: 700px) {
-      display: block;
-    }
-  }
-
-  .fans__vran__mobile-top-title {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    background: #E4E4DE;
-  }
-
-  .width__size__table-line-mobile {
-    width: 100%;
-  }
-
-  .fans__vran__mobile-top-numbers {
-    width: 20px !important;
-    font-size: 14px;
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    border-color: color(white);
-    padding: 7px;
-    background: #B6AFAF;
-    color: color(white);
-
-    &:first-child {
-      background-color: #D0C5C5;
-    }
-  }
-
-  .fans__vran__mobile-top-subtitle {
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 0px 0;
-    border-color: white;
-    background: #DBE6D9;
-    padding: 15px 0;
-  }
-
-  .fans__vran__mobile-size {
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    border-color: white;
-    background: #CDCDC0;
-  }
-
-  .fans__vran__mobile-size-box {
-    background-color: #B2C9AC;
-    color: color(white);
-    width: 28px;
-    font-size: 12px;
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    padding: 10px 5px 10px 5px;
-  }
 
   // Сертификаты!
   &__sertificat__container {

@@ -164,6 +164,11 @@
       font-size: 28px;
       max-width: 350px;
     }
+
+    @media (max-width: 400px) {
+      font-size: 25px;
+      max-width: 350px;
+    }
   }
 
   .banner__text {

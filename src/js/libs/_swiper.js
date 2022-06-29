@@ -8,10 +8,8 @@ export const initSwiper = () => {
     modules: [Navigation, Pagination],
     grabCursor: true,
     autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
+      delay: 5000,
     },
-
     simulateTouch: true,
     loop:true,
   });
@@ -71,13 +69,14 @@ export const initSwiper = () => {
   });
 
   const swiper4 = new Swiper(".mySwiper", {
-    modules: [Navigation],
+    modules: [Navigation, Pagination, EffectCards],
     slidesPerView: 5,
     spaceBetween: 5,
-    loop:true,
+    loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 5000,
     },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

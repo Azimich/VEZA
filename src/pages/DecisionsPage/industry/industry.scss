@@ -10,16 +10,16 @@
     left: 0;
     right: 0;
     @include backgroundImage(cover);
-    background-image: url('../assets/images/industry_banner.png'); 
+    background-image: url('../assets/images/industry_banner.jpg'); 
 
     @include tabletScreen {
       @include backgroundImage(cover);
-      background-image: url('../assets/images/industry_banner_ipad.png'); 
+      background-image: url('../assets/images/industry_banner_ipad.jpg'); 
     }
 
     @include ipadScreen {
       @include backgroundImage(cover);
-      background-image: url('../assets/images/industry_banner_mob.png'); 
+      background-image: url('../assets/images/industry_banner_mob.jpg'); 
     }
   }
   
