@@ -1,3 +1,4 @@
+import videojs from "video.js";
 
 export const initTabssizes = () => {
 
@@ -16,4 +17,10 @@ export const initTabssizes = () => {
             document.getElementById(id).classList.remove('hide');
         });
     });
+
+    //video.js
+    const videoJs = document.querySelector('.video-js')
+    if (videoJs) {
+        videojs(videoJs) 
+    }
 }

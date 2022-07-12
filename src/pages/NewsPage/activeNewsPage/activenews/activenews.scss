@@ -5,9 +5,6 @@
     margin-bottom: 50px;
   }
 
-  &__content-box {
-
-  }
 
   &__content-item {
     display: flex;
@@ -27,6 +24,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 5px #21212189;
+    position: relative;
 
     @include tabletScreen {
       width: 50%;
@@ -50,6 +48,35 @@
       height: max-content;
       margin-bottom: 20px;
     }
+  }
+
+  .active-news__counter-container {
+    background-color: color(green);
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px 20px;
+    border-radius: 8px 0 0 0;
+  }
+
+  .counter__icon {
+    margin-right: 8px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .counter__numbers {
+    font-size: 18px;
+    font-weight: 400;
+    color: color(white);
   }
 
   .active-news__img-pc {
