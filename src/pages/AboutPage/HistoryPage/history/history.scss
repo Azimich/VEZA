@@ -1,36 +1,8 @@
 .history {
 
-  &__banner-container {
-  }
-
-  &__container {
-  }
-
-  &__tabs-items {
-  }
-
-  &__start-container {
-  }
-
   .hide {
     display: none;
   }
-
-  // slider
-
-  // /* Стрелка влево */
-  // .slick-arrow.slick-prev {
-  //   left: 1px;
-  //   @include backgroundImage(cover);
-  //   background-image: url('../assets/images/slick-arrow.svg'); 
-  // }
-
-  // /* Стрелка вправо */
-  // .slick-arrow.slick-next {
-  //   right: 1px;
-  //   @include backgroundImage(cover);
-  //   background-image: url('../assets/images/slick-arrow-next.svg'); 
-  // }
 
   &__swiper {
     margin: 80px 0;

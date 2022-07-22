@@ -42,8 +42,8 @@
 
     &.active {
       color: color(green);
-      font-weight: 500;
 
+      
       @media (max-width: 650px) {
         color: color(white);
         background-color: color(green) !important;

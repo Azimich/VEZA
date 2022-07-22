@@ -39,7 +39,6 @@
 
     &.active {
       color: color(green);
-      font-weight: 600;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -94,16 +93,140 @@
 
   // Maps
   &__map-container {
-    max-width: 1000px;
     margin: 0 auto 100px;
+    max-width: 1000px;
+    position: relative;
 
     @media (max-width:530px) {
       margin-bottom: 60px;
     }
   }
 
+  //Блок сортировки с чек-боксами
+  &__map__filter-container {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    z-index: 99;
+  }
+
+  &__map__filter-title {
+    font-weight: 400;
+    color: #9c9c9c;
+    font-size: 18px;
+  }
+
+  &__map__enterprises-title {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #9c9c9c;
+  }
+
+  &__map__branches-title {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #9c9c9c;
+  }
+
+  &__map__filter-enterprises {
+    --background: #fff;
+    --border: #9c9c9c;
+    --border-hover: #BBC1E1;
+    --border-active: #009247;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all .3s;
+
+    input, svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+  }
+
+  &__map__filter-enterprises .check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0 !important;
+    border: 0 !important;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+    
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+
+    &:checked {
+      --b: var(--border-active);
+    }
+  }
+
+  &__map__filter-enterprises svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: -10px;
+    margin: 0 0 0 10px;
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+
+  &__map__filter-enterprises.path .check:checked {
+    --s: 1px;
+    transition-delay: 0.2s;
+  }
+
+  &__map__filter-enterprises.path .check:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+
+  &__map__filter-enterprises.path svg {
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    transition: stroke-dasharray 0.3s, stroke-dashoffset 0.3s;
+  }
+
+  &__map__filter-enterprises.bounce {
+    --stroke: var(--tick);
+  }
+
+  &__map__filter-enterprises.bounce .check:checked {
+    --s: 11px;
+  }
+
+  &__map__filter-enterprises.bounce svg {
+    --scale: 0;
+  }
+
+  &__map__filter-enterprises.bounce .check:checked + svg {
+    animation: bounce 0.2s linear forwards 0.2s;
+  }
+  
+  .vacancies__label__checbox {
+    margin-left: 8px;
+    font-size: 16px;
+    color: color(dark);
+  }
+
   .vacancies__map {
-    width: 100%;
     position: relative;
   }
 
@@ -125,32 +248,123 @@
     }
   }
 
+  .enterprises {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
   &__baloon-moskow_1 {
     position: absolute;
     height: 32px;
-    top: 55%;
-    left: 50%;
+    top: 62%;
+    left: 52%;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
 
     img {
       cursor: pointer;
     }
   }
 
-  
-  
-  &__maps-tooltip {
+  //Предприятия
+  &__baloon-moskow_2,
+  &__baloon-moskow_3,
+  &__baloon-moskow_4,
+  &__baloon-moskow_5,
+  &__baloon-moskow_6,
+  &__baloon-branches_1,
+  &__baloon-branches_2,
+  &__baloon-branches_3,
+  &__baloon-branches_4,
+  &__baloon-branches_5 {
     position: absolute;
-    left: 0;
-    top: 0;
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 0 10px #212121;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    display: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    border: 2px solid #fff;
+    color: color(white);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.5);
+    }
   }
-  
+
+  &__baloon-moskow_2 {
+    top: 54%;
+    left: 30%;
+  }
+
+  &__baloon-moskow_3 {
+    top: 68%;
+    left: 39%;
+  }
+
+  &__baloon-moskow_4 {
+    top: 50%;
+    left: 70%;
+  }
+
+  &__baloon-moskow_5 {
+    top: 65%;
+    left: 16%;
+  }
+
+  &__baloon-moskow_6 {
+    top: 80%;
+    left: 52%;
+  }
+
+
+  //Филиалы
+  .branches {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .check-branches.active .branches {
+    display: block;
+  }
+
+  &__baloon-branches_1 {
+    top: 47%;
+    left: 23%;
+  }
+
+  &__baloon-branches_2 {
+    top: 52%;
+    left: 14%;
+  }
+
+  &__baloon-branches_3 {
+    top: 37%;
+    left: 75%;
+  }
+
+  &__baloon-branches_4 {
+    top: 72%;
+    left: 85%;
+  }
+
+  &__baloon-branches_5 {
+    top: 82%;
+    left: 60%;
+  }
 
   // Наши вакансии
   &__vacancies__title {
@@ -593,7 +807,7 @@
       color: color(black);
     }
   
-    form{
+    form {
   
       input{
         width: 100%;

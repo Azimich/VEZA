@@ -10,6 +10,8 @@ import { initResources } from './_resources';
 import { initPopup } from './_popup';
 import { initForms } from './_forms';
 import { initHistory } from './_history';
+import { initialVacanceis } from './_vacancies';
+import { initManagers } from './_managers';
 
 
 (function () {
@@ -28,7 +30,9 @@ import { initHistory } from './_history';
     initResources();
     initPopup();
     initForms();
-    initHistory()
+    initHistory();
+    initialVacanceis();
+    initManagers();
 
   } catch (err) {
     console.log(err);

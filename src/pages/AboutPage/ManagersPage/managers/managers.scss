@@ -39,7 +39,6 @@
 
     &.active {
       color: color(green);
-      font-weight: 600;
 
       @media (max-width: 650px) {
         color: color(white);
@@ -137,7 +136,7 @@
 
   &__baloon-1 {
     top: 55%;
-    left: 12.2%;
+    left: 15.5%;
 
     @media (max-width: 500px) {
       top: 52%;
@@ -147,23 +146,22 @@
 
   &__baloon-2 {
     top: 58%;
-    left: 8.1%;
-    height: 20px;
+    left: 10.5%;
   }
 
   &__baloon-3 {
     top: 64%;
-    left: 8.4%;
+    left: 10.5%;
   }
 
   &__baloon-4 {
-    top: 67.8%;
-    left: 10.9%;
+    top: 68%;
+    left: 13%;
   }
 
   &__baloon-5 {
     top: 76%;
-    left: 7.7%;
+    left: 9%;
 
     @media (max-width: 500px) {
       top: 80%;
@@ -172,46 +170,46 @@
   }
 
   &__baloon-6 {
-    top: 77%;
-    left: 5%;
+    top: 80%;
+    left: 7%;
     
     @media (max-width: 500px) {
       top: 76%;
-      left: 4%;
+      left: 5%;
     }
   }
 
   &__baloon-7 {
     top: 74%;
-    left: 11%;
+    left: 12%;
     height: 20px;
   }
 
   &__baloon-8 {
     top: 73%;
-    left: 15%;
+    left: 16%;
     height: 20px;
   }
 
   &__baloon-9 {
     top: 67.4%;
-    left: 14.5%;
+    left: 15.5%;
     height: 20px;
   }
 
   &__baloon-10 {
     top: 67.4%;
-    left: 14.5%;
+    left: 18%;
 
     @media (max-width: 500px) {
       top: 61.4%;
-      left: 15.5%;
+      left: 16.5%;
     }
   }
 
   &__baloon-11 {
-    top: 42.8%;
-    left: 13.9%;
+    top: 44.8%;
+    left: 14%;
     
     @media (max-width: 500px) {
       top: 40%;
@@ -221,13 +219,13 @@
 
   &__baloon-12 {
     top: 72%;
-    left: 18.5%;
+    left: 19.5%;
     height: 20px;
   }
 
   &__baloon-13 {
     top: 68%;
-    left: 20.5%;
+    left: 21.5%;
     
     @media (max-width: 500px) {
       top: 68%;
@@ -237,13 +235,13 @@
 
   &__baloon-14 {
     top: 64%;
-    left: 18.6%;
+    left: 19.6%;
     height: 15px;
   }
 
   &__baloon-15 {
     top: 58.5%;
-    left: 18%;
+    left: 20%;
 
     @media (max-width: 500px) {
       top: 53.5%;
@@ -253,23 +251,23 @@
 
   &__baloon-16 {
     top: 60.5%;
-    left: 21.5%;
+    left: 22.5%;
     height: 20px;
   }
 
   &__baloon-17 {
     top: 61%;
-    left: 12%;
+    left: 13%;
 
     @media (max-width: 500px) {
       top: 60%;
-      left: 12%;
+      left: 14%;
     }
   }
 
   &__baloon-18 {
     top: 60.5%;
-    left: 15%;
+    left: 16%;
 
     @media (max-width: 500px) {
       top: 54.5%;
@@ -278,7 +276,7 @@
   }
 
   &__baloon-19 {
-    left: 15%;
+    left: 18%;
     top: 56%;
 
     @media (max-width: 500px) {
@@ -288,7 +286,7 @@
   }
 
   &__baloon-20 {
-    left: 15%;
+    left: 18%;
     top: 51.5%;
 
     @media (max-width: 500px) {
@@ -298,7 +296,7 @@
   }
 
   &__baloon-21 {
-    left: 12%;
+    left: 13%;
     top: 50%;
 
     @media (max-width: 500px) {
@@ -308,13 +306,13 @@
   }
 
   &__baloon-22 {
-    left: 27%;
+    left: 28%;
     top: 61%;
     height: 20px;
   }
 
   &__baloon-23 {
-    left: 23%;
+    left: 24%;
     top: 76%;
 
     @media (max-width: 500px) {
@@ -324,42 +322,42 @@
   }
 
   &__baloon-24 {
-    left: 29%;
+    left: 30%;
     top: 69%;
   }
 
   &__baloon-25 {
-    left: 33%;
+    left: 34%;
     top: 74%;
   }
 
   &__baloon-26 {
-    left: 26%;
+    left: 27%;
     top: 75%;
   }
 
   &__baloon-27 {
-    left: 36%;
+    left: 37%;
     top: 78%;
   }
 
   &__baloon-28 {
-    left: 43%;
+    left: 44%;
     top: 83%;
   }
 
   &__baloon-29 {
-    left: 43%;
+    left: 44%;
     top: 75%;
   }
 
   &__baloon-30 {
-    left: 51%;
+    left: 52%;
     top: 78%;
   }
 
   &__baloon-31 {
-    left: 87.5%;
+    left: 88%;
     top: 76%;
 
     @media (max-width: 500px) {
@@ -369,13 +367,19 @@
   }
 
   &__baloon-32 {
-    left: 88.5%;
+    left: 89%;
     top: 87%;
 
     @media (max-width: 500px) {
       left: 87.5%;
       top: 80%;
     }
+  }
+
+  &__baloon-33 {
+    left: 8.5%;
+    top: 49%;
+    height: 18px !important;
   }
 
   &__baloon-1,
@@ -409,10 +413,16 @@
   &__baloon-29,
   &__baloon-30,
   &__baloon-31,
-  &__baloon-32 {
+  &__baloon-32,
+  &__baloon-33 {
     position: absolute;
     height: 20px;
     width: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
 
     img {
       cursor: pointer;
@@ -424,99 +434,105 @@
     }
   }
 
-
-  &__tooltips {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 0 10px #212121;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    display: none;
-  }
-
   .managers__popup-contents {
-    display: flex;
-    align-items: center;
-    padding: 20px 15px;
-    
+    padding: 40px 40px 60px 40px;
+
     @include phoneScreen {
-      flex-direction: column;
-      justify-content: start;
+     padding: 20px 20px 30px 20px;
     }
   }
 
 
-  &__logo-popup {
+  &__popup-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-
-    img {
-      width: 80px;
-    }
-  }
-
-  .managers__popup-title {
-    color: color(dark);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-right: 50px;
-
-    @media (max-width: 920px) {
-      margin-right: 30px;
-    }
+    margin-bottom: 40px;
 
     @include phoneScreen {
-      margin: 0 0 16px 0;
+      margin-bottom: 20px;
     }
-  }
 
-  .managers__phone-content {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 400;
-    color: color(green);
-    transition: all 0.3s;
-
-    &:nth-child(3) {
-      margin: 0 20px;
+    img {
+      width: 130px;
 
       @include phoneScreen {
-        margin: 8px 0;
+        width: 100px;
       }
-    }
-
-    svg {
-      width: 22px;
-      height: 22px;
-      margin-right: 5px;
-
-      path {
-        fill:green;
-      }
-    }
-
-    .maps__geo {
-      width: 18px;
-      height: 18px;
     }
   }
 
-  .managers__popup-phone {
+  &__popup-title {
+    font-weight: 500;
+    font-size: 25px;
+    color: #404040;
+    margin-bottom: 15px;
+
+    @include phoneScreen {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .managers__popup-boss {
+    margin-bottom: 22px;
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: #5c5c5c;
+    }
+
+    h5 {
+      font-weight: 500;
+      font-size: 18px;
+      color: #5c5c5c;
+      margin-top: 6px;
+      
+      @include phoneScreen {
+        font-size: 16px;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &__phone-content {
     display: flex;
     align-items: center;
-    color: gray;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.025em;
+    color: #414141;
+    margin-bottom: 12px;
     transition: all 0.3s;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+
+      @include phoneScreen {
+        width: 20px;
+        height: 20px;
+      }
+
+      path {
+        fill: #33953A;;
+      }
+    }
+  }
+
+  &__popup-phone {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #414141;
+
+    @include phoneScreen {
+      font-size: 15px;
+    }
+
     &:hover {
       color: green;
 
@@ -526,29 +542,13 @@
     }
   }
 
-  .managers__popup-text {
+  &__popup-text {
     color: #000000;
     font-size: 16px;
     font-weight: 300;
     line-height: 145%;
     margin-bottom: 6px;
     margin-bottom: 15px;
-  }
-
-  // Maps
-  .managers__maps-block {
-    width: 100%;
-    height: 65vh;
-    overflow: hidden;
-
-    @include phoneScreen {
-      height: 50vh;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   // Popup
@@ -583,7 +583,7 @@
     top: 55%;
     left: 50%;
     right: 0;
-    width: 80%;
+    width: 550px;
     border-radius: 10px;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
@@ -599,9 +599,10 @@
   .managers__close-popup {
     position: absolute;
     right: 15px;
+    top: 8px;
     color: gray;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
   }
 
@@ -703,6 +704,7 @@
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 20px;
     padding: 0 0 8px 0;
+    margin-bottom: 80px;
   }
 
   &__managers-item {
@@ -739,7 +741,26 @@
     font-size: 16px;
   }
 
+  // Maps
+  &__managers__map-container {
+    overflow: hidden;
+  }
 
+  .managers__managers__map-map {
+    width: 100%;
+    height: 500px;
+    border: 2px solid rgba(0, 0, 0, 0.093);
+
+    @include phoneScreen {
+      height: 400px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
 
    // Стили соцсетей
    .banner__icon-box {
