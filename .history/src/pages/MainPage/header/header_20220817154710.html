@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<header class="header">
+  <div class="wrapper">
+    <div class="header__container">
+
+      <nav class="header__nav">
+        <div class="header__logo-box">
+          <a href="index.html" class="header__logo">
+            <img src="../assets/images/logo.svg" alt="vezalogo">
+          </a>
+          <a href="#popup__city" class="header__location popup-open popup-links">
+            <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 42.5L24.2 41.6C23.7 41.1 12 27.3 12 19C12 11.8 17.8 6 25 6C32.2 6 38 11.8 38 19C38 27.3 26.3 41.1 25.8 41.7L25 42.5ZM25 8C18.9 8 14 12.9 14 19C14 25.4 22.4 36.2 25 39.4C27.6 36.2 36 25.4 36 19C36 12.9 31.1 8 25 8Z" fill="black"/>
+              <path d="M25 24C22.2 24 20 21.8 20 19C20 16.2 22.2 14 25 14C27.8 14 30 16.2 30 19C30 21.8 27.8 24 25 24ZM25 16C23.3 16 22 17.3 22 19C22 20.7 23.3 22 25 22C26.7 22 28 20.7 28 19C28 17.3 26.7 16 25 16Z" fill="black"/>
+            </svg>
+            <span class="header__location-title">Веза-Москва</span>
+          </a>
+        </div>
+        <ul class="header__menu">
+          <li class="header__menu-list"><a href="decision.html" class="header__menu-link">Решение</a></li>
+          <li class="header__menu-list"><a href="production-page.html" class="header__menu-link">Продукция</a></li>
+          <li class="header__menu-list"><a href="news-page.html" class="header__menu-link">Новости</a></li>
+          <li class="header__menu-list"><a href="about-company.html" class="header__menu-link">О компании</a></li>
+          <li class="header__menu-list"><a href="resources-page.html" class="header__menu-link">Ресурсы</a></li>
+          <li class="header__menu-list"><a href="contacts-page.html" class="header__menu-link">Контакты</a></li>
+          <li class="header__menu-list last"><a href="contacts-page.html" class="header__menu-link">Мои заказы</a></li>
+          <div class="mobile__search-box">
+            <a href="#popup__search" class="header__icon popup-links">
+              <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.4314 17.328L21.4829 20.378C21.6253 20.5254 21.704 20.7227 21.7022 20.9275C21.7004 21.1324 21.6183 21.3283 21.4734 21.4732C21.3286 21.618 21.1326 21.7002 20.9278 21.702C20.7229 21.7038 20.5256 21.625 20.3783 21.4827L17.3267 18.4311C15.3326 20.1396 12.7542 21.0094 10.1326 20.8578C7.51109 20.7063 5.05012 19.5453 3.26614 17.6184C1.48216 15.6915 0.513845 13.1485 0.564383 10.523C0.614921 7.8976 1.68038 5.39377 3.5372 3.53695C5.39401 1.68014 7.89784 0.614677 10.5233 0.564139C13.1487 0.513601 15.6917 1.48192 17.6186 3.2659C19.5455 5.04988 20.7065 7.51085 20.8581 10.1324C21.0096 12.754 20.1399 15.3323 18.4314 17.3264V17.328ZM10.7189 19.3124C12.9981 19.3124 15.1839 18.407 16.7956 16.7953C18.4072 15.1837 19.3126 12.9978 19.3126 10.7186C19.3126 8.43943 18.4072 6.25357 16.7956 4.64193C15.1839 3.03029 12.9981 2.12488 10.7189 2.12488C8.43967 2.12488 6.25382 3.03029 4.64218 4.64193C3.03054 6.25357 2.12513 8.43943 2.12513 10.7186C2.12513 12.9978 3.03054 15.1837 4.64218 16.7953C6.25382 18.407 8.43967 19.3124 10.7189 19.3124V19.3124Z" fill="#2E6143"/>
+              </svg>                    
+            </a>
+            <a href="#" class="header__icon">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.1922 0.884644C5.04933 0.884644 0.865234 5.11184 0.865234 10.3077C0.865234 15.5036 5.04933 19.7308 10.1922 19.7308C15.3352 19.7308 19.5192 15.5036 19.5192 10.3077C19.5192 5.11184 15.3352 0.884644 10.1922 0.884644ZM2.73064 10.3077C2.73064 9.46059 2.87614 8.64737 3.13263 7.88693L4.59604 9.36541L6.46144 11.25V13.1346L8.32684 15.0193L9.25954 15.9616V17.7812C5.58563 17.3147 2.73064 14.1448 2.73064 10.3077ZM16.0962 14.8996C15.4872 14.4039 14.5638 14.077 13.923 14.077V13.1346C13.923 12.6348 13.7265 12.1555 13.3767 11.802C13.0269 11.4486 12.5524 11.25 12.0576 11.25H8.32684V8.4231C8.82158 8.4231 9.29605 8.22455 9.64588 7.87111C9.99571 7.51768 10.1922 7.03832 10.1922 6.53849V5.59618H11.1249C11.6197 5.59618 12.0941 5.39762 12.444 5.04419C12.7938 4.69076 12.9903 4.2114 12.9903 3.71157V3.32428C15.7213 4.44468 17.6538 7.15099 17.6538 10.3077C17.6537 11.9706 17.1057 13.5861 16.0962 14.8996Z" fill="#2E6143"/>
+              </svg>            
+            </a>
+            <a href="#" class="header__icon">
+              <svg class="push__icon" width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.8671 17.0072C19.2778 16.4819 18.7619 15.8796 18.3332 15.2167C17.8652 14.3016 17.5848 13.3022 17.5082 12.2772V9.25833C17.5123 7.64842 16.9283 6.09245 15.866 4.88276C14.8037 3.67306 13.3363 2.89291 11.7393 2.68888V1.90055C11.7393 1.68418 11.6534 1.47667 11.5004 1.32367C11.3474 1.17067 11.1399 1.08472 10.9235 1.08472C10.7071 1.08472 10.4996 1.17067 10.3466 1.32367C10.1936 1.47667 10.1077 1.68418 10.1077 1.90055V2.70111C8.52504 2.91984 7.07531 3.70471 6.02698 4.91034C4.97866 6.11597 4.40277 7.66067 4.40599 9.25833V12.2772C4.32945 13.3022 4.04897 14.3016 3.58099 15.2167C3.15986 15.8781 2.65222 16.4803 2.07155 17.0072C2.00636 17.0645 1.95412 17.135 1.91829 17.214C1.88247 17.293 1.86388 17.3788 1.86377 17.4655V18.2967C1.86377 18.4587 1.92815 18.6142 2.04276 18.7288C2.15737 18.8434 2.3128 18.9078 2.47488 18.9078H19.4638C19.6258 18.9078 19.7813 18.8434 19.8959 18.7288C20.0105 18.6142 20.0749 18.4587 20.0749 18.2967V17.4655C20.0748 17.3788 20.0562 17.293 20.0204 17.214C19.9845 17.135 19.9323 17.0645 19.8671 17.0072ZM3.13488 17.6856C3.70346 17.1363 4.20408 16.5208 4.62599 15.8522C5.21548 14.747 5.55942 13.5276 5.63433 12.2772V9.25833C5.61009 8.54213 5.73022 7.82837 5.98757 7.15957C6.24493 6.49076 6.63423 5.88058 7.13231 5.36537C7.63039 4.85015 8.22705 4.44043 8.88677 4.16061C9.54649 3.88078 10.2558 3.73658 10.9724 3.73658C11.689 3.73658 12.3983 3.88078 13.058 4.16061C13.7177 4.44043 14.3144 4.85015 14.8125 5.36537C15.3105 5.88058 15.6998 6.49076 15.9572 7.15957C16.2145 7.82837 16.3347 8.54213 16.3104 9.25833V12.2772C16.3853 13.5276 16.7293 14.747 17.3188 15.8522C17.7407 16.5208 18.2413 17.1363 18.8099 17.6856H3.13488Z" fill="#2E6143"/>
+                <path d="M11.0001 20.949C11.385 20.9401 11.7545 20.7954 12.043 20.5404C12.3315 20.2854 12.5206 19.9366 12.5767 19.5557H9.3623C9.42004 19.947 9.61795 20.304 9.91921 20.5603C10.2205 20.8166 10.6046 20.9547 11.0001 20.949Z" fill="#2E6143"/>
+              </svg>              
+            </a>
+            <a href="#" class="header__icon">
+              <svg class="user__icon" width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.9407 26.6663C29.2635 25.0384 28.2806 23.5598 27.0469 22.3127C25.8169 21.062 24.3599 20.0648 22.7563 19.3763C22.742 19.369 22.7276 19.3653 22.7133 19.358C24.9501 17.7186 26.4042 15.0481 26.4042 12.0352C26.4042 7.04397 22.4189 3 17.5 3C12.5811 3 8.5958 7.04397 8.5958 12.0352C8.5958 15.0481 10.0499 17.7186 12.2867 19.3617C12.2724 19.369 12.258 19.3726 12.2437 19.3799C10.6352 20.0685 9.19181 21.0558 7.95312 22.3163C6.72057 23.5644 5.73786 25.0428 5.05926 26.67C4.3926 28.263 4.03306 29.9709 4.00009 31.7013C3.99913 31.7401 4.00585 31.7788 4.01986 31.815C4.03386 31.8512 4.05487 31.8842 4.08164 31.9121C4.1084 31.9399 4.14039 31.962 4.17572 31.9771C4.21104 31.9922 4.24899 32 4.28732 32H6.44156C6.59954 32 6.7252 31.8725 6.7288 31.7158C6.8006 28.9033 7.91363 26.2692 9.88117 24.2727C11.9169 22.207 14.6205 21.0704 17.5 21.0704C20.3795 21.0704 23.0831 22.207 25.1188 24.2727C27.0864 26.2692 28.1994 28.9033 28.2712 31.7158C28.2748 31.8761 28.4005 32 28.5584 32H30.7127C30.751 32 30.789 31.9922 30.8243 31.9771C30.8596 31.962 30.8916 31.9399 30.9184 31.9121C30.9451 31.8842 30.9661 31.8512 30.9801 31.815C30.9941 31.7788 31.0009 31.7401 30.9999 31.7013C30.964 29.9598 30.6086 28.2657 29.9407 26.6663V26.6663ZM17.5 18.3015C15.852 18.3015 14.301 17.6494 13.1341 16.4653C11.9672 15.2813 11.3245 13.7074 11.3245 12.0352C11.3245 10.3629 11.9672 8.78907 13.1341 7.60503C14.301 6.42098 15.852 5.76884 17.5 5.76884C19.148 5.76884 20.699 6.42098 21.8659 7.60503C23.0328 8.78907 23.6755 10.3629 23.6755 12.0352C23.6755 13.7074 23.0328 15.2813 21.8659 16.4653C20.699 17.6494 19.148 18.3015 17.5 18.3015Z" fill="#2E6143"/>
+              </svg>              
+            </a>
+          </div>
+        </ul>
+        
+        <div class="header__icon__box">
+          <a href="#popup__search" class="header__icon popup-links">
+            <svg class="search__icon" width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.4314 17.328L21.4829 20.378C21.6253 20.5254 21.704 20.7227 21.7022 20.9275C21.7004 21.1324 21.6183 21.3283 21.4734 21.4732C21.3286 21.618 21.1326 21.7002 20.9278 21.702C20.7229 21.7038 20.5256 21.625 20.3783 21.4827L17.3267 18.4311C15.3326 20.1396 12.7542 21.0094 10.1326 20.8578C7.51109 20.7063 5.05012 19.5453 3.26614 17.6184C1.48216 15.6915 0.513845 13.1485 0.564383 10.523C0.614921 7.8976 1.68038 5.39377 3.5372 3.53695C5.39401 1.68014 7.89784 0.614677 10.5233 0.564139C13.1487 0.513601 15.6917 1.48192 17.6186 3.2659C19.5455 5.04988 20.7065 7.51085 20.8581 10.1324C21.0096 12.754 20.1399 15.3323 18.4314 17.3264V17.328ZM10.7189 19.3124C12.9981 19.3124 15.1839 18.407 16.7956 16.7953C18.4072 15.1837 19.3126 12.9978 19.3126 10.7186C19.3126 8.43943 18.4072 6.25357 16.7956 4.64193C15.1839 3.03029 12.9981 2.12488 10.7189 2.12488C8.43967 2.12488 6.25382 3.03029 4.64218 4.64193C3.03054 6.25357 2.12513 8.43943 2.12513 10.7186C2.12513 12.9978 3.03054 15.1837 4.64218 16.7953C6.25382 18.407 8.43967 19.3124 10.7189 19.3124V19.3124Z" fill="#2E6143"/>
+            </svg>                 
+          </a>
+          <a href="#" class="header__icon">
+            <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.1922 0.884644C5.04933 0.884644 0.865234 5.11184 0.865234 10.3077C0.865234 15.5036 5.04933 19.7308 10.1922 19.7308C15.3352 19.7308 19.5192 15.5036 19.5192 10.3077C19.5192 5.11184 15.3352 0.884644 10.1922 0.884644ZM2.73064 10.3077C2.73064 9.46059 2.87614 8.64737 3.13263 7.88693L4.59604 9.36541L6.46144 11.25V13.1346L8.32684 15.0193L9.25954 15.9616V17.7812C5.58563 17.3147 2.73064 14.1448 2.73064 10.3077ZM16.0962 14.8996C15.4872 14.4039 14.5638 14.077 13.923 14.077V13.1346C13.923 12.6348 13.7265 12.1555 13.3767 11.802C13.0269 11.4486 12.5524 11.25 12.0576 11.25H8.32684V8.4231C8.82158 8.4231 9.29605 8.22455 9.64588 7.87111C9.99571 7.51768 10.1922 7.03832 10.1922 6.53849V5.59618H11.1249C11.6197 5.59618 12.0941 5.39762 12.444 5.04419C12.7938 4.69076 12.9903 4.2114 12.9903 3.71157V3.32428C15.7213 4.44468 17.6538 7.15099 17.6538 10.3077C17.6537 11.9706 17.1057 13.5861 16.0962 14.8996Z" fill="#2E6143"/>
+            </svg>
+          </a>
+          <a href="#" class="header__icon push">
+            <svg class="push__icon" width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.8671 17.0072C19.2778 16.4819 18.7619 15.8796 18.3332 15.2167C17.8652 14.3016 17.5848 13.3022 17.5082 12.2772V9.25833C17.5123 7.64842 16.9283 6.09245 15.866 4.88276C14.8037 3.67306 13.3363 2.89291 11.7393 2.68888V1.90055C11.7393 1.68418 11.6534 1.47667 11.5004 1.32367C11.3474 1.17067 11.1399 1.08472 10.9235 1.08472C10.7071 1.08472 10.4996 1.17067 10.3466 1.32367C10.1936 1.47667 10.1077 1.68418 10.1077 1.90055V2.70111C8.52504 2.91984 7.07531 3.70471 6.02698 4.91034C4.97866 6.11597 4.40277 7.66067 4.40599 9.25833V12.2772C4.32945 13.3022 4.04897 14.3016 3.58099 15.2167C3.15986 15.8781 2.65222 16.4803 2.07155 17.0072C2.00636 17.0645 1.95412 17.135 1.91829 17.214C1.88247 17.293 1.86388 17.3788 1.86377 17.4655V18.2967C1.86377 18.4587 1.92815 18.6142 2.04276 18.7288C2.15737 18.8434 2.3128 18.9078 2.47488 18.9078H19.4638C19.6258 18.9078 19.7813 18.8434 19.8959 18.7288C20.0105 18.6142 20.0749 18.4587 20.0749 18.2967V17.4655C20.0748 17.3788 20.0562 17.293 20.0204 17.214C19.9845 17.135 19.9323 17.0645 19.8671 17.0072ZM3.13488 17.6856C3.70346 17.1363 4.20408 16.5208 4.62599 15.8522C5.21548 14.747 5.55942 13.5276 5.63433 12.2772V9.25833C5.61009 8.54213 5.73022 7.82837 5.98757 7.15957C6.24493 6.49076 6.63423 5.88058 7.13231 5.36537C7.63039 4.85015 8.22705 4.44043 8.88677 4.16061C9.54649 3.88078 10.2558 3.73658 10.9724 3.73658C11.689 3.73658 12.3983 3.88078 13.058 4.16061C13.7177 4.44043 14.3144 4.85015 14.8125 5.36537C15.3105 5.88058 15.6998 6.49076 15.9572 7.15957C16.2145 7.82837 16.3347 8.54213 16.3104 9.25833V12.2772C16.3853 13.5276 16.7293 14.747 17.3188 15.8522C17.7407 16.5208 18.2413 17.1363 18.8099 17.6856H3.13488Z" fill="#2E6143"/>
+              <path d="M11.0001 20.949C11.385 20.9401 11.7545 20.7954 12.043 20.5404C12.3315 20.2854 12.5206 19.9366 12.5767 19.5557H9.3623C9.42004 19.947 9.61795 20.304 9.91921 20.5603C10.2205 20.8166 10.6046 20.9547 11.0001 20.949Z" fill="#2E6143"/>
+            </svg>                          
+          </a>
+          <a href="#" class="header__icon">
+            <svg class="user__icon" width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M29.9407 26.6663C29.2635 25.0384 28.2806 23.5598 27.0469 22.3127C25.8169 21.062 24.3599 20.0648 22.7563 19.3763C22.742 19.369 22.7276 19.3653 22.7133 19.358C24.9501 17.7186 26.4042 15.0481 26.4042 12.0352C26.4042 7.04397 22.4189 3 17.5 3C12.5811 3 8.5958 7.04397 8.5958 12.0352C8.5958 15.0481 10.0499 17.7186 12.2867 19.3617C12.2724 19.369 12.258 19.3726 12.2437 19.3799C10.6352 20.0685 9.19181 21.0558 7.95312 22.3163C6.72057 23.5644 5.73786 25.0428 5.05926 26.67C4.3926 28.263 4.03306 29.9709 4.00009 31.7013C3.99913 31.7401 4.00585 31.7788 4.01986 31.815C4.03386 31.8512 4.05487 31.8842 4.08164 31.9121C4.1084 31.9399 4.14039 31.962 4.17572 31.9771C4.21104 31.9922 4.24899 32 4.28732 32H6.44156C6.59954 32 6.7252 31.8725 6.7288 31.7158C6.8006 28.9033 7.91363 26.2692 9.88117 24.2727C11.9169 22.207 14.6205 21.0704 17.5 21.0704C20.3795 21.0704 23.0831 22.207 25.1188 24.2727C27.0864 26.2692 28.1994 28.9033 28.2712 31.7158C28.2748 31.8761 28.4005 32 28.5584 32H30.7127C30.751 32 30.789 31.9922 30.8243 31.9771C30.8596 31.962 30.8916 31.9399 30.9184 31.9121C30.9451 31.8842 30.9661 31.8512 30.9801 31.815C30.9941 31.7788 31.0009 31.7401 30.9999 31.7013C30.964 29.9598 30.6086 28.2657 29.9407 26.6663V26.6663ZM17.5 18.3015C15.852 18.3015 14.301 17.6494 13.1341 16.4653C11.9672 15.2813 11.3245 13.7074 11.3245 12.0352C11.3245 10.3629 11.9672 8.78907 13.1341 7.60503C14.301 6.42098 15.852 5.76884 17.5 5.76884C19.148 5.76884 20.699 6.42098 21.8659 7.60503C23.0328 8.78907 23.6755 10.3629 23.6755 12.0352C23.6755 13.7074 23.0328 15.2813 21.8659 16.4653C20.699 17.6494 19.148 18.3015 17.5 18.3015Z" fill="#2E6143"/>
+            </svg>                                                   
+          </a>
+        </div>
+
+        <div class="header__mobile-menu">
+          <div class="header__line-1"></div>
+          <div class="header__line-2"></div>
+          <div class="header__line-3"></div>
+        </div>
+      </nav>
+
+      <div class="header__push-container">
+        <div class="header__push-item">
+          <div class="header__push-images">
+            <img src="../assets/images/push-2.jpg" alt="push">
+          </div>
+          <div class="header__push-info">
+            <h1>Тема уведомления</h1>
+            <p>
+              Lorem ipstum dolor sit amet, at ipsum
+              imperdiet, dui ipsum conubia susndisse Lorem ipstum dolor sit amet, at ipsum
+              imperdiet, dui ipsum conubia 
+              imperdiet, dui ipsum conubia susndisseяsusndisse
+            </p>
+          </div>
+        </div>
+        <div class="header__push-item">
+          <div class="header__push-images">
+            <img src="../assets/images/push-1.jpg" alt="push">
+          </div>
+          <div class="header__push-info">
+            <h1>Тема уведомления</h1>
+            <p>
+              Lorem ipstum dolor sit amet, at ipsum
+              imperdiet, dui ipsum conubia susndisse Lorem ipstum dolor sit amet, at ipsum
+              imperdiet, dui ipsum conubia 
+              imperdiet, dui ipsum conubia susndisseяsusndisse
+            </p>
+          </div>
+        </div>
+        <a href="#" class="header__push-button">
+          Показать все
+          <svg width="1024" height="1024" viewbox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M869 487.8L491.2 159.9C488.3 157.4 484.6 156 480.7 156H392.2C384.8 156 381.4 165.2 387 170L737.2 474H152C147.6 474 144 477.6 144 482V542C144 546.4 147.6 550 152 550H737.1L386.9 854C381.3 858.9 384.7 868 392.1 868H483.6C485.5 868 487.4 867.3 488.8 866L869 536.2C872.462 533.19 875.238 529.472 877.14 525.297C879.042 521.122 880.026 516.588 880.026 512C880.026 507.412 879.042 502.878 877.14 498.703C875.238 494.528 872.462 490.81 869 487.8V487.8Z" fill="black"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Поиск -->
+  <div class="popup seach__popup" id="popup__search">
+    <div class="popup__body popup__search-body">
+      <div class="close-popup search__close-popup">&times;</div>
+      <div class="popup__content popup__search-content">
+        <div class="popup__search-logo"><img src="../assets/images/logo.svg" alt="veza"></div>
+        <div class="popup__input">
+          <input placeholder="Поиск" class="input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Окно городов -->
+  <div class="header__popup-container popup" id="popup__city">
+    <div class="header__popup-body popup__body">
+      <div class="header__close-popup close-popup">&times;</div>
+      <div class="wrapper">
+        <div class="header__popup-content popup__content">
+          <h1 class="header__popup__title-h1">Ваш ближайший офис: <span>Москва</span></h1>
+          <input placeholder="Найти свой город" class="input header__popup-input">
+          <div class="header__popup__city-container">
+            <div class="header__popup__city-items">
+              <ul class="header__popup-countries">
+                <span class="header__country-title">Выберите страну:</span>
+                <li class="header__popup-country">Российская Федерация</li>
+                <li class="header__popup-country">Республика Беларусь</li>
+                <li class="header__popup-country">Республика Казахстан</li>
+                <li class="header__popup-country">Республика Узбекистан</li>
+              </ul>
+              <span class="header__city-title">Выберите регион:</span>
+              <ul class="header__popup-region">
+                <li class="header__popup-city">Адыгея Республика</li>
+                <li class="header__popup-city">Алтай Республика</li>
+                <li class="header__popup-city">Алтайский Край</li>
+                <li class="header__popup-city">Амурская Область</li>
+                <li class="header__popup-city">Архангельская Область</li>
+                <li class="header__popup-city">Астраханская Область</li>
+                <li class="header__popup-city">Байконур Город</li>
+                <li class="header__popup-city">Башкортостан Республика</li>
+                <li class="header__popup-city">Брянская Область</li>
+                <li class="header__popup-city">Бурятия Республика</li>
+                <li class="header__popup-city">Владимирская Область</li>
+                <li class="header__popup-city">Волгоградская Область</li>
+                <li class="header__popup-city">Вологодская Область</li>
+                <li class="header__popup-city">Воронежская Область</li>
+                <li class="header__popup-city">Дагестан Республика</li>
+                <li class="header__popup-city">Еврейская Автономная область</li>
+                <li class="header__popup-city">Ивановская Область</li>
+                <li class="header__popup-city">Ингушетия Республика</li>
+                <li class="header__popup-city">Иркутская Область</li>
+                <li class="header__popup-city">Кабардино-Балкарская Республика</li>
+                <li class="header__popup-city">Калининградская Область</li>
+                <li class="header__popup-city">Калмыкия Республика</li>
+                <li class="header__popup-city">Калужская Область</li>
+                <li class="header__popup-city">Камчатский Край</li>
+                <li class="header__popup-city">Карелия Республика</li>
+                <li class="header__popup-city">Кемеровская Область</li>
+                <li class="header__popup-city">Кировская Область</li>
+                <li class="header__popup-city">Коми Республика</li>
+                <li class="header__popup-city">Костромская Область</li>
+                <li class="header__popup-city">Краснодарский Край</li>
+                <li class="header__popup-city">Красноярский Край</li>
+                <li class="header__popup-city">Крым Республика</li>
+                <li class="header__popup-city">Бурятия Республика</li>
+                <li class="header__popup-city">Владимирская Область</li>
+                <li class="header__popup-city">Волгоградская Область</li>
+                <li class="header__popup-city">Вологодская Область</li>
+                <li class="header__popup-city">Воронежская Область</li>
+                <li class="header__popup-city">Дагестан Республика</li>
+                <li class="header__popup-city">Еврейская Автономная область</li>
+                <li class="header__popup-city">Ивановская Область</li>
+                <li class="header__popup-city">Ингушетия Республика</li>
+                <li class="header__popup-city">Иркутская Область</li>
+                <li class="header__popup-city">Кабардино-Балкарская Республика</li>
+                <li class="header__popup-city">Калининградская Область</li>
+                <li class="header__popup-city">Калмыкия Республика</li>
+                <li class="header__popup-city">Калужская Область</li>
+                <li class="header__popup-city">Камчатский Край</li>
+                <li class="header__popup-city">Карелия Республика</li>
+                <li class="header__popup-city">Кемеровская Область</li>
+                <li class="header__popup-city">Кировская Область</li>
+                <li class="header__popup-city">Коми Республика</li>
+                <li class="header__popup-city">Костромская Область</li>
+                <li class="header__popup-city">Краснодарский Край</li>
+                <li class="header__popup-city">Красноярский Край</li>
+                <li class="header__popup-city">Крым Республика</li>
+              </ul>
+            </div>
+            <div class="header__popup__city-items">
+              <span class="header__areas-title">Населенный пункт:</span>
+              <ul class="header__popup-locality">
+                <li class="header__popup-areas">Абаза</li>
+                <li class="header__popup-areas">Абакан</li>
+                <li class="header__popup-areas">Агидель</li>
+                <li class="header__popup-areas">Адыгейск</li>
+                <li class="header__popup-areas">Азов</li>
+                <li class="header__popup-areas">Ак-Довурак</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Алапаевск</li>
+                <li class="header__popup-areas">Алатырь</li>
+                <li class="header__popup-areas">Алейск</li>
+                <li class="header__popup-areas">Александровск</li>
+                <li class="header__popup-areas">Алматы</li>
+                <li class="header__popup-areas">Алушта</li>
+                <li class="header__popup-areas">Амурск</li>
+                <li class="header__popup-areas">Анадырь</li>
+                <li class="header__popup-areas">Ангарск</li>
+                <li class="header__popup-areas">Анжеро-Судженск</li>
+                <li class="header__popup-areas">Апатиты</li>
+                <li class="header__popup-areas">Аргун</li>
+                <li class="header__popup-areas">Арзамас</li>
+                <li class="header__popup-areas">Армавир</li>
+                <li class="header__popup-areas">Армянск</li>
+                <li class="header__popup-areas">Арсеньев</li>
+                <li class="header__popup-areas">Артем</li>
+                <li class="header__popup-areas">Архангельск</li>
+                <li class="header__popup-areas">Балашиха</li>
+                <li class="header__popup-areas">Балашов</li>
+                <li class="header__popup-areas">Барабинск</li>
+                <li class="header__popup-areas">Барнаул</li>
+                <li class="header__popup-areas">Барыш</li>
+                <li class="header__popup-areas">Батайск</li>
+                <li class="header__popup-areas">Белгород</li>
+                <li class="header__popup-areas">Белово</li>
+                <li class="header__popup-areas">Белогорск</li>
+                <li class="header__popup-areas">Белокуриха</li>
+                <li class="header__popup-areas">Белоярский</li>
+                <li class="header__popup-areas">Бердск</li>
+                <li class="header__popup-areas">Березники</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+
+
+
+

@@ -1,10 +1,9 @@
 .active-news {
   margin: 120px auto;
 
-  &__button {
-    margin-bottom: 50px;
+  &__container {
+    margin: 80px 0 0 0;
   }
-
 
   &__content-item {
     display: flex;
@@ -191,6 +190,11 @@
   .active-news__hover-effect-scale li:hover img {
     transform: scale(1.1);
   }
+
+  &__button {
+    margin: 50px auto 0;
+  }
+
 
   // Стили соцсетей
   &__icon-box {

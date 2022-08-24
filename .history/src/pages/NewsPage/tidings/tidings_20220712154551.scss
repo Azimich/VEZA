@@ -1,0 +1,852 @@
+.tidings {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 100px auto 50px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    text-align: center;
+
+    @include phoneScreen {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-bottom: 50px;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        background: linear-gradient(110.24deg, #0AB016 -6.34%, #33953A 98.24%);
+        box-shadow: 0px 0px 17px #088122;
+        transition: all 0.3s;
+      }
+    }
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: start;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+  
+  &__item:hover &__item-title {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+  &__item:hover &__item-text {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+   &__item:hover &__item-button {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+  &__item:hover path {
+    fill: #fff;
+
+    @include ipadScreen {
+      fill: #212121;
+    }
+  }
+
+  &__item:hover &__button-box {
+    margin-left: 12px;
+  }
+
+  &__images-box {
+    width: 543px;
+    height: 362px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    margin: 0 50px 0 0;
+
+    @media (max-width: 1280px) {
+      width: 500px;
+      height: 333px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 450px;
+      height: 300px;
+    }
+
+    @include ipadScreen {
+      border-radius: 10px;
+      margin-bottom: 20px;
+      height: max-content;
+    }
+
+    @include phoneScreen {
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+
+    @media (max-width: 490px) {
+      width: 100%;
+    }
+  }
+
+  &__text-box {
+    max-width: 700px;
+    padding: 0 10px 0 0;
+
+    @media (max-width: 1450px) {
+      max-width: 550px;
+    }
+
+    @media (max-width: 1280px) {
+      max-width: 500px;
+    }
+
+    @include ipadScreen {
+     max-width: 100%;
+    }
+
+    @include phoneScreen {
+      text-align: center;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 35px;
+
+    @media (max-width: 1280px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 490px) {
+      font-size: 25px;
+      line-height: 145%;
+    }
+
+    @include SEScreen {
+      font-size: 20px;
+    }
+  }
+
+  &__item-text {
+    margin: 10px 0 40px 0;
+    font-size: 18px;
+
+    span {
+      font-weight: 600;
+    }
+
+    @media (max-width: 1280px) {
+      margin: 10px 0 30px 0;
+      font-size: 16px; 
+    }
+
+    @media (max-width: 490px) {
+      margin: 8px 0 20px 0;
+      font-size: 15px;
+    }
+
+    @include SEScreen {
+      font-size: 14px;
+    }
+  }
+
+  &__button-box {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+
+    @include phoneScreen {
+      justify-content: center;
+    }
+  }
+
+
+  &__item-button {
+    color: color(dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #212121;
+      }
+    }
+  }
+
+  &__item__second {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-bottom: 50px;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        background: linear-gradient(110.24deg, #0AB016 -6.34%, #33953A 98.24%);
+        box-shadow: 0px 0px 17px #088122;
+        transition: all 0.3s;
+      }
+    }
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: end;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    @include phoneScreen {
+      align-items: center;
+    }
+  }
+
+  &__item__second:hover &__item-title__second {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+  &__item__second:hover &__item-text__second {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+   &__item__second:hover &__item-button__second {
+    color: color(white);
+
+    @include ipadScreen {
+      color: color(dark);
+    }
+  }
+
+  &__item__second:hover path {
+    fill: #fff;
+
+    @include ipadScreen {
+      fill: #212121;
+    }
+  }
+
+  &__item__second:hover &__button-box__second {
+    margin-right: 12px;
+
+    @include phoneScreen {
+      margin: 0 0 0 12px;
+    }
+  }
+
+  &__text-box__second {
+    max-width: 715px;
+    text-align: right;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    margin: 0 50px 0 0;
+
+    @media (max-width: 1450px) {
+      max-width: 550px;
+    }
+
+    @media (max-width: 1280px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 450px;
+    }
+
+    @include ipadScreen {
+      max-width: 100%;
+      margin-right: 0;
+      order: 2;
+    }
+
+    @include phoneScreen {
+      text-align: center;
+    }
+  }
+
+  &__item-title__second {
+    font-weight: 600;
+    font-size: 35px;
+
+    @media (max-width: 1280px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 490px) {
+      font-size: 25px;
+    }
+
+    @include SEScreen {
+      font-size: 20px;
+    }
+  }
+
+  &__item-text__second {
+    margin: 10px 0 40px 0;
+    font-size: 18px;
+
+    span {
+      font-weight: 600;
+    }
+
+    @media (max-width: 1280px) {
+      margin: 10px 0 30px 0;
+      font-size: 16px; 
+    }
+
+    @include phoneScreen {
+      line-height: 135%;
+    }
+
+    @media (max-width: 490px) {
+      margin: 8px 0 20px 0;
+      font-size: 15px;
+    }
+
+    @include SEScreen {
+      font-size: 14px;
+    }
+  }
+
+  &__button-box__second {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: all 0.3s;
+
+    @include phoneScreen {
+      justify-content: center;
+    }
+  }
+
+  &__item-button__second {
+    color: color(dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #212121;
+      }
+    }
+  }
+
+
+  &__images-box__second {
+    width: 543px;
+    height: 362px;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+
+    @media (max-width: 1280px) {
+      width: 500px;
+      height: 333px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 450px;
+      height: max-content;
+    }
+
+    @include ipadScreen {
+      border-radius: 10px;
+      order: 1;
+      margin-bottom: 20px;
+    }
+
+    @include phoneScreen {
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+
+    @media (max-width: 490px) {
+      width: 100%;
+    }
+  }
+
+  &__item-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+
+    @include ipadScreen {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item-horizontal {
+    position: relative;
+    width: 410px;
+
+    &:nth-child(2) {
+      margin: 0 10px;
+
+      @media (max-width: 870px) {
+       margin: 0 auto 20px;
+      }
+    }
+
+    @include ipadScreen {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item-horizontal:hover &__horizontal__button-box {
+    margin-left: 12px;
+  }
+
+  &__item-horizontal:hover  &__item-horizontal-images {
+    box-shadow: 0px 0px 17px #088122;
+  }
+
+  &__item-horizontal:hover  &__item__horizontal-text {
+   color: color(green);
+  }
+
+  &__item-horizontal-images {
+    width: 100%;
+    height: 330px;
+    position: relative;
+    transition: all 0.2s;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      object-fit: cover;
+    }
+
+    @include phoneScreen {
+      width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      height: max-content;
+    }
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 266px;
+    overflow: hidden;
+
+    @media (max-width: 1380px) {
+      width: 298px;
+      height: 228px;
+    }
+
+    @include phoneScreen {
+      width: 80%;
+      height: 45%;
+    }
+
+    @media (max-width: 490px) {
+      width: 100%;
+      height: 56.6%;;
+    }
+  }
+
+  &__horizontal__button-box {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: all 0.3s;
+  }
+
+  &__item__horizontal-button {
+    text-decoration: none;
+    color: color(white);
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-right: 10px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__item__horizontal-text {
+    color: color(dark);
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 400;
+    transition: all 0.3s;
+  }
+
+
+
+  // Стили для пагинации
+  .hidden-news {
+    display: none;
+  }
+
+  .more-news {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 15px 50px;
+    color: color(dark);
+    background-color: transparent;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1.8px solid #414141;
+    transition: all 0.3s;
+
+
+    &:hover {
+      background: color(green);
+      color: color(white);
+      border-color: (green);
+
+      path {
+        fill: rgb(255, 255, 255);
+      }
+    }
+
+    span {
+      padding-right: 20px;
+    }
+
+    svg {
+      transform: rotate(90deg);
+      
+      path {
+        fill: #212121;
+      }
+    }
+  }
+  
+
+   // Стили соцсетей
+   &__icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 280px;
+    left: 95%;
+    z-index: 100;
+
+    &::after,
+    &:before {
+      content: '';
+      background-color: #1BC47D;
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      right: 50%;
+    }
+
+    &::after {
+      bottom: -120px;
+    }
+
+    &:before {
+      top: -110px;
+    }
+
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
+
+    &:hover {
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 26px !important;
+      height: 26px !important;
+      position: absolute;
+      left: 3px;
+    }
+  }
+
+  // Анимация иконки телефона
+  .btn-call {
+    margin: 9px 0 0 5px;
+    border-radius: 50%;
+    transition: .3s;
+    -webkit-animation: hoverWave linear 1s infinite;
+    animation: hoverWave linear 2s infinite;
+  }
+  
+  .btn-call__ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 3s ease 10s normal none 0 running shake;
+    animation-iteration-count: infinite;
+    color: green;
+    transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  
+  @-webkit-keyframes hoverWave {
+    0% {
+        box-shadow: 0 8px 10px rgba(13, 122, 15, 0.41), 0 0 0 0 rgba(18, 156, 52, 0.2), 0 0 0 0 rgba(9, 185, 47, 0.2)
+    }
+  
+    40% {
+        box-shadow: 0 8px 10px rgba(34, 177, 15, 0.3), 0 0 0 15px rgba(11, 162, 13, 0.2), 0 0 0 0 rgba(34, 162, 12, 0.2)
+    }
+  
+    80% {
+        box-shadow: 0 8px 10px rgba(10, 160, 23, 0.3), 0 0 0 30px rgba(39, 168, 7, 0), 0 0 0 26.7px rgba(30, 159, 13, 0.067)
+    }
+  
+    100% {
+        box-shadow: 0 8px 10px rgba(69, 181, 5, 0.3), 0 0 0 30px rgba(122, 253, 56, 0), 0 0 0 40px rgba(45, 204, 24, 0)
+    }
+  }
+  
+  @keyframes hoverWave {
+    0% {
+        box-shadow: 0 8px 10px rgba(59, 220, 11, 0.3), 0 0 0 0 rgba(108, 253, 56, 0.2), 0 0 0 0 rgba(84, 236, 19, 0.2)
+    }
+  
+    40% {
+        box-shadow: 0 8px 10px rgba(63, 223, 27, 0.3), 0 0 0 15px rgba(14, 190, 11, 0.2), 0 0 0 0 rgba(34, 209, 18, 0.2)
+    }
+  
+    80% {
+        box-shadow: 0 8px 10px rgba(21, 193, 21, 0.3), 0 0 0 30px rgba(16, 177, 32, 0), 0 0 0 26.7px rgba(28, 197, 16, 0.067)
+    }
+  
+    100% {
+        box-shadow: 0 8px 10px rgba(44, 214, 18, 0.3), 0 0 0 30px rgba(50, 173, 12, 0), 0 0 0 40px rgba(28, 214, 59, 0)
+    }
+  }
+  
+  /* animations icon */
+  @keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  
+    10% {
+        transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+    }
+  
+    20% {
+        transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+    }
+  
+    30% {
+        transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+    }
+  
+    40% {
+        transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+    }
+  
+    50% {
+        transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+    }
+  
+    60% {
+        transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+    }
+  
+    70% {
+        transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+    }
+  
+    80% {
+        transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+    }
+  
+    90% {
+        transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+    }
+  
+    100% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  }
+  
+  @-webkit-keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  
+    10% {
+        transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+    }
+  
+    20% {
+        transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+    }
+  
+    30% {
+        transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+    }
+  
+    40% {
+        transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+    }
+  
+    50% {
+        transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+    }
+  
+    60% {
+        transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+    }
+  
+    70% {
+        transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+    }
+  
+    80% {
+        transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+    }
+  
+    90% {
+        transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+    }
+  
+    100% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.education {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 100px auto 80px;
+  }
+
+  &__container {
+  }
+  
+  &__items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__video-box {
+    width: 360px;
+    height: 240px;
+  }
+  
+  &__info {
+    width: 75%;
+    margin-left: 20px;
+  }
+  
+  &__btn-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__button {
+
+    &:first-child {
+      margin-right: 20px;
+      width: 30%; 
+    }
+  }
+ 
+  &__pred-button {
+  }
+  
+}

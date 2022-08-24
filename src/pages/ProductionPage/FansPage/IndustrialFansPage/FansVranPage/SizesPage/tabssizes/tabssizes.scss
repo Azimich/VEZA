@@ -271,10 +271,6 @@
     width: 350px;
     margin: 0 auto;
     transition: all 0.75s ease-out; 
-
-    @include phoneScreen {
-      width: auto;
-    }
   }
   
   .card .photo img {
@@ -287,18 +283,73 @@
   }
 
   .typesizes__description__button {
-    margin: 30px auto 70px;
+    margin: 30px auto 130px;
     width: 280px;
     padding: 25px 0;
   }
 
+  &__table-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    background: #E0EFDE;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #414141;
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    @include phoneScreen {
+      padding: 15px;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    svg {
+      transform: rotate(90deg);
+      transition: all 0.3s;
+    }
+
+    path {
+      fill: #414141;
+    }
+  }
+
   &__table__container {
     max-width: 1000px;
-    height: 700px;
+    max-height: 0px;
     overflow: auto;
     overflow-x: auto;
     background: #FFFFFF;
     box-shadow: 0px 0px 12px rgba(44, 42, 42, 0.65);
+    transition: all 0.3s;
+
+    &.active {
+      max-height: 470px;
+    }
+  }
+
+  &__table__container::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+  }
+  
+  &__table__container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: color(green);
+  }
+  
+  &__table__container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
   }
 
   &__table__box {
@@ -585,12 +636,62 @@
     margin: 0 auto;
   }
 
+  &__technical-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    background: #E0EFDE;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #414141;
+    cursor: pointer;
+    margin: 0 auto 12px;  
+
+    @include phoneScreen {
+      padding: 15px;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+
+    svg {
+      transform: rotate(90deg);
+      transition: all 0.3s;
+
+      &.active {
+        transform: rotate(-90deg); 
+      }
+    }
+
+    path {
+      fill: #414141;
+    }
+  }
+  
+
   &__technical__top-box {
     display: flex;
     justify-content: space-around;
     max-width: 1000px;
-    margin: 0 auto 200px;
+    margin: 0 auto 80px;
     padding-left: 20px;
+    max-height: 0;
+    overflow: hidden; 
+    transition: all 0.3s;
+
+    &.active {
+      max-height: 100vh;  
+
+      @include ipadScreen {
+        max-height: 200vh;
+      }
+    }
 
     @media (max-width:1200px) {
       flex-direction: column;
@@ -647,6 +748,62 @@
       margin: 0;
     }
   }
+
+  &__vran__table-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    background: #E0EFDE;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #414141;
+    cursor: pointer;
+    margin: 0 auto 12px; 
+
+    @include phoneScreen {
+      padding: 15px;
+    }
+
+    svg {
+      transform: rotate(90deg);
+      transition: all 0.3s;
+
+      &.active {
+        transform: rotate(-90deg);
+      }
+    }
+
+    path {
+      fill: #414141;
+    }
+  }
+
+  .typesize__vran__tables-container{
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &.active {
+      max-height: 100vh;  
+
+      @include phoneScreen {
+        max-height: 180vh;
+      }
+    }
+  }
+
+  .fans__vran__table-typesizes-box {
+    display: block;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
 
 
 
@@ -751,7 +908,7 @@
     background: rgba(0,0,0,0.5);
     opacity: 0; 
     pointer-events: none; 
-    z-index: 90;
+    z-index: 100;
     transition: 0.3s all;
 
     &.open {
@@ -768,7 +925,7 @@
 
   .typesizes__popup-items {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: #fff;
@@ -782,14 +939,13 @@
 
     @media (max-width: 900px) {
       padding: 90px 0;
-      top: 53%;
     }
 
   }
 
   &__close-popup {
     position: absolute;
-    top: 5%;
+    top: 3%;
     right: 3%;
     cursor: pointer;
     font-size: 40px;

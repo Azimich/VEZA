@@ -1,0 +1,32 @@
+.education {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 100px auto 80px;
+  }
+
+  &__container {
+  }
+  
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__video-box {
+    w360
+  }
+  
+  &__info {
+  }
+  
+  &__btn-box {
+  }
+  
+  &__button {
+  }
+ 
+  &__pred-button {
+  }
+  
+}

@@ -2,13 +2,13 @@
   margin: 150px auto 100px;
 
   @include phoneScreen {
-    margin: 100px auto 80px;
+    margin: 130px auto 80px;
   }
 
-  // Навигация Табов
+  //Навигация Табов
   &__nav {
-    margin: 0 auto 30px;
-    max-width: 1000px;
+    margin: 0 auto 40px;
+    max-width: 500px;
   }
 
   &__nav__menu {
@@ -96,11 +96,11 @@
     display: flex;
     align-items: center;
     max-width: 1000px;
-    margin: 0 auto 200px;
+    margin: 0 auto 0px;
 
-    @media (max-width:530px) {
-      margin-bottom: 60px;
-    }
+    @include phoneScreen {
+      display: none;
+    } 
   }
 
   .map {
@@ -109,21 +109,514 @@
     margin: 0 auto;
   }
   
-  .map svg {
+  .company__map-svg {
     display: block;
-    width: 100%;
+    width: 110%;
     height: 100%;
     position: relative;
+  }
 
+  //Стили и цвета для карты по областям
+  .severo__zapadniy-okrug {
     path {
-      transition: all 0.5s;
-      cursor: pointer;
+      transition: all 0.3s;
+      stroke: #229F08;
+    }
 
-      &:hover {
-        fill: rgb(28, 157, 0);
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
       }
     }
   }
+
+  .sybirskiy__federalniy-okrug {
+    path {
+      transition: all 0.3s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .yakutiya {
+    path {
+      transition: all 0.3s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .dalniy__vostok {
+    path {
+      transition: all 0.3s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .kurganskaya__oblast {
+    path {
+      transition: all 0.3s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .saratov {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .ekaterenburg {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .krasnoyarsk {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .OMSK {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .chehov {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .tver {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .volgograd {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .cheboksari {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .ivanovo {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .ug {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .bryansk {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .belgorod {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .novosibirskaya__oblast {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .saratov {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .voronezh {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .ufa {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .perm {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .samara {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .kazan {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .rostov {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .tumen {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .krasnodar {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .nizhegorodskaya {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .nizhniy__novgorod {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .hunti__yalamo {
+    path {
+      transition: all 0.5s;
+      stroke: #229F08;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .belorus {
+    path {
+      transition: all 0.5s;
+      stroke: #e7e7e7;
+    }
+
+    &:hover {
+      path {
+        fill: #50944E;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .uzbekistan {
+    path {
+      transition: all 0.5s;
+      stroke: #e7e7e7;
+      fill: rgb(64, 109, 87);
+    }
+
+    &:hover {
+      path {
+        fill: #70c0cc;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+    }
+  }
+
+  .kazahstan {
+    path {
+      transition: all 0.2s;
+      stroke: #e7e7e7;
+    }
+
+    &:hover {
+      path {
+        fill: #297b87;
+        stroke-width: 1px;
+        stroke: rgba(255, 255, 255, 0.40);
+      }
+
+      rect {
+        fill: #297b87;
+      }
+    }
+  }
+
 
   .popups__container {
     position: absolute;
@@ -168,7 +661,7 @@
   }
 
   &__baloon-moskow_1 {
-    top: 53.9%;
+    top: 25%;
     left: 17%;
 
     @include phoneScreen {
@@ -178,8 +671,8 @@
   }
 
   &__baloon-moskow_2 {
-    top: 59%;
-    left: 11%;
+    top: 29%;
+    left: 12.5%;
 
     @media (max-width: 530px) {
       top: 59%;
@@ -188,8 +681,8 @@
   }
 
   &__baloon-moskow_3 {
-    top: 54%;
-    left: 13%;
+    top: 24%;
+    left: 14%;
 
     @include phoneScreen {
       top: 49%;
@@ -203,8 +696,8 @@
   }
 
   &__baloon-moskow_4 {
-    top: 67%;
-    left: 12%;
+    top: 37%;
+    left: 13%;
 
     @media (max-width: 530px) {
       top: 67%;
@@ -213,8 +706,8 @@
   }
 
   &__baloon-moskow_5 {
-    top: 71%;
-    left: 25.7%;
+    top: 40%;
+    left: 24.9%;
 
     @include phoneScreen {
       top: 67%;
@@ -223,13 +716,13 @@
   }
 
   &__baloon-moskow_6 {
-    top: 70%;
+    top: 40%;
     left: 33%;
   }
 
   &__baloon-moskow_7 {
-    top: 53.9%;
-    left: 7.8%;
+    top: 29.3%;
+    left: 9.2%;
     width: 20px;
 
     @include ipadScreen {
@@ -245,7 +738,7 @@
   }
 
   &__baloon-moskow_8 {
-    top: 77%;
+    top: 44%;
     left: 10%;
     
     @media (max-width:530px) {
@@ -264,34 +757,22 @@
     }
   }
 
-  &__maps-tooltip {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 5px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 0 10px #212121;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    display: none;
-  }
-
 
    // Popups
    &__popup {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #4a4a4a !important;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
     top: 0;
     left: 0;
-    z-index: 98;
+    z-index: 99;
     opacity: 1;
     overflow-y: auto;
     overflow-x: hidden;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: all 0.1s;
 
     &.open {
       opacity: 1;
@@ -309,7 +790,7 @@
     top: 50%;
     left: 50%;
     right: 0;
-    width: 520px;
+    width: 420px;
     border-radius: 10px;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
@@ -332,48 +813,75 @@
     cursor: pointer;
   }
 
-  &__popup-logo {
-    width: 130px;
-    padding: 15px;
+  &__popup-contents {
+    padding: 40px;
+  }
+
+  &__factories-info {
+    margin-bottom: 16px;
   }
 
   &__popup-title {
-    font-size: 18px;
-    font-weight: 300; 
-    color: gray;
-    margin: 0 0 12px 12px;
-  }
-
-  &__galerry {
-    padding: 0 0 10px 0;
-    height: 280px;
-
-    img {
-      object-fit: cover;
-    }
-  }
-
-  &__popup-text {
-    font-size: 15px;
-    font-weight: 300;
-    color: #212121;
-    padding: 0 10px 10px;
-  }
-
-
-  &__leaders-container {
-    display: block;
-  }
-
-  &__leaders-title {
-    margin-bottom: 50px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
     text-transform: uppercase;
+    color: color(green);
+    margin-bottom: 20px;
+  }
 
-    @media (max-width: 500px) {
-      margin-bottom: 30px;
+  &__factories-servces {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: #212121;
+      font-size: 15px;
+      
+      &:last-child {
+        max-width: 152px;
+        line-height: 145%;
+      }
     }
   }
+
+  &__factories-button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0.025em;
+    color: color(green);
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: #009b00;
+
+      svg {
+        margin-left: 20px;
+        fill: #009b00;
+      }
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 12px;
+      transition: all 0.3s;
+    }
+
+    path {
+      fill: green;
+    }
+  }
+
 
   &__item-video {
     position: relative;
@@ -429,7 +937,7 @@
     border-radius: 20px;
     padding: 50px;
     text-align: center;
-    margin: -220px auto 100px;
+    margin: -220px auto 80px;
     max-width: 1000px;
 
     @include tabletScreen {
@@ -562,8 +1070,17 @@
     margin-bottom: 100px;
   }
 
-  &__video-title {
-    margin-bottom: 25px;
+  &__items-title {
+    text-align: center;
+    margin: 50px 0;
+    color: color(dark);
+    text-transform: uppercase;
+    font-size: 35px;
+
+    @media (max-width: 500px) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
   }
 
   &__video-item {
@@ -571,17 +1088,17 @@
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
-    height: 80vh;
+    height: 500px;
+
+    @include phoneScreen {
+      height: 100%;
+    }
 
     iframe {
       width: 100%;
       height: 100%;
       margin: 0 auto;
       border-radius: 10px;
-
-      @include ipadScreen {
-        height: 500px;
-      }
 
       @include phoneScreen {
         height: 400px;
@@ -593,327 +1110,58 @@
     }
   }
 
+  &__items {
+    max-width: 1215px;
+    margin: 0 auto;
+  }
 
-  &__factories__title-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
+  &__items-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+  }
 
-    @include ipadScreen {
-      margin-bottom: 50px;
-      text-align: left;
+  &__item {
+    background: color(green);
+    padding: 0 0 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__item-video {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding:  0 0 80% 0;
+    // aspect-ratio: 16 / 9;
+
+    @media (max-width: 1600px) {
+      padding: 0 0 60% 0;
     }
   }
 
-  &__factories__title-line {
-    width: 40%;
-    height: 2px;
-    background-color: color(green);
-    
-    @include ipadScreen {
-      display: none;
-    }
+  &__item-video video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  &__factories-title {
+  &__item-info {
+    padding: 10px 15px 0 15px;
+  }
+
+  &__item-name {
+    color: color(white);
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__item-text {
+    color: color(white);
     font-weight: 300;
-    font-size: 25px;
-    line-height: 150%;
-    text-align: center;
-    letter-spacing: 0.025em;
-    max-width: 700px;
-    margin: 0 10px;
-
-    @include tabletScreen {
-      font-size: 20px;
-    }
-
-    @include ipadScreen {
-      position: relative;
-      max-width: 100%;
-      margin: 0;
-
-      &::before {
-        content: '';
-        position: absolute;
-        background-color: color(green);
-        height: 2px;
-        width: 150px;
-        bottom: -20px;
-        right: 0;
-        left: 0;
-        margin: 0 auto 0;
-      }
-    }
-
-    @include phoneScreen {
-      margin-bottom: 8%;
-    }
-  }
-
-  &__factories-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5%;
-
-    @include phoneScreen {
-      flex-direction: column;
-      margin-bottom: 12%;
-    }
-  }
-
-  &__factories-item:hover  &__factories__images-box {
-    box-shadow: 0px 0px 8px #088122;
-  }
-
-  &__factories__images-box {
-    width: 45%;
-    margin-right: 5%;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: all 0.3s;
-
-    @include phoneScreen {
-     width: 100%;
-     margin: 0 0 5% 0;
-    }
-  }
-
-  &__factories__info-box {
-    width: 50%;
-
-    @include phoneScreen {
-      width: 100%;
-     }
-  }
-
-  &__factories__info-year {
-    color: #363636;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 57px;
-    letter-spacing: 0.025em;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 22%;
-      top: 30px;
-      height: 2px;
-      background-color: #363636;
-      width: 80px;
-
-      @media (max-width: 1280px) {
-        left: 28%;
-      }
-
-      @include ipadScreen {
-        left: 35%;
-      }
-
-      @include phoneScreen {
-        left: 23%;
-      }
-
-      @media (max-width: 460px) {
-        left: 30%;
-      }
-    }
-
-    @include ipadScreen {
-      font-size: 40px;
-    }
-
-  }
-
-  &__factories__info-title {
-    margin: 4% 0 0 0;
-    font-size: 22px;
-    font-weight: 600;
-
-    @media (max-width: 1280px) {
-      margin: 0;
-    }
-
-    @include phoneScreen {
-      margin: 10px 0;
-    }
-  }
-
-  &__factories__info-text {
-    margin-bottom: 5px;
-  }
-
-  &__factories__info__button-box {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    transition: all 0.3s;
-    margin-top: 20px;
-    transition: all 0.3s;
-
-    @media (max-width: 1280px) {
-      margin: 10px 0 0 0;
-    }
-
-    @include phoneScreen {
-      justify-content: left;
-    }
-
-    &:hover {
-      margin-left: 12px;
-    }
-  }
-
-  &__factories__info__button-box:hover &__factories__info-button {
-    color: color(green);
-  }
-
-
-  &__factories__info-button {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s;
-    color: color(dark);
-    font-weight: 600;
-    padding-right: 20px;
-    transition: all 0.3s;
-  }
-
-
-  &__factories__item-second {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5%;
-    transition: all 0.3s;
-
-    @include phoneScreen {
-      flex-direction: column;
-      margin-bottom: 12%;
-    }
-  }
-
-  &__factories__item-second:hover  &__factories__images__box-second {
-    box-shadow: 0px 0px 8px #088122;
-  }
-
-  &__factories__images__box-second {
-    width: 50%;
-    overflow: hidden;
-    border-radius: 10px;
-
-    @include phoneScreen {
-      width: 100%;
-      order: 0;
-      margin-bottom: 5%;
-    }
-  }
-
-  &__factories__info__box-second {
-    width: 45%;
-    margin-right: 5%;
-    text-align: right;
-
-    @include phoneScreen {
-      width: 100%;
-      margin-right: 0;
-      text-align: left;
-      order: 1;
-    }
-  }
-
-  &__factories__info__year-second {
-    color: #363636;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 57px;
-    letter-spacing: 0.025em;
-    position: relative;
-
-    span {
-      width: 80px;
-      height: 2px;
-      background-color: color(green);
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      right: 25%;
-      top: 30px;
-      height: 1px;
-      background-color: #363636;
-      width: 80px;
-
-      @media (max-width: 1280px) {
-        right: 28%;
-      }
-
-      @include ipadScreen {
-        right: 40%;
-      }
-
-      @include phoneScreen {
-        left: 30%;
-        right: 0;
-        height: 1.5px;
-      }
-    }
-
-    @include ipadScreen {
-      font-size: 40px;
-    }
-  }
-
-  &__factories__info__title-second {
-    margin: 4% 0 0 0;
-    font-size: 22px;
-    font-weight: 600;
-
-    @media (max-width: 1280px) {
-      margin: 0;
-    }
-
-    @include phoneScreen {
-      margin: 10px 0;
-    }
-  }
-
-  &__factories__info__text-second {
-    margin-bottom: 5px;
-  }
-
-  &__factories__info__button__box-second {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    transition: all 0.3s;
-
-    @include phoneScreen {
-      justify-content: left;
-    }
-
-    &:hover {
-      margin-right: 12px;
-    }
-  }
-
-  &__factories__info__button-second {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s;
-    color: color(dark);
-    font-weight: 400;
-    padding-right: 20px;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
-
-
-  &__factories__info__button__box-second:hover &__factories__info__button-second {
-    color: color(green);
+    font-size: 16px;
   }
 
 

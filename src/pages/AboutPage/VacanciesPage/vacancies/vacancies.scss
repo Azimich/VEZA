@@ -2,13 +2,13 @@
   margin: 150px auto 100px;
 
   @include phoneScreen {
-    margin: 100px auto 80px;
+    margin: 130px auto 80px;
   }
 
    // Навигация Табов
    &__nav {
-    margin: 0 auto 30px;
-    max-width: 1000px;
+    margin: 0 auto 40px;
+    max-width: 500px;
   }
 
   &__nav__menu {
@@ -24,7 +24,6 @@
   }
 
   &__nav__menu-item {
-
     @media (max-width: 650px) {
       width: 80%;
       margin: 0 auto 10px;
@@ -93,21 +92,26 @@
 
   // Maps
   &__map-container {
-    margin: 0 auto 100px;
+    margin: 0 auto;
     max-width: 1000px;
     position: relative;
 
-    @media (max-width:530px) {
-      margin-bottom: 60px;
+    @include phoneScreen {
+      display: none;
     }
   }
 
   //Блок сортировки с чек-боксами
   &__map__filter-container {
     position: absolute;
-    left: 0px;
-    top: 50px;
-    z-index: 99;
+    left: -60px;
+    top: 5px;
+    z-index: 1;
+
+    @media (max-width:1200px) {
+      top: -30px;
+      left: 20px;
+    }
   }
 
   &__map__filter-title {
@@ -232,21 +236,514 @@
 
   .vacancies__map svg {
     display: block;
-    width: 100%;
+    width: 115%;
     height: 100%;
     transition: all 0.2s;
     position: relative;
+  }
 
+ //Стили и цвета для карты по областям
+ .severo__zapadniy-okrug {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
     path {
-      transition: all 0.3s;
-      cursor: pointer;
-
-      &:hover {
-        fill: rgb(28, 157, 0);
-        box-shadow: 0 0 5px #212121;
-      }
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
     }
   }
+}
+
+.sybirskiy__federalniy-okrug {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.yakutiya {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.dalniy__vostok {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kurganskaya__oblast {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.saratov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ekaterenburg {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.krasnoyarsk {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.OMSK {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.chehov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.tver {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.volgograd {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.cheboksari {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ivanovo {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ug {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.bryansk {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.belgorod {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.novosibirskaya__oblast {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.saratov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.voronezh {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ufa {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.perm {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.samara {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kazan {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.rostov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.tumen {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.krasnodar {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.nizhegorodskaya {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.nizhniy__novgorod {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.hunti__yalamo {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.belorus {
+  path {
+    transition: all 0.5s;
+    stroke: #e7e7e7;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.uzbekistan {
+  path {
+    transition: all 0.5s;
+    stroke: #e7e7e7;
+    fill: rgb(64, 109, 87);
+  }
+
+  &:hover {
+    path {
+      fill: #70c0cc;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kazahstan {
+  path {
+    transition: all 0.2s;
+    stroke: #e7e7e7;
+  }
+
+  &:hover {
+    path {
+      fill: #297b87;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+    
+    rect {
+      fill: #297b87;
+    }
+  }
+}
+
+  
 
   .enterprises {
     display: none;
@@ -259,7 +756,7 @@
   &__baloon-moskow_1 {
     position: absolute;
     height: 32px;
-    top: 62%;
+    top: 40%;
     left: 52%;
     transition: all 0.3s;
 
@@ -308,7 +805,7 @@
   }
 
   &__baloon-moskow_3 {
-    top: 68%;
+    top: 32%;
     left: 39%;
   }
 
@@ -318,13 +815,13 @@
   }
 
   &__baloon-moskow_5 {
-    top: 65%;
-    left: 16%;
+    top: 35%;
+    left: 18%;
   }
 
   &__baloon-moskow_6 {
-    top: 80%;
-    left: 52%;
+    top: 39%;
+    left: 25%;
   }
 
 
@@ -342,12 +839,12 @@
   }
 
   &__baloon-branches_1 {
-    top: 47%;
+    top: 20%;
     left: 23%;
   }
 
   &__baloon-branches_2 {
-    top: 52%;
+    top: 26%;
     left: 14%;
   }
 
@@ -357,13 +854,13 @@
   }
 
   &__baloon-branches_4 {
-    top: 72%;
+    top: 20%;
     left: 85%;
   }
 
   &__baloon-branches_5 {
-    top: 82%;
-    left: 60%;
+    top: 30%;
+    left: 50%;
   }
 
   // Наши вакансии
@@ -599,7 +1096,8 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #4a4a4a !important;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
     top: 0;
     left: 0;
     z-index: 98;

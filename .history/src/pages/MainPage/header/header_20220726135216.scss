@@ -1,0 +1,587 @@
+
+.header {
+  box-shadow: 0px 3px 5px rgba(30, 158, 0, 0.9);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+    @include ipadScreen {
+      padding: 19px 0 35px 0;
+    }
+  }
+
+  &__logo-box {
+    position: relative;
+    height: 28px;
+    z-index: 2;
+
+    @include phoneScreen {
+      width: 105px;
+    }
+  }
+
+  &__logo {
+    height: 30px;
+
+    @include ipadScreen {
+      width: 90px;
+    }
+  }
+
+  //lovation
+  &__location {
+    position: absolute;
+    left: -35px;
+    top: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include ipadScreen {
+      left: 0;
+      top: 34px;
+      width: 200px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+  
+      path {
+        fill: green;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ipadScreen {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.99);
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 80px 0 900px 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      z-index: 1;
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+
+  &__menu-list {
+    margin: 0 20px;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    transition: 0.3s;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include ipadScreen {
+      margin: 0;
+      border-top: 1px solid #bdbdbd56;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      transition: all 0.3s;
+    }
+  }
+
+  @include ipadScreen {
+    .last {
+      border-bottom: 1px solid #bdbdbd56;
+    }
+  }
+
+
+  @include ipadScreen {
+    &__menu-list:hover {
+      background-color: green;
+    }
+
+    &__menu-list:hover &__menu-link {
+      color: color(white);
+    }
+  }
+
+  &__menu-link {
+    color: green;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px; 
+      background-color: color(green); 
+      transition: width 0.3s; 
+
+      @include ipadScreen {
+        display: none;
+      }
+    }           
+
+    &:hover:after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      height: 2px; 
+      background-color:  color(lightgreen); 
+      transition: width 0.3s;  
+
+      @include ipadScreen {
+        display: none;
+      }
+    }           
+
+    &:hover {
+      color: color(lightgreen);
+    }
+
+    @include ipadScreen {
+      padding: 20px 330px;
+    }
+
+    @include phoneScreen {
+      padding: 20px 250px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 20px 200px;
+    }
+
+    @media (max-width: 500px) {
+      padding: 20px 150px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 120px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 100px;
+    }
+  }
+
+  .mobile__search-box {
+    display: none;
+
+    @include ipadScreen {
+      display: block;
+      margin: 5% 0 0 0;
+    }
+  }
+
+  &__icon__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__icon {
+    margin: 5px 8px 0 8px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: rgb(0, 155, 0);
+      transition: all 0.3s;
+
+      &:hover {
+        path {
+          fill: green;
+        }
+      }
+
+      .search__icon {
+        width: 23px;
+      }
+    }
+
+    .search-icon {
+      width: 30px !important;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @include ipadScreen {
+      display: block;
+      z-index: 2;
+    }
+
+    &:after {
+      content: "";
+      width: 35px;
+      height: 36px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 6px rgb(0 0 0 / 25%);
+      border-radius: 50%;
+      position: absolute;
+      top: 14px;
+      right: 22px;
+      z-index: -1;
+
+      @include phoneScreen {
+        width: 35px;
+        height: 36px;
+        top: 14px;
+        right: 12px;
+      } 
+    }
+  }
+
+  &__line-1,
+  &__line-2,
+  &__line-3 {
+    width: 20px;
+    height: 1.5px;
+    margin: 4px;
+    background-color: #212121;
+    transition: all 0.3s ease;
+  }
+
+  .header__mobile-menu.toggle .header__line-1 {
+    transform: rotate(-45deg) translate(-5px, 4px)
+  }
+
+  .header__mobile-menu.toggle .header__line-3 {
+    transform: rotate(45deg) translate(-4px,-3px);
+  }
+
+  .header__mobile-menu.toggle .header__line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header__location-title {
+    color: green;
+    font-size: 16px;
+  }
+}
+
+
+
+
+// Popup
+.seach__popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.popup__search-body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  max-width: 1500px;
+  margin: 100px auto 0;
+  padding: 0 30px;
+}
+
+.seach__popup.open .popup__search-content {
+  opacity: 1;
+  transform: translate(0%, 0%) scale(1);
+}
+
+
+.popup__search-content {
+  width: 90%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s;
+  background: #fff;
+  position: relative;   
+
+  @include phoneScreen {
+    width: 100%;
+  }
+}
+
+.search__close-popup {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  font-weight: 300;
+  z-index: 1;
+  font-size: 40px;
+  cursor: pointer;
+}
+  
+.popup__search-logo {
+  margin-bottom: 30px;
+
+  @include phoneScreen {
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 120px;
+    @include phoneScreen {
+      width: 100px;
+    }
+  }
+}
+
+
+//Popup-ПОИСК городов
+.header__popup__title-h1 {
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.025em;
+  color: #414141;
+  margin-bottom: 12px;
+
+  span {
+    color: color(green);
+  }
+}
+
+.header__popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  opacity: 0; 
+  pointer-events: none; 
+  z-index: 90;
+  transition: 0.3s all;
+  &.open {
+    opacity: 1;
+    pointer-events: all; 
+    transition: 0.3s all;
+  }
+
+}
+
+.header__popup-container.open .header__popup-body {
+  transform: translate(-50%, -50%) scale(1); 
+  transition: 0.3s all;
+}
+
+.header__popup-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  padding: 60px 0 25px 0;
+  transition: 0.3s all;
+  overflow: hidden;
+  z-index: 100;
+  overflow: auto;
+  @media (max-width: 900px) {
+    padding: 50px 0;
+    top: 50%;
+  }
+}
+
+.header__close-popup {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 400;
+  color: gray;
+
+  @include ipadScreen {
+    top: 2%;
+  }
+}
+
+.header__popup-content {
+  padding-top: 0%;
+}
+
+
+.header__popup-input {
+  margin-bottom: 30px;
+}
+
+.header__popup__city-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 800px;
+
+  @include phoneScreen {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+.header__popup__city-items {
+  width: 45%;
+
+  @include phoneScreen {
+    width: 100%;
+  }
+
+  &:first-child {
+    width: 40%;
+
+    @include phoneScreen {
+      width: 100%;
+    }
+  }
+}
+
+.header__popup-countries {
+  margin-bottom: 30px;
+}
+
+.header__country-title,
+.header__city-title, 
+.header__areas-title {
+  font-weight: 400;
+  font-size: 22px;
+  color: #414141;
+}
+
+.header__popup-country {
+  margin-top: 12px;
+  color: grey;
+  cursor: pointer;
+
+  &:hover {
+    color: color(green);
+  }
+}
+
+.header__popup-region {
+  max-height: 600px;
+  overflow-y: auto;
+  margin: 12px 0 0 0;
+
+  @include phoneScreen {
+    margin: 12px 0 50px 0;
+  }
+}
+
+.header__popup-region::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+.header__popup-region::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: color(green);
+}
+
+.header__popup-region::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+.header__popup-locality {
+  max-height: 600px;
+  overflow-y: auto;
+  margin: 12px 0 0 0;
+}
+
+.header__popup-locality::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+.header__popup-locality::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: color(green);
+}
+
+.header__popup-locality::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+.header__popup-city {
+  margin-top: 12px;
+  color: grey;
+  cursor: pointer;
+
+  &:hover {
+    color: color(green);
+  }
+}
+
+.header__popup-locality {
+}
+
+.header__areas-title {
+}
+
+.header__popup-areas {
+  margin-top: 12px;
+  color: grey;
+  cursor: pointer;
+
+  &:hover {
+    color: color(green);
+  }
+}
+

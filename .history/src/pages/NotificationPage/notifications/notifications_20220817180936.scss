@@ -1,0 +1,73 @@
+
+.notifications {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 80px; 
+  }
+
+  &__container {
+  }
+
+  &__top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .notification__tabs {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tabs-list {
+    cursor: pointer; 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: #2E6143;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      h2
+    }
+
+    &:nth-child(2) {
+      margin: 0 20px;
+    }
+  } 
+
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+  }
+
+  .input {
+  }
+
+  &__calendar {
+  }
+
+  &__items-container {
+  }
+
+  &__block {
+  }
+
+  &__item {
+  }
+
+  &__button {
+  }
+
+  .little__button {
+  }
+}

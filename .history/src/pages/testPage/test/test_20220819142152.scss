@@ -1,0 +1,46 @@
+.test {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 50px;
+  }
+  &__container {
+  }
+
+  &__items-block {
+  }
+
+  &__item {
+  }
+
+  &__bars-box {
+  }
+
+  &__bars-title {
+  }
+
+  &__bars-bacground {
+    width: 100%;
+    height: 11px;
+    background-color: #e7e7e7;
+  }
+
+  &__title-quetion {
+  }
+
+  &__bars-quetions {
+  }
+
+  &__question {
+  }
+
+  .path {
+  }
+
+  .check {
+  }
+
+  .check-question {
+  }
+}
+
