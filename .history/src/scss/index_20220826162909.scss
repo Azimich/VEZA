@@ -1,0 +1,137 @@
+
+
+//Глобальные css & mixins
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/video.js/src/css/video-js.scss';
+@import '../../node_modules/video.js/dist/video-js.min.css';
+@import './utils/variables';
+@import './utils/_mixins';
+@import './utils/_global';
+
+//Стили главной страницы сайта
+@import '../pages/MainPage/header/header';
+@import '../pages/MainPage/banner/banner';
+@import '../pages/MainPage/about/about';
+@import '../pages/MainPage/news/news';
+@import '../pages/MainPage/gallery/gallery';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../pages/MainPage/footer/footer';
+
+//Стили страницы РЕШЕНИЯ
+@import '../pages/DecisionsPage/header/header';
+@import '../pages/DecisionsPage/footer/footer';
+@import '../pages/DecisionsPage/industry/industry';
+
+//Стили страницы ОТРАСЛИ
+@import '../pages/DecisionsPage/IndustryPage/header/header';
+@import '../pages/DecisionsPage/IndustryPage/objects/objects';
+@import '../pages/DecisionsPage/IndustryPage/slider/slider';
+@import '../pages/DecisionsPage/IndustryPage/footer/footer';
+
+//Стили страницы ПРОДУКЦИЯ
+@import '../pages/ProductionPage/header/header';
+@import '../pages/ProductionPage/equipment/equipment';
+@import '../pages/ProductionPage/footer/footer';
+
+//Стили страницы Вентиляторы
+@import '../pages/ProductionPage/FansPage/header/header';
+@import '../pages/ProductionPage/FansPage/fans/fans';
+@import '../pages/ProductionPage/FansPage/footer/footer';
+
+//Стили страницы ОБЩЕПРОМЫШЛЕННЫЕ Вентиляторы
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/industrialfans/industrialfans';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/footer/footer';
+
+//Стили страницы Вентиляторы ВРАН
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/fansVRAN/fansVRAN';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/footer/footer';
+
+//Стили страницы Вентиляторы и Типаразмеры
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/header/header';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/tabssizes/tabssizes';
+@import '../pages/ProductionPage/FansPage/IndustrialFansPage/FansVranPage/SizesPage/footer/footer';
+
+//Стили страницы Новости
+@import '../pages/NewsPage/header/header';
+@import '../pages/NewsPage/tidings/tidings';
+@import '../pages/NewsPage/footer/footer';
+
+//Стили страницы Активная Новости
+@import '../pages/NewsPage/activeNewsPage/header/header';
+@import '../pages/NewsPage/activeNewsPage/activenews/activenews';
+@import '../pages/NewsPage/activeNewsPage/footer/footer';
+
+//Стили страницы О компании
+@import '../pages/AboutPage/header/header';
+@import '../pages/AboutPage/company/company';
+@import '../pages/AboutPage/footer/footer';
+
+//Стили страницы История
+@import '../pages/AboutPage/HistoryPage/header/header';
+@import '../pages/AboutPage/HistoryPage/history/history';
+@import '../pages/AboutPage/HistoryPage/footer/footer';
+
+//Стили страницы Наши Лидеры
+@import '../pages/AboutPage/LeadersPage/header/header';
+@import '../pages/AboutPage/LeadersPage/leaders/leaders';
+@import '../pages/AboutPage/LeadersPage/footer/footer';
+
+//Стили страницы Вакансии
+@import '../pages/AboutPage/VacanciesPage/header/header';
+@import '../pages/AboutPage/VacanciesPage/vacancies/vacancies';
+@import '../pages/AboutPage/VacanciesPage/footer/footer';
+
+//Стили страницы Ресурсы
+@import '../pages/CertificatesPage/header/header';
+@import '../pages/CertificatesPage/certificates/certificates';
+@import '../pages/CertificatesPage/footer/footer';
+
+//Стили страницы Сертификаты
+@import '../pages/ResourcesPage/header/header';
+@import '../pages/ResourcesPage/theresources/resources';
+@import '../pages/ResourcesPage/footer/footer';
+
+//Стили страницы Контакты
+@import '../pages/ContactsPage/header/header';
+@import '../pages/ContactsPage/information/information';
+@import '../pages/ContactsPage/footer/footer';
+
+//Стили страницы Техподдержка
+@import '../pages/ContactsPage/SupportPage/header/header';
+@import '../pages/ContactsPage/SupportPage/support/support';
+@import '../pages/ContactsPage/SupportPage/footer/footer';
+
+//Стили страницы Уведомления
+@import '../pages/NotificationPage/header//header';
+@import '../pages/NotificationPage/notifications/notifications';
+@import '../pages/NotificationPage/footer/footer';
+
+//Стили страницы Профиль
+@import '../pages/ProfilePage/header//header';
+@import '../pages/ProfilePage/profile/profile';
+@import '../pages/ProfilePage/footer/footer';
+
+//Стили страницы Обучения
+@import '../pages/EducationPage/header/header';
+@import '../pages/EducationPage/education/education';
+@import '../pages/EducationPage/footer/footer';
+
+//Стили страницы Тестирование
+@import '../pages/TestPage/header/header';
+@import '../pages/TestPage/test/test';
+@import '../pages/TestPage/footer/footer';
+
+//Стили страницы Документации
+@import '../pages/DocumentationPage/header/header';
+@import '../pages/DocumentationPage/documentation/documentation';
+@import '../pages/DocumentationPage/footer/footer';
+
+//Стили страницы Мои заказы
+@import '../pages/OrderPage/header/header';
+@import '../pages/OrderPage/order/order'; 
+@import '../pages/OrderPage/footer/footer';
+

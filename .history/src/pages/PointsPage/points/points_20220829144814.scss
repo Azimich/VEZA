@@ -1,0 +1,21 @@
+.points {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 50px;
+  }
+
+  &__container {
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__items {
+  }
+
+  &__number {
+  }
+}
