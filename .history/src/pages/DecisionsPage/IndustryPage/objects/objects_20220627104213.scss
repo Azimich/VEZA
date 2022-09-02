@@ -1,0 +1,730 @@
+.objects {
+  margin: 150px auto 50px;
+
+  @include phoneScreen {
+    margin: 100px auto 80px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @media (max-width: 1220px) {
+      display: block;
+    }
+
+    @include phoneScreen {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__pc-img {
+    display: block;
+    width: 40%;
+    
+    @media (max-width: 1220px) {
+      display: none;
+    }
+  }
+
+  &__ipad-img {
+    display: none;
+
+    @media (max-width: 1220px) {
+      display: block;
+      border-radius: 10px;
+      margin: 0 auto 40px;
+      width: 60%;
+    }
+
+    @include phoneScreen {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__right-block {
+    margin-left: 30px;
+
+    @media (max-width: 1220px) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-size: 38px;
+    font-weight: 500;
+
+    @media (max-width: 1220px) {
+      text-align: center;
+      margin: 0 auto 15px;
+    }
+
+    @include phoneScreen {
+      font-size: 35px;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    @include phoneScreen {
+      font-size: 30px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 25px;
+      line-height: 28px;
+    }
+  }
+
+  &__our-title {
+    font-weight: 400;
+    margin-bottom: 40px;
+
+    @media (max-width: 1600px) {
+      text-align: center;
+    }
+
+    @include phoneScreen {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 35px;
+    }
+  }
+
+  &__text {
+    
+    @media (max-width: 1500px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 1220px) {
+      text-align: center;
+    }
+
+    @include phoneScreen {
+      text-align: center;
+    }
+  }
+
+  &__our-objects {
+    margin-bottom: 120px;
+
+    @media (max-width: 1600px) {
+      margin: 0 auto 80px;
+    }
+  }
+
+  &__top-box {
+    display: flex;
+
+
+    li {
+      margin: 0 20px;
+
+      @media (max-width: 1600px) {
+        margin: 0 10px;
+      }
+
+      @include ipadScreen {
+        margin: 0 5px;
+      }
+
+      @media (max-width: 800px) {
+        margin: 10px 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+
+        @media (max-width: 800px) {
+          margin: 0 auto 20px;
+          width: 80%;
+        }
+
+         @media (max-width: 600px) {
+          width: 90%;
+        }
+
+        @media (max-width: 400px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        @media (max-width: 800px) {
+          margin: 0 auto 20px;
+          width: 80%;
+        }
+
+        @media (max-width: 600px) {
+          width: 90%;
+        }
+
+        @media (max-width: 400px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+
+  &__img-box {
+
+    @include ipadScreen {
+      width: 100%;
+    }
+  }
+
+  &__bottom__img-box {
+    display: flex;
+
+    li {
+
+       @media (max-width: 800px) {
+          margin: 0 auto 20px;
+          width: 80%;
+        }
+
+      &:nth-child(1) {
+        margin: 35px 0 0 0;
+
+        @media (max-width: 1600px) {
+          margin: 20px 0 0 0;
+        }
+
+        @include ipadScreen {
+          margin: 10px 0 0 0;
+        }
+
+        @media (max-width: 800px) {
+          margin: 0 0 20px 0;
+        }
+
+         @media (max-width: 800px) {
+          margin: 0 auto 20px;
+          width: 80%;
+        }
+
+        @media (max-width: 600px) {
+          width: 90%;
+        }
+  
+        @media (max-width: 400px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 35px 0 0 35px;
+
+        @media (max-width: 1600px) {
+          margin: 20px 0 0 20px;
+        }
+
+        @include ipadScreen {
+          margin: 10px 0 0 10px;
+        }
+
+        @media (max-width: 800px) {
+          margin: 0;
+        }
+
+         @media (max-width: 800px) {
+          margin: 0 auto 20px;
+          width: 80%;
+        }
+
+        @media (max-width: 600px) {
+          width: 90%;
+        }
+  
+        @media (max-width: 400px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+
+    .pc__image {
+      display: block;
+
+      @include ipadScreen {
+        display: none;
+      }
+    }
+
+    .ipad__image {
+      display: none;
+
+      @include ipadScreen {
+        display: block;
+      }
+    }
+  }
+
+  &__bottom__img-size {
+
+    img {
+      width: 100%;
+
+    }
+  }
+
+  &__effects-cover {
+    list-style:none;
+
+    li {
+      position: relative;
+      /* Задаем ширину элемента списка с картинкой*/
+      overflow: hidden;
+      border-radius: 20px;
+
+      @media (max-width: 1600px) {
+        height: max-content;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 800px) {
+        margin: 0 auto 20px;
+        width: 80%;
+      }
+
+      @media (max-width: 600px) {
+        width: 90%;
+      }
+
+      @media (max-width: 400px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__effect-to-right {
+    padding: 20px 0 0 20px;
+    text-align: left;
+
+    @include ipadScreen {
+      padding: 10px 0 0 10px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 20px;
+    }
+  }
+
+  &__name {
+    color: color(white);
+    font-size: 25px;
+    font-weight: 400;
+
+    @media  (max-width: 1200px) {
+      font-size: 20px;
+    }
+
+    @include ipadScreen {
+      font-size: 18px;
+    }
+  }
+
+  &__adress-title {
+    margin: 15px 0 5px 0;
+    font-size: 23px;
+
+    @media  (max-width: 1200px) {
+      font-size: 18px;
+    }
+
+    @include ipadScreen {
+      font-size: 16px;
+      margin: 10px 0 5px 0;
+    }
+  }
+
+  &__adress-1 {
+    color: color(white);
+    font-size: 18px;
+    font-weight: 400;
+
+    @include ipadScreen {
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+
+      @include ipadScreen {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__adress {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+
+    @include ipadScreen {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+
+  // Мобильная
+  &__desck{
+    display: block;
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+
+  &__mob-img {
+    display: none;
+
+    @media (max-width: 1600px) {
+      display: block;
+    }
+  }
+
+  &__mob_2-img {
+    display: none;
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+
+  .last__mobile-images {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+
+
+
+  /* Выезжающий блок с текстом для панели слева направо */
+  &__effects-cover li >  &__effect-to-right {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: left;
+  }
+
+  &__effects-cover li:hover > &__effect-to-right {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  &__effects-cover li &__effect-to-right {
+    opacity: 0;
+    background: linear-gradient(227.96deg, rgba(123, 169, 0, 0.86) -21.84%, #337700 103.24%); /* Фон блока при наведении */
+    transition: all 0.5s;
+    color: color(white);
+    transform: translate(-250px, 0px) rotate(0deg); /* Направление выезжающей панели */
+  }
+
+  &__effects-cover li:hover &__effect-to-right {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+
+
+   // Стили соцсетей
+   &__icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 280px;
+    left: 95%;
+    z-index: 95 !important;
+
+    &::after,
+    &:before {
+      content: '';
+      background-color: #1BC47D;
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      right: 50%;
+    }
+
+    &::after {
+      bottom: -120px;
+    }
+
+    &:before {
+      top: -110px;
+    }
+
+    @include ipadScreen {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+
+    path {
+      fill: green;
+    }
+
+    &:hover {
+      path {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  .ok__ru {
+    svg {
+      width: 26px !important;
+      height: 26px !important;
+      position: absolute;
+      left: 3px;
+    }
+  }
+
+  // Анимация иконки телефона
+  .btn-call {
+    margin: 9px 0 0 5px;
+    border-radius: 50%;
+    transition: .3s;
+    -webkit-animation: hoverWave linear 1s infinite;
+    animation: hoverWave linear 2s infinite;
+  }
+  
+  .btn-call__ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 3s ease 10s normal none 0 running shake;
+    animation-iteration-count: infinite;
+    color: green;
+    transition: .3s all;
+
+    svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    path {
+      fill: green;
+      width: 30px;
+
+      &:hover {
+        fill: #1BC47D;
+      }
+    }
+  }
+
+  
+  @-webkit-keyframes hoverWave {
+    0% {
+        box-shadow: 0 8px 10px rgba(13, 122, 15, 0.41), 0 0 0 0 rgba(18, 156, 52, 0.2), 0 0 0 0 rgba(9, 185, 47, 0.2)
+    }
+  
+    40% {
+        box-shadow: 0 8px 10px rgba(34, 177, 15, 0.3), 0 0 0 15px rgba(11, 162, 13, 0.2), 0 0 0 0 rgba(34, 162, 12, 0.2)
+    }
+  
+    80% {
+        box-shadow: 0 8px 10px rgba(10, 160, 23, 0.3), 0 0 0 30px rgba(39, 168, 7, 0), 0 0 0 26.7px rgba(30, 159, 13, 0.067)
+    }
+  
+    100% {
+        box-shadow: 0 8px 10px rgba(69, 181, 5, 0.3), 0 0 0 30px rgba(122, 253, 56, 0), 0 0 0 40px rgba(45, 204, 24, 0)
+    }
+  }
+  
+  @keyframes hoverWave {
+    0% {
+        box-shadow: 0 8px 10px rgba(59, 220, 11, 0.3), 0 0 0 0 rgba(108, 253, 56, 0.2), 0 0 0 0 rgba(84, 236, 19, 0.2)
+    }
+  
+    40% {
+        box-shadow: 0 8px 10px rgba(63, 223, 27, 0.3), 0 0 0 15px rgba(14, 190, 11, 0.2), 0 0 0 0 rgba(34, 209, 18, 0.2)
+    }
+  
+    80% {
+        box-shadow: 0 8px 10px rgba(21, 193, 21, 0.3), 0 0 0 30px rgba(16, 177, 32, 0), 0 0 0 26.7px rgba(28, 197, 16, 0.067)
+    }
+  
+    100% {
+        box-shadow: 0 8px 10px rgba(44, 214, 18, 0.3), 0 0 0 30px rgba(50, 173, 12, 0), 0 0 0 40px rgba(28, 214, 59, 0)
+    }
+  }
+  
+  /* animations icon */
+  @keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  
+    10% {
+        transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+    }
+  
+    20% {
+        transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+    }
+  
+    30% {
+        transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+    }
+  
+    40% {
+        transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+    }
+  
+    50% {
+        transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+    }
+  
+    60% {
+        transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+    }
+  
+    70% {
+        transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+    }
+  
+    80% {
+        transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+    }
+  
+    90% {
+        transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+    }
+  
+    100% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  }
+  
+  @-webkit-keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  
+    10% {
+        transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+    }
+  
+    20% {
+        transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+    }
+  
+    30% {
+        transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+    }
+  
+    40% {
+        transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+    }
+  
+    50% {
+        transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+    }
+  
+    60% {
+        transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+    }
+  
+    70% {
+        transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+    }
+  
+    80% {
+        transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+    }
+  
+    90% {
+        transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+    }
+  
+    100% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+  }
+}
+

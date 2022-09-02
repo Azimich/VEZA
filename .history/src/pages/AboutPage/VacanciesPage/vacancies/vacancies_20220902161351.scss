@@ -1,0 +1,1803 @@
+.vacancies {
+  margin: 150px auto 100px;
+
+  @include phoneScreen {
+    margin: 130px auto 80px;
+  }
+
+   // Навигация Табов
+   &__nav {
+    margin: 0 auto 40px;
+    max-width: 500px;
+  }
+
+  &__nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__nav__menu-item {
+    @media (max-width: 650px) {
+      width: 80%;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__nav__menu-item-link {
+    color: #313131;
+    font-size: 18px;
+    padding: 0 0 15px 0;
+    position: relative;
+
+    &.active {
+      color: color(green);
+
+      @media (max-width: 650px) {
+        color: color(white);
+        background-color: color(green) !important;
+      } 
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -16%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: transparent;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    &.active::after {
+      background-color: color(green);
+    }
+
+    @media (max-width: 650px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: rgba(79, 102, 79, 0.795) !important;
+      color: color(white);
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+
+  &__nav__menu-line {
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.247);
+    margin-top: 15px;
+    border-radius: 5px;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  // Maps
+  &__map-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+
+    @include phoneScreen {
+      display: none;
+    }
+  }
+
+  //Блок сортировки с чек-боксами
+  &__map__filter-container {
+    position: absolute;
+    left: -60px;
+    top: 5px;
+    z-index: 1;
+
+    @media (max-width:1200px) {
+      top: -30px;
+      left: 20px;
+    }
+  }
+
+  &__map__filter-title {
+    font-weight: 400;
+    color: #9c9c9c;
+    font-size: 18px;
+  }
+
+  &__map__enterprises-title {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #9c9c9c;
+  }
+
+  &__map__branches-title {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #9c9c9c;
+  }
+
+  &__map__filter-enterprises {
+    --background: #fff;
+    --border: #9c9c9c;
+    --border-hover: #BBC1E1;
+    --border-active: #009247;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all .3s;
+
+    input, svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+  }
+
+  &__map__filter-enterprises .check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0 !important;
+    border: 0 !important;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+    
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+
+    &:checked {
+      --b: var(--border-active);
+    }
+  }
+
+  &__map__filter-enterprises svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: -10px;
+    margin: 0 0 0 10px;
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+
+  &__map__filter-enterprises.path .check:checked {
+    --s: 1px;
+    transition-delay: 0.2s;
+  }
+
+  &__map__filter-enterprises.path .check:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+
+  &__map__filter-enterprises.path svg {
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    transition: stroke-dasharray 0.3s, stroke-dashoffset 0.3s;
+  }
+
+  &__map__filter-enterprises.bounce {
+    --stroke: var(--tick);
+  }
+
+  &__map__filter-enterprises.bounce .check:checked {
+    --s: 11px;
+  }
+
+  &__map__filter-enterprises.bounce svg {
+    --scale: 0;
+  }
+
+  &__map__filter-enterprises.bounce .check:checked + svg {
+    animation: bounce 0.2s linear forwards 0.2s;
+  }
+  
+  .vacancies__label__checbox {
+    margin-left: 8px;
+    font-size: 16px;
+    color: color(dark);
+  }
+
+  .vacancies__map {
+    position: relative;
+  }
+
+  .vacancies__map svg {
+    display: block;
+    width: 115%;
+    height: 100%;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+ //Стили и цвета для карты по областям
+ .severo__zapadniy-okrug {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.sybirskiy__federalniy-okrug {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.yakutiya {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.dalniy__vostok {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kurganskaya__oblast {
+  path {
+    transition: all 0.3s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.saratov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ekaterenburg {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.krasnoyarsk {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.OMSK {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.chehov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.tver {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.volgograd {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.cheboksari {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ivanovo {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ug {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.bryansk {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.belgorod {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.novosibirskaya__oblast {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.saratov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.voronezh {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.ufa {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.perm {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.samara {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kazan {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.rostov {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.tumen {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.krasnodar {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.nizhegorodskaya {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.nizhniy__novgorod {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.hunti__yalamo {
+  path {
+    transition: all 0.5s;
+    stroke: #229F08;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.belorus {
+  path {
+    transition: all 0.5s;
+    stroke: #e7e7e7;
+  }
+
+  &:hover {
+    path {
+      fill: #50944E;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.uzbekistan {
+  path {
+    transition: all 0.5s;
+    stroke: #e7e7e7;
+    fill: rgb(64, 109, 87);
+  }
+
+  &:hover {
+    path {
+      fill: #70c0cc;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+  }
+}
+
+.kazahstan {
+  path {
+    transition: all 0.2s;
+    stroke: #e7e7e7;
+  }
+
+  &:hover {
+    path {
+      fill: #297b87;
+      stroke-width: 1px;
+      stroke: rgba(255, 255, 255, 0.40);
+    }
+    
+    rect {
+      fill: #297b87;
+    }
+  }
+}
+
+  
+
+  .enterprises {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__baloon-moskow_1 {
+    position: absolute;
+    height: 32px;
+    top: 40%;
+    left: 52%;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  //Предприятия
+  &__baloon-moskow_2,
+  &__baloon-moskow_3,
+  &__baloon-moskow_4,
+  &__baloon-moskow_5,
+  &__baloon-moskow_6,
+  &__baloon-branches_1,
+  &__baloon-branches_2,
+  &__baloon-branches_3,
+  &__baloon-branches_4,
+  &__baloon-branches_5 {
+    position: absolute;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    border: 2px solid #fff;
+    color: color(white);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &__baloon-moskow_2 {
+    top: 54%;
+    left: 30%;
+  }
+
+  &__baloon-moskow_3 {
+    top: 32%;
+    left: 39%;
+  }
+
+  &__baloon-moskow_4 {
+    top: 50%;
+    left: 70%;
+  }
+
+  &__baloon-moskow_5 {
+    top: 35%;
+    left: 18%;
+  }
+
+  &__baloon-moskow_6 {
+    top: 39%;
+    left: 25%;
+  }
+
+
+  //Филиалы
+  .branches {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .check-branches.active .branches {
+    display: block;
+  }
+
+  &__baloon-branches_1 {
+    top: 20%;
+    left: 23%;
+  }
+
+  &__baloon-branches_2 {
+    top: 26%;
+    left: 14%;
+  }
+
+  &__baloon-branches_3 {
+    top: 37%;
+    left: 75%;
+  }
+
+  &__baloon-branches_4 {
+    top: 20%;
+    left: 85%;
+  }
+
+  &__baloon-branches_5 {
+    top: 30%;
+    left: 50%;
+  }
+
+  // Наши вакансии
+  &__vacancies__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 45px;
+
+    @media (max-width: 500px) {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 30px;
+    }
+  }
+
+  &__vacancies__search-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    background-color: #f3f3f3;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #000000b3;
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: center;
+      max-width: 60%;
+    }
+
+    @include phoneScreen {
+      max-width: 80%;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 100%;
+      padding: 20px 10px;
+    }
+  }
+
+  &__vacancies__search-item {
+
+    @include ipadScreen {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+
+  &__vacancies__search-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145%;
+    color: color(dark);
+    padding: 0 0 8px 0;
+  }
+
+  &__vacancies__search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #2121219c;
+    width: 100%;
+    transition: all 0.2s;
+
+    &::placeholder { 
+      color: #3131318e;
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: color(green);
+      box-shadow: 0px 0px 2px #078707b3;
+    }
+  }
+
+  &__vacancies__search-button {
+    margin: 0 auto;
+  }
+
+  &__vacancies__vacancy-container {
+    padding: 0 0 5px 0;
+  }
+
+  &__vacancies__vacancy-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        background: #D4DDC9;
+        border-color: color(green);
+        box-shadow: 0 0 5px rgb(48, 53, 48);
+      }
+    }
+
+    @include ipadScreen {
+      border-color: color(green);
+      border-color: color(green);
+    }
+
+    @include ipadScreen {
+      flex-direction: column;
+      align-items: start;
+      padding: 20px 10px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__vacancies__vacancy-item:hover  &__vacancies__vacncy-button {
+      background-color: color(green);
+    }
+  }
+
+  &__vacancies__vacancy-title-box {
+    max-width: 70%;
+
+    @include ipadScreen {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__vacancies__vacancy-title {
+    font-size: 25px;
+    color: #212121;
+    letter-spacing: 2.5%;
+    margin-bottom: 12px;
+  }
+
+  &__vacancies__vacancy-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121b5;
+    margin-bottom: 8px;
+  }
+
+  &__vacancies__vacancy-text {
+    font-size: 16px;
+  }
+
+  &__vacancies__button-box {
+
+    @include ipadScreen {
+      margin: 0 auto;
+    }
+  }
+
+  &__vacancies__vacncy-button {
+    background: rgba(51, 149, 58, 0.6);
+    width: 240px;
+    height: 50px;
+    transition: all 0.3s;
+
+    @include ipadScreen {
+      background-color: color(green);
+    }
+  }
+
+  &__vacancies__bottom-box {
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+
+  &__vacancies__bottom-title {
+    margin-bottom: 15px;
+
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
+  }
+
+  &__vacancies__bottom-text {
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  &__vacancies__bottom-btn {
+    text-align: center;
+    margin: 0 auto;
+    width: 240px;
+    height: 50px;
+    transition: all 0.3s;
+    
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+    }
+  }
+
+
+  // Стили для поикс
+  .input__search {
+    position: relative;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 5px #212121;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto 30px;
+
+    img {
+      position: absolute;
+      right: 28px;
+      top: 26px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .input {
+    padding: 10px 40px 10px 10px;
+    
+    &::placeholder {
+      color: gray;
+    }
+  }
+
+
+  //popup-slider
+  .vacancies__popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.8);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 98;
+    opacity: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .vacancies__popup.open .vacancies__popup-bg {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .vacancies__popup-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    width: 100% !important;
+    height: 100vh;
+    padding: 30px 30px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s;
+    background: transparent;
+    overflow: hidden;
+
+    @include phoneScreen {
+      width: 90%;
+    }
+  }
+
+  .vacancies__close-popup {
+    position: absolute;
+    right: 5% !important;
+    top: 5% !important;
+    color: gray;
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  //Swiper-popup
+  .vacancies__slider {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .swiper-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 4% 12% 4% 12%;
+
+    @include phoneScreen {
+      padding: 18% 9% 8% 9%;
+    }
+  }
+
+  .vacancies__slider-slide {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .vacancies__slider-img {
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 70vh;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include phoneScreen {
+      border-radius: 10px;
+    }
+
+    img {
+      object-fit: revert;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background-color: color(white);
+
+    @include phoneScreen {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next::after {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    position: absolute;
+  }
+
+  @include phoneScreen {
+
+    .swiper-button-prev:after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  }
+
+  
+
+   // Popup-forms
+   .popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 8, 0.5);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    
+  
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    &__body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 20px;
+  
+      @include phoneScreen{
+        align-items: start;
+      }
+    }
+  
+    .popup__vacancies-content {
+      width: 520px;
+      padding: 48px 24px 56px;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+      transition: all 0.4s;
+      background-color: color(white);
+      border-radius: 15px !important;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      right: 0;
+    }
+  
+    &.open  .popup__vacancies-content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  
+    .close-popup {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      line-height: 18px;
+      font-size: 50px;
+      color: #E6E7E9;
+      cursor: pointer;
+    }
+  
+    &__heading{
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+      text-transform: uppercase;
+      color: color(black);
+    }
+  
+    &__text{
+      margin-top: 16px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: color(black);
+    }
+  
+    form {
+  
+      input{
+        width: 100%;
+        padding: 8px;
+        margin-top: 24px;
+        border: none;
+        border-bottom: 1px solid #BCBDC0;
+        color: color(black);
+        font-size: 14px;
+  
+        &::placeholder{
+          color: #6C6D70;
+        }
+  
+        &:focus{
+          border-width: 2px;
+          border-color: color(green);
+        }
+  
+        &.error{
+          border-color: red;
+        }
+      }
+  
+      .email-tel-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+  
+        input{
+          width: 204px;
+        }
+  
+        @include phoneScreen{
+          display: block;
+  
+          input{
+            width: 100%;
+          }
+        }
+      }
+  
+      textarea{
+        width: 100%;
+        height: 81px;
+        padding: 8px;
+        color: color(black);
+        font-size: 14px;
+        line-height: 22px;
+        border: 1px solid #BCBDC0;
+  
+        &::placeholder{
+          color: #6C6D70;
+        }
+  
+        &:focus{
+          border-width: 2px !important;
+          border-color: color(green);
+        }
+      }
+  
+      .inputfile-box {
+        border: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+  
+        label {
+          width: 280px;
+          margin: 20px 0 8px;
+          padding: 8px;
+          border: none;
+          cursor: pointer;
+          color: #6C6D70;
+          font-size: 14px;
+          border-bottom: 1px solid #BCBDC0;
+          text-overflow: ellipsis;
+          position: relative;
+  
+          &:focus{
+            border-bottom: 2px solid color(lightgreen2);
+          }
+      
+          &::before {
+            content: "Прикрепить";
+            position: absolute;
+            padding: 5px 0 0 30px;
+            right: -48px;
+            bottom: 4px;
+            width: 24px;
+            height: 24px;
+            font-size: inherit;
+            font-weight: 500;
+            color: color(black);
+            background-size: cover;
+            background: url('../assets/images/upload-icon.svg') no-repeat;
+          }
+        }
+      
+        input {
+          margin: 0 !important;
+          padding: 0;
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          visibility: hidden;
+        }
+  
+        .file-cleane {
+          position: absolute;
+          top: 30px;
+          right: 190px;
+          width: 14px;
+          height: 14px;
+          cursor: pointer;
+          background: url('../assets/images/file-cleaner.svg') no-repeat;
+          background-size: contain;
+          z-index: 2;
+        }
+  
+        p {
+          font-size: 11.3px;
+          line-height: 17px;
+          color: #BCBDC0;
+        }
+  
+        @include phoneScreen{
+          label{
+            width: 88%;
+            &::after {
+              display: none;
+            }
+    
+            &::before {
+              content: '';
+              bottom: 3px;
+              right: -17%;
+            }
+          }
+  
+          .file-cleaner{
+            right: 40px;
+          }
+        }
+      }
+
+      .submit{
+        width: 100%;
+        padding: 25px 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // CheckBox
+  &__form-checkbox {
+    --background: #fff;
+    --border: #616161;
+    --border-hover: #BBC1E1;
+    --border-active: #009247;
+    --tick: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0 40px 0;
+    transition: all .3s;
+
+    input, svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 25px;
+    }
+  }
+
+
+  &__form-checkbox .check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 22px !important;
+    margin-top: 0 !important;
+    border: 0 !important;
+    height: 22px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+
+    &:hover {
+      --s: 2px;
+      --b: var(--border-hover);
+    }
+
+    &:checked {
+      --b: var(--border-active);
+    }
+
+    &.error{
+      box-shadow: 0 0 5px red;
+    }
+  }
+
+  &__popup-titles {
+    margin-bottom: 18px;
+  }
+
+   &__form-checkbox:hover .vacancies__label__checbox {
+    color:#616161;
+  }
+  
+  .vacancies__label__checbox {
+    margin-left: 8px;
+    font-size: 16px;
+    color: color(dark);
+  }
+  
+  &__form-checkbox svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 22px;
+    height: 22px;
+    margin: 0 0 0 10px;
+    transform: scale(var(--scale, 1)) translateZ(0);
+  }
+  
+  &__form-checkbox.path .check:checked {
+    --s: 1px;
+    transition-delay: 0.2s;
+  }
+  
+   &__form-checkbox.path .check:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+  
+   &__form-checkbox.path svg {
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    transition: stroke-dasharray 0.3s, stroke-dashoffset 0.3s;
+  }
+  
+   &__form-checkbox.bounce {
+    --stroke: var(--tick);
+  }
+  
+   &__form-checkbox.bounce .check:checked {
+    --s: 11px;
+  }
+  
+   &__form-checkbox.bounce .check:checked + svg {
+    animation: bounce 0.2s linear forwards 0.2s;
+  }
+  
+   &__form-checkbox.bounce svg {
+    --scale: 0;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .success{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 35, 50, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 99;
+  
+    &.sended{
+      display: block;
+    }
+  
+    &__popup-wrapper{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    &__popup-content {
+      max-width: 600px;
+      width: 100%;
+      height: 300px;
+      padding: 30px 10px 0;
+      background-color: color(white);
+      margin: auto;
+      border-radius: 20px;
+  
+      @include phoneScreen{
+        height: 230px;
+      }
+  
+    }
+  
+    &__content-text{
+      margin-top: 30px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 30px;
+      color: rgb(7, 136, 25);
+  
+      @include phoneScreen{
+        margin-top: 10px;
+        font-size: 23px;
+      }
+    }
+  
+    .success-checkmark {
+      width: 80px;
+      height: 115px;
+      margin: 0 auto;
+      
+      .check-icon {
+          width: 80px;
+          height: 80px;
+          position: relative;
+          border-radius: 50%;
+          box-sizing: content-box;
+          border: 4px solid #4CAF50;
+          
+          &::before {
+              top: 3px;
+              left: -2px;
+              width: 30px;
+              transform-origin: 100% 50%;
+              border-radius: 100px 0 0 100px;
+          }
+          
+          &::after {
+              top: 0;
+              left: 30px;
+              width: 60px;
+              transform-origin: 0 50%;
+              border-radius: 0 100px 100px 0;
+              animation: rotate-circle 4.25s ease-in;
+          }
+          
+          &::before, &::after {
+              content: '';
+              height: 100px;
+              position: absolute;
+              background: #FFFFFF;
+              transform: rotate(-45deg);
+          }
+          
+          .icon-line {
+              height: 5px;
+              background-color: #4CAF50;
+              display: block;
+              border-radius: 2px;
+              position: absolute;
+              z-index: 10;
+              
+              &.line-tip {
+                  top: 46px;
+                  left: 14px;
+                  width: 25px;
+                  transform: rotate(45deg);
+                  animation: icon-line-tip 0.75s;
+              }
+              
+              &.line-long {
+                  top: 38px;
+                  right: 8px;
+                  width: 47px;
+                  transform: rotate(-45deg);
+                  animation: icon-line-long 0.75s;
+              }
+          }
+          
+          .icon-circle {
+              top: -4px;
+              left: -4px;
+              z-index: 10;
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              position: absolute;
+              box-sizing: content-box;
+              border: 4px solid rgba(76, 175, 80, .5);
+          }
+          
+          .icon-fix {
+              top: 8px;
+              width: 5px;
+              left: 26px;
+              z-index: 1;
+              height: 85px;
+              position: absolute;
+              transform: rotate(-45deg);
+              background-color: #FFFFFF;
+          }
+      }
+  
+      @keyframes rotate-circle {
+        0% {
+            transform: rotate(-45deg);
+        }
+        5% {
+            transform: rotate(-45deg);
+        }
+        12% {
+            transform: rotate(-405deg);
+        }
+        100% {
+            transform: rotate(-405deg);
+        }
+    }
+  
+    @keyframes icon-line-tip {
+        0% {
+            width: 0;
+            left: 1px;
+            top: 19px;
+        }
+        54% {
+            width: 0;
+            left: 1px;
+            top: 19px;
+        }
+        70% {
+            width: 50px;
+            left: -8px;
+            top: 37px;
+        }
+        84% {
+            width: 17px;
+            left: 21px;
+            top: 48px;
+        }
+        100% {
+            width: 25px;
+            left: 14px;
+            top: 45px;
+        }
+    }
+  
+    @keyframes icon-line-long {
+        0% {
+            width: 0;
+            right: 46px;
+            top: 54px;
+        }
+        65% {
+            width: 0;
+            right: 46px;
+            top: 54px;
+        }
+        84% {
+            width: 55px;
+            right: 0px;
+            top: 35px;
+        }
+        100% {
+            width: 47px;
+            right: 8px;
+            top: 38px;
+        }
+    }
+
+  }
+
+}
